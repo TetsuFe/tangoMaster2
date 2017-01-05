@@ -1,0 +1,68 @@
+trial@裁判・試練@civil trial@民事裁判@0@n
+rob@盗む@robbed of wallet@財布を盗まれる@0@v
+bully@いじめる・いじめっ子@bullying@いじめ@0@v
+permanently@永久に@permanent delete@永久に削除する@0@av
+leisure@余暇・休暇@at my leisure@都合のいい時に@0@n
+apart@離れて・別々に@apart from@〜とは別に@0@av
+incredible@素晴らしい@you are incredible!@素晴らしい！@0@a
+grant@認める・当然だ@take it for granted@それは当然だ@0@v
+convey@伝える・運ぶ@convey goods@品物を運ぶ@0@v
+novel@斬新な・小説@novel idea@斬新な考え@0@a
+subject@主題・話題・被験者@subject of study@研究の主題@0@n
+pursuit@追求・追跡@in pursuit of@〜を追い求めて@0@n
+sympathy@共感・思いやり@strong sympathy@強い共感@0@n
+court@法廷・裁判所@court@法廷@0@n
+character@性格・特徴・文字@Chinese character@漢字@0@n
+crime@犯罪@commit a crime@犯罪を犯す@0@n
+fault@責任・欠点@find fault with~@〜の粗探しをする@0@n
+unwilling@気が進まない@unwilling to do@〜するのに気が進まない@0@av
+site@場所・サイト@site@場所@0@n
+prompt@促す・すばやい@prompt A to do@Aに〜するよう促す@0@v
+locate@配置する・探す@be located to~@〜に位置する@0@v
+confess@告白する・白状する@confess the truth@真実を告白する@0@v
+funeral@葬式@funeral@葬式@0@n
+gift@贈り物・才能@gift for music@音楽の才能@0@n
+sorrow@悲しみ@chain of sorrow@悲しみの連鎖@0@n
+via@〜を経由して@via NewYork@ニューヨーク経由で@0@p
+extremely@非常に@extremely@極端に@0@av
+temporary@一時的に@temporary unavailable@一時的に利用できない@0@ad
+struggle@苦戦する・奮闘する@struggle to do@〜に苦戦している@0@v
+cancer@がん・癌@lung cancer@肺がん@0@n
+reputation@名声・評判@regain the reputation@名声を取り戻す@0@n
+feed@養う・食事をする@feed children@子供を養う@0@v
+glory@栄光@glory@栄光@0@n
+classic@古典の・昔からの・傑作@classic literature@古典文学@0@n
+abandon@捨てる・やめる@abandon a friend@友達を見捨てる@0@v
+replace@交換する@replace A with B@AをBに変える@0@v
+recall@思い出す・呼び戻す@recall memories@記憶を呼び覚ます@0@v
+burst@爆発する・急増する@burst into tears@突然泣き出す@0@v
+invite@招く・招待する@invite tragedies@悲劇を招く@0@v
+settle@住み着く・解決する@be settled in A@Aに住んでしばらくたつ@0@v
+respect@尊敬する・尊重する@respect my teacher@私の先生を尊敬している@0@v
+coal@石炭@coal@石炭@0@n
+crop@作物・収穫高@good crops@豊作@0@n
+transport@輸送する・乗り物・運搬@transport@輸送期間@0@v
+trade@貿易・職業・取引@free trade@自由貿易@0@n
+shelf@棚@bookshelf@本棚@0@n
+supply@供給する・必需品@supply A foods@Aに食べ物をあげる@0@v
+protest@抗議する・主張する@protest A's opinion@Aの意見に反対する@0@v
+illustrate@説明する・絵をかく@illustrate A's idea@Aの考えを説明する@0@v
+emission@排出（量）@emission of gas@ガスの排出量@0@n
+fuel@燃料@fuel@燃料@0@n
+greenhouse@温室・温室効果の@greenhouse gases@温室効果ガス@0@n
+pump@汲みあげる・排出する@pump gases@ガスを排出する@0@v
+weight@重量・重要さ@weight of the problem@問題の重要性@0@n
+vast@広大な・膨大な@vast land@広大な土地@0@n
+distant@遠い・態度が冷たい@distant memory@遠い昔の記憶@0@n
+wonder@〜だろうか・驚く@wonder why~@なぜ〜なんだろうか@0@v
+tackle@取り組む・捕まえる・タックル@tackle@タックルする@0@v
+entirely@全く・完全に@not entirely@全く〜しないわけではない@0@av
+indect@感染させる@infeced with flu@インフルエンザに感染する@0@v
+despite@〜にもかかわらず@despite the heavy sick@重病にもかかわらず@0@p
+beyond@〜を越えて@beyond the wall@壁を越えて@0@p
+fundamental@基本的な@fundamental rights@基本的権利@0@a
+since@〜以来@since that day@あの日以来@0@p
+relative@〜に関係のある@relative to you@あなたに関係がある@0@a
+
+
+

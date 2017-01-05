@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1924974B1E1E83AB00E032B9 /* Jpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924974A1E1E83AB00E032B9 /* Jpn.swift */; };
+		1924974D1E1E98F600E032B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924974C1E1E98F600E032B9 /* AppDelegate.swift */; };
+		1924974E1E1E994D00E032B9 /* CardTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1F1E1E82AB008B0D9F /* CardTango.swift */; };
+		19C23A091E1E8077008B0D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A071E1E8077008B0D9F /* Main.storyboard */; };
+		19C23A0B1E1E8077008B0D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A0A1E1E8077008B0D9F /* Assets.xcassets */; };
+		19C23A0E1E1E8077008B0D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */; };
+		19C23A581E1E82AB008B0D9F /* AutoFadeTangp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */; };
+		19C23A591E1E82AB008B0D9F /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */; };
+		19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */; };
+		19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */; };
+		19C23A601E1E82AB008B0D9F /* dangoEngStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */; };
+		19C23A611E1E82AB008B0D9F /* dangoStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A251E1E82AB008B0D9F /* dangoStory.txt */; };
+		19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A281E1E82AB008B0D9F /* GlobalList.swift */; };
+		19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */; };
+		19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */; };
+		19C23A6B1E1E82AB008B0D9F /* JpnEngImgTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */; };
+		19C23A6F1E1E82AB008B0D9F /* AutoFadeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */; };
+		19C23A701E1E82AB008B0D9F /* CardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A341E1E82AB008B0D9F /* CardVC.swift */; };
+		19C23A711E1E82AB008B0D9F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A351E1E82AB008B0D9F /* HomeVC.swift */; };
+		19C23A721E1E82AB008B0D9F /* NewImageReibun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */; };
+		19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A371E1E82AB008B0D9F /* ListVC.swift */; };
+		19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A381E1E82AB008B0D9F /* NigateListVC.swift */; };
+		19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A391E1E82AB008B0D9F /* NovelVC.swift */; };
+		19C23A761E1E82AB008B0D9F /* ProblemResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */; };
+		19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */; };
+		19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */; };
+		19C23A831E1E82AB008B0D9F /* tangoData2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A481E1E82AB008B0D9F /* tangoData2.txt */; };
+		19C23A841E1E82AB008B0D9F /* tangoTest0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A491E1E82AB008B0D9F /* tangoTest0.txt */; };
+		19C23A851E1E82AB008B0D9F /* tangoTest1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A4A1E1E82AB008B0D9F /* tangoTest1.txt */; };
+		19C23A861E1E82AB008B0D9F /* tangoTest2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A4B1E1E82AB008B0D9F /* tangoTest2.txt */; };
+		19C23A871E1E82AB008B0D9F /* tangoTest3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A4C1E1E82AB008B0D9F /* tangoTest3.txt */; };
+		19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A4F1E1E82AB008B0D9F /* ListCell.swift */; };
+		19C23A8C1E1E82AB008B0D9F /* wrong_test_for_0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A511E1E82AB008B0D9F /* wrong_test_for_0.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1924974A1E1E83AB00E032B9 /* Jpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jpn.swift; sourceTree = "<group>"; };
+		1924974C1E1E98F600E032B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19C23A001E1E8077008B0D9F /* tangoMaster2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tangoMaster2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C23A081E1E8077008B0D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19C23A0A1E1E8077008B0D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19C23A0D1E1E8077008B0D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19C23A0F1E1E8077008B0D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C23A151E1E82AA008B0D9F /* tangoMaster2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tangoMaster2-Bridging-Header.h"; sourceTree = "<group>"; };
+		19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoFadeTangp.swift; sourceTree = "<group>"; };
+		19C23A1C1E1E82AB008B0D9F /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
+		19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
+		19C23A1F1E1E82AB008B0D9F /* CardTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTango.swift; sourceTree = "<group>"; };
+		19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectCell.swift; sourceTree = "<group>"; };
+		19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectVC.swift; sourceTree = "<group>"; };
+		19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dangoEngStory.txt; sourceTree = "<group>"; };
+		19C23A251E1E82AB008B0D9F /* dangoStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dangoStory.txt; sourceTree = "<group>"; };
+		19C23A281E1E82AB008B0D9F /* GlobalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalList.swift; sourceTree = "<group>"; };
+		19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSelectCell.swift; sourceTree = "<group>"; };
+		19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReibunTango.swift; sourceTree = "<group>"; };
+		19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnEngImgTango.swift; sourceTree = "<group>"; };
+		19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoFadeVC.swift; sourceTree = "<group>"; };
+		19C23A341E1E82AB008B0D9F /* CardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardVC.swift; sourceTree = "<group>"; };
+		19C23A351E1E82AB008B0D9F /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImageReibun.swift; sourceTree = "<group>"; };
+		19C23A371E1E82AB008B0D9F /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		19C23A381E1E82AB008B0D9F /* NigateListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListVC.swift; sourceTree = "<group>"; };
+		19C23A391E1E82AB008B0D9F /* NovelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelVC.swift; sourceTree = "<group>"; };
+		19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemResultVC.swift; sourceTree = "<group>"; };
+		19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemVC.swift; sourceTree = "<group>"; };
+		19C23A3E1E1E82AB008B0D9F /* NSCharacterSet_empyt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_empyt.h; sourceTree = "<group>"; };
+		19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySelectVC.swift; sourceTree = "<group>"; };
+		19C23A481E1E82AB008B0D9F /* tangoData2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoData2.txt; sourceTree = "<group>"; };
+		19C23A491E1E82AB008B0D9F /* tangoTest0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoTest0.txt; sourceTree = "<group>"; };
+		19C23A4A1E1E82AB008B0D9F /* tangoTest1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoTest1.txt; sourceTree = "<group>"; };
+		19C23A4B1E1E82AB008B0D9F /* tangoTest2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoTest2.txt; sourceTree = "<group>"; };
+		19C23A4C1E1E82AB008B0D9F /* tangoTest3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoTest3.txt; sourceTree = "<group>"; };
+		19C23A4F1E1E82AB008B0D9F /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		19C23A511E1E82AB008B0D9F /* wrong_test_for_0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wrong_test_for_0.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19C239FD1E1E8077008B0D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C239F71E1E8077008B0D9F = {
+			isa = PBXGroup;
+			children = (
+				19C23A021E1E8077008B0D9F /* tangoMaster2 */,
+				19C23A011E1E8077008B0D9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19C23A011E1E8077008B0D9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19C23A001E1E8077008B0D9F /* tangoMaster2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19C23A021E1E8077008B0D9F /* tangoMaster2 */ = {
+			isa = PBXGroup;
+			children = (
+				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
+				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
+				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
+				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
+				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
+				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
+				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
+				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
+				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
+				19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */,
+				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
+				19C23A071E1E8077008B0D9F /* Main.storyboard */,
+				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
+				19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */,
+				19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */,
+				19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */,
+				19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */,
+				19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */,
+				1924974A1E1E83AB00E032B9 /* Jpn.swift */,
+				19C23A1F1E1E82AB008B0D9F /* CardTango.swift */,
+				19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */,
+				19C23A281E1E82AB008B0D9F /* GlobalList.swift */,
+				19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */,
+				19C23A1C1E1E82AB008B0D9F /* CALayer+XibConfiguration.h */,
+				19C23A3E1E1E82AB008B0D9F /* NSCharacterSet_empyt.h */,
+				19C23A151E1E82AA008B0D9F /* tangoMaster2-Bridging-Header.h */,
+				19C23A481E1E82AB008B0D9F /* tangoData2.txt */,
+				19C23A491E1E82AB008B0D9F /* tangoTest0.txt */,
+				19C23A4A1E1E82AB008B0D9F /* tangoTest1.txt */,
+				19C23A4B1E1E82AB008B0D9F /* tangoTest2.txt */,
+				19C23A4C1E1E82AB008B0D9F /* tangoTest3.txt */,
+				19C23A511E1E82AB008B0D9F /* wrong_test_for_0.txt */,
+				19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */,
+				19C23A251E1E82AB008B0D9F /* dangoStory.txt */,
+				19C23A0F1E1E8077008B0D9F /* Info.plist */,
+				19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */,
+				19C23A0A1E1E8077008B0D9F /* Assets.xcassets */,
+			);
+			path = tangoMaster2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19C239FF1E1E8077008B0D9F /* tangoMaster2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19C23A121E1E8077008B0D9F /* Build configuration list for PBXNativeTarget "tangoMaster2" */;
+			buildPhases = (
+				19C239FC1E1E8077008B0D9F /* Sources */,
+				19C239FD1E1E8077008B0D9F /* Frameworks */,
+				19C239FE1E1E8077008B0D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tangoMaster2;
+			productName = tangoMaster2;
+			productReference = 19C23A001E1E8077008B0D9F /* tangoMaster2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19C239F81E1E8077008B0D9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Tetsu;
+				TargetAttributes = {
+					19C239FF1E1E8077008B0D9F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9Q76QMRKQ2;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 19C239FB1E1E8077008B0D9F /* Build configuration list for PBXProject "tangoMaster2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19C239F71E1E8077008B0D9F;
+			productRefGroup = 19C23A011E1E8077008B0D9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19C239FF1E1E8077008B0D9F /* tangoMaster2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19C239FE1E1E8077008B0D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C23A831E1E82AB008B0D9F /* tangoData2.txt in Resources */,
+				19C23A8C1E1E82AB008B0D9F /* wrong_test_for_0.txt in Resources */,
+				19C23A841E1E82AB008B0D9F /* tangoTest0.txt in Resources */,
+				19C23A611E1E82AB008B0D9F /* dangoStory.txt in Resources */,
+				19C23A871E1E82AB008B0D9F /* tangoTest3.txt in Resources */,
+				19C23A601E1E82AB008B0D9F /* dangoEngStory.txt in Resources */,
+				19C23A0E1E1E8077008B0D9F /* LaunchScreen.storyboard in Resources */,
+				19C23A851E1E82AB008B0D9F /* tangoTest1.txt in Resources */,
+				19C23A0B1E1E8077008B0D9F /* Assets.xcassets in Resources */,
+				19C23A861E1E82AB008B0D9F /* tangoTest2.txt in Resources */,
+				19C23A091E1E8077008B0D9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19C239FC1E1E8077008B0D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1924974E1E1E994D00E032B9 /* CardTango.swift in Sources */,
+				19C23A761E1E82AB008B0D9F /* ProblemResultVC.swift in Sources */,
+				19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */,
+				19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */,
+				19C23A701E1E82AB008B0D9F /* CardVC.swift in Sources */,
+				19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */,
+				19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */,
+				19C23A591E1E82AB008B0D9F /* CALayer+XibConfiguration.m in Sources */,
+				19C23A6B1E1E82AB008B0D9F /* JpnEngImgTango.swift in Sources */,
+				19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */,
+				19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */,
+				19C23A6F1E1E82AB008B0D9F /* AutoFadeVC.swift in Sources */,
+				19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */,
+				19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */,
+				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,
+				19C23A581E1E82AB008B0D9F /* AutoFadeTangp.swift in Sources */,
+				19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */,
+				19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */,
+				1924974B1E1E83AB00E032B9 /* Jpn.swift in Sources */,
+				19C23A721E1E82AB008B0D9F /* NewImageReibun.swift in Sources */,
+				19C23A711E1E82AB008B0D9F /* HomeVC.swift in Sources */,
+				1924974D1E1E98F600E032B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19C23A071E1E8077008B0D9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19C23A081E1E8077008B0D9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19C23A0D1E1E8077008B0D9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19C23A101E1E8077008B0D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19C23A111E1E8077008B0D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19C23A131E1E8077008B0D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 9Q76QMRKQ2;
+				INFOPLIST_FILE = tangoMaster2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Testu.tangoMaster2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		19C23A141E1E8077008B0D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 9Q76QMRKQ2;
+				INFOPLIST_FILE = tangoMaster2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Testu.tangoMaster2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19C239FB1E1E8077008B0D9F /* Build configuration list for PBXProject "tangoMaster2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C23A101E1E8077008B0D9F /* Debug */,
+				19C23A111E1E8077008B0D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19C23A121E1E8077008B0D9F /* Build configuration list for PBXNativeTarget "tangoMaster2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C23A131E1E8077008B0D9F /* Debug */,
+				19C23A141E1E8077008B0D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19C239F81E1E8077008B0D9F /* Project object */;
+}
