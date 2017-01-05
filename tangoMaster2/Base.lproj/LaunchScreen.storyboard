@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,22 +20,35 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="基礎英単語" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8O-ww-lcb">
-                                <rect key="frame" x="61" y="135" width="258" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基礎英単語" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8O-ww-lcb">
+                                <rect key="frame" x="30" y="132" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k8O-ww-lcb" secondAttribute="height" multiplier="26:5" id="Wfm-14-R0u"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tomato_b" translatesAutoresizingMaskIntoConstraints="NO" id="dO5-Ho-jT1">
-                                <rect key="frame" x="67" y="242" width="240" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tomato_b" translatesAutoresizingMaskIntoConstraints="NO" id="dO5-Ho-jT1">
+                                <rect key="frame" x="40" y="238" width="240" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dO5-Ho-jT1" secondAttribute="height" multiplier="240:181" id="VK1-JV-GYL"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.01694810591" green="0.81944219559999998" blue="0.32402480239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="dO5-Ho-jT1" secondAttribute="bottom" constant="149" id="3CC-3R-fx7"/>
+                            <constraint firstItem="dO5-Ho-jT1" firstAttribute="top" secondItem="k8O-ww-lcb" secondAttribute="bottom" constant="56" id="4Mo-kV-27v"/>
+                            <constraint firstItem="dO5-Ho-jT1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DMb-hD-Gvq"/>
+                            <constraint firstItem="k8O-ww-lcb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="14" id="KxF-Ea-0AP"/>
+                            <constraint firstItem="dO5-Ho-jT1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="24" id="dvf-gQ-cPD"/>
+                            <constraint firstItem="k8O-ww-lcb" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="112" id="n45-QX-PYP"/>
+                            <constraint firstItem="k8O-ww-lcb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rvK-du-dGB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
