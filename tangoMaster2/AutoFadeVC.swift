@@ -163,7 +163,7 @@ class AutoFadeVC: UIViewController {
     func stopOrPlay(){
         if(timer.isValid){
             flag = false
-            stopOrPlayButton.setTitle("停止中", for: .normal)
+            stopOrPlayButton.setTitle("一時停止", for: .normal)
             //self.tangoImage.layer.removeAllAnimations()
             self.engLabel.layer.removeAllAnimations()
             self.jpnLabel.layer.removeAllAnimations()
@@ -171,7 +171,7 @@ class AutoFadeVC: UIViewController {
         }
         else{
             flag = true
-            stopOrPlayButton.setTitle("再生中", for: .normal)
+            stopOrPlayButton.setTitle("再生", for: .normal)
             timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
             timer.fire()
             
@@ -358,16 +358,16 @@ class AutoFadeVC: UIViewController {
         
         categoryLabel.text = sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
         
-        stopOrPlayButton.setTitle("再生中", for: .normal)
+        stopOrPlayButton.setTitle("再生", for: .normal)
         stopOrPlayButton.addTarget(self, action: #selector(stopOrPlay), for: .touchUpInside)
     }
     
     func reverse(){
         self.direction *= -1
         if self.direction == -1{
-            reverseButton.setTitle("逆再生中", for: .normal)
+            reverseButton.setTitle("逆再生に", for: .normal)
         }else{
-            reverseButton.setTitle("順再生中", for: .normal)
+            reverseButton.setTitle("順再生に", for: .normal)
         }
     }
     
