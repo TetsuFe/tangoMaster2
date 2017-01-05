@@ -768,7 +768,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jk3-cf-UvM" secondAttribute="height" multiplier="107:30" id="t2D-H7-USX"/>
                                 </constraints>
-                                <state key="normal" title="順再生中"/>
+                                <state key="normal" title="逆再生に"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初級1000 - chap10-10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-bT-gJI">
                                 <rect key="frame" x="51" y="59" width="218" height="27"/>
