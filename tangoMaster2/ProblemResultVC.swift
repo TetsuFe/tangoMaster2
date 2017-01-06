@@ -31,63 +31,8 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var storyButton: UIButton!
     
-    func goNext(){
-        if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1 ){
-            appDelegate.chapterNumber += 1
-            goNext()
-        }
-    }
     
-    func retryProblem(){
-        goProblem()
-    }
-    
-    func goProblem(){
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
-        // Viewの移動する.
-        UIApplication.shared.keyWindow?.rootViewController = secondViewController
-        //こちらはエラーwhose view is not in window hierarky
-        //   self.present(secondViewController, animated: true, completion: nil)
-    }
-    
-    func backToSelect(){
-        
-        // ① UIAlertControllerクラスのインスタンスを生成
-        // タイトル, メッセージ, Alertのスタイルを指定する
-        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
-        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "問題選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
-        
-        // ② Actionの設定
-        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
-        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
-        // OKボタン
-        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
-            (action: UIAlertAction!) -> Void in
-            print("OK")
-            let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier:"categorySelect") as! CategorySelectVC
-            // アニメーションを設定する.
-            //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            // 値渡ししたい時 hoge -> piyo
-            //secondViewController.piyo = self.hoge
-            // Viewの移動する.
-            self.present(secondViewController, animated: true, completion: nil)
-            
-        })
-        // キャンセルボタン
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
-            (action: UIAlertAction!) -> Void in
-            print("Cancel")
-        })
-        
-        // ③ UIAlertControllerにActionを追加
-        alert.addAction(cancelAction)
-        alert.addAction(defaultAction)
-        
-        // ④ Alertを表示
-        present(alert, animated: true, completion: nil)
-    }
+  
     
     var tangoNumber = 0
     
@@ -192,6 +137,64 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             //if indexPath.section == 1 {
             return correctCell[indexPath.row]
         }
+    }
+    
+    func goProblem(){
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
+        // Viewの移動する.
+        UIApplication.shared.keyWindow?.rootViewController = secondViewController
+        //こちらはエラーwhose view is not in window hierarky
+        //   self.present(secondViewController, animated: true, completion: nil)
+    }
+    
+    func goNext(){
+        if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1 ){
+            appDelegate.chapterNumber += 1
+            goNext()
+        }
+    }
+    
+    func retryProblem(){
+        goProblem()
+    }
+    
+    func backToSelect(){
+        
+        // ① UIAlertControllerクラスのインスタンスを生成
+        // タイトル, メッセージ, Alertのスタイルを指定する
+        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
+        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "問題選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        
+        // ② Actionの設定
+        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
+        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
+        // OKボタン
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+            let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier:"categorySelect") as! CategorySelectVC
+            // アニメーションを設定する.
+            //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+            // 値渡ししたい時 hoge -> piyo
+            //secondViewController.piyo = self.hoge
+            // Viewの移動する.
+            self.present(secondViewController, animated: true, completion: nil)
+            
+        })
+        // キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("Cancel")
+        })
+        
+        // ③ UIAlertControllerにActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        // ④ Alertを表示
+        present(alert, animated: true, completion: nil)
     }
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate

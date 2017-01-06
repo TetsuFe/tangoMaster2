@@ -78,7 +78,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     var fileNameCells = Array<Array<CategorySelectCell>>()
     var chapterNameCells = Array<Array<CategorySelectCell>>()
     
-    func tableView(_ tableView : UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
+    func tableView(_ tableView : UITableView,cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         
         //var cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
             //cell.setCell(chapterNames[appDelegate.problemCategory][indexPath.row])
@@ -91,14 +91,16 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 cell.setCell(chapterNames[appDelegate.problemCategory][indexPath.row])
             }
         }else{
+            if appDelegate.sceneTag == 1{
+                if indexPath.row > newChapterNumber{
+                    cell.backgroundColor = UIColor.darkGray
+                }
+            }
             cell.setCell(fileNames[appDelegate.problemCategory][indexPath.row])
         }
         return cell
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     //セクションの数を返す.
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -132,13 +134,105 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 depth = true
             }
         }else if depth == true{
-            appDelegate.sectionNumber = indexPath.row
-            goScene()
-            //categorySelectTable.reloadData()
+            if appDelegate.sceneTag == 1{
+                //問題の場合のみ、クリアしていない単語を解けないようにする
+                if indexPath.row <= newChapterNumber{
+                    appDelegate.sectionNumber = indexPath.row
+                    goScene()
+                    //categorySelectTable.reloadData()
+                }
+            }else{
+                appDelegate.sectionNumber = indexPath.row
+                goScene()
+            }
         } else {
            print("error")
         }
     }
+    
+    func categoryChange(_ category:Int){
+        begButton.backgroundColor = UIColor.gray
+        midButton.backgroundColor = UIColor.gray
+        highButton.backgroundColor = UIColor.gray
+        toeicButton.backgroundColor = UIColor.gray
+        if category == 0{
+            begButton.backgroundColor = UIColor.blue
+        }else if category == 1{
+            midButton.backgroundColor = UIColor.blue
+        }else if category == 2{
+            highButton.backgroundColor = UIColor.blue
+        }else if category == 3{
+            toeicButton.backgroundColor = UIColor.blue
+        }
+        appDelegate.problemCategory = category
+        //下のappendをするために前の分を消去
+        cells = Array<CategorySelectCell>()
+        for i in 0..<chapterNames[appDelegate.problemCategory].count{
+            cells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
+            cells[i].setCell(chapterNames[appDelegate.problemCategory][i])
+        }
+        categorySelectTable.reloadData()
+    }
+    
+    func toBeg(){
+        categoryChange(0)
+    }
+    func toMid(){
+        categoryChange(1)
+    }
+    func toHigh(){
+        categoryChange(2)
+    }
+    func toToeic(){
+        categoryChange(3)
+    }
+    
+    func GoNew(){
+        //全部を読み込む
+        appDelegate.modeTag = 0
+        goScene()
+    }
+    
+    func GoReview(){
+        //苦手だけを読み込む
+        appDelegate.modeTag = 1
+        goScene()
+    }
+    
+    func GoFullReivew(){
+        //各カテゴリの苦手をテスト
+        if(appDelegate.sceneTag == 2){
+            appDelegate.modeTag = 2
+            goScene()
+        }
+    }
+    
+    func goScene(){
+        print(appDelegate.sceneTag)
+        var secondViewController = UIViewController()
+        if  appDelegate.sceneTag == 0{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newList") as!  ListVC
+        }else if  appDelegate.sceneTag == 1{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
+        }else if appDelegate.sceneTag == 2{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCard") as!  CardVC
+        }else if  appDelegate.sceneTag == 3{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as!  NigateListVC
+        }else if appDelegate.sceneTag == 4{
+            //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as!  StorySelectVC
+        }
+        
+        // Viewの移動する.
+        //UIApplication.shared.keyWindow?.rootViewController = secondViewController
+        //こちらはエラーwhose view is not in window hierarky
+        self.present(secondViewController, animated: true, completion: nil)
+    }
+    
+    var nigateTangoVolumeArray = Array<Int>()
+    var newChapterNumber = Int()
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    //var greenColor:CGColor? = nil
 
     var listForTable = Array<Array<String>>()
     var cells = Array<CategorySelectCell>()
@@ -181,88 +275,9 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
     }
     
-    func categoryChange(_ category:Int){
-        begButton.backgroundColor = UIColor.gray
-        midButton.backgroundColor = UIColor.gray
-        highButton.backgroundColor = UIColor.gray
-        toeicButton.backgroundColor = UIColor.gray
-        if category == 0{
-            begButton.backgroundColor = UIColor.blue
-        }else if category == 1{
-            midButton.backgroundColor = UIColor.blue
-        }else if category == 2{
-            highButton.backgroundColor = UIColor.blue
-        }else if category == 3{
-            toeicButton.backgroundColor = UIColor.blue
-        }
-        appDelegate.problemCategory = category
-        //下のappendをするために前の分を消去
-        cells = Array<CategorySelectCell>()
-        for i in 0..<chapterNames[appDelegate.problemCategory].count{
-            cells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
-            cells[i].setCell(chapterNames[appDelegate.problemCategory][i])
-        }
-        categorySelectTable.reloadData()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    
-    func toBeg(){
-        categoryChange(0)
-    }
-    func toMid(){
-        categoryChange(1)
-    }
-    func toHigh(){
-        categoryChange(2)
-    }
-    func toToeic(){
-        categoryChange(3)
-    }
- 
-    func GoNew(){
-        //全部を読み込む
-        appDelegate.modeTag = 0
-        goScene()
-    }
-    
-    func GoReview(){
-        //苦手だけを読み込む
-        appDelegate.modeTag = 1
-        goScene()
-    }
-    
-    func GoFullReivew(){
-        //各カテゴリの苦手をテスト
-        if(appDelegate.sceneTag == 2){
-            appDelegate.modeTag = 2
-            goScene()
-        }
-    }
-    
-    func goScene(){
-        print(appDelegate.sceneTag)
-        var secondViewController = UIViewController()
-        if  appDelegate.sceneTag == 0{
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newList") as!  ListVC
-        }else if  appDelegate.sceneTag == 1{
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
-        }else if appDelegate.sceneTag == 2{
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCard") as!  CardVC
-        }else if  appDelegate.sceneTag == 3{
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as!  NigateListVC
-        }else if appDelegate.sceneTag == 4{
-            //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as!  StorySelectVC
-        }
 
-        // Viewの移動する.
-        //UIApplication.shared.keyWindow?.rootViewController = secondViewController
-        //こちらはエラーwhose view is not in window hierarky
-        self.present(secondViewController, animated: true, completion: nil)
-    }
-    
-    var nigateTangoVolumeArray = Array<Int>()
-    var newChapterNumber = Int()
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-  
-    var greenColor:CGColor? = nil
     
 }
