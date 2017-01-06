@@ -51,7 +51,7 @@ class AutoFadeVC: UIViewController {
                 }
             }
         }
-        if self.count == sortedImageReibunArray.count-1 &&  sortedImageReibunArray.count != 1{
+        if self.count == sortedImageReibunArray.count-1 && sortedImageReibunArray.count != 1{
             self.count -= 1
             changeFile()
         }
@@ -85,6 +85,8 @@ class AutoFadeVC: UIViewController {
         }
         changeCategoryLabel()
     }
+    
+    
     func changeCategoryLabel(){
         categoryLabel.text = sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
     }

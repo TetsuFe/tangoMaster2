@@ -15,7 +15,7 @@
         <!--Problem ResultVC-->
         <scene sceneID="5vV-7G-9Dr">
             <objects>
-                <viewController storyboardIdentifier="newProblemResult" id="yEQ-wH-WXn" customClass="ProblemResultVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newProblemResult" id="yEQ-wH-WXn" customClass="ProblemResultVC" customModule="tangoMaster2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OHp-HC-uiw"/>
                         <viewControllerLayoutGuide type="bottom" id="NV4-Vl-U2n"/>
@@ -140,7 +140,7 @@
                                     <constraint firstAttribute="width" secondItem="syV-5H-Slj" secondAttribute="height" multiplier="320:239" id="hQc-Fm-hrx"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="List]Cell" rowHeight="79" id="rIA-GW-dkG" customClass="ListCell" customModule="tangoMaster2" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="79" id="rIA-GW-dkG" customClass="ListCell" customModule="tangoMaster2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rIA-GW-dkG" id="0Vo-q4-xOX">
@@ -1173,7 +1173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFH-Yi-M0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4399" y="-1047"/>
+            <point key="canvasLocation" x="-4153" y="-1050"/>
         </scene>
         <!--Story SelectVC-->
         <scene sceneID="O00-7j-vKc">
@@ -1589,7 +1589,7 @@
         <image name="un_nigate" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D68-c6-ptc"/>
-        <segue reference="dnN-G8-y3w"/>
+        <segue reference="5Yf-jX-BTs"/>
+        <segue reference="vOY-ZE-hQI"/>
     </inferredMetricsTieBreakers>
 </document>

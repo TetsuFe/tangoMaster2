@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //status bar's color is while
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -397,8 +397,6 @@ class NewProblemResultVC: UIViewController, UITableViewDelegate, UITableViewData
         }
  */
         //correctlistForTable = getArrayETFromList(list: correctlist)
-        
-        
         
         for r in 0..<correctArray.count/6{
             print("correct")

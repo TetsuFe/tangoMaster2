@@ -80,7 +80,7 @@ class ProblemVC: UIViewController {
             (action: UIAlertAction!) -> Void in
             print("OK")
             self.setResult(self.list)
-            let secondViewController: NewProblemResultVC = self.storyboard?.instantiateViewController(withIdentifier: "newProblemResult") as! NewProblemResultVC
+            let secondViewController: ProblemResultVC = self.storyboard?.instantiateViewController(withIdentifier: "newProblemResult") as! ProblemResultVC
             // アニメーションを設定する.
             //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
             // 値渡ししたい時 hoge -> piyo
