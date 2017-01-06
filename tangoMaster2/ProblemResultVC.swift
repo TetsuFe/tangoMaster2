@@ -31,16 +31,18 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var storyButton: UIButton!
     
-    func goNew(){
+    func goNext(){
         if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1 ){
             appDelegate.chapterNumber += 1
             goNext()
         }
     }
     
-    func goNext(){
-        //appDelegate.problemCategory =
-        //appDelegate.chapterNumber
+    func retryProblem(){
+        goProblem()
+    }
+    
+    func goProblem(){
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
         // Viewの移動する.
         UIApplication.shared.keyWindow?.rootViewController = secondViewController
@@ -85,10 +87,6 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // ④ Alertを表示
         present(alert, animated: true, completion: nil)
-        
-        // alertOnSubmitView.frame.width = self.view.frame.width/3
-        // alertOnSubmitView.frame.height = self.view.frame.height/3
-        
     }
     
     var tangoNumber = 0
@@ -96,31 +94,9 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var gtangoRow:Int = 0
     var gtangoColumn:Int = 0
     var wrongList = Array<NewImageReibun>()
-    //var list2 = Array<Array<NewImageReibun>>(repeating: [],count: 26)
     var correctList = Array<NewImageReibun>()
     
-    //var listForTable : Array<NewImageReibun> = []
-    //var correctlistForTable : Array<NewImageReibun> = []
-    /*
-    func getArrayETFromList(list:Array<Array<NewImageReibun>>)->Array<NewImageReibun>{
-        var tempList : Array<NewImageReibun> = []
-        for i in 0..<26{
-            for j in 0..<list[i].count{
-                tempList.append(list[i][j])
-            }
-        }
-        return tempList
-    }
-    
-    func addListJpnEngImageReibun(list:Array<Array<NewImageReibun>>,eng:String,jpn:String,imgPath:String,engReibun:String,jpnReibun:String,nigateFlag:String,partsOfSpeech:String,soundPath:String)->Array<NewImageReibun>{
-        print(eng)
-        let hash = getHashNum(eng)
-        var newList = list[hash]
-        newList.append(NewImageReibun(eng: eng,jpn: jpn,engReibun:engReibun,jpnReibun:jpnReibun,nigateFlag:nigateFlag))
-        return newList
-    }
-    */
-    func getWordArrayFromString(str:String)->Array<String>{
+     func getWordArrayFromString(str:String)->Array<String>{
         var wordArray = Array<String>()
         wordArray.append("")
         var j:Int = 0
@@ -422,13 +398,15 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         storyButton.layer.borderWidth = 0
         storyButton.layer.cornerRadius = 10
 
+        retryButton.addTarget(self, action: #selector
+            (retryProblem), for: .touchUpInside)
         
         backSerectButton.addTarget(self, action: #selector
             (backToSelect), for: .touchUpInside)
         
         //ボタンをタップした時に実行するメソッドを指定
         goNextProblem.addTarget(self, action: #selector
-            (goNew), for: .touchUpInside)
+            (goNext), for: .touchUpInside)
         if(appDelegate.chapterNumber >= testFileNamesArray[appDelegate.problemCategory].count-1 ){
             print(appDelegate.chapterNumber)
             print(testFileNamesArray[appDelegate.problemCategory].count-1)

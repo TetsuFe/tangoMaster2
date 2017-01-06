@@ -115,12 +115,12 @@
 			children = (
 				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
 				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
+				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
 				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
 				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
 				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
 				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
 				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
-				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
 				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
 				19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */,
 				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
