@@ -19,6 +19,8 @@ class AutoFadeVC: UIViewController {
     
     @IBOutlet weak var reverseButton: UIButton!
     
+    @IBOutlet weak var progress: UILabel!
+    
     var fileName = String()
     var tango = Array<String>()
     
@@ -221,12 +223,20 @@ class AutoFadeVC: UIViewController {
     var direction:Int = 1
     
     func update() {
-        if(self.count < sortedImageReibunArray.count-1){
-            self.count += self.direction
-            self.engLabel.text = self.sortedImageReibunArray[self.count].eng!
-            self.jpnLabel.text = self.sortedImageReibunArray[self.count].jpn!
-            //self.tangoImage.image = UIImage(named:self.sortedImageReibunArray[self.count].imgPath!)
+        if self.direction == 1{
+            //順再生のとき
+            if(self.count < sortedImageReibunArray.count-1){
+                self.count += self.direction
+            }
+        }else{
+            //逆再生のとき。out of rangeに注意
+            if(self.count > 0){
+                self.count += self.direction
+            }
         }
+        self.engLabel.text = self.sortedImageReibunArray[self.count].eng!
+        self.jpnLabel.text = self.sortedImageReibunArray[self.count].jpn!
+        progress.text = String(count+1) + "/" + String(sortedImageReibunArray.count)
         
         UIView.animate(
             withDuration: fudeDuration,
@@ -358,16 +368,16 @@ class AutoFadeVC: UIViewController {
         
         categoryLabel.text = sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
         
-        stopOrPlayButton.setTitle("再生", for: .normal)
+        //stopOrPlayButton.setTitle("再生", for: .normal)
         stopOrPlayButton.addTarget(self, action: #selector(stopOrPlay), for: .touchUpInside)
     }
     
     func reverse(){
         self.direction *= -1
         if self.direction == -1{
-            reverseButton.setTitle("逆再生に", for: .normal)
-        }else{
             reverseButton.setTitle("順再生に", for: .normal)
+        }else{
+            reverseButton.setTitle("逆再生に", for: .normal)
         }
     }
     
