@@ -534,9 +534,6 @@
                                 <state key="normal" title="再生">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="goAutoFade:" destination="b0d-cQ-iGI" eventType="touchUpInside" id="4oS-oa-iD3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3b-MM-gRI">
                                 <rect key="frame" x="256" y="64" width="64" height="44"/>
@@ -547,9 +544,6 @@
                                 <state key="normal" title="テスト">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="goTest:" destination="b0d-cQ-iGI" eventType="touchUpInside" id="vOW-3p-PdV"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0K0-Gu-h57">
                                 <rect key="frame" x="0.0" y="64" width="64" height="44"/>
@@ -560,9 +554,6 @@
                                 <state key="normal" title="カード">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="goCard:" destination="b0d-cQ-iGI" eventType="touchUpInside" id="hpp-D9-PRP"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苦手リスト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYA-0t-YZ7">
                                 <rect key="frame" x="116" y="36" width="88" height="20"/>
@@ -709,6 +700,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goAutoFadeButton" destination="U1U-Ev-6Cv" id="IfR-iu-aEo"/>
+                        <outlet property="goCardButton" destination="0K0-Gu-h57" id="SM8-Vm-P47"/>
+                        <outlet property="goTestButton" destination="K3b-MM-gRI" id="xWo-fL-9lG"/>
                         <outlet property="imageTableView" destination="3Px-9Q-bnk" id="TBt-j2-GaF"/>
                     </connections>
                 </viewController>
@@ -1590,6 +1584,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Yf-jX-BTs"/>
-        <segue reference="vOY-ZE-hQI"/>
+        <segue reference="MeD-Zl-Ofu"/>
     </inferredMetricsTieBreakers>
 </document>

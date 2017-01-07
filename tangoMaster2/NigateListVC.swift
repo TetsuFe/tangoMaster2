@@ -14,20 +14,27 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+
     
-    @IBAction func goCard(_ sender: Any) {
+    @IBOutlet weak var goCardButton: UIButton!
+    
+    @IBOutlet weak var goAutoFadeButton: UIButton!
+
+    @IBOutlet weak var goTestButton: UIButton!
+    
+    func goCard() {
         changeModeToNigate()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCard") as!  CardVC
          self.present(secondViewController, animated: true, completion: nil)
     }
     
-    @IBAction func goAutoFade(_ sender: Any) {
+    func goAutoFade() {
         changeModeToNigate()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newAutoFade") as!  AutoFadeVC
         self.present(secondViewController, animated: true, completion: nil)
     }
     
-    @IBAction func goTest(_ sender: Any) {
+    func goTest() {
         changeModeToNigate()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
         self.present(secondViewController, animated: true, completion: nil)
@@ -108,21 +115,32 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
             var listForTable : Array<NewImageReibun> = []
             cellsArray.append([])
             //先ずは苦手リストが作成されているか確認する
+            
             tango = getfile(fileName:fileName)
-            
-            for r in 0..<tango.count/6{
-                listForTable.append(NewImageReibun(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5]))
+            if tango.count != 0{
+                for r in 0..<tango.count/6{
+                    listForTable.append(NewImageReibun(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5]))
+                }
+                
+                for r in 0..<tango.count/6{
+                    cellsArray[cIndex].append(imageTableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
+                    )
+                    cellsArray[cIndex][r].setCell(listForTable[r])
+                }
+                cIndex += 1
             }
-            
-            for r in 0..<tango.count/6{
-                cellsArray[cIndex].append(imageTableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
-                )
-                cellsArray[cIndex][r].setCell(listForTable[r])
-            }
-            cIndex += 1
         }
         imageTableView.dataSource = self
         imageTableView.delegate = self
+        goCardButton.addTarget(self, action:#selector(goCard), for: .touchUpInside)
+        goAutoFadeButton.addTarget(self, action:#selector(goAutoFade), for: .touchUpInside)
+        goTestButton.addTarget(self, action:#selector(goTest), for: .touchUpInside)
+        //苦手が登録されていないときはカード・問題などに行かないようにボタンを無効に
+        if cIndex == 0{
+            goCardButton.isEnabled = false
+            goAutoFadeButton.isEnabled = false
+            goTestButton.isEnabled = false
+        }
     }
     
         
