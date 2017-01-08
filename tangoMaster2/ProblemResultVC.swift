@@ -150,7 +150,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func goNext(){
         if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1 ){
             appDelegate.chapterNumber += 1
-            goNext()
+            goProblem()
         }
     }
     
@@ -410,7 +410,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //ボタンをタップした時に実行するメソッドを指定
         goNextProblem.addTarget(self, action: #selector
             (goNext), for: .touchUpInside)
-        if(appDelegate.chapterNumber >= testFileNamesArray[appDelegate.problemCategory].count-1 ){
+        if(appDelegate.chapterNumber >= testFileNamesArray[appDelegate.problemCategory].count-1){
             print(appDelegate.chapterNumber)
             print(testFileNamesArray[appDelegate.problemCategory].count-1)
             goNextProblem.layer.backgroundColor = UIColor.gray.cgColor
@@ -418,6 +418,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         let newChapterNumber = getNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
+       
         if(newChapterNumber > appDelegate.chapterNumber){
             //次のchapterを調べるので、次があることを確認する
             if(appDelegate.modeTag == 1){
