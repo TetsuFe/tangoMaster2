@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class ProblemVC: UIViewController {
 
     //status bar's color is while
