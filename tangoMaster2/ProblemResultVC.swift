@@ -70,26 +70,26 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //正解率が80パーセント以上で合格。setNewChapterする
         if(100*retryCount/problemVolume == 0){
             comment[0] = "Perfect"
-            comment[1] = "完全クリアだ。さすが我が下僕よ。"
+            comment[1] = ""
             resultImage.image = UIImage(named: "90ten.jpg")
             setNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
         }else if(100*retryCount/problemVolume <= 10 && 100*retryCount/problemVolume > 0){
             comment[0] = "Excellent"
-            comment[1] = "とりあえずクリアだ。気を抜かずまた挑戦だ。"
+            comment[1] = ""
             resultImage.image = UIImage(named: "80ten.jpg")
             setNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
         }else if(100*retryCount/problemVolume <= 20 && 100*retryCount/problemVolume > 10 ){
             comment[0] = "Good"
-            comment[1] = "まあ良い。今日中にまた挑戦せよ。"
+            comment[1] = ""
             resultImage.image = UIImage(named: "70ten.jpg")
             setNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
         }else if(100*retryCount/problemVolume <= 30  && 100*retryCount/problemVolume > 20){
             comment[0] = "Not Bad"
-            comment[1] = "悪くない。だがこれでは魔界を生き抜けぬぞ。"
+            comment[1] = ""
             resultImage.image = UIImage(named: "60ten.jpg")
         }else if(100*retryCount/problemVolume > 30){
             comment[0] = "No Sence"
-            comment[1] = "お主には失望したわ。勉強して出直してこい"
+            comment[1] = ""
             resultImage.image = UIImage(named: "50ten.jpg")
         }
         print("値は\(100*retryCount/problemVolume)")

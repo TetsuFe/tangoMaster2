@@ -144,7 +144,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rIA-GW-dkG" id="0Vo-q4-xOX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜にもかかわらず" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccz-vu-Q7j">
@@ -166,7 +166,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テストに遅刻する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0x-J3-jZl">
-                                                    <rect key="frame" x="121" y="48" width="142" height="24"/>
+                                                    <rect key="frame" x="121" y="48" width="157" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -189,11 +189,11 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ISi-TG-exq" firstAttribute="leading" secondItem="x0x-J3-jZl" secondAttribute="trailing" constant="2" id="4Iq-Mc-v85"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ccz-vu-Q7j" secondAttribute="bottom" constant="-2" id="6C0-jY-Lhc"/>
                                                 <constraint firstItem="tPh-S6-ldC" firstAttribute="leading" secondItem="0Vo-q4-xOX" secondAttribute="leadingMargin" id="82N-ne-Hla"/>
                                                 <constraint firstItem="Ccz-vu-Q7j" firstAttribute="firstBaseline" secondItem="x0x-J3-jZl" secondAttribute="firstBaseline" id="ArQ-qU-Wui"/>
                                                 <constraint firstItem="x0x-J3-jZl" firstAttribute="bottom" secondItem="ISi-TG-exq" secondAttribute="bottom" id="HPc-CN-8KX"/>
-                                                <constraint firstItem="ISi-TG-exq" firstAttribute="leading" secondItem="x0x-J3-jZl" secondAttribute="trailing" constant="17" id="Ho2-Aa-AVL"/>
                                                 <constraint firstItem="tPh-S6-ldC" firstAttribute="baseline" secondItem="tA4-Hv-ZO1" secondAttribute="baseline" id="HtT-qd-paQ"/>
                                                 <constraint firstItem="tA4-Hv-ZO1" firstAttribute="leading" secondItem="x0x-J3-jZl" secondAttribute="leading" id="RO0-eY-wK4"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ISi-TG-exq" secondAttribute="trailing" constant="8" id="byi-8m-TMi"/>
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qe-SB-VhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1314" y="-1049"/>
+            <point key="canvasLocation" x="-1314.375" y="-1050"/>
         </scene>
         <!--NewNovelScene-->
         <scene sceneID="zfS-xU-qS6">
@@ -394,7 +394,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nPP-jq-Sep" id="S2o-a3-7sZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜にもかかわらず" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-9P-o5A">
@@ -416,7 +416,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テストに遅刻する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttZ-5H-svV">
-                                                    <rect key="frame" x="121" y="48" width="142" height="24"/>
+                                                    <rect key="frame" x="121" y="48" width="157" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -451,8 +451,8 @@
                                                 <constraint firstItem="9VI-9P-o5A" firstAttribute="top" secondItem="Kl0-ra-XmN" secondAttribute="bottom" constant="7" id="M84-7b-rEw"/>
                                                 <constraint firstItem="Kl0-ra-XmN" firstAttribute="top" secondItem="S2o-a3-7sZ" secondAttribute="topMargin" constant="-2" id="MDO-Rb-W18"/>
                                                 <constraint firstItem="Kl0-ra-XmN" firstAttribute="baseline" secondItem="Swk-YX-EFb" secondAttribute="baseline" id="VHV-0U-5UD"/>
+                                                <constraint firstItem="V6w-w3-cbL" firstAttribute="leading" secondItem="ttZ-5H-svV" secondAttribute="trailing" constant="2" id="XOI-aJ-nlL"/>
                                                 <constraint firstItem="Swk-YX-EFb" firstAttribute="leading" secondItem="Kl0-ra-XmN" secondAttribute="trailing" constant="8" symbolic="YES" id="kIH-cn-JcJ"/>
-                                                <constraint firstItem="V6w-w3-cbL" firstAttribute="leading" secondItem="ttZ-5H-svV" secondAttribute="trailing" constant="17" id="sip-Q2-j3M"/>
                                                 <constraint firstItem="Kl0-ra-XmN" firstAttribute="leading" secondItem="S2o-a3-7sZ" secondAttribute="leadingMargin" id="xFc-YT-D5o"/>
                                                 <constraint firstItem="Swk-YX-EFb" firstAttribute="leading" secondItem="ttZ-5H-svV" secondAttribute="leading" id="zDQ-x0-1kc"/>
                                                 <constraint firstItem="Kl0-ra-XmN" firstAttribute="leading" secondItem="9VI-9P-o5A" secondAttribute="leading" id="zQj-gG-Spv"/>
@@ -511,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbx-Gt-r6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2248" y="-1780"/>
+            <point key="canvasLocation" x="-2415" y="-1835"/>
         </scene>
         <!--Nigate ListVC-->
         <scene sceneID="bwc-Eg-ZVf">
@@ -598,7 +598,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PFr-KK-ZNz" id="bKq-6z-UEo">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜にもかかわらず" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-bo-nwA">
@@ -620,7 +620,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テストに遅刻する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjq-aa-xTQ">
-                                                    <rect key="frame" x="121" y="48" width="142" height="24"/>
+                                                    <rect key="frame" x="121" y="48" width="157" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -645,10 +645,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="k5H-wK-xAd" secondAttribute="trailing" constant="8" id="0D6-o9-uS2"/>
                                                 <constraint firstItem="8be-LV-nmT" firstAttribute="leading" secondItem="2kh-bo-nwA" secondAttribute="leading" id="1Mm-10-sFa"/>
+                                                <constraint firstItem="k5H-wK-xAd" firstAttribute="leading" secondItem="Vjq-aa-xTQ" secondAttribute="trailing" constant="2" id="1Ot-iw-QGk"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="2kh-bo-nwA" secondAttribute="bottom" constant="-2" id="2Ov-Az-nmb"/>
                                                 <constraint firstItem="2kh-bo-nwA" firstAttribute="firstBaseline" secondItem="Vjq-aa-xTQ" secondAttribute="firstBaseline" id="66W-HP-bsJ"/>
                                                 <constraint firstItem="H65-dn-bIW" firstAttribute="trailing" secondItem="bKq-6z-UEo" secondAttribute="trailingMargin" id="7dh-bQ-uEn"/>
-                                                <constraint firstItem="k5H-wK-xAd" firstAttribute="leading" secondItem="Vjq-aa-xTQ" secondAttribute="trailing" constant="17" id="CWT-l6-08R"/>
                                                 <constraint firstItem="8be-LV-nmT" firstAttribute="baseline" secondItem="H65-dn-bIW" secondAttribute="baseline" id="I3x-Wp-6FN"/>
                                                 <constraint firstItem="H65-dn-bIW" firstAttribute="leading" secondItem="Vjq-aa-xTQ" secondAttribute="leading" id="TAJ-GZ-01U"/>
                                                 <constraint firstItem="2kh-bo-nwA" firstAttribute="top" secondItem="8be-LV-nmT" secondAttribute="bottom" constant="7" id="Tmh-Z1-tz6"/>
@@ -708,7 +708,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pl-2a-HE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2248" y="378"/>
+            <point key="canvasLocation" x="-2248.125" y="377.11267605633805"/>
         </scene>
         <!--Auto FadeVC-->
         <scene sceneID="ez6-wy-pSo">
@@ -1078,7 +1078,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nUx-tK-eV9" id="VJn-hZ-evP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYg-4m-4bZ">
@@ -1220,7 +1220,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PR1-Dz-808" id="ZkW-bo-cFb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvv-Su-DSX">
@@ -1583,7 +1583,7 @@
         <image name="un_nigate" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zzT-VK-2Zk"/>
         <segue reference="5Yf-jX-BTs"/>
-        <segue reference="MeD-Zl-Ofu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,14 +8,6 @@
 
 import UIKit
 
-let sectionList:Array<String> = ["大学受験初級1000","大学受験中級800","大学受験上級500","Toeic830点レベル"]
-
-//sections = levels * chapters * chapterNumbers
-let beginnerFileNames = ["beg1-1","beg1-2","beg2-1","beg2-2","beg3-1","beg3-2"]
-let intermidFileNames = ["mid1-1","mid1-2","mid2-1","mid2-2"]
-let beginnerChapterNames = ["beg1","beg2","beg3"]
-let intermidChapterNames = ["mid1","mid2"]
-
 
 class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
@@ -47,11 +39,11 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     //@IBOutlet weak var reviewButton: UIButton!
     //@IBOutlet weak var newButton: UIButton!
     
-    var depth:Bool = false
+    var is_top:Bool = true
     
     //tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
-        if depth == false{
+        if is_top {
             //section range = {0...9}
             if section == 0{
                 //mylistの時
@@ -63,15 +55,13 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             }else{
                 return 0
             }
-        }else if depth == true{
+        }else {
             //section range = {0...4}(max:beginner's situation)
             if section == 0{
-                 return 2
+                return 2
             }else{
                 return 0
             }
-        } else {
-            return 0
         }
     }
     
@@ -83,7 +73,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         //var cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
             //cell.setCell(chapterNames[appDelegate.problemCategory][indexPath.row])
         let cell: CategorySelectCell = categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell
-        if(depth == false){
+        if(is_top == false){
             //mylistのときは別の表示
             if appDelegate.sceneTag == 3{
                 cell.setCell("全範囲")
@@ -109,7 +99,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     
     //セクションのタイトルを返す.
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(depth==false){
+        if is_top{
             return sectionList[appDelegate.problemCategory]
         }else{
             return chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
@@ -120,7 +110,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
      Cellが選択された際に呼び出される.
      */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if depth == false{
+        if is_top{
             //mylistの時の処理
             if appDelegate.sceneTag == 3{
                 goScene()
@@ -131,9 +121,9 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                     cells[i].setCell(fileNames[appDelegate.problemCategory][i])
                 }
                 categorySelectTable.reloadData()
-                depth = true
+                is_top = false
             }
-        }else if depth == true{
+        }else{
             if appDelegate.sceneTag == 1{
                 //問題の場合のみ、クリアしていない単語を解けないようにする
                 if indexPath.row <= newChapterNumber{
@@ -145,8 +135,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 appDelegate.sectionNumber = indexPath.row
                 goScene()
             }
-        } else {
-           print("error")
         }
     }
     

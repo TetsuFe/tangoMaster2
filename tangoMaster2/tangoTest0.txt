@@ -1,3 +1,40 @@
+let@させる・許す@let her go to school@彼女を学校に行かせる
+choose@選ぶ@choose one from the list@リストの中から一つ選ぶ
+spend@過ごす・費やす@spend money on a ~@〜のためにお金を使う
+appear@現れる・見える@he appeared in this city@彼はこの街に現れrた
+communicate@会話する@communicate with him@友達と話す
+separate@分離させる@separate them into 2 groups
+roll@転がる・進む@the ball roll down ~@球が〜で転がり落ちる
+lift@持ち上げる@lift heavy furniture@重い家具を持ち上げる
+wrap@包む@wrap a gift in the paper@贈り物を包装紙で包む
+place@場所@the place I will go to@私が行く予定の場所
+job@仕事・職@work at a part-time job@アルバイトの仕事をする
+health@健康@be harmful to your health@彼は健康状態がいい
+weather@天気@forecast weather@明日の天気を予想する
+conversation@会話@conversation with ~@〜との会話
+fear@不安・恐れる@a fear of losing my job@職を失う恐怖
+saccident@事故・災難@causes traffic accidents@交通事故を引き起こす
+birth@誕生・出産@give birth to a baby girl@女の子を出産する
+mail@手紙@send a mail to him@父親に手紙を送る
+sheet@用紙・シーツ@put a sheet on my bed@ベッドにシーツを敷く
+post@投稿する・郵便@work in the post office@郵便局で働く
+smell@匂い・匂いがする@the flower smells sweet@その花はいい香りがする
+guests@客@invite guests to a party@パーティに客を招待する
+flow@流れ・流れる@the flow of the river@その川の流れ
+ease@楽・安らぎ@solve with ease@楽に仕事を終わらせる
+bike@自転車@come to scholl by bike@自転車で学校に行く
+hometown@出身地・故郷@go back to my hometown@自分の故郷に帰る
+famous@有名な@is famous for udon@香川はうどんで有名だ
+busy@忙しい@be busy with one's work@仕事で忙しい
+impossible@不可能な@It's impossible for me to do@私には〜できない
+dead@死体・死んでいる@dead@死体を発見する
+loud@大きな@Speak in a loud voice@大きな声で話しなさい
+chief@主な・長@chief of the department@部長
+especially@（〜の中で）特に@Especially, I like Nakai@特に私は中居君が好きだ@0@av
+thus@したがって@~. Thus ~ @〜だ。したがって、〜だ@0@n
+highly@非常に・高く@be highly pleased with ~@〜がとても嬉しい@0@av
+abroad@海外へ@go abroad to study@勉強のために海外へ行く@0@av
+apart@離れて@live apart from hasband@親から離れて暮らす@0@av
 deny@拒否する@deny his offer@彼の申し出を断る@0@v
 exercise@運動する・行使する@exercise the right@権利を行使する@0@v
 apple@りんご@red apple@赤いりんご@0@n

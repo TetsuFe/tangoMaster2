@@ -18,21 +18,26 @@ extension Character
     }
 }
 
-let chapterArray = ["tangoData0","tangoData1","tangoData2"]
-let nigateChapterArray = ["nigateDate0","nigateData1","nigateData2"]
-let cardArray = ["tangoDataMini0","tangoDataMini1","tangoDataMini2"]
 let arrayCategory = ["大学受験初級","大学受験中級","大学受験上級","Toeic"]
 
 let testWrongTangoArray = [["wrongTest0","wrongTest1"],["wrongTest2","wrongTest3"]]
 
+//ファイル名　クリア後のchapter numberを書き込むsetNewChapterに対応
 let checkFileNamesArray = ["checkDS","checkDT","checkDJ","checkToeic"]
 
 
 //テストは2*2で行う
+//最終的には〇〇fileNamesを使う
 let testFileNamesArray = [["tangoTest0","tangoTest1"],["tangoTest2","tangoTest3"]]
 let testNigateFileNamesArray =  [["nbeg1-1","nbeg1-2"],["nigateTest2","nigateTest3"]]
 
+let sectionList:Array<String> = ["大学受験初級1000","大学受験中級800","大学受験上級500","Toeic830点レベル"]
 
+//sections = levels * chapters * chapterNumbers
+let beginnerFileNames = ["beg1-1","beg1-2","beg2-1","beg2-2","beg3-1","beg3-2"]
+let intermidFileNames = ["mid1-1","mid1-2","mid2-1","mid2-2"]
+let beginnerChapterNames = ["beg1","beg2","beg3"]
+let intermidChapterNames = ["mid1","mid2"]
 
 
 func readFileGetWordArray(_ fileName:String,extent:String)->Array<String>{
