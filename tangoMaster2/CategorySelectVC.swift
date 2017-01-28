@@ -39,11 +39,11 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     //@IBOutlet weak var reviewButton: UIButton!
     //@IBOutlet weak var newButton: UIButton!
     
-    var is_top:Bool = true
+    var is_category_top:Bool = true
     
     //tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
-        if is_top {
+        if is_category_top {
             //section range = {0...9}
             if section == 0{
                 //mylistの時
@@ -73,7 +73,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         //var cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
             //cell.setCell(chapterNames[appDelegate.problemCategory][indexPath.row])
         let cell: CategorySelectCell = categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell
-        if(is_top == false){
+        if(is_category_top == false){
             //mylistのときは別の表示
             if appDelegate.sceneTag == 3{
                 cell.setCell("全範囲")
@@ -99,7 +99,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     
     //セクションのタイトルを返す.
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if is_top{
+        if is_category_top{
             return sectionList[appDelegate.problemCategory]
         }else{
             return chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
@@ -110,7 +110,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
      Cellが選択された際に呼び出される.
      */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if is_top{
+        if is_category_top{
             //mylistの時の処理
             if appDelegate.sceneTag == 3{
                 goScene()
@@ -121,7 +121,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                     cells[i].setCell(fileNames[appDelegate.problemCategory][i])
                 }
                 categorySelectTable.reloadData()
-                is_top = false
+                is_category_top = false
             }
         }else{
             if appDelegate.sceneTag == 1{
@@ -153,7 +153,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             toeicButton.backgroundColor = UIColor.blue
         }
         appDelegate.problemCategory = category
-        is_top = true
+        is_category_top = true
         //下のappendをするために前の分を消去
         cells = Array<CategorySelectCell>()
         for i in 0..<chapterNames[appDelegate.problemCategory].count{
