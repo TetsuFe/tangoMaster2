@@ -153,6 +153,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             toeicButton.backgroundColor = UIColor.blue
         }
         appDelegate.problemCategory = category
+        is_top = true
         //下のappendをするために前の分を消去
         cells = Array<CategorySelectCell>()
         for i in 0..<chapterNames[appDelegate.problemCategory].count{
