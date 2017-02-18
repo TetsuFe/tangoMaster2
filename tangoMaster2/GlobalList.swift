@@ -36,8 +36,8 @@ let sectionList:Array<String> = ["大学受験初級1000","大学受験中級800
 //sections = levels * chapters * chapterNumbers
 let beginnerFileNames = ["beg1-1","beg1-2","beg2-1","beg2-2","beg3-1","beg3-2"]
 let intermidFileNames = ["mid1-1","mid1-2","mid2-1","mid2-2"]
-let beginnerChapterNames = ["beg1","beg2","beg3"]
-let intermidChapterNames = ["mid1","mid2"]
+let beginnerChapterNames = ["chapter1","chapter2","chapter3"]
+let intermidChapterNames = ["chapter1","chapter2"]
 
 
 func readFileGetWordArray(_ fileName:String,extent:String)->Array<String>{

@@ -50,7 +50,7 @@ class ProblemVC: UIViewController {
     
     @IBOutlet weak var backProblemButton: UIButton!
     
-    @IBOutlet weak var submitButton: UIButton!
+    //@IBOutlet weak var submitButton: UIButton!
     
     @IBOutlet weak var backPageButton: UIButton!
     
@@ -63,46 +63,10 @@ class ProblemVC: UIViewController {
     
     func submit(){
         print("submit")
-        
-        // ① UIAlertControllerクラスのインスタンスを生成
-        // タイトル, メッセージ, Alertのスタイルを指定する
-        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
-        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "答えを提出しますか？", preferredStyle:  UIAlertControllerStyle.alert)
-        
-        // ② Actionの設定
-        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
-        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
-        // OKボタン
-        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
-            (action: UIAlertAction!) -> Void in
-            print("OK")
-            self.setResult(self.list)
-            let secondViewController: ProblemResultVC = self.storyboard?.instantiateViewController(withIdentifier: "newProblemResult") as! ProblemResultVC
-            // アニメーションを設定する.
-            //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            // 値渡ししたい時 hoge -> piyo
-            //secondViewController.piyo = self.hoge
-            // Viewの移動する.
-            self.present(secondViewController, animated: true, completion: nil)
-            
-        })
-        // キャンセルボタン
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
-            (action: UIAlertAction!) -> Void in
-            print("Cancel")
-        })
-        
-        // ③ UIAlertControllerにActionを追加
-        alert.addAction(cancelAction)
-        alert.addAction(defaultAction)
-        
-        // ④ Alertを表示
-        present(alert, animated: true, completion: nil)
-        
-        // alertOnSubmitView.frame.width = self.view.frame.width/3
-        // alertOnSubmitView.frame.height = self.view.frame.height/3
+        //結果の保存
+        self.setResult(self.list)
+        let secondViewController: ProblemResultVC = self.storyboard?.instantiateViewController(withIdentifier: "newProblemResult") as! ProblemResultVC
+        self.present(secondViewController, animated: true, completion: nil)
     }
     
     func backPage(){
@@ -139,6 +103,9 @@ class ProblemVC: UIViewController {
                 existProblemIndex = k
             }
             setLabel()
+        }
+        if(k == correctArray.count){
+            submit()
         }
     }
     
@@ -376,6 +343,7 @@ class ProblemVC: UIViewController {
             ][appDelegate.chapterNumber])
         deleteFile(fileName: "correct")
         
+        
         print("setResultwrong:\(wrongArray.count)")
         for k in 0..<wrongArray.count{
             if(wrongArray[k] == 1){
@@ -495,13 +463,13 @@ class ProblemVC: UIViewController {
         answerButton4.addTarget(self, action: #selector(pushAnswer4), for: .touchUpInside)
         
         backProblemButton.layer.borderWidth = 0
-        submitButton.layer.borderWidth = 0
+        //submitButton.layer.borderWidth = 0
         backPageButton.layer.borderWidth = 0
         backProblemButton.layer.cornerRadius = 10
-        submitButton.layer.cornerRadius = 10
+        //submitButton.layer.cornerRadius = 10
         backPageButton.layer.cornerRadius = 10
         backProblemButton.addTarget(self, action: #selector(goPrevProblem), for: .touchUpInside)
-        submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
+        //submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
         backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
         
         // labelAnswer1.layer.borderWidth = 1

@@ -130,27 +130,15 @@ class CardVC: UIViewController {
             //スワイプボタンの実行関数を変更
             
             leftSwipeButton.removeTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
-            
             leftSwipeButton.addTarget(self, action: #selector(retry), for: .touchUpInside)
-            
-             rightSwipeButton.removeTarget(self, action: #selector(goNextCard), for: .touchUpInside)
-            
+            rightSwipeButton.removeTarget(self, action: #selector(goNextCard), for: .touchUpInside)
             rightSwipeButton.addTarget(self, action: #selector(goNextChapter), for: .touchUpInside)
-            
             leftSwipeButton.setTitle("もう一度", for: .normal)
-            
             rightSwipeButton.setTitle("次のchapterへ", for: .normal)
-            
-             nigateAddOrGoProblem.removeTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
-            
+            nigateAddOrGoProblem.removeTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
             nigateAddOrGoProblem.addTarget(self, action: #selector(goProblem), for: .touchUpInside)
-            
-       
-            
             goNextChapButton.setTitle("問題(苦手)", for: .normal)
-            
-                goNextChapButton.addTarget(self, action: #selector(goProblem2), for: .touchUpInside)
-            
+            goNextChapButton.addTarget(self, action: #selector(goProblem2), for: .touchUpInside)
             nigateAddOrGoProblem.setTitle("問題に挑戦！", for: .normal)
             /*
             //苦手だけ探せば、存在するかどうかはわかる
@@ -182,8 +170,6 @@ class CardVC: UIViewController {
                     }
                 }
             }
-            
-
         }
     }
     
@@ -370,66 +356,6 @@ class CardVC: UIViewController {
     }
     
     func makeFinishView(retryCount : Int){
-        
-        /*
-        finishView.frame.size = CGSize(width: superCardView.frame.width, height: superCardView.frame.height)
-        finishView.center = CGPoint(x: superCardView.frame.size.width/2, y: superCardView.frame.height/2)
-        //print(finishView.center)
-        finishView.backgroundColor = UIColor.white
-        finishView.layer.masksToBounds = true
-        finishView.layer.cornerRadius = 0.0
-        finishView.layer.borderWidth = 1
-        
-        // Labelを生成.
-        var comment:[String] = ["",""]
-        print(retryCount)
-
-        
-        print(100*retryCount/cardDatas.count)
-        if(100*retryCount/cardDatas.count == 0){
-            comment[0] = "Perfect"
-            comment[1] = "完璧だ。さすが我が下僕よ。"
-        }else if(100*retryCount/cardDatas.count > 0 && 100*retryCount/cardDatas.count <= 10 ){
-            comment[0] = "Excellent"
-            comment[1] = "あと少しだ。気を抜かずまた挑戦だ。"
-        }else if(100*retryCount/cardDatas.count > 10 && 100*retryCount/cardDatas.count <= 20 ){
-            comment[0] = "Good"
-            comment[1] = "まあ良い。今日中にまた挑戦せよ。"
-        }else if(100*retryCount/cardDatas.count > 20  && 100*retryCount/cardDatas.count <= 30){
-            comment[0] = "Not Bad"
-            comment[1] = "悪くない。だがこれでは魔界を生き抜けぬぞ。"
-        }else if(100*retryCount/cardDatas.count > 30){
-            comment[0] = "No Sence"
-            comment[1] = "お主には失望したわ。勉強して出直してこい"
-        }
- 
-        
-        print(comment[0],comment[1])
-        let finishLabel = [UILabel(),UILabel()]
-        finishLabel[0].frame.size = CGSize(width: finishView.frame.size.width, height: finishView.frame.size.height/3)
-        finishLabel[0].center = CGPoint(x: finishView.frame.size.width/2, y: finishView.frame.size.height/2.5)
-        finishLabel[0].text = comment[0]
-        finishLabel[0].font = UIFont.systemFont(ofSize: CGFloat(26))
-        //finishLabel[0].alpha = 1
-        
-        finishLabel[1].frame.size = CGSize(width: finishView.frame.size.width, height: finishView.frame.size.height/3)
-        finishLabel[1].center = CGPoint(x: finishView.frame.size.width/2, y: finishView.frame.size.height/1.5)
-        finishLabel[1].text = comment[1]
-        finishLabel[1].font = UIFont.systemFont(ofSize: CGFloat(18))
-        //finishLabel[1].alpha = 1
-        
-        for i in 0...1{
-            finishLabel[i].textColor = UIColor.black
-            finishLabel[i].textAlignment = NSTextAlignment.center
-            finishLabel[i].backgroundColor = UIColor.white
-            finishLabel[i].layer.masksToBounds = true
-            finishLabel[i].layer.cornerRadius = 0.0
-        }
-        superCardView.addSubview(finishView)
-        finishView.addSubview(finishLabel[1])
-        finishView.addSubview(finishLabel[0])
-        
- */
         print("finishView Show?")
     }
     
@@ -533,7 +459,8 @@ class CardVC: UIViewController {
      タッチを感知した際に呼ばれるメソッド.
      */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       showJpn()    }
+       showJpn()
+    }
     
     /*
      ドラッグを感知した際に呼ばれるメソッド.
@@ -577,7 +504,7 @@ class CardVC: UIViewController {
         // Labelアニメーション.
         UIView.animate(withDuration: 0.1,
                        
-                       // アニメーション中の処理.
+            // アニメーション中の処理.
             animations: { () -> Void in
                 // 拡大用アフィン行列を作成する.
                 self.cardViews[self.count].transform = CGAffineTransform(scaleX: 0.4, y: 0.4)

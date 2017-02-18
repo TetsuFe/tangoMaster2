@@ -1,7 +1,6 @@
 trial@裁判・試練@civil trial@民事裁判@0@n
-rob@盗む@robbed of wallet@財布を盗まれる@0@v
 bully@いじめる・いじめっ子@bullying@いじめ@0@v
-permanently@永久に@permanent delete@永久に削除する@0@av
+permanently@永久に@permanently delete@永久に削除する@0@av
 leisure@余暇・休暇@at my leisure@都合のいい時に@0@n
 apart@離れて・別々に@apart from@〜とは別に@0@av
 incredible@素晴らしい@you are incredible!@素晴らしい！@0@a

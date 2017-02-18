@@ -1,5 +1,5 @@
 locate@配置する・探す@be located to~@〜に位置する@0@v
-confess@告白する・白状する@confess the truth@真実を告白する@0@v
+confess@告白する@confess the truth@真実を告白する@0@v
 funeral@葬式@funeral@葬式@0@n
 gift@贈り物・才能@gift for music@音楽の才能@0@n
 sorrow@悲しみ@chain of sorrow@悲しみの連鎖@0@n
