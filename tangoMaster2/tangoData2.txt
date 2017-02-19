@@ -1,5 +1,20 @@
-clinical@臨床の・病院の@tomato_b.jpg@clinical test@臨床実験@0@a
-conduct@行う・案内する@bar0314_b.jpg@conduct a tour@旅行を実施する、案内する@0@v
-view@見解・眺め@moonyet3_b.jpg@specialist's view@専門家の見解@0@a
-alternative@代わりの・二者択一の@sevem03142_b.jpg@alternative choices@二つに一つの選択@0@a
-grocery@日用品・食料品@suika0314_b.jpg@grocery store@日用品店@0@n
+deny@拒否する@deny his offer@彼の申し出を断る@0@v
+exercise@運動する・行使する@exercise the right@権利を行使する@0@v
+apple@りんご@red apple@赤いりんご@0@n
+book@本@read book@本を読む@0@n
+criticize@批判する@criticize him for being stubborn@彼が頑固なことを批判する@0@v
+clinical@臨床の・病院の@clinical test@臨床実験@0@a
+conduct@行う・案内する@conduct a tour@旅行を実施する、案内する@0@v
+view@見解・眺め@specialist's view@専門家の見解@0@n
+alternative@代わりの・二者択一の@alternative choices@二つに一つの選択@0@a
+grocery@日用品・食料品@grocery store@日用品店@0@n
+essentially@本質的には@essentially same@本質的には同じ@0@av
+persist@固執する・貫く@persist in a blief@信念を貫く@0@v
+desperate@絶望的な・必死の@desperate efforts@必死の努力@0@a
+executive@行政の・幹部の@exective director@幹部の役員@0@a
+household@家庭の・家族@household dog@家の犬@0@a
+pollution@汚染・公害@environmental pollution@環境汚染@0@n
+pay@（お金・注意を）払う・報いる@pay attention to @~に注意を払う@0@v
+present@現在の・発表する@at present@現在、@0@a
+farm@農業・農場@farmer@農場主@0@n
+deprive@奪う・盗む@deprived of sleeping@睡眠を奪われる@0@v

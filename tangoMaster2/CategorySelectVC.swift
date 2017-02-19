@@ -8,10 +8,8 @@
 
 import UIKit
 
-
 class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
-    
     //status bar's color is while
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -85,7 +83,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         
         if is_category_top{
             var row = indexPath.row
-            print(row)
+            print("row: \(row)")
             
             for i in 0..<appDelegate.problemCategory{
                 row = row + chapterNames[i].count
@@ -95,23 +93,38 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             //mylistのときは別の表示
             if appDelegate.sceneTag == 3{
                 //cell.setCell("全範囲")
+                cell.backgroundColor = UIColor.orange
                 cell.setCell("全範囲")
                 return cell
             }else if appDelegate.sceneTag == 1{
-                if indexPath.row > (newChapterNumber+1)/5{
+                if indexPath.row < (newChapterNumbers[appDelegate.problemCategory]+1)/5{
+                    graphCells[row].backgroundColor = UIColor.green
+                }else if indexPath.row == (newChapterNumbers[appDelegate.problemCategory]+1)/5{
+                    graphCells[row].backgroundColor = UIColor.orange
+                }
+                else if indexPath.row > (newChapterNumbers[appDelegate.problemCategory]+1)/5{
                     graphCells[row].backgroundColor = UIColor.darkGray
                 }
                 return graphCells[row]
             }else{
                 //print(graphCells.count)
+                graphCells[row].backgroundColor = UIColor.orange
                 return graphCells[row]
             }
             
         }else{
+            
             if appDelegate.sceneTag == 1{
-                if indexPath.row > newChapterNumber{
+                if indexPath.row < newChapterNumbers[appDelegate.problemCategory]{
+                    cell.backgroundColor = UIColor.green
+                }else if indexPath.row == newChapterNumbers[appDelegate.problemCategory]{
+                    cell.backgroundColor = UIColor.orange
+                }
+                else if indexPath.row > newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.darkGray
                 }
+            }else{
+                cell.backgroundColor = UIColor.orange
             }
             cell.setCell(fileNames[appDelegate.problemCategory][indexPath.row])
             return cell
@@ -142,7 +155,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             if appDelegate.sceneTag == 3{
                 goScene()
             }else if appDelegate.sceneTag == 1{
-                if indexPath.row <= (newChapterNumber+1)/5{
+                if indexPath.row <= (newChapterNumbers[appDelegate.problemCategory]+1)/5{
                     appDelegate.chapterNumber = indexPath.row
                     for i in 0..<fileNames[appDelegate.problemCategory].count{
                         normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
@@ -163,7 +176,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         }else{
             if appDelegate.sceneTag == 1{
                 //問題の場合のみ、クリアしていない単語を解けないようにする
-                if indexPath.row <= newChapterNumber{
+                if indexPath.row <= newChapterNumbers[appDelegate.problemCategory]{
                     appDelegate.sectionNumber = indexPath.row
                     goScene()
                     //categorySelectTable.reloadData()
@@ -306,7 +319,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 graphCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectWithGraphCell") as! CategorySelectWithGraphCell)
                 
                 var ratio = Double()
-                let number = 0
+
                 let graphMaxWidth = 4*graphCells[i].frame.width/6
                 
                 let superViewWidth = graphCells[i].frame.width
@@ -324,13 +337,15 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
 
             
                 
-                labels.append(UILabel(frame: CGRect(x:0,y:CGFloat(number)*superViewHeight/5, width: superViewWidth/6, height: superViewHeight/2)))
+                labels.append(UILabel(frame: CGRect(x:0,y:0, width: superViewWidth/4, height: superViewHeight/2)))
                 
-                coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/6, y: 0.1*superViewHeight/5 + CGFloat(number) * superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
+                coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/4, y: 0.1*superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
                 
-                labels2.append(UILabel(frame: CGRect(x:5*superViewWidth/6,y:CGFloat(number)*superViewHeight/5, width: superViewWidth/6, height: superViewHeight/2)))
+                labels2.append(UILabel(frame: CGRect(x:superViewWidth/4 + CGFloat(ratio) * graphMaxWidth + CGFloat(1.0 - ratio) * graphMaxWidth,y:0, width: superViewWidth/6, height: superViewHeight/2)))
                 
-                nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/6 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5 + CGFloat(number) * superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
+                nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/4 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
+                
+                
                 
                 labels[countOfCell].text = chapterNames[j][i]
                 labels2[countOfCell].text = String(Int(ratio*100)) + "%"
