@@ -17,7 +17,6 @@ class ProblemResultProgressVC: UIViewController {
     var end   = CGFloat()
     let step: CGFloat = 1.0
     
-    
     var progressID = Int()
     var originProgressBarFrame = CGRect()
     
@@ -34,7 +33,32 @@ class ProblemResultProgressVC: UIViewController {
         popUpView.backgroundColor = UIColor.orange
         let graphMaxWidth = 2*popUpView.frame.width/3
         
-        let ratios = [0.8,0.6,0.2,1]
+        //let ratios = [0.8,0.6,0.2,1]
+        var newChapterNumbers = getNewChapterArray()
+        //現在・上級を作っていないのでその分を追加
+        while(newChapterNumbers.count < 4){
+            newChapterNumbers.append(0)
+        }
+        var ratios = Array<Double>()
+        for i in 0..<chapterVolumes.count {
+            if(i == 0){
+                newChapterNumbers[i] = 50
+                ratios.append(50.0/Double(chapterVolumes[i]))
+            }
+            else if(i > 0 && i < 3){
+                ratios.append(Double(newChapterNumbers[i]) / Double(chapterVolumes[i]))
+            }
+                //3番目は3種類の合計
+            else{
+                let sumchapnum = Double(newChapterNumbers.reduce(0,{$0+$1}))
+                print(sumchapnum)
+                let sumchapvolume = chapterVolumes.reduce(0,{$0+$1})
+                print(sumchapvolume)
+                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / chapterVolumes.reduce(0, {$0 + $1}))
+            }
+            print(ratios[i])
+        }
+
         
         let labelNames = ["初級","中級","上級","合計"]
         
@@ -65,8 +89,6 @@ class ProblemResultProgressVC: UIViewController {
         
         doneButton.addTarget(self, action: #selector(self.removeAnimate), for: .touchUpInside)
         
-        
-        
         popUpView.addSubview(doneButton)
         
         //ポップアップ処理のセット二行。ポップアップ以外部分を暗い透明にし、ポップアップ
@@ -74,7 +96,8 @@ class ProblemResultProgressVC: UIViewController {
         self.showAnimate()
         
         //どのカテゴリが変化するのか調べる progressID = appDelegate.problemCategory
-        progressID = Int(arc4random()) % 4
+        //progressID = Int(arc4random()) % 4
+        progressID = 1
         
         //後にprogressDrawでも使うので、endとは区別する必要あり
         originProgressBarFrame = graphs[progressID].coloredGraph.frame
@@ -87,12 +110,10 @@ class ProblemResultProgressVC: UIViewController {
         end = originProgressBarFrame.width
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(progressDraw), userInfo: nil, repeats: true)
-        
-        // Do any additional setup after loading the view.
     }
     
     func progressDraw(){
-        if(begin < end){
+        if(begin <= end){
             self.begin += step
             drawer.removeFromSuperview()
             drawer = ColoredDrawer(frame: CGRect(x: originProgressBarFrame.origin.x, y: originProgressBarFrame.origin.y, width: begin, height: originProgressBarFrame.height))
@@ -146,7 +167,7 @@ class ProblemResultProgressVC: UIViewController {
             }
         });
     }
-    
+
 }
 
 
@@ -170,4 +191,5 @@ class TangoProgressGraph2{
         label2.text = String(Int(ratio*100)) + "%"
     }
 }
+
 

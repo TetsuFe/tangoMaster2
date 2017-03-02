@@ -39,6 +39,16 @@ let intermidFileNames = ["mid1-1","mid1-2","mid2-1","mid2-2"]
 let beginnerChapterNames = ["chapter10","chapter2","chapter3"]
 let intermidChapterNames = ["chapter1","chapter2"]
 
+let chapterNames = [beginnerChapterNames,intermidChapterNames]
+
+func getNewChapterArray()->Array<Int>{
+    var newChapterNumbers = Array<Int>()
+    for category in 0..<chapterNames.count{
+        newChapterNumbers.append(getNewChapter(fileName: checkFileNamesArray[category], chapterVolume: testFileNamesArray[category].count))
+    }
+    return newChapterNumbers
+}
+
 
 func readFileGetWordArray(_ fileName:String,extent:String)->Array<String>{
     var wordArray = Array<String>()

@@ -120,16 +120,6 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         }
     }
     
-    let chapterNames = [beginnerChapterNames,intermidChapterNames]
-    
-    func getNewChapterArray()->Array<Int>{
-        var newChapterNumbers = Array<Int>()
-        for category in 0..<chapterNames.count{
-            newChapterNumbers.append(getNewChapter(fileName: checkFileNamesArray[category], chapterVolume: testFileNamesArray[category].count))
-        }
-        return newChapterNumbers
-    }
-    
     //func calcRatio(array:Array<Int>)->Array<Double>{
         
     //}

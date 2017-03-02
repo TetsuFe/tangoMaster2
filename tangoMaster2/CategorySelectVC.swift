@@ -21,7 +21,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     @IBOutlet weak var toeicButton: UIButton!
     
     let fileNames = [beginnerFileNames,intermidFileNames]
-    let chapterNames = [beginnerChapterNames,intermidChapterNames]
     
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         let orientation: UIInterfaceOrientationMask = UIInterfaceOrientationMask.portrait

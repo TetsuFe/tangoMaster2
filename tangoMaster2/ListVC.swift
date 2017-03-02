@@ -45,8 +45,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     }
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    let chapterNames = [beginnerChapterNames,intermidChapterNames]
-    
+
     /*
      セクションのタイトルを返す.
      */

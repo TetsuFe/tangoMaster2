@@ -324,8 +324,7 @@ class AutoFadeVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    let chapterNames = [beginnerChapterNames,intermidChapterNames]
-    
+       
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
