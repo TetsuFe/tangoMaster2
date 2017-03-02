@@ -11,7 +11,12 @@ import UIKit
 class HomeSelectCell:UITableViewCell{
     @IBOutlet weak var sectionLabel: UILabel!
     
-    func setCell(_ labelName:String) {
+    
+    @IBOutlet weak var sectionImage: UIImageView!
+    
+    func setCell(_ labelName:String,_ imageFileName:String) {
         sectionLabel.text = labelName
+        sectionImage.image = UIImage(named: imageFileName)
+        
     }
 }

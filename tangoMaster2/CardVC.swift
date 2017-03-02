@@ -15,8 +15,25 @@ class CardVC: UIViewController {
         return .lightContent
     }
     
+    @IBOutlet weak var nigateAddOrGoProblem: UIButton!
+    
+    @IBOutlet weak var goNextChapButton: UIButton!
+    
+    @IBOutlet weak var leftSwipeButton: UIButton!
+    @IBOutlet weak var rightSwipeButton: UIButton!
+    
+    @IBOutlet weak var progress: UILabel!
+    
+    @IBOutlet weak var superCardView: UIView!
+
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        if(appDelegate.cardMoveSetting){
+            leftSwipeButton.isEnabled = false
+            rightSwipeButton.isEnabled = false
+        }
         
         newChapterNumber = getNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
 
@@ -333,16 +350,6 @@ class CardVC: UIViewController {
     
     var cardMode:Int = 1
     
-    @IBOutlet weak var nigateAddOrGoProblem: UIButton!
-    
-    @IBOutlet weak var goNextChapButton: UIButton!
-    
-    @IBOutlet weak var leftSwipeButton: UIButton!
-    @IBOutlet weak var rightSwipeButton: UIButton!
-    
-    @IBOutlet weak var progress: UILabel!
-    
-    @IBOutlet weak var superCardView: UIView!
     
     var retryCount = 0
     //最初に問題数を得ておく。listcountは変動するので。それとretryCountを比較する。(同じものを何回やったかは考慮しない)
@@ -429,7 +436,7 @@ class CardVC: UIViewController {
     
     @IBAction func backButton(_ sender: AnyObject) {
         // ① UIAlertControllerクラスのインスタンスを生成
-        let alert: UIAlertController = UIAlertController(title: "確認", message: "問題選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        let alert: UIAlertController = UIAlertController(title: "確認", message: "範囲選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
         
         // ② Actionの設定
         // OKボタン
@@ -459,7 +466,9 @@ class CardVC: UIViewController {
      タッチを感知した際に呼ばれるメソッド.
      */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       showJpn()
+        if(appDelegate.cardMoveSetting){
+            showJpn()
+        }
     }
     
     /*
@@ -467,31 +476,32 @@ class CardVC: UIViewController {
      (ドラッグ中何度も呼ばれる)
      */
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        //print("touchesMoved")
-        
-        // タッチイベントを取得.
-        let aTouch: UITouch = touches.first!
-        
-        // 移動した先の座標を取得.
-        let location = aTouch.location(in: superCardView)
-        
-        // 移動する前の座標を取得.
-        let prevLocation = aTouch.previousLocation(in: superCardView)
-        
-        // CGRect生成.
-        var myFrame: CGRect = self.cardViews[self.count].frame
-        
-        // ドラッグで移動したx, y距離をとる.
-        let deltaX: CGFloat = location.x - prevLocation.x
-        let deltaY: CGFloat = location.y - prevLocation.y
-        
-        // 移動した分の距離をmyFrameの座標にプラスする.
-        myFrame.origin.x += deltaX
-        myFrame.origin.y += deltaY
-        
-        // frameにmyFrameを追加.
-        self.cardViews[self.count].frame = myFrame
+         if(appDelegate.cardMoveSetting){
+            //print("touchesMoved")
+            
+            // タッチイベントを取得.
+            let aTouch: UITouch = touches.first!
+            
+            // 移動した先の座標を取得.
+            let location = aTouch.location(in: superCardView)
+            
+            // 移動する前の座標を取得.
+            let prevLocation = aTouch.previousLocation(in: superCardView)
+            
+            // CGRect生成.
+            var myFrame: CGRect = self.cardViews[self.count].frame
+            
+            // ドラッグで移動したx, y距離をとる.
+            let deltaX: CGFloat = location.x - prevLocation.x
+            let deltaY: CGFloat = location.y - prevLocation.y
+            
+            // 移動した分の距離をmyFrameの座標にプラスする.
+            myFrame.origin.x += deltaX
+            myFrame.origin.y += deltaY
+            
+            // frameにmyFrameを追加.
+            self.cardViews[self.count].frame = myFrame
+        }
     }
     
     /*
@@ -499,27 +509,28 @@ class CardVC: UIViewController {
      */
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        //print("touchesEnded")
-        // Labelアニメーション.
-        UIView.animate(withDuration: 0.1,
-                       
-            // アニメーション中の処理.
-            animations: { () -> Void in
-                // 拡大用アフィン行列を作成する.
-                self.cardViews[self.count].transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
-                // 縮小用アフィン行列を作成する.
-                self.cardViews[self.count].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        })
-        { (Bool) -> Void in
-            
-        }
-        if(self.cardViews[self.count].frame.origin.x > superCardView.bounds.size.width/2.2 || self.cardViews[self.count].frame.origin.x < -self.cardViews[self.count].frame.width/3.5){
-            self.fadeOutCard()
-            if(self.cardViews[self.count].frame.origin.x < -self.cardViews[self.count].frame.width/2){
-                self.addBehind()
+        if(appDelegate.cardMoveSetting){
+            //print("touchesEnded")
+            // Labelアニメーション.
+            UIView.animate(withDuration: 0.1,
+                           
+                           // アニメーション中の処理.
+                animations: { () -> Void in
+                    // 拡大用アフィン行列を作成する.
+                    self.cardViews[self.count].transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
+                    // 縮小用アフィン行列を作成する.
+                    self.cardViews[self.count].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            })
+            { (Bool) -> Void in
+                
             }
-            self.nextOrFinish()
+            if(self.cardViews[self.count].frame.origin.x > superCardView.bounds.size.width/2.2 || self.cardViews[self.count].frame.origin.x < -self.cardViews[self.count].frame.width/3.5){
+                self.fadeOutCard()
+                if(self.cardViews[self.count].frame.origin.x < -self.cardViews[self.count].frame.width/2){
+                    self.addBehind()
+                }
+                self.nextOrFinish()
+            }
         }
     }
     
@@ -554,7 +565,23 @@ class CardVC: UIViewController {
         return cardDatas
     }
     
+    @IBAction func settingButton(_ sender: Any) {
+        showPopUpProgressView()
+    }
+
+    
+    func showPopUpProgressView(){
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardSettingPopUp") as! CardSettingPopUpVC
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        print("popOverVC : \(popOverVC.view.frame)")
+        self.view.addSubview(popOverVC.view)
+        
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
 }

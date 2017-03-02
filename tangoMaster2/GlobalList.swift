@@ -24,7 +24,7 @@ let testWrongTangoArray = [["wrongTest0","wrongTest1"],["wrongTest2","wrongTest3
 
 //ファイル名　クリア後のchapter numberを書き込むsetNewChapterに対応
 let checkFileNamesArray = ["checkDS","checkDT","checkDJ","checkToeic"]
-
+let chapterVolumes:Array<Double> = [50.0,40.0,25.0,50.0] //1000/20, 800/20, 500/20, 1000/20
 
 //テストは2*2で行う
 //最終的には〇〇fileNamesを使う

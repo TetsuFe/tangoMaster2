@@ -11,6 +11,10 @@
 		1924974D1E1E98F600E032B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924974C1E1E98F600E032B9 /* AppDelegate.swift */; };
 		1924974E1E1E994D00E032B9 /* CardTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1F1E1E82AB008B0D9F /* CardTango.swift */; };
 		199F80A41E3C8AB800913F0F /* CategorySelectWithGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */; };
+		199FD87B1E6255E5008381D7 /* ProblemResultProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */; };
+		199FD87D1E63ADDA008381D7 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FD87C1E63ADDA008381D7 /* HelpVC.swift */; };
+		199FD87F1E63B074008381D7 /* HelpSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FD87E1E63B074008381D7 /* HelpSelectCell.swift */; };
+		199FD8811E66CA9A008381D7 /* CardSettingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */; };
 		19C23A091E1E8077008B0D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A071E1E8077008B0D9F /* Main.storyboard */; };
 		19C23A0B1E1E8077008B0D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A0A1E1E8077008B0D9F /* Assets.xcassets */; };
 		19C23A0E1E1E8077008B0D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */; };
@@ -47,6 +51,10 @@
 		1924974A1E1E83AB00E032B9 /* Jpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jpn.swift; sourceTree = "<group>"; };
 		1924974C1E1E98F600E032B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectWithGraphCell.swift; sourceTree = "<group>"; };
+		199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemResultProgressVC.swift; sourceTree = "<group>"; };
+		199FD87C1E63ADDA008381D7 /* HelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		199FD87E1E63B074008381D7 /* HelpSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpSelectCell.swift; sourceTree = "<group>"; };
+		199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSettingPopUpVC.swift; sourceTree = "<group>"; };
 		19C23A001E1E8077008B0D9F /* tangoMaster2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tangoMaster2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C23A081E1E8077008B0D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19C23A0A1E1E8077008B0D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 			children = (
 				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
 				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
+				199FD87C1E63ADDA008381D7 /* HelpVC.swift */,
 				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
 				19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */,
 				199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */,
@@ -125,12 +134,15 @@
 				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
 				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
 				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
+				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
 				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
+				199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */,
 				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
 				19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */,
 				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
 				19C23A071E1E8077008B0D9F /* Main.storyboard */,
 				19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */,
+				199FD87E1E63B074008381D7 /* HelpSelectCell.swift */,
 				19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */,
 				19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */,
 				19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */,
@@ -245,6 +257,9 @@
 				19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */,
 				19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */,
 				19C23A701E1E82AB008B0D9F /* CardVC.swift in Sources */,
+				199FD87D1E63ADDA008381D7 /* HelpVC.swift in Sources */,
+				199FD87B1E6255E5008381D7 /* ProblemResultProgressVC.swift in Sources */,
+				199FD8811E66CA9A008381D7 /* CardSettingPopUpVC.swift in Sources */,
 				19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */,
 				19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */,
 				19C23A591E1E82AB008B0D9F /* CALayer+XibConfiguration.m in Sources */,
@@ -257,6 +272,7 @@
 				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,
 				19C23A581E1E82AB008B0D9F /* AutoFadeTangp.swift in Sources */,
 				19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */,
+				199FD87F1E63B074008381D7 /* HelpSelectCell.swift in Sources */,
 				19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */,
 				1924974B1E1E83AB00E032B9 /* Jpn.swift in Sources */,
 				19C23A721E1E82AB008B0D9F /* NewImageReibun.swift in Sources */,

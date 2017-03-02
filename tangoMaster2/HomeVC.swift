@@ -23,7 +23,8 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var homeTableView: UITableView!
     
     //tableView
-    let labelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","ストーリー"]
+    let labelNames = ["単語一覧","単語テスト","単語カード","苦手リスト"]
+    let imageNames = ["list.png","test.png","card.png","nigatelist.png"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         return labelNames.count
@@ -33,13 +34,12 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         
         let cell: HomeSelectCell = homeTableView.dequeueReusableCell(withIdentifier: "HomeSelectCell") as! HomeSelectCell
         
-        cell.setCell(labelNames[indexPath.row])
+        cell.setCell(labelNames[indexPath.row],imageNames[indexPath.row])
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         homeTableView.dataSource = self
         homeTableView.delegate = self
     }
@@ -56,15 +56,15 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
         }else{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
-            let transition = CATransition()
-            transition.duration = 0.25
-            transition.type = kCATransitionPush
-            transition.subtype = kCATransitionFromRight
-            view.window!.layer.add(transition, forKey: kCATransition)
-            self.present(secondViewController, animated: false, completion: nil)
+            //let transition = CATransition()
+            //transition.duration = 0.25
+            //transition.type = kCATransitionPush
+            //transition.subtype = kCATransitionFromRight
+            //view.window!.layer.add(transition, forKey: kCATransition)
+            self.present(secondViewController, animated: true, completion: nil)
 
         }
-            }
+    }
     
     override func viewDidAppear(_ animated : Bool){
         super.viewDidAppear(true)
@@ -74,7 +74,31 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         
         var graphs = Array<TangoProgressGraph>()
         
-        let ratios = [0.8,0.6,0.2,1]
+        //let ratios = [0.8,0.6,0.2,1]
+        var newChapterNumbers = getNewChapterArray()
+        //現在・上級を作っていないのでその分を追加
+        while(newChapterNumbers.count < 4){
+            newChapterNumbers.append(0)
+        }
+        var ratios = Array<Double>()
+        for i in 0..<chapterVolumes.count {
+            if(i == 0){
+                newChapterNumbers[i] = 50
+                ratios.append(50.0/Double(chapterVolumes[i]))
+            }
+            else if(i > 0 && i < 3){
+                ratios.append(Double(newChapterNumbers[i]) / Double(chapterVolumes[i]))
+            }
+            //3番目は3種類の合計
+            else{
+                let sumchapnum = Double(newChapterNumbers.reduce(0,{$0+$1}))
+                print(sumchapnum)
+                let sumchapvolume = chapterVolumes.reduce(0,{$0+$1})
+                print(sumchapvolume)
+                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / chapterVolumes.reduce(0, {$0 + $1}))
+            }
+            print(ratios[i])
+        }
         
         let labelNames = ["初級","中級","上級","合計"]
         
@@ -156,7 +180,7 @@ class ColoredDrawer: UIView {
     override func draw(_ rect: CGRect) {// 矩形 -------------------------------------
         let rectangle = UIBezierPath(rect: rect)
         // stroke 色の設定
-        UIColor.blue.setStroke()
+        UIColor.green.setStroke()
         // ライン幅
         rectangle.lineWidth = 1
         //
@@ -174,7 +198,7 @@ class NonColoredDrawer: UIView {
     override func draw(_ rect: CGRect) {// 矩形 -------------------------------------
         let rectangle = UIBezierPath(rect: rect)
         // stroke 色の設定
-        UIColor.blue.setStroke()
+        UIColor.gray.setStroke()
         // ライン幅
         rectangle.lineWidth = 1
         // 塗りつぶしの色を黄色に設定.
@@ -187,14 +211,3 @@ class NonColoredDrawer: UIView {
         rectangle.stroke()
     }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -265,8 +265,20 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         print(chapterNumber)
     }
     
+    func showPopUpProgressView(){
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "problemResultProgress") as! ProblemResultProgressVC
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        print("popOverVC : \(popOverVC.view.frame)")
+        self.view.addSubview(popOverVC.view)
+        
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        //progressVCを表示
+        showPopUpProgressView()
         
         resultTableView.delegate = self
         resultTableView.dataSource = self

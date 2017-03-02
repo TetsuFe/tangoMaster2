@@ -14,7 +14,7 @@ class AutoFadeVC: UIViewController {
     @IBOutlet weak var engLabel: UILabel!
     
     @IBOutlet weak var categoryLabel: UILabel!
-    //@IBOutlet weak var tangoImage: UIImageView!
+    
     @IBOutlet weak var speedButton: UIButton!
     
     @IBOutlet weak var reverseButton: UIButton!
@@ -88,7 +88,7 @@ class AutoFadeVC: UIViewController {
     
     
     func changeCategoryLabel(){
-        categoryLabel.text = sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.chapterNumber%5)
     }
     
     func  changeFile(){
@@ -167,18 +167,23 @@ class AutoFadeVC: UIViewController {
     func stopOrPlay(){
         if(timer.isValid){
             flag = false
-            stopOrPlayButton.setTitle("一時停止", for: .normal)
+            stopOrPlayButton.setTitle("再生", for: .normal)
             //self.tangoImage.layer.removeAllAnimations()
             self.engLabel.layer.removeAllAnimations()
             self.jpnLabel.layer.removeAllAnimations()
+            //停止時に全ラベルを表示状態に
+            self.engLabel.alpha = 1
+            self.jpnLabel.alpha = 1
             timer.invalidate()
         }
         else{
             flag = true
-            stopOrPlayButton.setTitle("再生", for: .normal)
+            stopOrPlayButton.setTitle("一時停止", for: .normal)
             timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
             timer.fire()
-            
+            //再生開始時には全ラベルを非表示の状態にし、そこからアニメーションスタート
+            self.engLabel.alpha = 0
+            self.jpnLabel.alpha = 0
             print("fire!")
         }
     }
@@ -286,7 +291,7 @@ class AutoFadeVC: UIViewController {
     
     @IBAction func backButton(_ sender: AnyObject) {
         // ① UIAlertControllerクラスのインスタンスを生成
-        let alert: UIAlertController = UIAlertController(title: "確認", message: "問題選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        let alert: UIAlertController = UIAlertController(title: "確認", message: "単語リストに戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
         
         // ② Actionの設定
         // OKボタン
@@ -368,9 +373,10 @@ class AutoFadeVC: UIViewController {
         reverseButton.addTarget(self, action: #selector
             (reverse), for: .touchUpInside)
         
-        categoryLabel.text = sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.chapterNumber%5)
         
-        //stopOrPlayButton.setTitle("再生", for: .normal)
+        //stopOrPlayButton.setTitle("一時停止", for: .normal)
+        speedButton.setTitle("速さ:\(timerInterval)", for: .normal)
         stopOrPlayButton.addTarget(self, action: #selector(stopOrPlay), for: .touchUpInside)
     }
     
