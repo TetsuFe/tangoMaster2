@@ -102,6 +102,8 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         }
         */
         
+        
+        
         tango = readFileGetWordArray(testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber], extent: "txt")
         
         for r in 0..<tango.count/6{

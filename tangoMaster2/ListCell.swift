@@ -59,7 +59,8 @@ class ListCell:UITableViewCell{
             //OFF
             let nigateArray = getfile(fileName:preserveFileName)
             for r in 0..<nigateArray.count/6{
-                list.append(NewImageReibun(eng: nigateArray[8*r],jpn:nigateArray[8*r+1],engReibun:nigateArray[8*r+3],jpnReibun:nigateArray[8*r+4],nigateFlag: nigateArray[8*r+5],partOfSpeech: nigateArray[8*r+6]))
+                //list.append(NewImageReibun(eng: nigateArray[8*r],jpn:nigateArray[8*r+1],engReibun:nigateArray[8*r+3],jpnReibun:nigateArray[8*r+4],nigateFlag: nigateArray[8*r+5],partOfSpeech: nigateArray[8*r+6]))
+                list.append(NewImageReibun(eng: nigateArray[6*r],jpn:nigateArray[6*r+1],engReibun:nigateArray[6*r+2],jpnReibun:nigateArray[6*r+3],nigateFlag: nigateArray[6*r+4],partOfSpeech: nigateArray[6*r+5]))
             }
             list = deleteWordFromNigateArray(eng:engLabel.text!,list:list)
             deleteFile(fileName:preserveFileName)
@@ -68,7 +69,7 @@ class ListCell:UITableViewCell{
             }
             setCell(NewImageReibun(eng:engLabel.text!,jpn:jpnLabel.text!,engReibun:engPhrase.text!,jpnReibun:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech:partOfSpeech))
         }
- 
+
     }
     
     func deleteWordFromNigateArray(eng:String,list:Array<NewImageReibun>)->Array<NewImageReibun>{
@@ -76,6 +77,7 @@ class ListCell:UITableViewCell{
         for i in 0..<deletedArray.count{
             if deletedArray[i].eng == eng{
                 deletedArray.remove(at: i)
+                break
             }
         }
         return deletedArray

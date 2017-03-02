@@ -396,6 +396,7 @@ func setFileOfProblemVolume(fileName:String,problemVolume:Int){
     }
 }
 
+/*Deprecated
 //あるchapterのファイルから苦手な単語を探し。EightTangoの配列として返す？
 func getNigateTangoArray(fileName:String)->Array<CardTango>{
     let wholeArray = getfile(fileName: fileName)
@@ -408,7 +409,9 @@ func getNigateTangoArray(fileName:String)->Array<CardTango>{
     }
     return nigateArray
 }
+ */
 
+/*
 func getWrongTangoVolume(fileName:String)->Int{
     let wholeArray = getfile(fileName: fileName)
     var wrongVolume:Int = 0
@@ -418,9 +421,11 @@ func getWrongTangoVolume(fileName:String)->Int{
     }
     return wrongVolume
 }
+ */
 
 
 //あるチャプターのファイルの中身を検索し、苦手な単語の数を返す。forなどでイテレータfilenameを回し、それを各chapterの苦手数の配列などに順に格納するなどして利用する。
+/*
 func getNigateTangoVolume(fileName:String)->Int{
     print("getNigateTangoVolume")
     let nigateArray = getfile(fileName: fileName)
@@ -433,6 +438,36 @@ func getNigateTangoVolume(fileName:String)->Int{
     }
     return nigateCount
 }
+ */
+
+//上の改良版8->6
+
+
+func getWrongTangoVolume(fileName:String)->Int{
+    let wholeArray = getfile(fileName: fileName)
+    var wrongVolume:Int = 0
+    for _ in 0..<wholeArray.count/6{
+        wrongVolume += 1
+    }
+    return wrongVolume
+}
+
+
+//あるチャプターのファイルの中身を検索し、苦手な単語の数を返す。forなどでイテレータfilenameを回し、それを各chapterの苦手数の配列などに順に格納するなどして利用する。
+
+func getNigateTangoVolume(fileName:String)->Int{
+    print("getNigateTangoVolume")
+    let nigateArray = getfile(fileName: fileName)
+    var nigateCount = 0
+    for r in 0..<nigateArray.count/6{
+        print(nigateArray[6*r+4])
+        if(nigateArray[6*r+4] == "1"){
+            nigateCount += 1
+        }
+    }
+    return nigateCount
+}
+
 
 
 func getNewChapter(fileName:String,chapterVolume:Int)->Int{
