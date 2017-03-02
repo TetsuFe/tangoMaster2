@@ -214,6 +214,8 @@ class CardVC: UIViewController {
     
     var retryIndexs:Array<Int> = []
     
+    //新しくappendしたlabelなどを使って次のcardViewを作成し、一番後ろに配置する。ここでlistcountはappendしたタイミングでは増えていないこと、実際に配列にアクセスするための添え字は[labelsの数-1]が最後部になることを考えると、現在のlistcount（+1する前）が最後部のlabelsになる。この最後部のlabelなどを使って新しいcardViewを作成する。＜ーこれがlistcountが必要な理由！
+    //すなわち、今の値はself.countにあり、それをself.listcount番目のcardに代入するという形になる（両者は最後のカードの時一致する。ややこしい！）
     func addBehind(){
         retryIndexs.append(count)
         cardViews.append(UIView())
@@ -221,11 +223,12 @@ class CardVC: UIViewController {
         myLabels2.append(UILabel())
         nigateButtons.append(UIButton())
         //makeCard(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!)
-        makeCardWithNigateStar(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], myNigateButton:nigateButtons[self.count],eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,nigateFlag:nigateFlags[self.count])
+        makeCardWithNigateStar(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], myNigateButton:nigateButtons[self.listcount],eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,nigateFlag:nigateFlags[self.count])
         superCardView.sendSubview(toBack: cardViews[listcount])
         
         nigateFlags.append(nigateFlags[self.count])
-        cardDatas.append(NewImageReibun(eng:"a",jpn:"あ",engReibun:"e",jpnReibun:"え",nigateFlag:"1",partOfSpeech:"a"))
+        //nigateaddでは苦手かどうかをみるだけなので、jpnreibunなどはとくに気にする必要はない
+        cardDatas.append(NewImageReibun(eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,engReibun:"test",jpnReibun:"てすと",nigateFlag:nigateFlags[self.count],partOfSpeech:"test"))
         listcount += 1
         retryCount += 1
     }
@@ -290,7 +293,9 @@ class CardVC: UIViewController {
             self.nigateAddOrGoProblem.isEnabled = true
         })
         
-        if cardDatas[count].nigateFlag == "0"{
+        //if cardDatas[count].nigateFlag == "0"{
+        print("count : " + String(count))
+        if nigateFlags[count] == "0"{
             print("nigate add")
             writeSixFile(fileName:preserveFileName,eng:cardDatas[count].eng!,jpn:cardDatas[count].jpn!,engPhrase:cardDatas[count].engReibun!,jpnPhrase:cardDatas[count].jpnReibun!,nigateFlag:"1",partOfSpeech: cardDatas[count].partOfSpeech!)
                 nigateButtons[count].setImage(UIImage(named:"nigate.png"), for: .normal)
@@ -300,7 +305,6 @@ class CardVC: UIViewController {
             writeSixFile(fileName:preserveFileName,eng:cardDatas[count].eng!,jpn:cardDatas[count].jpn!,engPhrase:cardDatas[count].engReibun!,jpnPhrase:cardDatas[count].jpnReibun!,nigateFlag:"0",partOfSpeech: cardDatas[count].partOfSpeech!)
             nigateButtons[count].setImage(UIImage(named:"un_nigate.png"), for: .normal)
             nigateFlags[count] = "0"
-
         }
     }
 
