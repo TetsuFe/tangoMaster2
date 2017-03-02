@@ -86,11 +86,7 @@ class CardSettingPopUpVC: UIViewController {
         print("push button button")
 
         appDelegate.cardMoveSetting = false
-        buttonSettingButton.isEnabled = false
-        swipeSettingButton.isEnabled = true
 
-        
-        swipeSettingButton.isEnabled = true
         swipeSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
         buttonSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
         
@@ -99,10 +95,7 @@ class CardSettingPopUpVC: UIViewController {
     func pushedSwipeButton(){
         print("push swipe button")
         appDelegate.cardMoveSetting = true
-        swipeSettingButton.isEnabled = false
-        buttonSettingButton.isEnabled = true
         
-        buttonSettingButton.isEnabled = true
         buttonSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
         swipeSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
         

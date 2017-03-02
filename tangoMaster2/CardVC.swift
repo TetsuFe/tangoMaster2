@@ -51,7 +51,18 @@ class CardVC: UIViewController {
             //fileName = matomeFileNamesArray[appDelegate.problemCategory]
         }
         //テスト中なので、とりあえず、ファイルの全てを取れるようにしておく。基本、苦手もファイル名が変わるだけで形式は同じ
-        
+        //苦手配列の英語と同じ英語に苦手ラベルづけ
+        let nigateArray:Array<String> = getfile(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+        for r in 0..<nigateArray.count/6{
+            if nigateArray[6*r+4] == "1"{
+                for i in 0..<cardDatas.count{
+                    if(nigateArray[6*r] == cardDatas[i].eng){
+                        cardDatas[i].nigateFlag = "1"
+                    }
+                }
+            }
+        }
+
         initialListCount = cardDatas.count
         
         
@@ -60,10 +71,12 @@ class CardVC: UIViewController {
             self.cardViews.append(UIView())
             self.myLabels.append(UILabel())
             self.myLabels2.append(UILabel())
+            self.nigateButtons.append(UIButton())
         }
         
         for i in 0..<cardDatas.count {
-            makeCard(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!)
+            //makeCard(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!)
+            makeCardWithNigateStar(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],myNigateButton:nigateButtons[listcount-1-i],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!,nigateFlag:cardDatas[listcount-1-i].nigateFlag!)
         }
         
         //nigateAddOrGoProblem.layer.borderWidth = 1
@@ -79,7 +92,11 @@ class CardVC: UIViewController {
         
         progress.text = String(count+1) + "/" + String(cardDatas.count)
        
-        nigateFlags = getNigateFlagArray(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+        //nigateFlags = getNigateFlagArray(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+        nigateFlags = Array<String>()
+        for i in cardDatas{
+            nigateFlags.append(i.nigateFlag!)
+        }
         
         leftSwipeButton.addTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
         rightSwipeButton.addTarget(self, action: #selector(goNextCard), for: .touchUpInside)
@@ -202,8 +219,12 @@ class CardVC: UIViewController {
         cardViews.append(UIView())
         myLabels.append(UILabel())
         myLabels2.append(UILabel())
-        makeCard(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!)
+        nigateButtons.append(UIButton())
+        //makeCard(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!)
+        makeCardWithNigateStar(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], myNigateButton:nigateButtons[self.count],eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,nigateFlag:nigateFlags[self.count])
         superCardView.sendSubview(toBack: cardViews[listcount])
+        
+        nigateFlags.append(nigateFlags[self.count])
         cardDatas.append(NewImageReibun(eng:"a",jpn:"あ",engReibun:"e",jpnReibun:"え",nigateFlag:"1",partOfSpeech:"a"))
         listcount += 1
         retryCount += 1
@@ -238,12 +259,14 @@ class CardVC: UIViewController {
         }
     }
     
+    /*
     func getNigateFlagArray(fileName:String)->Array<String>{
+        print("getNigateFlagArray")
         let nigateArray = getfile(fileName: fileName)
         var nigateFlagArray = Array<String>()
         for r in 0..<nigateArray.count/6{
-            print(nigateArray[6*r+5])
-            if(nigateArray[6*r+5] == "1"){
+            print(nigateArray[6*r+4])
+            if(nigateArray[6*r+4] == "1"){
                 nigateFlagArray.append("1")
             }else{
                 nigateFlagArray.append("0")
@@ -251,12 +274,14 @@ class CardVC: UIViewController {
         }
         return nigateFlagArray
     }
+    */
+
     
     
     var nigateFlags = Array<String>()
     
     func nigateAdd(){
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        //let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let preserveFileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
         
         nigateAddOrGoProblem.isEnabled = false //login_btnはUIButtonです
@@ -265,9 +290,17 @@ class CardVC: UIViewController {
             self.nigateAddOrGoProblem.isEnabled = true
         })
         
-        
         if cardDatas[count].nigateFlag == "0"{
+            print("nigate add")
             writeSixFile(fileName:preserveFileName,eng:cardDatas[count].eng!,jpn:cardDatas[count].jpn!,engPhrase:cardDatas[count].engReibun!,jpnPhrase:cardDatas[count].jpnReibun!,nigateFlag:"1",partOfSpeech: cardDatas[count].partOfSpeech!)
+                nigateButtons[count].setImage(UIImage(named:"nigate.png"), for: .normal)
+                nigateFlags[count] = "1"
+        }else{
+            print("nigate cancel")
+            writeSixFile(fileName:preserveFileName,eng:cardDatas[count].eng!,jpn:cardDatas[count].jpn!,engPhrase:cardDatas[count].engReibun!,jpnPhrase:cardDatas[count].jpnReibun!,nigateFlag:"0",partOfSpeech: cardDatas[count].partOfSpeech!)
+            nigateButtons[count].setImage(UIImage(named:"un_nigate.png"), for: .normal)
+            nigateFlags[count] = "0"
+
         }
     }
 
@@ -295,12 +328,23 @@ class CardVC: UIViewController {
                     let tangos = getfile(fileName: fileName)
                     for r in 0..<tangos.count/6{
                         cardDatas.append(NewImageReibun(eng: tangos[6*r],jpn:tangos[6*r+1],engReibun:tangos[6*r+2],jpnReibun:tangos[6*r+3],nigateFlag:tangos[6*r+4],partOfSpeech:tangos[6*r+5]))
-                        
                     }
-                    
                 }else{
                     //fileName = matomeFileNamesArray[appDelegate.problemCategory]
                 }
+                
+                //苦手配列の英語と同じ英語に苦手ラベルづけ
+                let nigateArray:Array<String> = getfile(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+                for r in 0..<nigateArray.count/6{
+                    if nigateArray[6*r+4] == "1"{
+                        for i in 0..<cardDatas.count{
+                            if(nigateArray[6*r] == cardDatas[i].eng){
+                                cardDatas[i].nigateFlag = "1"
+                            }
+                        }
+                    }
+                }
+
                 print(fileName)
                 //テスト中なので、とりあえず、ファイルの全てを取れるようにしておく。基本、苦手もファイル名が変わるだけで形式は同じ
                 initialListCount = cardDatas.count
@@ -313,13 +357,19 @@ class CardVC: UIViewController {
                     self.cardViews.append(UIView())
                     self.myLabels.append(UILabel())
                     self.myLabels2.append(UILabel())
+                    self.nigateButtons.append(UIButton())
                 }
                 
                 for i in 0..<cardDatas.count {
-                    makeCard(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!)
+                    //makeCard(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!)
+                    makeCardWithNigateStar(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],myNigateButton:nigateButtons[listcount-1-i],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!,nigateFlag:cardDatas[listcount-1-i].nigateFlag!)
                 }
                 
-                nigateFlags = getNigateFlagArray(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+                //nigateFlags = getNigateFlagArray(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+                nigateFlags = Array<String>()
+                for i in cardDatas{
+                    nigateFlags.append(i.nigateFlag!)
+                }
                 finishView.removeFromSuperview()
             }
         }else{
@@ -367,6 +417,7 @@ class CardVC: UIViewController {
     }
     
     
+    /*
     func makeCard(cardView:UIView,myLabel:Array<UILabel>,eng:String,jpn:String){
         
         
@@ -411,6 +462,67 @@ class CardVC: UIViewController {
         
         
     }
+    */
+    
+    
+    
+    
+    func makeCardWithNigateStar(cardView:UIView,myLabel:Array<UILabel>,myNigateButton:UIButton,eng:String,jpn:String,nigateFlag:String){
+        
+        
+        cardView.frame.size = CGSize(width: superCardView.frame.width, height: superCardView.frame.height)
+        cardView.center = CGPoint(x: superCardView.frame.size.width/2, y: superCardView.frame.height/2)
+        cardView.backgroundColor = UIColor.white
+        cardView.layer.masksToBounds = true
+        cardView.layer.cornerRadius = 0.0
+        cardView.layer.borderWidth = 1
+        print(superCardView.center)
+        print(cardView.center)
+        
+        
+        // Labelを生成.
+        myLabel[0].frame.size = CGSize(width: cardView.frame.size.width, height: cardView.frame.size.height/3)
+        myLabel[0].center = CGPoint(x: cardView.frame.size.width/2, y: cardView.frame.size.height/2.5)
+        myLabel[0].text = eng
+        myLabel[0].font = UIFont.systemFont(ofSize: CGFloat(26))
+        myLabel[0].alpha = 1
+        
+        myLabel[1].frame.size = CGSize(width: cardView.frame.size.width, height: cardView.frame.size.height/3)
+        myLabel[1].center = CGPoint(x: cardView.frame.size.width/2, y: cardView.frame.size.height/1.5)
+        myLabel[1].text = jpn
+        myLabel[1].font = UIFont.systemFont(ofSize: CGFloat(18))
+        myLabel[1].alpha = 0
+        
+        for i in 0...1{
+            myLabel[i].textColor = UIColor.black
+            myLabel[i].textAlignment = NSTextAlignment.center
+            myLabel[i].backgroundColor = UIColor.white
+            myLabel[i].layer.masksToBounds = true
+            myLabel[i].layer.cornerRadius = 0.0
+        }
+        superCardView.addSubview(cardView)
+        cardView.addSubview(myLabel[1])
+        cardView.addSubview(myLabel[0])
+        
+        //同じlabelを参照していないかを確認(名前を間違えていた)
+        //print(Unmanaged.passRetained(myLabel[0]))
+        // print(Unmanaged.passRetained(myLabel[1]))
+        cardMode = 1
+        
+        myNigateButton.addTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
+        if(nigateFlag == "0"){
+            myNigateButton.setImage(UIImage(named:"un_nigate.png"), for: .normal)
+        }else{
+            myNigateButton.setImage(UIImage(named:"nigate.png"), for: .normal)
+        }
+        myNigateButton.frame = CGRect(x: 6*cardView.frame.width/7, y: 0, width: cardView.frame.width/7, height: cardView.frame.width/7)
+        cardView.addSubview(myNigateButton)
+        
+        
+    }
+
+    
+    
     /*
     @IBAction func jpnVisibleButton(_ sender: AnyObject) {
         if(self.jpnVisible == CGFloat(0)){
@@ -430,6 +542,7 @@ class CardVC: UIViewController {
     var cardViews = Array<UIView>()
     var myLabels = Array<UILabel>()
     var myLabels2 = Array<UILabel>()
+    var nigateButtons = Array<UIButton>()
     var count = 0
     var listcount = 0
     var jpnVisible : CGFloat = CGFloat(0)
@@ -539,6 +652,7 @@ class CardVC: UIViewController {
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    
     //苦手ファイルをゲット
     func getNigateTangos(fileName:String)->Array<NewImageReibun>{
         //ファイルをゲット、区切られたArray<String>を得る
@@ -568,7 +682,6 @@ class CardVC: UIViewController {
     @IBAction func settingButton(_ sender: Any) {
         showPopUpProgressView()
     }
-
     
     func showPopUpProgressView(){
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardSettingPopUp") as! CardSettingPopUpVC
@@ -585,3 +698,9 @@ class CardVC: UIViewController {
     }
 
 }
+
+
+
+
+
+

@@ -71,7 +71,7 @@ class ProblemVC: UIViewController {
     
     func backPage(){
         // ① UIAlertControllerクラスのインスタンスを生成
-        let alert: UIAlertController = UIAlertController(title: "確認", message: "選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        let alert: UIAlertController = UIAlertController(title: "確認", message: "範囲選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
         
         // ② Actionの設定
         // OKボタン

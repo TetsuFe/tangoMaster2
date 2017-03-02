@@ -1,4 +1,3 @@
-bread@パン・生計@eat three slices of bread@パンを三枚食べる
 help@手伝う@help him to clean@彼が掃除するのを手伝う@0@v
 respect@尊敬する@respect the teacher@その先生を尊敬している@0@v
 essentially@本質的には@be essentially same@本質的には同じ@0@av

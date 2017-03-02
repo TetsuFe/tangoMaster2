@@ -32,8 +32,6 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var storyButton: UIButton!
     
     
-  
-    
     var tangoNumber = 0
     
     var gtangoRow:Int = 0
@@ -163,7 +161,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         // ① UIAlertControllerクラスのインスタンスを生成
         // タイトル, メッセージ, Alertのスタイルを指定する
         // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
-        let alert: UIAlertController = UIAlertController(title: "確認", message: "問題選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        let alert: UIAlertController = UIAlertController(title: "確認", message: "範囲選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
         
         // ② Actionの設定
         // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
@@ -450,6 +448,8 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 }
             }
         }
+        
+        resultTableView.rowHeight = self.view.bounds.size.height/9
         
     }
     

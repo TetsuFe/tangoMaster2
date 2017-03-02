@@ -320,7 +320,8 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 
                 var ratio = Double()
 
-                let graphMaxWidth = 4*graphCells[i].frame.width/6
+                //ラベルがchapter1のように少し長いため、その分graphの長さを短く設定4/6 -> 4/7
+                let graphMaxWidth = 4*graphCells[i].frame.width/7
                 
                 let superViewWidth = graphCells[i].frame.width
                 let superViewHeight = graphCells[i].frame.height
@@ -330,12 +331,10 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                     ratio = 1
                 }else if i == (newChapterNumbers[j]) / 5{
                     ratio = Double((newChapterNumbers[j]) % 5) / 5
-
                 }else{
                     ratio = 0
                 }
 
-            
                 
                 labels.append(UILabel(frame: CGRect(x:0,y:0, width: superViewWidth/4, height: superViewHeight/2)))
                 
