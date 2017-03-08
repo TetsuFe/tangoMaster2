@@ -71,8 +71,5 @@ class ListCell:UITableViewCell{
             }
             setCell(NewImageReibun(eng:engLabel.text!,jpn:jpnLabel.text!,engReibun:engPhrase.text!,jpnReibun:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech:partOfSpeech),chapterNumber:chapterNumber)
         }
-
     }
-    
-    
 }

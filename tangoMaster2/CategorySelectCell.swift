@@ -15,5 +15,3 @@ class CategorySelectCell:UITableViewCell{
         chapterLabel.text = labelName
     }
 }
-
-

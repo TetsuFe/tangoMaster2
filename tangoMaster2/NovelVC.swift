@@ -633,8 +633,5 @@ class CSendText {
         //m_text = nil
     }
 }
-
-
 //日本 "HiraMinProN-W3"
 //英語 "Helvetica"
-

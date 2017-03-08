@@ -17,4 +17,3 @@ class HelpSelectCell:UITableViewCell{
         selectOptionLabel.text = labelName
     }
 }
-

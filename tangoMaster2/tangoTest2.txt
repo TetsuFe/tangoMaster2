@@ -5,7 +5,7 @@ gift@贈り物・才能@gift for music@音楽の才能@0@n
 sorrow@悲しみ@chain of sorrow@悲しみの連鎖@0@n
 via@〜を経由して@via NewYork@ニューヨーク経由で@0@p
 extremely@非常に@extremely@極端に@0@av
-temporary@一時的に@temporary unavailable@一時的に利用できない@0@ad
+temporary@一時的に@temporary unavailable@一時的に利用できない@0@av
 struggle@苦戦する・奮闘する@struggle to do@〜に苦戦している@0@v
 cancer@がん・癌@lung cancer@肺がん@0@n
 reputation@名声・評判@regain the reputation@名声を取り戻す@0@n

@@ -59,6 +59,7 @@ class ProblemVC: UIViewController {
     //本当はchapに応じた範囲でランダム決定したいので、chap引数も追加したい。
     func partsToIndex(parts:String)->Int{
         var jpnArrayIdentifier = -1
+        print("parts : \(parts)")
         switch parts{
         case "n":
             //本当はchapに応じた範囲でランダム決定
@@ -74,6 +75,7 @@ class ProblemVC: UIViewController {
         default:
             break
         }
+        print("return -1! may ber error occur!")
         return jpnArrayIdentifier
     }
     
@@ -144,6 +146,9 @@ class ProblemVC: UIViewController {
             tango = getfile(fileName:fileName)
             for r in 0..<tango.count/6{
                 sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber)))
+            }
+            for seven in sevenList{
+                print(seven.eng!,seven.jpn!,seven.engReibun!,seven.jpnReibun!,seven.nigateFlag!,seven.partOfSpeech!)
             }
         
         //苦手chpaterの全範囲のProblem
@@ -267,6 +272,8 @@ class ProblemVC: UIViewController {
     func originProblem4(correct:Int,M:Int)->Array<Int>{
         //k1が正解の番号
         //ダミーの決定 (4たくの場合)
+        print("dummy : \(dummyArray.count)")
+        print("seven : \(sevenList.count)")
         let currentArray = dummyArray[partsToIndex(parts: sevenList[correct].partOfSpeech!)]
         
         var dummyOptionArray = [-1,-1,-1]

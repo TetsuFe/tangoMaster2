@@ -28,10 +28,6 @@ class CardVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        if(appDelegate.cardMoveSetting){
-            leftSwipeButton.isEnabled = false
-            rightSwipeButton.isEnabled = false
-        }
         
         newChapterNumber = getNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
 
@@ -111,12 +107,10 @@ class CardVC: UIViewController {
         
         if(appDelegate.modeTag != 2){
             for i in 0..<cardDatas.count {
-                //makeCard(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!)
                 makeCardWithNigateStar(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],myNigateButton:nigateButtons[listcount-1-i],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!,nigateFlag:cardDatas[listcount-1-i].nigateFlag!)
             }
         }else{
             for i in 0..<sevenDatas.count {
-                //makeCard(cardView: cardViews[listcount-1-i], myLabel: [myLabels[cardDatas.count-1-i],myLabels2[cardDatas.count-1-i]],eng: cardDatas[listcount-1-i].eng!,jpn: cardDatas[listcount-1-i].jpn!)
                 makeCardWithNigateStar(cardView: cardViews[listcount-1-i], myLabel: [myLabels[sevenDatas.count-1-i],myLabels2[sevenDatas.count-1-i]],myNigateButton:nigateButtons[listcount-1-i],eng: sevenDatas[listcount-1-i].eng!,jpn: sevenDatas[listcount-1-i].jpn!,nigateFlag:sevenDatas[listcount-1-i].nigateFlag!)
             }
 
@@ -128,18 +122,16 @@ class CardVC: UIViewController {
 
         }
 
-        /*
-        leftSwipeButton.layer.cornerRadius = 10
-        rightSwipeButton.layer.cornerRadius = 10
-        goProblemButton.layer.cornerRadius = 10
-        goNigateProblemButton.layer.cornerRadius = 10
-        backButton.layer.cornerRadius = 10
- */
-        
         initializeButtonColor()
         initializeButtonAction()
         initializeButtonTitle()
         initializeButtonBorder()
+        if(appDelegate.cardMoveSetting){
+            leftSwipeButton.isEnabled = false
+            rightSwipeButton.isEnabled = false
+            goNigateProblemButton.isEnabled = false
+        }
+        goNigateProblemButton.addTarget(self, action: #selector(goProblem2), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backToSelect), for: .touchUpInside)
         
     }
@@ -205,73 +197,72 @@ class CardVC: UIViewController {
     
     func finishingProcess(){
         //if(cardMode == 1){
-            //makeFinishView(retryCount:retryCount)
-            
-            //スワイプボタンの実行関数を変更
-            leftSwipeButton.title = "もう一度"
-            leftSwipeButton.removeTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
-            leftSwipeButton.addTarget(self, action: #selector(retry), for: .touchUpInside)
-            leftSwipeButton.isEnabled = true
-     
-            rightSwipeButton.title = "次のchapterへ"
-            rightSwipeButton.removeTarget(self, action: #selector(goNextCard), for: .touchUpInside)
-            rightSwipeButton.addTarget(self, action: #selector(goNextChapter), for: .touchUpInside)
-            rightSwipeButton.isEnabled = true
-          
-            goProblemButton.removeTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
-            goProblemButton.addTarget(self, action: #selector(goProblem), for: .touchUpInside)
-            goNigateProblemButton.title = "問題（苦手）"
-            goNigateProblemButton.addTarget(self, action: #selector(goProblem2), for: .touchUpInside)
-            goProblemButton.title = "問題（全て）"
-       //3/7
+        //makeFinishView(retryCount:retryCount)
+        
+        //スワイプボタンの実行関数を変更
+        leftSwipeButton.title = "もう一度"
+        leftSwipeButton.removeTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
+        leftSwipeButton.addTarget(self, action: #selector(retry),for: .touchUpInside)
+        leftSwipeButton.isEnabled = true
+        
+        rightSwipeButton.title = "次のchapterへ"
+        rightSwipeButton.removeTarget(self, action: #selector(goNextCard), for: .touchUpInside)
+        rightSwipeButton.addTarget(self, action: #selector(goNextChapter), for: .touchUpInside)
+        rightSwipeButton.isEnabled = true
+        
+        goProblemButton.removeTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
+        goProblemButton.addTarget(self, action: #selector(goProblem), for: .touchUpInside)
+        goNigateProblemButton.isEnabled = true
+        goNigateProblemButton.title = "問題（苦手）"
+        
+        goProblemButton.title = "問題（全て）"
+        
+        goProblemButton.layer.borderWidth = 1
+        goNigateProblemButton.layer.borderWidth = 1
+        
+        
         /*
-            leftSwipeButton.backgroundColor = UIColor.orange
-            rightSwipeButton.backgroundColor = UIColor.green
-            goProblemButton.backgroundColor = UIColor.blue
-            goNigateProblemButton.backgroundColor = UIColor.yellow
- */
-            goProblemButton.layer.borderWidth = 1
-            goNigateProblemButton.layer.borderWidth = 1
+         //苦手だけ探せば、存在するかどうかはわかる
+         if(appDelegate.modeTag == 1){
+         //次のchapterを調べるので、次があることを確認する
+         if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
+         if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) == 0{
+         goNigateProblemButton.layer.backgroundColor = UIColor.gray.cgColor
+         goNigateProblemButton.isEnabled = false
+         }
+         }
+         }
+         */
         
-        
-            /*
-            //苦手だけ探せば、存在するかどうかはわかる
-            if(appDelegate.modeTag == 1){
-                //次のchapterを調べるので、次があることを確認する
-                if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
-                    if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) == 0{
-                        goNigateProblemButton.layer.backgroundColor = UIColor.gray.cgColor
-                        goNigateProblemButton.isEnabled = false
-                    }
-                }
-            }
-            */
-            
-            //次のchapterを調べる。
-            if(appDelegate.modeTag == 0){
-                if appDelegate.chapterNumber == testFileNamesArray[appDelegate.problemCategory].count-1{
-                    rightSwipeButton.isEnabled = false
-                    rightSwipeButton.backgroundColor = UIColor.clear
-                }
-            }
- 
-            if appDelegate.modeTag == 1{
+        //次のchapterを調べる。
+        if(appDelegate.modeTag == 0){
+            if appDelegate.chapterNumber == testFileNamesArray[appDelegate.problemCategory].count-1{
                 rightSwipeButton.isEnabled = false
                 rightSwipeButton.backgroundColor = UIColor.clear
             }
-
- 
+        }
             
-            //現在のchapterを調べる。こちらはProblemに行けるかを判定
-            if(appDelegate.chapterNumber <= testNigateFileNamesArray[appDelegate.problemCategory].count-1){
-                if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]) == 0{
-                    print(getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]))
-                    goNigateProblemButton.isEnabled = false
-                    goNigateProblemButton.backgroundColor = UIColor.clear
-                }else{
-                    goNigateProblemButton.isEnabled = true
-                }
+        else if appDelegate.modeTag == 1{
+            rightSwipeButton.isEnabled = false
+            rightSwipeButton.backgroundColor = UIColor.clear
+        }else if appDelegate.modeTag == 2{
+            
+        }
+        
+        
+        
+        //現在のchapterを調べる。こちらはProblemに行けるかを判定
+        if(appDelegate.chapterNumber <= testNigateFileNamesArray[appDelegate.problemCategory].count-1){
+            if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]) == 0{
+                print(getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]))
+                goNigateProblemButton.isEnabled = false
+                goNigateProblemButton.backgroundColor = UIColor.clear
+            }else{
+                goNigateProblemButton.isEnabled = true
             }
+        }
+        goProblemButton.isEnabled = true
+        goProblemButton.layer.borderWidth = 1.0
     }
     
     func changeCard(){
@@ -289,7 +280,6 @@ class CardVC: UIViewController {
         myLabels.append(UILabel())
         myLabels2.append(UILabel())
         nigateButtons.append(UIButton())
-        //makeCard(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!)
         if(appDelegate.modeTag != 2){
             makeCardWithNigateStar(cardView: cardViews[listcount], myLabel:[myLabels[self.listcount],myLabels2[self.listcount]], myNigateButton:nigateButtons[self.listcount],eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,nigateFlag:cardDatas[count].nigateFlag!)
             superCardView.sendSubview(toBack: cardViews[listcount])
@@ -301,7 +291,7 @@ class CardVC: UIViewController {
             superCardView.sendSubview(toBack: cardViews[listcount])
             
             //nigateaddでは苦手かどうかをみるだけなので、jpnreibunなどはとくに気にする必要はない
-            cardDatas.append(NewImageReibun(eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,engReibun:sevenDatas[self.count].engReibun!,jpnReibun:sevenDatas[self.count].jpnReibun!,nigateFlag:sevenDatas[self.count].nigateFlag!,partOfSpeech:sevenDatas[self.count].partOfSpeech!))
+            sevenDatas.append(SixWithChapter(eng: myLabels[self.count].text!, jpn: myLabels2[self.count].text!,engReibun:sevenDatas[self.count].engReibun!,jpnReibun:sevenDatas[self.count].jpnReibun!,nigateFlag:sevenDatas[self.count].nigateFlag!,partOfSpeech:sevenDatas[self.count].partOfSpeech!,chapterNumber:sevenDatas[self.count].chapterNumber!))
         }
         listcount += 1
         retryCount += 1
@@ -394,11 +384,7 @@ class CardVC: UIViewController {
                 for r in 0..<list.count{
                     writeSixFile(fileName:preserveFileName,eng: list[r].eng!, jpn: list[r].jpn!, engPhrase: list[r].engReibun!, jpnPhrase: list[r].jpnReibun!,nigateFlag:list[r].nigateFlag!,partOfSpeech: list[r].partOfSpeech!)
                 }
-                /*
-writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas[count].jpn!,engPhrase:sevenDatas[count].engReibun!,jpnPhrase:sevenDatas[count].jpnReibun!,nigateFlag:"0",partOfSpeech: sevenDatas[count].partOfSpeech!)
-               */
             }
-            
         }
     }
 
@@ -427,6 +413,7 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
                 }else if appDelegate.modeTag == 1{
                     fileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
                     let tangos = getfile(fileName: fileName)
+                    cardDatas = Array<NewImageReibun>()
                     for r in 0..<tangos.count/6{
                         cardDatas.append(NewImageReibun(eng: tangos[6*r],jpn:tangos[6*r+1],engReibun:tangos[6*r+2],jpnReibun:tangos[6*r+3],nigateFlag:tangos[6*r+4],partOfSpeech:tangos[6*r+5]))
                     }
@@ -441,6 +428,7 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
                             print(j)
                         }
                         tango = tango + tempTango
+                        sevenDatas = Array<SixWithChapter>()
                         for r in 0..<tempTango.count/6{
                             sevenDatas.append(SixWithChapter(eng: tempTango[6*r],jpn:tempTango[6*r+1],engReibun:tempTango[6*r+2],jpnReibun:tempTango[6*r+3],nigateFlag: tempTango[6*r+4],partOfSpeech:tempTango[6*r+5],chapterNumber:String(i)))
                         }
@@ -451,7 +439,6 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
                 }else{
                     
                 }
-
                 
                 //苦手配列の英語と同じ英語に苦手ラベルづけ
                 let nigateArray:Array<String> = getfile(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
@@ -467,6 +454,11 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
 
                 print(fileName)
                 //テスト中なので、とりあえず、ファイルの全てを取れるようにしておく。基本、苦手もファイル名が変わるだけで形式は同じ
+                self.cardViews = [UIView()]
+                self.myLabels = [UILabel()]
+                self.myLabels2 = [UILabel()]
+                self.nigateButtons = [UIButton()]
+                
                 
                 if(appDelegate.modeTag != 2){
                     initialListCount = cardDatas.count
@@ -482,6 +474,7 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
                 }else{
                     initialListCount = sevenDatas.count
                     
+                    self.listcount = sevenDatas.count
                     for _ in 0..<sevenDatas.count {
                         self.cardViews.append(UIView())
                         self.myLabels.append(UILabel())
@@ -506,8 +499,14 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
           
                 finishView.removeFromSuperview()
                 initializeButtonColor()
-                initializeButtonAction()
+                //initializeButtonAction()
+                //initializeButtonBorder()
+                goNigateProblemButton.layer.borderWidth = 0.0
+                goProblemButton.layer.borderWidth = 0.0
+                goProblemButton.isEnabled = false
                 initializeButtonTitle()
+                changeButtonTargeEndToRunning()
+                goNigateProblemButton.isEnabled = false
                 }
         }else{
             appDelegate.chapterNumber -= 1
@@ -522,9 +521,23 @@ writeSixFile(fileName:preserveFileName,eng:sevenDatas[count].eng!,jpn:sevenDatas
             leftSwipeButton.backgroundColor = UIColor.clear
             rightSwipeButton.backgroundColor = UIColor.clear
         }else{
-            //leftSwipeButton.backgroundColor = UIColor.orange
-            //rightSwipeButton.backgroundColor = UIColor.green
+            leftSwipeButton.backgroundColor = UIColor.orange
+            rightSwipeButton.backgroundColor = UIColor.green
         }
+    }
+    
+    func changeButtonTargetRunningToEnd(){
+        leftSwipeButton.removeTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
+        rightSwipeButton.removeTarget(self, action: #selector(goNextCard), for: .touchUpInside)
+        leftSwipeButton.addTarget(self, action: #selector(retry), for: .touchUpInside)
+        rightSwipeButton.addTarget(self, action: #selector(goNextChapter), for: .touchUpInside)
+    }
+    
+    func changeButtonTargeEndToRunning(){
+        leftSwipeButton.removeTarget(self, action:  #selector(retry), for: .touchUpInside)
+        rightSwipeButton.removeTarget(self, action: #selector(goNextChapter), for: .touchUpInside)
+        leftSwipeButton.addTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
+        rightSwipeButton.addTarget(self, action:#selector(goNextCard), for: .touchUpInside)
     }
     
     func initializeButtonAction(){

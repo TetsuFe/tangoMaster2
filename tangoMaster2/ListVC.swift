@@ -142,4 +142,3 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         super.didReceiveMemoryWarning()
     }
 }
-

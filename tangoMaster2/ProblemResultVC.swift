@@ -107,7 +107,8 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         //各種ラベル・ボタンの設定
         
-        scoreLabel.text = "正解率 : "+String(wrongArray.count/6+correctArray.count/6 - wrongCount)+" / "+String(wrongArray.count/6+correctArray.count/6)
+        //scoreLabel.text = "正解率 : "+String(wrongArray.count/6+correctArray.count/6 - wrongCount)+" / "+String(wrongArray.count/6+correctArray.count/6)
+        scoreLabel.text = "正解率 : "+String(wrongArray.count/7+correctArray.count/7 - wrongCount)+" / "+String(wrongArray.count/7+correctArray.count/7)
         
         makeFinishLabel(retryCount : wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
         judgeAndWriteNewChapter(retryCount :wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
@@ -249,7 +250,6 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 fileObject = fileObject+"0"
             }
         }
-        
         let filepath1 = "\(path)/\(fileName+".txt")"
         let filew: FileHandle? = FileHandle(forWritingAtPath: filepath1)
         // 保存処理 先のdeletefileで必ず消されているので、ここに必ず入る
@@ -292,7 +292,6 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         popOverVC.view.frame = self.view.frame
         print("popOverVC : \(popOverVC.view.frame)")
         self.view.addSubview(popOverVC.view)
-        
         popOverVC.didMove(toParentViewController: self)
     }
 

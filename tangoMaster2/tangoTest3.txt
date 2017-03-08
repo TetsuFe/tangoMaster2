@@ -17,4 +17,4 @@ distant@遠い・態度が冷たい@distant memory@遠い昔の記憶@0@n
 wonder@〜だろうか・驚く@wonder why~@なぜ〜なんだろうか@0@v
 tackle@取り組む・捕まえる・タックル@tackle@タックルする@0@v
 entirely@全く・完全に@not entirely@全く〜しないわけではない@0@av
-indect@感染させる@infeced with flu@インフルエンザに感染する@0@v
+infect@感染させる@infeced with flu@インフルエンザに感染する@0@v

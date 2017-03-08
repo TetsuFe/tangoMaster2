@@ -12,4 +12,3 @@ import UIKit
 class CategorySelectWithGraphCell:UITableViewCell{
     
 }
-

@@ -28,9 +28,13 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // try! audioSession.setActive(true)
+       
+        /*バックグラウンド小さい音
         let audioSession : AVAudioSession = AVAudioSession.sharedInstance()
         try! audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.duckOthers)
         try! audioSession.setActive(true)
+        */
+       
         /*
          try! audioSession.setCategory(AVAudioSessionCategoryAmbient)
          try! audioSession.setActive(true)
@@ -76,10 +80,4 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
 }
-
-
-
-

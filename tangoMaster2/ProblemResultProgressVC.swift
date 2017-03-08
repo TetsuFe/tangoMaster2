@@ -189,5 +189,3 @@ class TangoProgressGraph2{
         label2.text = String(Int(ratio*100)) + "%"
     }
 }
-
-

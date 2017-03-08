@@ -679,7 +679,3 @@ func writeSixFile(fileName:String,eng: String, jpn: String, engPhrase: String, j
         filer?.closeFile()
     }
 }
-
-
-
-
