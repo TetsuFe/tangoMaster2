@@ -16,8 +16,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     }
     
     @IBOutlet weak var graphView: UIView!
-    
-    
+
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var homeTableView: UITableView!
@@ -26,46 +25,12 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     let labelNames = ["単語一覧","単語テスト","単語カード","苦手リスト"]
     let imageNames = ["list.png","test.png","card.png","nigatelist.png"]
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
-        return labelNames.count
-    }
-    
-    func tableView(_ tableView : UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
-        
-        let cell: HomeSelectCell = homeTableView.dequeueReusableCell(withIdentifier: "HomeSelectCell") as! HomeSelectCell
-        
-        cell.setCell(labelNames[indexPath.row],imageNames[indexPath.row])
-        return cell
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         homeTableView.dataSource = self
         homeTableView.delegate = self
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    //Cellが選択された際に呼び出される
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        appDelegate.sceneTag = indexPath.row
-        var secondViewController = UIViewController()
-        if indexPath.row == 4{
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
-        }else{
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
-            //let transition = CATransition()
-            //transition.duration = 0.25
-            //transition.type = kCATransitionPush
-            //transition.subtype = kCATransitionFromRight
-            //view.window!.layer.add(transition, forKey: kCATransition)
-            self.present(secondViewController, animated: true, completion: nil)
 
-        }
-    }
-    
     override func viewDidAppear(_ animated : Bool){
         super.viewDidAppear(true)
         
@@ -89,13 +54,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             else if(i > 0 && i < 3){
                 ratios.append(Double(newChapterNumbers[i]) / Double(chapterVolumes[i]))
             }
-            //3番目は3種類の合計
+                //3番目は3種類の合計
             else{
                 let sumchapnum = Double(newChapterNumbers.reduce(0,{$0+$1}))
                 print(sumchapnum)
                 let sumchapvolume = chapterVolumes.reduce(0,{$0+$1})
                 print(sumchapvolume)
-                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / chapterVolumes.reduce(0, {$0 + $1}))
+                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / Double(chapterVolumes.reduce(0, {$0 + $1})))
             }
             print(ratios[i])
         }
@@ -119,19 +84,43 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             graphView.addSubview(graphs[i].nonColoredGraph)
         }
     }
+
     
-    //func calcRatio(array:Array<Int>)->Array<Double>{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
+        return labelNames.count
+    }
+    
+    func tableView(_ tableView : UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         
-    //}
+        let cell: HomeSelectCell = homeTableView.dequeueReusableCell(withIdentifier: "HomeSelectCell") as! HomeSelectCell
+        
+        cell.setCell(labelNames[indexPath.row],imageNames[indexPath.row])
+        return cell
+    }
+    
+    //Cellが選択された際に呼び出される
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        appDelegate.sceneTag = indexPath.row
+        var secondViewController = UIViewController()
+        if indexPath.row == 4{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
+        }else{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
+            self.present(secondViewController, animated: true, completion: nil)
+
+        }
+    }
     
     func makeTangoProgressGraph(superViewWidth:CGFloat,superViewHeight:CGFloat,graphMaxWidth:CGFloat,labelName:String,ratio:Double,number:Int)->TangoProgressGraph{
         
         let graph = TangoProgressGraph(superViewWidth: superViewWidth, superViewHeight: superViewHeight, graphMaxWidth: graphMaxWidth, labelName: labelName, ratio: ratio,number:number)
         return graph
     }
-    
-}
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
 
 
 class TangoProgressGraph{
@@ -150,15 +139,6 @@ class TangoProgressGraph{
         
         self.nonColoredGraph = NonColoredDrawer(frame: CGRect(x: superViewWidth/6 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5 + CGFloat(number) * superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/8))
         
-        /*
-        labels.append(UILabel(frame: CGRect(x:0,y:CGFloat(number)*superViewHeight/5, width: superViewWidth/6, height: superViewHeight/2)))
-        
-        coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/6, y: 0.1*superViewHeight/5 + CGFloat(number) * superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
-        
-        labels2.append(UILabel(frame: CGRect(x:5*superViewWidth/6,y:CGFloat(number)*superViewHeight/5, width: superViewWidth/6, height: superViewHeight/2)))
-        
-        nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/6 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5 + CGFloat(number) * superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
-*/
         
         label1.text = labelName
         label2.text = String(Int(ratio*100)) + "%"

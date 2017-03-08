@@ -21,7 +21,6 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var sectionNumber:Int = 0
     var sceneTag:Int = 0
     var modeTag:Int = 0
-    var autoFadeTag:Int = 0
     var cardMoveSetting:Bool = true
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()

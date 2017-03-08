@@ -15,13 +15,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         return .lightContent
     }
     
-    @IBOutlet weak var begButton: UIButton!
-    @IBOutlet weak var midButton: UIButton!
-    @IBOutlet weak var highButton: UIButton!
-    @IBOutlet weak var toeicButton: UIButton!
-    
-    let fileNames = [beginnerFileNames,intermidFileNames]
-    
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         let orientation: UIInterfaceOrientationMask = UIInterfaceOrientationMask.portrait
         return orientation
@@ -31,14 +24,133 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     override var shouldAutorotate : Bool{
         return true
     }
+
     
+    @IBOutlet weak var begButton: UIButton!
+    @IBOutlet weak var midButton: UIButton!
+    @IBOutlet weak var highButton: UIButton!
+    @IBOutlet weak var toeicButton: UIButton!
     @IBOutlet weak var categorySelectTable: UITableView!
-    
-    //@IBOutlet weak var reviewButton: UIButton!
-    //@IBOutlet weak var newButton: UIButton!
     
     var is_category_top:Bool = true
     
+    let fileNames = [beginnerFileNames,intermidFileNames]
+    var fileNameCells = Array<Array<CategorySelectCell>>()
+    var chapterNameCells = Array<Array<CategorySelectCell>>()
+    
+    var labels = Array<UILabel>()
+    var coloredGraphs = Array<ColoredDrawer>()
+    var labels2 = Array<UILabel>()
+    var nonColoredGraphs = Array<NonColoredDrawer>()
+
+    var nigateTangoVolumeArray = Array<Int>()
+    var newChapterNumber = Int()
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var listForTable = Array<Array<String>>()
+    var normalCells = Array<CategorySelectCell>()
+    var graphCells = Array<CategorySelectWithGraphCell>()
+    var newChapterNumbers = Array<Int>()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        appDelegate.modeTag = 0
+        print("viewDidloaded")
+        
+        //let purpleColor = reviewButton.layer.backgroundColor
+        //greenColor = newButton.layer.backgroundColor
+        
+        for category in 0..<chapterNames.count{
+            newChapterNumbers.append(getNewChapter(fileName: checkFileNamesArray[category], chapterVolume: testFileNamesArray[category].count))
+        }
+        
+        //appDelegate.chapterNumber = newChapterNumber
+        
+        //各chapterの苦手単語数を取得
+        for fileName in testNigateFileNamesArray[appDelegate.problemCategory]{
+            nigateTangoVolumeArray.append(getNigateTangoVolume(fileName: fileName))
+        }
+        print(appDelegate.chapterNumber)
+        
+        //tableViewの設定
+        categorySelectTable.dataSource = self
+        categorySelectTable.delegate = self
+        
+        appDelegate.problemCategory = 0
+        
+        /*
+         for i in 0..<chapterNames[appDelegate.problemCategory].count{
+         normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
+         normalCells[i].setCell(chapterNames[appDelegate.problemCategory][i])
+         }
+         
+         */
+        var countOfCell = 0
+        for j in 0..<chapterNames.count{
+            for i in 0..<chapterNames[j].count{
+                graphCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectWithGraphCell") as! CategorySelectWithGraphCell)
+                
+                var ratio = Double()
+                
+                //ラベルがchapter1のように少し長いため、その分graphの長さを短く設定4/6 -> 4/7
+                let graphMaxWidth = 4*graphCells[i].frame.width/7
+                
+                let superViewWidth = graphCells[i].frame.width
+                let superViewHeight = graphCells[i].frame.height
+                
+                //TODO: newChapterNumberがレベルカテゴリごとに必要
+                if i < (newChapterNumbers[j]) / 5 {
+                    ratio = 1
+                }else if i == (newChapterNumbers[j]) / 5{
+                    ratio = Double((newChapterNumbers[j]) % 5) / 5
+                }else{
+                    ratio = 0
+                }
+                
+                
+                labels.append(UILabel(frame: CGRect(x:0,y:0, width: superViewWidth/4, height: superViewHeight/2)))
+                
+                coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/4, y: 0.1*superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
+                
+                labels2.append(UILabel(frame: CGRect(x:superViewWidth/4 + CGFloat(ratio) * graphMaxWidth + CGFloat(1.0 - ratio) * graphMaxWidth,y:0, width: superViewWidth/6, height: superViewHeight/2)))
+                
+                nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/4 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
+                
+                
+                
+                labels[countOfCell].text = chapterNames[j][i]
+                labels2[countOfCell].text = String(Int(ratio*100)) + "%"
+                
+                labels[countOfCell].center.y = graphCells[countOfCell].center.y
+                labels2[countOfCell].center.y = graphCells[countOfCell].center.y
+                coloredGraphs[countOfCell].center.y = graphCells[countOfCell].center.y
+                nonColoredGraphs[countOfCell].center.y = graphCells[countOfCell].center.y
+                
+                graphCells[countOfCell].backgroundColor = UIColor.orange
+                
+                graphCells[countOfCell].contentView.addSubview(labels[countOfCell])
+                graphCells[countOfCell].contentView.addSubview(coloredGraphs[countOfCell])
+                graphCells[countOfCell].contentView.addSubview(labels2[countOfCell])
+                graphCells[countOfCell].contentView.addSubview(nonColoredGraphs[countOfCell])
+                
+                countOfCell = countOfCell + 1
+            }
+        }
+        print("c = \(graphCells.count)")
+        
+        //appDelegate.problemCategory = 0
+        begButton.backgroundColor = UIColor.blue
+        midButton.backgroundColor = UIColor.gray
+        highButton.backgroundColor = UIColor.gray
+        toeicButton.backgroundColor = UIColor.gray
+        
+        begButton.addTarget(self, action: #selector(toBeg), for: .touchUpInside)
+        midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
+        highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
+        toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
+    }
+    
+
     //tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         if is_category_top {
@@ -62,15 +174,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             }
         }
     }
-    
-    var fileNameCells = Array<Array<CategorySelectCell>>()
-    var chapterNameCells = Array<Array<CategorySelectCell>>()
-    
-    var labels = Array<UILabel>()
-    var coloredGraphs = Array<ColoredDrawer>()
-    var labels2 = Array<UILabel>()
-    var nonColoredGraphs = Array<NonColoredDrawer>()
-
     
     func tableView(_ tableView : UITableView,cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         print("newChapter = \(newChapterNumber)")
@@ -187,8 +290,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         }
     }
     
-    //var categoryChanged = false
-    
     func categoryChange(_ category:Int){
         if category != appDelegate.problemCategory{
             begButton.backgroundColor = UIColor.gray
@@ -238,13 +339,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         goScene()
     }
     
-    func GoFullReivew(){
-        //各カテゴリの苦手をテスト
-        if(appDelegate.sceneTag == 2){
-            appDelegate.modeTag = 2
-            goScene()
-        }
-    }
     
     func goScene(){
         print(appDelegate.sceneTag)
@@ -267,119 +361,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         self.present(secondViewController, animated: true, completion: nil)
     }
     
-    var nigateTangoVolumeArray = Array<Int>()
-    var newChapterNumber = Int()
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    //var greenColor:CGColor? = nil
-
-    var listForTable = Array<Array<String>>()
-    var normalCells = Array<CategorySelectCell>()
-    var graphCells = Array<CategorySelectWithGraphCell>()
-    
-    var newChapterNumbers = Array<Int>()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        appDelegate.modeTag = 0
-        print("viewDidloaded")
-        
-        //let purpleColor = reviewButton.layer.backgroundColor
-        //greenColor = newButton.layer.backgroundColor
-        
-        for category in 0..<chapterNames.count{
-            newChapterNumbers.append(getNewChapter(fileName: checkFileNamesArray[category], chapterVolume: testFileNamesArray[category].count))
-        }
-        
-        //appDelegate.chapterNumber = newChapterNumber
-        
-        //各chapterの苦手単語数を取得
-        for fileName in testNigateFileNamesArray[appDelegate.problemCategory]{
-            nigateTangoVolumeArray.append(getNigateTangoVolume(fileName: fileName))
-        }
-        print(appDelegate.chapterNumber)
-        
-        //tableViewの設定
-        categorySelectTable.dataSource = self
-        categorySelectTable.delegate = self
-        
-        appDelegate.problemCategory = 0
-        
-        /*
-        for i in 0..<chapterNames[appDelegate.problemCategory].count{
-            normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
-            normalCells[i].setCell(chapterNames[appDelegate.problemCategory][i])
-        }
- 
-        */
-        var countOfCell = 0
-        for j in 0..<chapterNames.count{
-            for i in 0..<chapterNames[j].count{
-                graphCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectWithGraphCell") as! CategorySelectWithGraphCell)
-                
-                var ratio = Double()
-
-                //ラベルがchapter1のように少し長いため、その分graphの長さを短く設定4/6 -> 4/7
-                let graphMaxWidth = 4*graphCells[i].frame.width/7
-                
-                let superViewWidth = graphCells[i].frame.width
-                let superViewHeight = graphCells[i].frame.height
-                
-                //TODO: newChapterNumberがレベルカテゴリごとに必要
-                if i < (newChapterNumbers[j]) / 5 {
-                    ratio = 1
-                }else if i == (newChapterNumbers[j]) / 5{
-                    ratio = Double((newChapterNumbers[j]) % 5) / 5
-                }else{
-                    ratio = 0
-                }
-
-                
-                labels.append(UILabel(frame: CGRect(x:0,y:0, width: superViewWidth/4, height: superViewHeight/2)))
-                
-                coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/4, y: 0.1*superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
-                
-                labels2.append(UILabel(frame: CGRect(x:superViewWidth/4 + CGFloat(ratio) * graphMaxWidth + CGFloat(1.0 - ratio) * graphMaxWidth,y:0, width: superViewWidth/6, height: superViewHeight/2)))
-                
-                nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/4 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
-                
-                
-                
-                labels[countOfCell].text = chapterNames[j][i]
-                labels2[countOfCell].text = String(Int(ratio*100)) + "%"
-                
-                labels[countOfCell].center.y = graphCells[countOfCell].center.y
-                labels2[countOfCell].center.y = graphCells[countOfCell].center.y
-                coloredGraphs[countOfCell].center.y = graphCells[countOfCell].center.y
-                nonColoredGraphs[countOfCell].center.y = graphCells[countOfCell].center.y
-                
-                graphCells[countOfCell].backgroundColor = UIColor.orange
-                
-                graphCells[countOfCell].contentView.addSubview(labels[countOfCell])
-                graphCells[countOfCell].contentView.addSubview(coloredGraphs[countOfCell])
-                graphCells[countOfCell].contentView.addSubview(labels2[countOfCell])
-                graphCells[countOfCell].contentView.addSubview(nonColoredGraphs[countOfCell])
-                
-                countOfCell = countOfCell + 1
-            }
-        }
-        print("c = \(graphCells.count)")
-
-        //appDelegate.problemCategory = 0
-        begButton.backgroundColor = UIColor.blue
-        midButton.backgroundColor = UIColor.gray
-        highButton.backgroundColor = UIColor.gray
-        toeicButton.backgroundColor = UIColor.gray
-        
-        begButton.addTarget(self, action: #selector(toBeg), for: .touchUpInside)
-        midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
-        highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
-        toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    
 }

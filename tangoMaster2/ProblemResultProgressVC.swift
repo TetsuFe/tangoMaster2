@@ -54,7 +54,7 @@ class ProblemResultProgressVC: UIViewController {
                 print(sumchapnum)
                 let sumchapvolume = chapterVolumes.reduce(0,{$0+$1})
                 print(sumchapvolume)
-                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / chapterVolumes.reduce(0, {$0 + $1}))
+                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / Double(chapterVolumes.reduce(0, {$0 + $1})))
             }
             print(ratios[i])
         }
@@ -80,11 +80,9 @@ class ProblemResultProgressVC: UIViewController {
             popUpView.addSubview(graphs[i].nonColoredGraph)
         }
         
-        //let doneButton = DoneButton(superViewWidth:popUpView.frame.width,superViewHeight:popUpView.frame.height,number:labelNames.count)
-        
         let doneButton = UIButton(frame: CGRect(x: popUpView.frame.width/2 - popUpView.frame.width/12, y: 0.1*popUpView.frame.height/3 + CGFloat(labelNames.count) * popUpView.frame.height/5,width: popUpView.frame.width/6,height: popUpView.frame.height/8))
         
-        doneButton.setTitle("OK", for: .normal)
+        doneButton.title = "OK"
         doneButton.layer.borderWidth = 1
         
         doneButton.addTarget(self, action: #selector(self.removeAnimate), for: .touchUpInside)

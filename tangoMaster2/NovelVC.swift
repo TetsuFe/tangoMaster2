@@ -97,7 +97,7 @@ class NovelScene: SKScene {
         self.addChild(textZone)
         
         self.jpnEngButton.backgroundColor = UIColor.clear
-        self.jpnEngButton.setTitle("日本語", for: .normal)
+        self.jpnEngButton.title = "日本語"
         self.jpnEngButton.addTarget(self, action: #selector(switchJpnEng), for: .touchUpInside)
         self.jpnEngButton.frame.size = CGSize(width: 80, height: 30)
         self.jpnEngButton.layer.borderWidth = 1
@@ -192,13 +192,13 @@ class NovelScene: SKScene {
         jpnEngShowFlag += 1
         if jpnEngShowFlag == 1{
             showEngText()
-            self.jpnEngButton.setTitle("日本語", for: .normal)
+            self.jpnEngButton.title = "日本語"
         }else if jpnEngShowFlag == 2{
             showJpnText()
-            self.jpnEngButton.setTitle("日英同時", for: .normal)
+            self.jpnEngButton.title = "日英同時"
         }else{
             showJpnEngText()
-            self.jpnEngButton.setTitle("英語",for: .normal)
+            self.jpnEngButton.title = "英語"
             jpnEngShowFlag = 0
         }
         self.jpnEngButton.frame.origin = CGPoint(x:self.backGroundButton!.frame.width - 80, y: self.backGroundButton!.frame.height - 114)
@@ -294,7 +294,7 @@ class NovelVC: UIViewController {
         let skView = self.view as! SKView
         
         //表示されるテキスト
-        NovelVC.backButton.setTitle("save", for: .normal)
+        NovelVC.backButton.title = "save"
         
         //テキストの色
         //NovelVC.backButton.setTitleColor(UIColor.blue, for: .normal)
@@ -330,7 +330,7 @@ class NovelVC: UIViewController {
         self.view.addSubview(NovelVC.backButton)
         
         self.exitButton.backgroundColor = UIColor.clear
-        self.exitButton.setTitle("やめる", for: .normal)
+        self.exitButton.title = "やめる"
         self.exitButton.addTarget(self, action: #selector(backHome), for: .touchUpInside)
         self.exitButton.frame.size = CGSize(width: 80, height: 30)
         self.exitButton.layer.borderWidth = 1

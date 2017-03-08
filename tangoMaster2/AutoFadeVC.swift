@@ -9,17 +9,15 @@
 import UIKit
 
 class AutoFadeVC: UIViewController {
-
+    
     @IBOutlet weak var jpnLabel: UILabel!
     @IBOutlet weak var engLabel: UILabel!
-    
     @IBOutlet weak var categoryLabel: UILabel!
-    
     @IBOutlet weak var speedButton: UIButton!
-    
     @IBOutlet weak var reverseButton: UIButton!
-    
     @IBOutlet weak var progress: UILabel!
+    @IBOutlet weak var stopOrPlayButton: UIButton!
+    
     
     var fileName = String()
     var tango = Array<String>()
@@ -29,61 +27,230 @@ class AutoFadeVC: UIViewController {
     //画像、英語（音声）、日本語、消えるの４つで４秒と言えそうだがどうやらそうもいかない
     var fudeDuration = 1.0
     
-    // goPrevChapter(_ sender: Any) {
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    @IBAction func goPrevChapter(_ sender: Any) {
-
-        //ボタンをタップした時に実行するメソッドを指定
-        if(appDelegate.modeTag == 0){
-            if(appDelegate.chapterNumber > 0){
-                appDelegate.chapterNumber -= 1
-                changeFile()
-            }else if appDelegate.chapterNumber == 0{
-                appDelegate.chapterNumber = testFileNamesArray[appDelegate.problemCategory].count-1
-                changeFile()
-            }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        //let chapterNumber = appDelegate.chapterNumber
+        var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
+        if appDelegate.modeTag == 0{
+            fileName = testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            tango = readFileGetWordArray(fileName, extent: "txt")
             
-        }else if(appDelegate.modeTag == 1){
-            if(appDelegate.chapterNumber != 0){
-                if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
-                    appDelegate.chapterNumber -= 1
-                    changeFile()
+            print("tokui")
+        }else if appDelegate.modeTag == 1{
+            fileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            tango = getfile(fileName:fileName)
+            print("nigate")
+        } //苦手chpaterの全範囲のProblem
+        else if appDelegate.modeTag == 2{
+            for i in 0..<2{
+                fileName = testNigateFileNamesArray[appDelegate.problemCategory
+                    ][i]
+                let tempTango = getfile(fileName:fileName)
+                for j in tempTango{
+                    print(j)
                 }
+                tango = tango + tempTango
             }
+            for j in tango{
+                print(j)
+            }
+        }else{
+            
         }
-        if self.count == sortedImageReibunArray.count-1 && sortedImageReibunArray.count != 1{
-            self.count -= 1
-            changeFile()
+        
+        //tangoが0だった時の例外処理
+        if(tango.count == 0){
+            //emptyArrayError()
         }
-        changeCategoryLabel()
+        
+        for r in 0..<tango.count/6{
+            let hash = getHashNum(tango[6*r])
+            //print(hash)
+            list[hash] = addListNIR(list: list,eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5])
+        }
+        
+        
+        sortedImageReibunArray = getArrayNIRFromList(list: list)
+        print(sortedImageReibunArray.count-1)
+        self.engLabel.alpha = 0
+        self.engLabel.isHidden = false
+        self.jpnLabel.alpha = 0
+        self.jpnLabel.isHidden = false
+        //self.tangoImage.alpha = 0
+        //self.tangoImage.isHidden = false
+        timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
+        timer.fire()
+        
+        speedButton.layer.borderWidth = 0
+        speedButton.layer.cornerRadius = 10
+        speedButton.addTarget(self, action: #selector
+            (changeSpeed), for: .touchUpInside)
+        reverseButton.layer.borderWidth = 0
+        reverseButton.layer.cornerRadius = 10
+        reverseButton.addTarget(self, action: #selector
+            (reverse), for: .touchUpInside)
+        
+        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.chapterNumber%5)
+        
+        //stopOrPlayButton.title("一時停止")
+        speedButton.title = "速さ:\(timerInterval)"
+        stopOrPlayButton.addTarget(self, action: #selector(stopOrPlay), for: .touchUpInside)
     }
     
-   // @IBAction func goNextChapter(_ sender: Any) {
+    /*空のときはautofadeに入れないので必要ない
+     func emptyArrayError(){
+     // ① UIAlertControllerクラスのインスタンスを生成
+     let alert: UIAlertController = UIAlertController(title: "エラー", message: "苦手リストに単語がありません。ホーム画面に戻ります。", preferredStyle:  UIAlertControllerStyle.alert)
+     
+     // ② Actionの設定
+     // OKボタン
+     let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+     // ボタンが押された時の処理を書く（クロージャ実装）
+     (action: UIAlertAction!) -> Void in
+     print("OK")
+     var secondViewController = UIViewController()
+     if(self.appDelegate.modeTag == 0){
+     secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newList") as! ListVC
+     
+     }else{
+     secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as! NigateListVC
+     }
+     // Viewの移動する.
+     self.present(secondViewController, animated: true, completion: nil)
+     
+     })
+     alert.addAction(defaultAction)
+     
+     present(alert, animated: true, completion: nil)
+     }
+     */
+    var direction:Int = 1
     
-    @IBAction func goNextChapter(_ sender: Any) {
-    //ボタンをタップした時に実行するメソッドを指定
-        if(appDelegate.modeTag == 0){
-            if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1){
-                appDelegate.chapterNumber += 1
-                changeFile()
-            }else{
-                appDelegate.chapterNumber = 0
-                changeFile()
+    func update() {
+        if self.direction == 1{
+            //順再生のとき
+            if(self.count < sortedImageReibunArray.count-1){
+                self.count += self.direction
             }
-        }else if(appDelegate.modeTag == 1){
-            //次のchapterを調べるので、次があることを確認する
-            if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
-                if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
-                    appDelegate.chapterNumber += 1
+        }else{
+            //逆再生のとき。out of rangeに注意
+            if(self.count > 0){
+                self.count += self.direction
+            }
+        }
+        self.engLabel.text = self.sortedImageReibunArray[self.count].eng!
+        self.jpnLabel.text = self.sortedImageReibunArray[self.count].jpn!
+        progress.text = String(count+1) + "/" + String(sortedImageReibunArray.count)
+        
+        UIView.animate(
+            withDuration: fudeDuration,
+            animations: {
+                if(self.flag == false){
+                    return
+                }
+                //self.tangoImage.alpha = 1
+        },completion: {(finished:Bool) in
+            if(self.flag == false){
+                return
+            }
+            UIView.animate(
+                withDuration: self.fudeDuration,
+                animations: {
+                    self.engLabel.alpha = 1
+            },completion: {(finished:Bool) in
+                if(self.flag == false){
+                    return
+                }
+                UIView.animate(
+                    withDuration: self.fudeDuration,
+                    animations: {
+                        self.jpnLabel.alpha = 1
+                },completion:{(finished:Bool)   in
+                    if(self.flag == false){
+                        return
+                    }
+                    UIView.animate(
+                        withDuration:self.fudeDuration,
+                        delay:self.fudeDuration,
+                        animations:{
+                            self.engLabel.alpha = 0
+                            self.engLabel.isHidden = false
+                            self.jpnLabel.alpha = 0
+                            self.jpnLabel.isHidden = false
+                            //self.tangoImage.alpha = 0
+                            //self.tangoImage.isHidden = false
+                    })
+                })
+            })
+        })
+        
+    }
+    
+    func reverse(){
+        self.direction *= -1
+        if self.direction == -1{
+            reverseButton.title = "順再生に"
+        }else{
+            reverseButton.title = "逆再生に"
+        }
+    }
+    
+    @IBAction func goPrevChapter(_ sender: Any) {
+        if(appDelegate.modeTag != 2){
+            //ボタンをタップした時に実行するメソッドを指定
+            if(appDelegate.modeTag == 0){
+                if(appDelegate.chapterNumber > 0){
+                    appDelegate.chapterNumber -= 1
+                    changeFile()
+                }else if appDelegate.chapterNumber == 0{
+                    appDelegate.chapterNumber = testFileNamesArray[appDelegate.problemCategory].count-1
                     changeFile()
                 }
+                
+            }else if(appDelegate.modeTag == 1){
+                if(appDelegate.chapterNumber != 0){
+                    if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
+                        appDelegate.chapterNumber -= 1
+                        changeFile()
+                    }
+                }
             }
+            if self.count == sortedImageReibunArray.count-1 && sortedImageReibunArray.count != 1{
+                self.count -= 1
+                changeFile()
+            }
+            changeCategoryLabel()
         }
-        if self.count == sortedImageReibunArray.count-1 &&  sortedImageReibunArray.count != 1{
-            self.count -= 1
-            changeFile()
+    }
+    
+    @IBAction func goNextChapter(_ sender: Any) {
+        //ボタンをタップした時に実行するメソッドを指定
+        if(appDelegate.modeTag != 2){
+            if(appDelegate.modeTag == 0){
+                if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1){
+                    appDelegate.chapterNumber += 1
+                    changeFile()
+                }else{
+                    appDelegate.chapterNumber = 0
+                    changeFile()
+                }
+            }else if(appDelegate.modeTag == 1){
+                //次のchapterを調べるので、次があることを確認する
+                if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
+                    if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
+                        appDelegate.chapterNumber += 1
+                        changeFile()
+                    }
+                }
+            }
+            if self.count == sortedImageReibunArray.count-1 &&  sortedImageReibunArray.count != 1{
+                self.count -= 1
+                changeFile()
+            }
+            changeCategoryLabel()
         }
-        changeCategoryLabel()
     }
     
     
@@ -148,26 +315,22 @@ class AutoFadeVC: UIViewController {
             timerInterval = 5.0
             self.fudeDuration = 1.0
         }
-        speedButton.setTitle("速さ:\(timerInterval)", for: .normal)
+        speedButton.title = "速さ:\(timerInterval)"
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
         timer.fire()
     }
-   
+    
     var timer = Timer()
     var count = -1
     var flag = true
     
     var sortedImageReibunArray : Array<NewImageReibun> = []
     
-    //stopButton(_ sender: AnyObject)
-    
-    @IBOutlet weak var stopOrPlayButton: UIButton!
-    
     func stopOrPlay(){
         if(timer.isValid){
             flag = false
-            stopOrPlayButton.setTitle("再生", for: .normal)
+            stopOrPlayButton.title = "再生"
             //self.tangoImage.layer.removeAllAnimations()
             self.engLabel.layer.removeAllAnimations()
             self.jpnLabel.layer.removeAllAnimations()
@@ -178,7 +341,7 @@ class AutoFadeVC: UIViewController {
         }
         else{
             flag = true
-            stopOrPlayButton.setTitle("一時停止", for: .normal)
+            stopOrPlayButton.title = "一時停止"
             timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
             timer.fire()
             //再生開始時には全ラベルを非表示の状態にし、そこからアニメーションスタート
@@ -227,68 +390,6 @@ class AutoFadeVC: UIViewController {
         }
     }
     
-    var direction:Int = 1
-    
-    func update() {
-        if self.direction == 1{
-            //順再生のとき
-            if(self.count < sortedImageReibunArray.count-1){
-                self.count += self.direction
-            }
-        }else{
-            //逆再生のとき。out of rangeに注意
-            if(self.count > 0){
-                self.count += self.direction
-            }
-        }
-        self.engLabel.text = self.sortedImageReibunArray[self.count].eng!
-        self.jpnLabel.text = self.sortedImageReibunArray[self.count].jpn!
-        progress.text = String(count+1) + "/" + String(sortedImageReibunArray.count)
-        
-        UIView.animate(
-            withDuration: fudeDuration,
-            animations: {
-                if(self.flag == false){
-                    return
-                }
-                //self.tangoImage.alpha = 1
-        },completion: {(finished:Bool) in
-            if(self.flag == false){
-                return
-            }
-            UIView.animate(
-                withDuration: self.fudeDuration,
-                animations: {
-                    self.engLabel.alpha = 1
-            },completion: {(finished:Bool) in
-                if(self.flag == false){
-                    return
-                }
-                UIView.animate(
-                    withDuration: self.fudeDuration,
-                    animations: {
-                        self.jpnLabel.alpha = 1
-                },completion:{(finished:Bool)   in
-                    if(self.flag == false){
-                        return
-                    }
-                    UIView.animate(
-                        withDuration:self.fudeDuration,
-                        delay:self.fudeDuration,
-                        animations:{
-                            self.engLabel.alpha = 0
-                            self.engLabel.isHidden = false
-                            self.jpnLabel.alpha = 0
-                            self.jpnLabel.isHidden = false
-                            //self.tangoImage.alpha = 0
-                            //self.tangoImage.isHidden = false
-                    })
-                })
-            })
-        })
-        
-    }
-    
     @IBAction func backButton(_ sender: AnyObject) {
         // ① UIAlertControllerクラスのインスタンスを生成
         let alert: UIAlertController = UIAlertController(title: "確認", message: "単語リストに戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
@@ -300,13 +401,10 @@ class AutoFadeVC: UIViewController {
             (action: UIAlertAction!) -> Void in
             print("OK")
             var secondViewController = UIViewController()
-            if(self.appDelegate.autoFadeTag == 0){
+            if(self.appDelegate.modeTag == 0){
                 secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newList") as! ListVC
-                
-            }else if(self.appDelegate.autoFadeTag == 1){
-                secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as! NigateListVC
             }else{
-                
+                secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as! NigateListVC
             }
             // Viewの移動する.
             self.present(secondViewController, animated: true, completion: nil)
@@ -322,70 +420,6 @@ class AutoFadeVC: UIViewController {
         alert.addAction(defaultAction)
         
         present(alert, animated: true, completion: nil)
-    }
-    
-       
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        //let chapterNumber = appDelegate.chapterNumber
-        var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
-        if appDelegate.modeTag == 0{
-            fileName = testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt")
-            
-            print("tokui")
-        }else if appDelegate.modeTag == 1{
-            fileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
-            tango = getfile(fileName:fileName)
-            print("nigate")
-        }else{
-            
-        }
-        for r in 0..<tango.count/6{
-            let hash = getHashNum(tango[6*r])
-            //print(hash)
-            list[hash] = addListNIR(list: list,eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5])
-        }
-        
-        
-        sortedImageReibunArray = getArrayNIRFromList(list: list)
-        //sortedImageReibunArray = deleteWordFromArray(eng:engLabel.text!,list2:sortedImageReibunArray)
-        print(sortedImageReibunArray.count-1)
-        self.engLabel.alpha = 0
-        self.engLabel.isHidden = false
-        self.jpnLabel.alpha = 0
-        self.jpnLabel.isHidden = false
-        //self.tangoImage.alpha = 0
-        //self.tangoImage.isHidden = false
-        timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
-        timer.fire()
-        
-        speedButton.layer.borderWidth = 0
-        speedButton.layer.cornerRadius = 10
-        speedButton.addTarget(self, action: #selector
-            (changeSpeed), for: .touchUpInside)
-        reverseButton.layer.borderWidth = 0
-        reverseButton.layer.cornerRadius = 10
-        reverseButton.addTarget(self, action: #selector
-            (reverse), for: .touchUpInside)
-        
-        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.chapterNumber%5)
-        
-        //stopOrPlayButton.setTitle("一時停止", for: .normal)
-        speedButton.setTitle("速さ:\(timerInterval)", for: .normal)
-        stopOrPlayButton.addTarget(self, action: #selector(stopOrPlay), for: .touchUpInside)
-    }
-    
-    func reverse(){
-        self.direction *= -1
-        if self.direction == -1{
-            reverseButton.setTitle("順再生に", for: .normal)
-        }else{
-            reverseButton.setTitle("逆再生に", for: .normal)
-        }
     }
     
     override func didReceiveMemoryWarning() {

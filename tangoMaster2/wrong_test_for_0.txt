@@ -63,6 +63,3 @@ beyond@〜を越えて@beyond the wall@壁を越えて@0@p
 fundamental@基本的な@fundamental rights@基本的権利@0@a
 since@〜以来@since that day@あの日以来@0@p
 relative@〜に関係のある@relative to you@あなたに関係がある@0@a
-
-
-

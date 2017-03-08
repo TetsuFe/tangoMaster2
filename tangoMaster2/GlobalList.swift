@@ -7,6 +7,23 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIButton {
+    
+    /// ボタンのタイトルの取得/設定
+    var title: String? {
+        get {
+            return self.title(for: .normal)
+        }
+        set(v) {
+            UIView.performWithoutAnimation {
+                self.setTitle(v, for: .normal)
+                self.layoutIfNeeded()
+            }
+        }
+    }
+}
 
 extension Character
 {
@@ -24,7 +41,7 @@ let testWrongTangoArray = [["wrongTest0","wrongTest1"],["wrongTest2","wrongTest3
 
 //ファイル名　クリア後のchapter numberを書き込むsetNewChapterに対応
 let checkFileNamesArray = ["checkDS","checkDT","checkDJ","checkToeic"]
-let chapterVolumes:Array<Double> = [50.0,40.0,25.0,50.0] //1000/20, 800/20, 500/20, 1000/20
+let chapterVolumes:Array<Int> = [50,40,25,50] //1000/20, 800/20, 500/20, 1000/20
 
 //テストは2*2で行う
 //最終的には〇〇fileNamesを使う
@@ -67,6 +84,10 @@ func readFileGetWordArray(_ fileName:String,extent:String)->Array<String>{
                     wordArray.append("")
                     j += 1
                 }
+            }
+            //最後が空文字だった時最後の要素を削除
+            if(wordArray[wordArray.count-1] == ""){
+                wordArray.remove(at: wordArray.count-1)
             }
         }
         catch let error as NSError {
@@ -169,7 +190,10 @@ func getWordArrayFromString(str:String)->Array<String>{
             j += 1
         }
     }
-   
+    //最後が空文字だった時最後の要素を削除
+    if(wordArray[wordArray.count-1] == ""){
+        wordArray.remove(at: wordArray.count-1)
+    }
     return wordArray
 }
 
@@ -295,7 +319,31 @@ func deleteWordFromArray(eng:String,list2:Array<EightTango>)->Array<EightTango>{
     }
     return tempList
 }
-*/
+ */
+
+func deleteWordFromNigateArray(eng:String,list:Array<NewImageReibun>)->Array<NewImageReibun>{
+    var deletedArray = list
+    for i in 0..<deletedArray.count{
+        if deletedArray[i].eng == eng{
+            deletedArray.remove(at: i)
+            break
+        }
+    }
+    return deletedArray
+}
+
+func deleteWordFromNigateArraySeven(eng:String,list:Array<SixWithChapter>)->Array<SixWithChapter>{
+    var deletedArray = list
+    for i in 0..<deletedArray.count{
+        if deletedArray[i].eng == eng{
+            deletedArray.remove(at: i)
+            break
+        }
+    }
+    return deletedArray
+}
+
+
 func fileSet(fileName:String,eng:String,jpn:String,imgPath:String,engPhrase:String,jpnPhrase:String,nigateFlag:String,partsOfSpeech:String,soundPath:String){
     //get current word list
     
@@ -533,6 +581,41 @@ func getNewChapter(fileName:String,chapterVolume:Int)->Int{
     }
     print("new chapter number is \(chapterNumber)")
     return chapterNumber
+}
+
+func writeSevenFile(fileName:String,eng: String, jpn: String, engPhrase: String, jpnPhrase: String,nigateFlag:String,partOfSpeech:String,chapterNumber:String){
+    let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+    
+    let fileManager = FileManager.default
+    var isDir : ObjCBool = false
+    
+    fileManager.fileExists(atPath: path, isDirectory: &isDir)
+    
+    if !isDir.boolValue{
+        try! fileManager.createDirectory(atPath: path ,withIntermediateDirectories: false, attributes: nil)
+    }
+    
+    let fileObject:String = eng+"@"+jpn+"@"+engPhrase+"@"+jpnPhrase+"@"+nigateFlag+"@"+partOfSpeech+"@"+String(chapterNumber)+"\n"
+    
+    let filepath1 = "\(path)/\(fileName+".txt")"
+    let filew: FileHandle? = FileHandle(forWritingAtPath: filepath1)
+    if(filew == nil){
+        try! fileObject.write(toFile: "\(path)/\(fileName+".txt")", atomically: true, encoding: String.Encoding.utf8)
+    }
+    let filer: FileHandle? = FileHandle(forReadingAtPath: filepath1)
+    if filer == nil {
+        print("File open failed")
+    } else {
+        filer?.seekToEndOfFile()
+        let endOffset = (filer?.offsetInFile)!
+        filer?.seek(toFileOffset: 0)
+        let databuffer = filer?.readData(ofLength: Int(endOffset))
+        let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
+        if !isInFile(cWord: eng, str:out){
+            fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+        }
+        filer?.closeFile()
+    }
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191DBC941E6F05A4002978C3 /* SixwithChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191DBC931E6F05A4002978C3 /* SixwithChapter.swift */; };
 		1924974B1E1E83AB00E032B9 /* Jpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924974A1E1E83AB00E032B9 /* Jpn.swift */; };
 		1924974D1E1E98F600E032B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924974C1E1E98F600E032B9 /* AppDelegate.swift */; };
 		1924974E1E1E994D00E032B9 /* CardTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1F1E1E82AB008B0D9F /* CardTango.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191DBC931E6F05A4002978C3 /* SixwithChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixwithChapter.swift; sourceTree = "<group>"; };
 		1924974A1E1E83AB00E032B9 /* Jpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jpn.swift; sourceTree = "<group>"; };
 		1924974C1E1E98F600E032B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectWithGraphCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
 				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
 				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
+				191DBC931E6F05A4002978C3 /* SixwithChapter.swift */,
 				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
 				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
 				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
@@ -253,6 +256,7 @@
 			files = (
 				1924974E1E1E994D00E032B9 /* CardTango.swift in Sources */,
 				199F80A41E3C8AB800913F0F /* CategorySelectWithGraphCell.swift in Sources */,
+				191DBC941E6F05A4002978C3 /* SixwithChapter.swift in Sources */,
 				19C23A761E1E82AB008B0D9F /* ProblemResultVC.swift in Sources */,
 				19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */,
 				19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */,

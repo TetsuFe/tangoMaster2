@@ -11,11 +11,8 @@ import UIKit
 class CardSettingPopUpVC: UIViewController {
 
     @IBOutlet weak var popUpView: UIView!
-    
     @IBOutlet weak var swipeSettingButton: UIButton!
-    
     @IBOutlet weak var buttonSettingButton: UIButton!
-    
     @IBAction func doneButton(_ sender: Any) {
         removeAnimate()
     }
@@ -69,11 +66,16 @@ class CardSettingPopUpVC: UIViewController {
                     if let parentViewController:CardVC = self.parent as! CardVC?{
                         parentViewController.leftSwipeButton.isEnabled = false
                         parentViewController.rightSwipeButton.isEnabled = false
+                        parentViewController.leftSwipeButton.backgroundColor = UIColor.clear
+                        parentViewController.rightSwipeButton.backgroundColor = UIColor.clear
+                        
                     }
                 }else{
                    if let parentViewController:CardVC = self.parent as! CardVC?{
                         parentViewController.leftSwipeButton.isEnabled = true
                         parentViewController.rightSwipeButton.isEnabled = true
+                        parentViewController.leftSwipeButton.backgroundColor = UIColor.orange
+                        parentViewController.rightSwipeButton.backgroundColor = UIColor.green
                     }
                 }
                 self.view.removeFromSuperview()
