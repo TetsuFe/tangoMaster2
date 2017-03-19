@@ -1,0 +1,20 @@
+ambition@望み・野心@ambition for power@権力への野心@0@n
+forecast@予想する@forecast the weather@天気を予報する@0@n
+psychology@心理学@study psychology@心理学を研究する@0@n
+shelf@棚@book shelf@本棚@0@n
+candidate@候補者@candidates for mayor@市長候補@0@n
+obstacle@障害・困難@overcome an obstacle@障害を乗り越える@0@n
+tribe@部族・族@a cannibal tribe@食人族@0@n
+budget@予算・生活費@government budget@政府予算（案）@0@n
+cough@咳・咳をする@have a cough@せきが出る@0@n
+fate@運命・命運@decide her fate@彼女の運命を決める@0@n
+inhabitant@住民@inhabitant of Japan@日本の住民（日本人）@0@n
+fossil@化石@fossil fuels@化石燃料@0@n
+motive@動機@motive for murder@殺人の動機@0@n
+suburb@郊外@live in the suburbs@郊外に住む@0@n
+passion@情熱@feel his passion@彼の情熱を感じる@0@n
+horror@恐怖@in horror@恐ろしくて@0@n
+logic@論理・理屈@specius logic@もっともらしい理屈@0@n
+rumor@噂・評判@spread a rumor@うわさを広める@0@n
+illusion@幻想・空想@only illusion@ただの幻想@0@n
+option@選択・付加物@have no option@選択肢がない@0@n

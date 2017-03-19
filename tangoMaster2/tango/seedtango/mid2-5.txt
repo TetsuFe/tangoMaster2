@@ -1,0 +1,20 @@
+retain@保持する@retain a receipt@レシートをとっておく@0@v
+calculate@計算する@calculate the cost@コストを計算する@0@v
+sink@沈む@sinking ship@沈んでいく船@0@v
+rescue@救う@rescue a boby@赤ん坊を救う@0@v
+beg@乞う・頼む@beg him to do@彼に〜してと頼む@0@v
+generate@生み出す@generate electricity@電力を生み出す@0@v
+sustain@維持する@sustain life@命を維持する@0@v
+float@浮かぶ@float on water@水に浮かぶ@0@v
+chat@しゃべる@chat with friends@友達とおしゃべりする@0@v
+cooperate@協力する@cooperate with him@彼と協力する@0@v
+inherit@受け継ぐ@inherit genes@遺伝子を受け継ぐ@0@v
+seize@掴む@seize his arm@彼の腕をつかむ@0@v
+conquer@征服する@conquer the world@世界を征服する@0@v
+melt@溶ける@Ice melts at 0℃@氷は０℃で溶ける@0@v
+invade@侵攻する@invade Russia@ロシアに侵攻する@0@v
+scatter@ばらまく@scatter clothes@服を脱ぎ散らかす@0@v
+abolish@廃止する@abolish the system@制度を廃止する@0@v
+undergo@経験する@undergo a failure@失敗を経験する@0@v
+bend@曲げる@bend the wire@針金を曲げる@0@v
+assist@手伝う@assist him to study@彼の勉強を手伝う@0@v

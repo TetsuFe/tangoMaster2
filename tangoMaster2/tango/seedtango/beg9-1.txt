@@ -1,0 +1,20 @@
+dish@皿・料理@wash the dishes@皿を洗う@0@n
+endangered@絶滅寸前の@an endangered species@絶滅危惧種@0@a
+expert@専門家・熟練者@at expert in psychology@心理学の専門家@0@n
+psychological@心理学の@psychological research@心理学的研究@0@a
+fill@満たす@be filled with joy@喜びでいっぱいになる@0@v
+generally@一般的に@generally speaking,@一般的に言って、@0@av
+healthy@健康な@maintain a healthy body@健康な体を維持する@0@a
+helpful@有益だ・便利な@this book is helpful to me@この本は私に有益だ@0@a
+humorous@ユーモアのある@humorous stories@ユーモアのある話@0@a
+hunger@飢え・空腹@suffer from hunger@飢えに苦しむ@0@n
+increasingly@ますます@increasingly important@ますます重要な（〜になる）@0@av
+per@〜につき@30 km per hour@一時間につき30km@0@o
+poor@貧乏な・下手な@poor English@下手な英語@0@a
+abandon@捨てる・やめる@abandon my plan@計画を途中でやめる@0@v
+discipline@しつけ・規律@keep discipline@規律を守る@0@n
+anticipate@予期する@anticipate that ~@〜だと予期する・期待する@0@v
+create@作り出す@create the world@この世を創造する@0@v
+lie@嘘・横になる@He lay down on the bed.@彼はベッドで横になった@0@v
+rise@上がる・上昇@the sun rise in the east@太陽が東に昇る@0@v
+hang@吊るす・掛ける@hang a hat on the hook@フックに帽子を掛ける@0@v

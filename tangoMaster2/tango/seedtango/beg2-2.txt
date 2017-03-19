@@ -1,0 +1,20 @@
+win@勝つ・勝ち取る@win the prize@賞を勝ち取る@0@v
+dress@服・服を着せる@put on a dress@服を着る@0@v
+communicate@会話する@communicate with him@彼と話す@0@v
+drop@落下・落とす@drop a ball@ボールを落とす@0@v
+throw@投げる@throw away a bottle@瓶をごみに捨てる@0@v
+collect@集める@collect stamps@切手を集める@0@v
+repeat@繰り返す@repeat he word@その言葉を繰り返し言う@0@v
+request@要求する・頼む@request him to work@彼に働いてくれと頼む@0@v
+dislike@嫌いだ@I dislike that teacher@私はあの先生が嫌いだ@0@v
+bite@噛む@the dog bit my hand@その犬は私の手を噛んだ@0@v
+boil@沸騰させる@boiled egg@ゆでたまご@0@v
+job@仕事・職@work at a part-time job@アルバイトの仕事をする@0@n
+light@光・火をつける@turn off the light@明かりを消す@0@n
+century@世紀@in 20th century@二十世紀に@0@n
+area@地域・区域@in this area@この地域では@0@n
+information@情報@get the information@その情報を得る@0@n
+land@土地・陸@cultivate the land@土地を耕す@0@n
+past@過去@in the past@過去には@0@n
+health@健康@do harm to your health@あなたの健康を害する@0@n
+space@空間・宇宙@launch into space@宇宙に向けて打ち上がる@0@n

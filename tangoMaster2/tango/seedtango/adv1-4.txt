@@ -1,0 +1,20 @@
+conservation@保護・保存@wildlife conservation@野生動物保護@0@n
+surgery@手術・外科@surgery and medicine@外科と内科@0@n
+superstition@迷信@believe in superstitions@迷信を信じる@0@n
+guilty@有罪@guilty deed@犯行@0@n
+vital@重要な@a vital role@重要な役割@0@a
+awful@ひどい@an awful mistake@ひどい失敗@0@a
+obscure@明確でない@obscure reason@はっきりしない理由@0@a
+innocent@無罪の・無垢な@innocent people@罪の無い人々@0@a
+underlying@根本的な@underlying problem@根本的な問題@0@a
+brilliant@素晴らしい@brilliant idea@素晴らしい考え@0@a
+decent@きちんとした@decent clothes@きちんとした服装@0@a
+marvelous@驚くべき@a marvelous discovery@驚くべき発見@0@a
+misleading@誤解を招く@a misleading expression@誤解を招く表現@0@a
+vivid@鮮やかな@vivid memories@鮮やかな思い出@0@a
+miserable@惨めな@a miserable life@惨めな生活@0@a
+altogether@完全に@finish altogether@完全に終了する@0@av
+barely@かろうじて@barely survive@かろうじて生き残る@0@av
+scarcely@ほとんどない@can scarcely hear@ほとんど聞こえない@0@av
+namely@すなわち@namely, A=B@すなわち、A=B@0@av
+visible@目に見える@visible stars@目に見える星@0@a

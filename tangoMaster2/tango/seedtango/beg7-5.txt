@@ -1,0 +1,20 @@
+wage@賃金@work for low wages@安い賃金で働く@0@n
+tax@税金@pay income tax@所得税を払う@0@n
+leisure@暇・余暇@have no leisure@暇がない@0@n
+barrier@壁・改札口@a language barrier@言葉の壁@0@n
+category@分類・種類@fall into the category@そのカテゴリーに属する@0@n
+reputation@評判・噂@the shop's reputation@そのお店の評判@0@n
+sympathy@同情・共感@feel sympathy@同情する@0@n
+era@時代@Meiji era@明治時代@0@n
+agriculture@農業の@engage in agriculture@農業に従事する@0@n
+murder@殺人・殺人事件@mass murder@大量殺人@0@n
+destination@目的地@reach destination@目的地に着く@0@n
+muscle@筋肉@voluntary muscles@随意筋@0@n
+fever@熱@a slight (high) fever@微熱（高熱）@0@n
+pause@休止・止まる@pause to see him@彼をみるために止まった@0@v
+privilege@特権@privilege hierarchy@特権階級@0@n
+prosperity@繁栄@cultural prosperity@文化的繁栄@0@n
+genius@天才・才能@a writer of genius@才能のある作家@0@n
+seed@種@plant pumpkin seeds@カボチャの種をまく@0@n
+theme@主題・題名@theme of a haiku@俳句の題@0@n
+boundary@境界線@the boundary between ~@〜と〜の境界線@0@n

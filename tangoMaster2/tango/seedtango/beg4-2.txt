@@ -1,0 +1,20 @@
+essential@必要な・本質的@essential requirement@必要な条件@0@a
+huge@巨大な@a huge building@巨大な建物@0@a
+terrible@ひどい@terrible disaster@大災害@0@a
+comfortable@快適な@a comfortable life@快適な暮らし@0@a
+convenient@便利な@a convenient method@便利な方法@0@a
+strict@厳しい@strict rules@厳しい規則@0@a
+stupid@馬鹿な@Don't be stupid!@馬鹿なことはやめろ！@0@a
+probably@多分@he'll probably come@多分彼はやってくる@0@av
+gradually@徐々に@gradually increase@徐々に増えていく@0@av
+nevertheless@にも関わらず@~. Nevertheless, ~@〜だ。にも関わらず、〜@0@o
+moreover@さらに@~. Moreover, ~@〜である。さらに、〜@0@o
+despite@にも関わらず@despite his advice@忠告したにも関わらず@0@o
+rob@盗む・奪う@rob him of his bag@彼からカバンを盗む@0@v
+interfere@妨害する@interfere with my sleep@私の安眠を妨害する@0@v
+facility@施設・簡単@public facilities@公共施設@0@n
+sum@合計・金額@the whole sum@全額・総和@0@n
+courage@勇気・度胸@courage to confess@告白する勇気@0@n
+furniture@家具@a piece of furniture@いくつかの家具@0@n
+temple@寺・神殿@The Kiyomizu Temple@清水寺@0@n
+garbage@ごみ@throw away garbage@ゴミを投げ捨てる@0@n

@@ -1,0 +1,20 @@
+electricity@電気・電力@generate electricity@発電する@0@n
+castle@城@build a sand castle@砂の城をつくる@0@n
+infant@赤ん坊・幼い@infant mortality rate@乳幼児死亡率@0@n
+consequence@結果・重要性@a natural consequence@当然の結果@0@n
+local@地方の・普通の@a local government@地方自治体@0@a
+physical@肉体の@physical strength@体力@0@a
+pleasant@楽しい@a pleasant chat@楽しいおしゃべり@0@a
+chemical@化学の@a chemical change@化学変化@0@a
+conscious@気づいている@be conscious of ~@〜に気づく@0@a
+fundamental@基本的な@fundamental rights@基本的権利@0@a
+alike@似ている@We are all alike@私たちは似た者同士だ@0@a
+domestic@国内の・家庭の@domestic problem@国内問題@0@a
+moral@道徳的・道徳@moral responsibility@道徳的な責任@0@a
+prime@主な・最高の@a prime candidate@最有力候補者@0@a
+nuclear@原子力の@nuclear weapons@原子力兵器@0@a
+curious@知りたがる@be curious about ~@〜について知りたがる@0@a
+civil@市民の@a civil war@内戦@0@a
+somehow@なぜか@somehow like him@なぜか彼が好きだ@0@av
+beneath@〜の下で@beneath the surface@地下で@0@o
+political@政治的な@a political party@政党@0@a

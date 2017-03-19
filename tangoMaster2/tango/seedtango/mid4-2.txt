@@ -1,0 +1,20 @@
+dull@退屈な・鈍い@dull speech@退屈な話@0@a
+loose@ゆるい@loose clothes@ゆるゆるの服@0@a
+delicate@繊細な・もろい@delicate balance@微妙なバランス@0@a
+internal@内部の@internal organs@内蔵@0@a
+casual@普段の@casual clothes@普段着@0@a
+mature@成熟した@mature plan@よく練られた計画@0@a
+overall@全体的な@overall abolition@全面的廃止@0@a
+tight@きつい@tight schedule@過密なスケジュール@0@a
+genuine@真の・本物の@genuine love@心からの愛@0@a
+intimate@親密な@an intimate relationship@親密な（男女の）関係@0@a
+sophisticated@精巧な@sophisticated computer@精巧なコンピュータ@0@a
+passive@消極的な@passive attitude@受け身の態度@0@a
+ethnic@民族の@ethnic minorities@少数民族@0@a
+noble@貴族の・崇高な@noble mind@崇高な精神@0@a
+faint@かすかな@a faint hope@かすかな希望@0@a
+awkward@気まずい・下手@an awkward silence@気まずい沈黙@0@a
+consistent@一致している@consistent with ideas@考えと一致する@0@a
+fierce@激しい・獰猛@a fierce tiger@獰猛な虎@0@n
+dense@濃い・密な@a dense forest@密林@0@a
+thrilled@ぞくぞくする@be thrilled with terror@恐怖にぞくぞくする@0@a

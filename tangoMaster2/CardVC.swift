@@ -785,7 +785,7 @@ class CardVC: UIViewController {
     
     func getAllTangos(fileName:String)->Array<NewImageReibun>{
         //ファイルをゲット、区切られたArray<String>を得る
-        let fileWholeTangos = readFileGetWordArray(fileName, extent: "txt")
+        let fileWholeTangos = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
         var cardDatas = Array<NewImageReibun>()
         //区切られたArray<String>の一部の情報を得る
         for r in 0..<fileWholeTangos.count/6{

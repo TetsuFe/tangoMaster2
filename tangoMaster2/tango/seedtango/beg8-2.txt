@@ -1,0 +1,20 @@
+commerce@商業・貿易@domestic commerce@国内取引@0@n
+refrigerator@冷蔵庫@latest refrigerator@最新モデルの冷蔵庫@0@n
+famine@飢餓・飢え@serious famine@深刻な食糧不足@0@n
+folk@民族の・人々@folk music@民族音楽・民謡@0@a
+diversity@多様性@cultural diversity@文化的多様性@0@n
+thumb@親指@thumb of right hand@右手の親指@0@n
+envelope@封筒@a letter in envelope@封筒の中の手紙@0@n
+discrimination@差別・区別@sexual discrimination@男女差別@0@n
+virus@ウイルス@a virus disease@ウイルス性疾患@0@n
+bond@きずな@strong bonds@強いきずな@0@n
+astronaut@宇宙飛行士@astronaut exam@宇宙飛行士の試験@0@n
+dialect@方言@the local dialect@地方の方言@0@n
+thief@泥棒@juwel thief@宝石泥棒@0@n
+yard@庭・ヤード@play in the yard@庭で遊ぶ@0@n
+lung@肺@lung cancer@肺ガン@0@n
+opponent@敵・反対者@defeat an opponent@ライバルを倒す@0@n
+mammal@哺乳類@whale is mammal@鯨は哺乳類である@0@n
+telescope@望遠鏡@astronomical telescope@天体望遠鏡@0@n
+suicide@自殺@commit a suicide@自殺をする@0@n
+habitat@生息地・居住地@the habitat of bears@クマの生息地@0@n

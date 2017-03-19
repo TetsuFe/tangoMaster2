@@ -1,0 +1,20 @@
+desirable@望ましい@desirable surroundings@望ましい環境s@0@a
+magnificent@壮大な・雄大な@a magnificent view@壮大な眺め@0@a
+evident@明らかな@become evident@明らかになる@0@a
+damage@害・損害@cause heavy damage to ~@〜に大きな害を与える@0@n
+chief@主な・長@a chief of the department@部長@0@n
+separate@分離させる@separate A from B@AからBを分離させる@0@v
+soldier@兵士@train soldiers@兵士を訓練する@0@n
+journey@旅@make a journey@旅行をする@0@n
+route@経路・道@decide the route@道を決定する@0@n
+plate@皿・板@use a plate@皿を使う@0@n
+license@免許@get a license@免許を取る@0@n
+cave@洞窟@explore in the cave@洞窟の中を探検する@0@n
+mate@夫・妻・友@look for a mate@夫・妻を探す@0@n
+ladder@はしご@climb a ladder@はしごを登る@0@n
+loan@ローン・貸付@take a loan@ローンを借りる@0@n
+daily@日常の・日毎の@daily routine@日課@0@n
+commercial@商業の@commercial use@商用利用@0@a
+fair@正当な・公平な@a fair judgment@公平な判断@0@a
+plain@簡単な・平地@speak in plain English@簡単な英語で話す@0@a
+fairly@かなり・公平に@a fairly difficult book@かなり難しい本@0@av

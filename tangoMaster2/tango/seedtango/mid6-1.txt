@@ -1,0 +1,20 @@
+grind@砕く・磨く@grind coffee beans@コーヒー豆を挽く@0@v
+growth@成長・発展@the rapid growth of ~@〜の急成長@0@n
+guest@客・招待客@invited five guests@五人の客を招待した@0@n
+harmony@調和@in harmony with ~@〜と調和して@0@n
+heat@熱・熱する@heat some milk@牛乳を温める@0@v
+historic@歴史的重要な@a historic event@歴史的事件@0@a
+hit@ぶつかる・打つ@hit on a good idea@良い考えが思いつく@0@v
+hole@穴・穴を掘る@dig a hole in the ground@地面に穴を掘る@0@n
+housework@家事@help with the housework@家事を手伝う@0@n
+imagine@想像する@can't imagine@想像できない@0@v
+immigrate@移住する@immigrate to England@イギリスへ移住する@0@v
+importance@重要性@know the importance@重要性をわかっている@0@n
+inefficient@効率が悪い@inefficient system@効率の悪いシステム@0@a
+insistence@主張・強要@insistence on the right@権利を主張する@0@n
+location@位置・場所@a good location for ~@〜に適した場所だ@0@n
+ultimately@最終的に@ultimately decide ~@最終的に〜を決める@0@av
+comprehensive@包括的・総合的@comprehensive evaluation@総合的評価@0@a
+precise@正確な@precise calculations@正確な計算@0@a
+controversial@議論になる@controversial topic@議論になりやすい話題@0@a
+enhance@増す・高める@enhance my reputation@自分の評判を高める@0@v

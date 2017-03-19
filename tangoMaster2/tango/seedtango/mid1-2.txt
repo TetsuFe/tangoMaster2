@@ -1,0 +1,20 @@
+retire@退職する@retire from the company@会社を退職する@0@v
+transform@変える@transform A into B@AをBに変える@0@v
+defeat@倒す・負かす@defeat my opponent@対戦相手を倒す@0@v
+sign@合図・署名する@sign a contract@契約書にサインする@0@v
+service@事業・サービス@public services@公共事業@0@n
+industry@工業・産業@a heavy industry@重工業@0@n
+progress@前進・進歩@the progress of ~@〜の進歩@0@n
+excuse@弁解・許す@make a excuse@弁解する@0@n
+economy@経済・節約@domestic economy@国内経済@0@n
+sight@視界・見解@disappear from sight@視界から消える@0@n
+project@企画・突き出る@a building project@建設計画@0@n
+duty@義務@it's my duty to fight@戦うのが私の義務だ@0@n
+mass@大量の・大衆@mass production@大量生産@0@a
+element@要素@the important element@重要な要素@0@n
+revolution@革命・回転@before the revolution@革命が起こる前は@0@n
+quarter@四分の一@the quater of a year@一年の四分の一@0@n
+flood@洪水・殺到@the flood occurred@洪水が発生した@0@n
+desert@砂漠@in the desert@砂漠で@0@n
+trend@傾向・流行@the trend toward ~@〜へ向かう傾向@0@n
+impact@影響・衝撃@have an impact on ~@〜に影響を与える@0@n

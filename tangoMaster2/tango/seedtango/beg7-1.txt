@@ -1,0 +1,20 @@
+slight@少しの@a slight difference@少しの違い@0@a
+military@軍事的な@military forces@軍隊@0@a
+solid@個体の・硬い@solid rock@硬い岩@0@a
+hardly@殆ど〜ない@hardly study@ほとんど勉強しない@0@o
+immediately@すぐに@start immediately@すぐに始める@0@av
+eventually@結局・ついに@eventually finished@ついに終わった@0@av
+frequently@しばしば@be late frequently@しばしば遅刻する@0@av
+extremely@非常に@extremely difficult@非常に難しい@0@av
+relatively@比較的@relatively high@比較的高い@0@av
+absolutely@絶対に@absolutely impossible@絶対に不可能な@0@av
+largely@主に@be largely due to ~@主に〜が原因だ@0@av
+mostly@ほとんど@he mostly sleeps@彼は大抵いつも寝ている@0@av
+somewhat@多少は@somewhat better@多少良い@0@av
+interpret@解釈する@interpret A as B@Aの意味をBと解釈する@0@v
+cease@やめる・終わる@the rain ceased@雨が止む@0@v
+resist@抵抗する@resist the pressure@圧力に抵抗する@0@v
+interrupt@中断させる@interrupt his work@彼の仕事を中断させる@0@v
+illustrate@例証する@illustrated the theory@理論を証明する@0@v
+arrest@逮捕する@arrest A for B@Aを〜の容疑で逮捕する@0@v
+stimulate@刺激する@stimulate his curiosity@彼の好奇心を刺激する@0@v

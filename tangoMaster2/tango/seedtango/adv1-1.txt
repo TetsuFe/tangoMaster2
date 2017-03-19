@@ -1,0 +1,20 @@
+launch@発射する@launch a rocket@ロケットを発射する@0@v
+foster@養う@foster a child@子供を養う@0@v
+deserve@価値がある@deserve admiration@賞賛に値する@0@v
+punish@罰する@punish a criminal@犯罪者を罰する@0@v
+deceive@だます@deceive my friends@友人をだます@0@v
+vanish@消える@The man vanished@男は突然姿を消した@0@v
+regulate@規制する@regulate air pollution@大気汚染を規制する@0@v
+distribute@配布する@distribute equally@平等に分配する@0@v
+exceed@超える@exceed the limit@限界を超える@0@v
+wipe@拭きとる@wipe my face@顔をふく@0@v
+unite@団結させる@unite two countries@二国を併合する@0@v
+leap@跳ぶ@leaps into a pond@池に飛びこむ@0@v
+exaggerate@誇張する@exaggerate a story@話を大げさに語る@0@v
+modify@修正する@modify the plan@計画を修正する@0@v
+scream@悲鳴をあげる@scream for help@助けてと悲鳴をあげる@0@v
+attain@達成する@attain the goal@目標を達成する@0@v
+rub@こする@rub my eyes@目をこする@0@v
+assert@主張する@assert that ~@〜だと主張する@0@v
+contract@契約（書）@sign a contract@契約にサインする@0@n
+stuff@もの・材料@soft stuff@柔らかいもの@0@n

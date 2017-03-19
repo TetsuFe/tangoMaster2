@@ -1,0 +1,20 @@
+exist@存在する@the creature exists@その生物は存在する@0@v
+protect@守る@protect A trom danger@Aを危険から守る@0@v
+affect@影響を与える@affecte your health@君の健康に影響する@0@v
+ignore@無視する@ignore his advice@彼の忠告を無視する@0@v
+guess@推測する@I guess that ~@私は〜だと思う@0@v
+complain@不満を言う@complain about ~@〜について不満を言う@0@v
+achieve@達成する@achieve the goal@目標を達成する@0@v
+divide@分ける・割る@divide an apple in half@リンゴを二つにわける@0@v
+distinguish@区別する@distinguish A from B@AとBを区別する@0@v
+educate@教育する@educate children@子供を教育する@0@v
+trust@信頼・信用する@betrayed my trust@私の信頼を裏切った@0@v
+overcome@打ち勝つ@overcome the difficulties@困難に打ち勝つ@0@v
+predict@予測する@predict that ~@〜が起こると予測する@0@v
+investigate@調査する@investigate the cause@原因を調査する@0@v
+pretend@ふりをする@pretend to study@勉強するふりをする@0@v
+value@値段・価値@realize the value@その価値に気づく@0@n
+trade@貿易・貿易する@free trade@自由貿易@0@n
+taste@味・味がする@it tastes sour.@酸っぱい味がする@0@v
+risk@危険・リスク@at the risk of ~@〜の危険を承知で@0@n
+feature@特徴・特集@features of human@人間の特徴@0@n

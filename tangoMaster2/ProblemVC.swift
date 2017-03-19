@@ -30,32 +30,30 @@ class ProblemVC: UIViewController {
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     
-    let nounProbFile = ["noun_prob_0"]
-    let adjProbFile = ["adj_prob_0"]
-    let adveProbFile = ["adve_prob_0"]
-    let preProbFile = ["pre_prob_0"]
-    let verbProbFIle = ["verb_prob_0"]
-    
-    func getFileNameOfParts(chap: Int, parts:String)->String{
+
+/*
+    func getFileNameOfParts(parts:String)->String{
+        let fileName = parts
+        /*
         var fileName = String()
         switch parts{
         case "n":
-            //本当はchapに応じた範囲でランダム決定
-            fileName = nounProbFile[0]
+            fileName = "dummy_noun"
         case "a":
-            fileName = adjProbFile[0]
+            fileName = "dummy_adj"
         case "av":
-            fileName = adveProbFile[0]
-        case "p":
-            fileName = preProbFile[0]
+            fileName =  "dummy_adve"
         case "v":
-            fileName = verbProbFIle[0]
+            fileName = "dummy_verb"
+        case "o":
+            fileName = "dummy_other"
         default:
             break
         }
+ */
         return fileName
     }
-    
+  */
     //本当はchapに応じた範囲でランダム決定したいので、chap引数も追加したい。
     func partsToIndex(parts:String)->Int{
         var jpnArrayIdentifier = -1
@@ -68,36 +66,38 @@ class ProblemVC: UIViewController {
             jpnArrayIdentifier = 1
         case "av":
             jpnArrayIdentifier = 2
-        case "p":
-            jpnArrayIdentifier = 3
         case "v":
+            jpnArrayIdentifier = 3
+        case "o":
             jpnArrayIdentifier = 4
         default:
+            print("return -1! may ber error occur!")
             break
         }
-        print("return -1! may ber error occur!")
         return jpnArrayIdentifier
     }
-    
+   /*
     func writePartsFileFromDataFile(parts:String,fileName:String){
-        var readArray = readFileGetWordArray(fileName,extent:"txt")
+        var readArray = readFileGetWordArray(fileName,extent:"txt",inDirectory: "tango/seedtango")
         for r in 0..<readArray.count/6{
             if readArray[6*r+5] == parts {
                 writeSixFile(fileName:getFileNameOfParts(chap:0, parts:parts),eng:readArray[6*r],jpn:readArray[6*r+1],engPhrase:readArray[6*r+2],jpnPhrase:readArray[6*r+3],nigateFlag:readArray[6*r+4],partOfSpeech:readArray[6*r+5])
             }
         }
     }
-
-
+*/
+    var dummyArray = Array<Array<Jpn>>(repeating:[],count:5)
+    
     override func viewWillAppear(_ animated: Bool) {
         
         //ダミー配列の生成（２次元） 非常にややこしい構成である
         //まず最初にwrong_test_for_0.txtから各partsに応じたファイルに対してpartsの情報を書き込む。
         //このpartsofspeechファイル群は、のちにdummyArrayに使用される。今回はデモなのでいちいち作成しているが、
         //実際にはpythonのプログラムなどであらかじめpartsごとのファイルを作成しておき、それをはじめからiosプロジェクトにいれておくという方法を取るのが良いと思われる。
-        let iterParts = ["n","a","av","p","v"]
+        /*
+        let iterParts = ["n","a","av","p","v","c","aux"]
         for i in 0..<iterParts.count{
-            writePartsFileFromDataFile(parts:iterParts[i],fileName:"wrong_test_for_0")
+            writePartsFileFromDataFile(parts:iterParts[i],dummyTextArray:dummyText)
             let array = getfile(fileName:getFileNameOfParts(chap:0,parts:iterParts[i]))
             //print(array.count)
             for r in 0..<array.count/6{
@@ -105,6 +105,19 @@ class ProblemVC: UIViewController {
                 dummyArray[i].append(Jpn(jpn: array[6*r+1]))
             }
         }
+        */
+        let partsOfSpeechCodes:Array<String>= ["n","a","av","v","o"]//各品詞を集めたファイル
+        var array = Array<Array<String>>(repeating:[],count:5)
+        for i in 0..<partsOfSpeechCodes.count{
+            array[i] = readFileGetWordArray(partsOfSpeechCodes[i], extent: "txt", inDirectory:"tango/dummy")
+            for r in 0..<array[i].count/6{
+                //dummyArrayのrowごとに各partsが入っている。取り出すために、partsToIndexがある
+                dummyArray[i].append(Jpn(jpn: array[i][6*r+1]))
+            }
+        }
+        
+
+      
         
         labelProblem.layer.borderWidth = 1
         
@@ -135,7 +148,7 @@ class ProblemVC: UIViewController {
         var tango = Array<String>()
         if appDelegate.modeTag == 0{
             fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt")
+            tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             for r in 0..<tango.count/6{
                 sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber)))
             }
@@ -209,7 +222,6 @@ class ProblemVC: UIViewController {
     //var nigateList = Array<NewImageReibun>()
     //問題リストファイルを選択 問題番号とファイル名を対応させておく。
     
-    var dummyArray = Array<Array<Jpn>>(repeating:[],count:5)
     
     
     var count = 0
@@ -284,8 +296,9 @@ class ProblemVC: UIViewController {
                 let index = Int(arc4random_uniform(UInt32(currentArray.count))) + appDelegate.problemVolume
                 dummyOptionArray [n] = index
                 //今までのdummyと同じにならないようにする
-                print(correctArray.count)
+                print(currentArray.count)
                 print(dummyOptionArray[n]-appDelegate.problemVolume)
+                print(sevenList.count)
                 if currentArray[dummyOptionArray[n]-appDelegate.problemVolume].jpn != sevenList[correct].jpn{
                     flag = 1
                     for o in 0..<n{

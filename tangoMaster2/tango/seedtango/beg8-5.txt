@@ -1,0 +1,20 @@
+safety@安全性@make sure of the safety@安全を確かめる@0@n
+scientific@科学的な@scientific methods@科学的な方法@0@a
+sex@性別@sex discrimination@性差別@0@n
+shout@叫ぶ@shout for help@助けを求めて叫ぶ@0@v
+smell@匂い（がする）@This flower smells sweet@この花は甘い匂いがする@0@n
+automobile@自動車@wash an automobile@自動車を洗う@0@n
+bark@吠える@The dog barked fiercely@その犬は激しく吠えた@0@v
+bathroom@トイレ・浴室@go to the bathroom@トイレ（浴室）に行く@0@n
+below@〜の下（以下）に@below the bridge@橋の下で@0@o
+beside@〜のそばに@stand beside her@彼女のそばに立つ@0@o
+beyond@〜の向こうに@it's beyond me@私には理解できない@0@o
+action@行動・活動@take action to do@〜のために行動を起こす@0@a
+anyway@とにかく@Anyway, let's try!@とにかく、やってみよう！@0@av
+anywhere@どこでも@I can go anywhere@どこへでも行ける@0@n
+childhood@子供時代@in my childhood@私が子供だった頃@0@n
+condition@状況・条件@on this condition@この状況（条件）で@0@n
+cross@十字架・渡る@cross the street@道路を渡る@0@v
+cultural@文化的な@cultural differences@文化的な違い@0@a
+dare@思い切ってする@dare not tell him@彼に言う勇気がない@0@o
+difficulty@困難・苦労@have difficulty in doing@〜するのに苦労する@0@n

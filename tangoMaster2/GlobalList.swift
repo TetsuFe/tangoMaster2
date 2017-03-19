@@ -80,9 +80,9 @@ func getNewChapterArray()->Array<Int>{
 }
 
 
-func readFileGetWordArray(_ fileName:String,extent:String)->Array<String>{
+func readFileGetWordArray(_ fileName:String,extent:String,inDirectory directoryName:String)->Array<String>{
     var wordArray = Array<String>()
-    if let filePath = Bundle.main.path(forResource: fileName,ofType: extent,inDirectory:"tango") {
+    if let filePath = Bundle.main.path(forResource: fileName,ofType: extent,inDirectory:directoryName) {
         do {
             let str = try String(contentsOfFile: filePath,
                                  encoding: String.Encoding.utf8)

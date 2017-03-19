@@ -1,0 +1,20 @@
+horizon@地平線・範囲@above the horizon@地平線の上に@0@n
+jam@混雑@avoid traffic jam@交通渋滞を避ける@0@n
+constitution@憲法・組織@the Japanese constitution@日本国憲法@0@n
+charm@魅力・魅了する@were charmed with ~@魅了される@0@v
+organ@器官・臓器@internal organs@内臓@0@n
+prey@獲物・犠牲@become a prey to ~@〜のえじきになる@0@n
+venture@冒険・企業@a joint venture@合弁企業@0@n
+mission@任務・使命@a sense of mission@使命感@0@n
+shade@陰・日陰@in the shade@日陰で@0@n
+stereotype@固定観念@racial stereotypes@人種への固定観念@0@n
+output@生産高・出力@increase output@生産高を増やす@0@n
+convention@慣習・伝統@break a conventions@慣習を破る@0@n
+sensation@感覚・大流行@auditory sensation@聴覚@0@n
+peer@仲間・貴族@a hereditary peer@世襲貴族@0@n
+gravity@重力@zero gravity@無重力@0@n
+incident@出来事・事件@a strange incident@奇妙な出来事@0@n
+laboratory@研究所@science laboratory@科学研究所@0@n
+analysis@分析@analysis of DNA@DNAの分析（に基づくなど)@0@n
+poverty@貧乏・貧困@live in poverty@貧乏な暮らしをする@0@n
+shortage@不足@water shortage@水不足@0@n

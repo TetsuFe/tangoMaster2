@@ -1,0 +1,20 @@
+expand@拡大する@expand the territory@領土を拡大する@0@v
+disturb@妨げる@No one disturbs me@誰も私を邪魔しない@0@v
+engage@携わる・雇う@engage in agriculture@農業に携わる@0@v
+bother@困らせる@Don's bother me@私を困らせないでくれ@0@v
+appeal@訴える・求める@appeal to him for help@彼に助けを求める@0@v
+combine@くっつける@combine A with B@AとBをくっつける@0@v
+remark@述べる・発言@remark that it is true@それは本当だと述べる@0@v
+release@解放する@release a bird from cage@鳥を檻から解放する@0@v
+rent@借りる・家賃@rent an apartment@アパートを借りる@0@v
+identify@見分ける@identify the body@死体の身元を特定する@0@v
+conclude@結論を出す@conclude that@〜という結論を出す@0@v
+neglect@無視する・怠る@neglect human rights@人権を無視する@0@v
+adjust@調節する@adjust a telescope@望遠鏡を調節する@0@v
+pursue@追い求める@pursue my goal@目標を追い求める@0@v
+demonstrate@証明する@demonstrate that ~@〜を証明する@0@v
+stretch@伸ばす@stretch my arms@腕を伸ばす@0@v
+reverse@逆にする@reverse the position@立場を逆転する@0@v
+capture@捕まえる@capture the cat@猫を捕まえる@0@v
+produce@作る@produce the car@その車を製造する@0@v
+express@表現する@express my feelings@気持ちを表現する@0@v

@@ -1,0 +1,20 @@
+symptom@症状・前兆@symptoms of depression@鬱の症状@0@n
+oxygen@酸素@oxygen molecule@酸素分子@0@n
+physician@医者・内科医@physician association@医師会@0@n
+anthropology@人類学@Anthropology class@人類学の授業@0@n
+merchant@商人@a timber merchant@材木商@0@n
+priest@神父・聖職者@a Catholic priest@カトリック教会の神父@0@n
+astronomy@天文学@astronomical probability@天文学的確率@0@n
+particle@粒子・粒@particles of sand@砂の粒@0@n
+protein@タンパク質@high-protein food@高タンパク質の食べ物@0@n
+molecule@分子@sugar molecule@糖分子@0@n
+peculiar@特有の・変な@peculiar taste@独特な味@0@a
+vain@無駄な@work in vain@無駄に働く@0@a
+substantially@事実上・十分に@substantially increase@十分に増やす@0@av
+silly@馬鹿な@silly jokes@馬鹿な冗談@0@a
+ecological@生態学の@ecological system@生態系@0@a
+grocery@日用品・食料品@grocery store@日用品店@0@n
+pursuit@追求・追跡@in pursuit of@〜を追い求めて@0@n
+pump@排出する@pump gases@ガスを排出する@0@v
+bamboo@竹@is made from bamboo@竹でできている@0@n
+cage@おり・かご@escape from the cage@おりから逃げる@0@n

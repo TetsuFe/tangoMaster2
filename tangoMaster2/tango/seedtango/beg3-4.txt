@@ -1,0 +1,20 @@
+attempt@試みる@attempt to do@〜しようと試みる@0@v
+custom@慣習・習慣@follow local customs@地方の慣習に従う@0@n
+traffic@交通・交通の@traffic jam@交通渋滞@0@n
+patient@患者・我慢強い@an isolated patient@隔離された患者@0@n
+favor@お願い@May I ask your favor?@お願いしていいですか@0@n
+benefit@利益@for my benefit@自分の利益のために@0@n
+relative@親戚・比較的@be relative to ~@〜と関係がある@0@a
+pain@痛み・苦痛@relieve the pain@痛みを和らげる@0@n
+kid@子供@I have three kids@３人の子供がいる@0@n
+climate@気温・温度@a warm climate@温暖な気候@0@n
+grade@成績・学年@gets good grades@よい成績をとる@0@n
+agency@代理店@a travel agency@旅行代理店@0@n
+appointment@予約・指名@make an appointment@予約する@0@n
+quantity@量@large quantities of@膨大な量の@0@n
+government@政府・行政@the U.S. government@アメリカ政府@0@n
+effort@努力@make an effort@努力する@0@n
+population@人口@population growth@人口の増加@0@n
+quality@質@water quality@水質@0@n
+attitude@態度・考え@the attitude to us@私たちに対する態度@0@n
+research@研究・調べる@research the history@歴史を研究する@0@v

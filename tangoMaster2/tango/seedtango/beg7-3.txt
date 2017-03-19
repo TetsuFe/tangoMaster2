@@ -1,0 +1,20 @@
+guarantee@保証する@guarantee the success@成功を保証する@0@v
+greet@挨拶する@greet politely.@礼儀正しく挨拶する@0@v
+apologize@謝る@apologize for ~@〜について謝る@0@v
+fade@徐々に消える@memories fade away@記憶が消えていく@0@v
+evaluate@評価する@evaluate her ability@彼女の能力を評価する@0@v
+scold@叱る@scold him for doing@〜した彼を叱る@0@v
+postpone@延期する@postpone the game@試合を延期する@0@v
+burden@負担・荷物@be a burden to you@あなたの負担になる@0@n
+access@接近・利用@gain access to 〜@〜を利用する（へ行く）@0@n
+treasure@財宝・貴重品@look for treasure@財宝を探す@0@n
+vehicle@乗り物・手段@a space vehicle@宇宙船@0@n
+perspective@観点・見通し@a distorted perspective@歪んだ物の見方@0@n
+witness@目撃者・見る@a witness of (to) ~ @〜の目撃者@0@n
+border@国境・境界@cross the border@国境を越える@0@n
+fee@料金・手数料@an admission fee@入場料@0@n
+slave@奴隷@work like a slave@奴隷のように働く@0@n
+divorce@離婚・離婚する@divorce her husband@夫と離婚する@0@v
+faculty@学部・能力@the mental faculties@知的能力@0@n
+span@期間・範囲@for a short span@短い期間に@0@n
+version@版・型@buy an old version@旧型を買う@0@n

@@ -1,0 +1,20 @@
+annual@年に一度の@annual event@年に一度のイベント@0@a
+concrete@具体的な@concrete example@具体例@0@a
+apt@しがちである@be apt to be late@遅刻しがちである@0@a
+modest@控えめな@modest attitude@謙虚な態度@0@a
+relevant@関係のある@be relevant to me@私に関係がある@0@a
+desperate@必死の@desperate effort@必死の努力@0@a
+precisely@丁度・正確に@precisely at ten@丁度１０時に@0@av
+meanwhile@その間・一方@Meanwhile, I was sleeping@一方その頃、私は寝ていた@0@av
+lonely@寂しい@a lonely old man@孤独な老人@0@av
+precious@貴重・大切な@precious metal@貴金属@0@a
+reluctant@したくない@be reluctant to do@〜したくない@0@a
+vague@曖昧な@a vague expression@曖昧な表現@0@a
+numerous@多くの@numerous visitors@たくさんの訪問者@0@a
+rural@田舎の@rural town@田舎の町@0@a
+odd@奇妙な・奇数@odd number@奇数@0@a
+indifferent@無関心な@indifferent attitude@無関心な態度@0@a
+initial@初期の@initial step@最初の段階@0@a
+linguistics@言語学の@linguistic lectures@言語学の授業@0@n
+crucial@重要な@crucial decisions@重大な決断@0@a
+flexible@柔軟な@flexible thinking@柔軟な考え方@0@a

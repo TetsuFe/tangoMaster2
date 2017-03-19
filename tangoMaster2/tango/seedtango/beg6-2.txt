@@ -1,0 +1,20 @@
+skill@技術@improve my skill@技術を向上させる@0@n
+role@役割@play an important role@役割を担う@0@n
+author@著者・作者@my favorite author@私の好きな作家@0@n
+shape@形・姿@the shape of a woman@女性の姿@0@n
+advantage@利点・有利@take advantage of ~@〜を利用する@0@n
+detail@詳細@explain it in detail@詳細に説明する@0@n
+distance@距離@short/long distance@短/長距離@0@n
+clothes@服・衣服@put on my clothes@服を着る@0@n
+standard@標準・基準@the standard of living@生活水準@0@n
+organization@組織・団体@establish a organization@組織を設立する@0@n
+resource@資源@natural resources@天然資源@0@n
+customer@客・取引先@a reguler customer@常連客@0@n
+species@（分類上の）種@endangered species@絶滅危惧種@0@n
+passenger@乗客@passangers on a bus@バスの乗客@0@n
+crime@犯罪・罪@commit a crime@罪を犯す@0@n
+majority@多数派@the majority of woman@大多数の女性@0@n
+equipment@装置・備品@laboratory equipments@実験室の備品@0@n
+strength@強さ@strength of will@意志の強さ@0@n
+circumstances@状況・事情@present circumstance@現在の状況@0@n
+religion@宗教@believe in religion@宗教を信じる@0@n

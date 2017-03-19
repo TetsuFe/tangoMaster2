@@ -1,0 +1,20 @@
+bore@退屈させる@a boring speech@退屈な演説@0@v
+survive@生き残る@survive in desert@砂漠で生き残る@0@v
+represent@表現する@A dove represents peace@鳩は平和の象徴である@0@v
+indicate@示す@the data indicates that@そのデータは〜を示す@0@v
+acquire@習得する@acquire new skill@新しい技術を習得する@0@v
+escape@逃げる@escape from the enemy@敵から逃避する@0@v
+reveal@暴露する@reveal the secret@その秘密を暴露する@0@v
+surround@囲む@be surrounded by lake@湖に囲まれている@0@v
+suit@適している@are suited for the hat@その帽子が似合っている@0@v
+estimate@推定する@estimate that ~@〜になると推定する@0@v
+earn@稼ぐ@earn much money@多くのお金をかせぐ@0@v
+remove@取り除く@remove a stain from ~@〜からシミを除く@0@v
+associate@関連づける@associate A with B@AとBを連想する@0@v
+attract@注意を引く@attract their interests@彼らの興味を引く@0@v
+rely@頼る@rely on my intuition@自分の直感を頼る@0@v
+adopt@採用する@adopt her plan@彼女の案を採用する@0@v
+hurt@傷つける@hurted my feelings@私の心を傷つけた@0@v
+blame@責める@blame him for losing@敗北を彼のせいにする@0@v
+persuade@説得する@persuade him to study@勉強するよう説得する@0@v
+admire@褒める@admire him for ~@〜のことで彼をほめる@0@v

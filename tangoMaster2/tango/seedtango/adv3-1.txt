@@ -1,0 +1,20 @@
+parliament@議会・下院@a Member of Parliament@下院議員@0@n
+subsequent@その後の@the subsequent change@その後の変化@0@a
+primarily@主に・第一に@primarily be caused by ~@主に〜が原因だ@0@av
+sensible@賢明な@it is sensible of you to do@〜するとは君は賢明だ@0@a
+vase@花瓶@break the vase@花瓶を割る@0@n
+outer@外側の@the outer wall@外壁@0@a
+match@試合・合う@the wrestling match@レスリングの試合@0@n
+manufacture@製造する・製造@manufacture the cars@車を製造する@0@v
+alarm@警告・不安にする@sound the alarm@警告音を鳴らす@0@v
+attach@取り付ける@attach the label@ラベルをつける@0@v
+explore@探検する@explore the island@島を探検する@0@v
+alter@変更する@alter the plan@その計画を変更する@0@v
+material@物質・材料@raw material@原料@0@n
+passage@節・通路@read a passage from@〜の一節を読む@0@n
+department@部署・学部@the personnel department@（企業の）人事部@0@n
+delight@喜び・喜ばせる@be delighted with ~@〜を喜ぶ@0@n
+branch@枝・一部門@cut a branch@木の枝を切る@0@n
+square@平方の・四角@1 square meter@1平方メートル@0@n
+function@機能・働き@the function of the heart@心臓の機能@0@n
+contrast@対比・対照@the contrast between ~@〜と〜の対比@0@n

@@ -1,0 +1,20 @@
+narrow@狭い@a narrow street@狭い道@0@a
+nervous@神経質な@feel nervous@神経質になる@0@a
+negative@否定的な@a negative response@否定的な反応@0@a
+latter@後者@former and latter@前者と後者@0@n
+anxious@心配な@be anxious about ~@〜が心配だ@0@a
+thin@薄い・細い@he is thin@彼は痩せている@0@a
+tough@タフな・堅い@a tough worker@タフな労働者@0@a
+possibly@かもしれない@possibly i can ~@できるかもしれない@0@av
+contrary@反対の・逆の@on the contrary@逆に@0@a
+complete@完全な@a complete failure@完全な失敗@0@a
+aware@気づいている@be aware of ~@〜に気づいている@0@a
+practical@実用的な@practical skills@実用的な技術@0@a
+entire@全体の@the entire area@地区全域@0@a
+active@活動的な@active discussion@活発な議論@0@a
+mental@精神の・心の@a mental disorder@精神障害@0@a
+accurate@正確な@accurate analyses@正確な分析@0@a
+sufficient@十分な@sufficient food@十分な食料@0@a
+urban@都市部の@urban problem@都市問題@0@a
+permanent@永久の@permanent peace@恒久の平和@0@a
+brief@簡潔な・短い@brief explanation@簡潔な説明@0@a

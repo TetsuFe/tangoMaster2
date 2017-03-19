@@ -1,0 +1,20 @@
+dangerous@危険な@be dangerous to do@〜するのは危険だ@0@a
+excite@興奮させる@an exciting movie@面白い映画@0@v
+surprise@驚かせる@be surprised to hear it@それを聞いて驚く@0@v
+tired@疲れる・退屈だ@be tired of life@人生に疲れる@0@a
+angry@怒っている@get angry with her@彼女に腹を立てる@0@a
+careful@気をつける@be careful not to do@〜しないよう気をつける@0@a
+cheap@安い・安価な@be cheaper than ~@〜よりも安い@0@a
+glad@嬉しい@be glad to see you@あなたに会えて嬉しい@0@a
+another@もう一つの@one after another@次々と@0@a
+loud@大きな@Speak in a loud voice@大きな声で話しなさい@0@a
+clever@賢い・器用な@she looks clever@彼女は賢そうだ@0@a
+dirty@汚い・汚れた@clean a dirty room@汚れた部屋を掃除する@0@a
+absent@欠席している@be absent from school@学校を欠席している@0@a
+delicious@美味しい@it's delicious!@おいしい！@0@a
+almost@ほとんど@almost all the students@ほとんど全ての生徒@0@av
+yet@まだ@haven't arrived yet.@まだ到着していない@0@av
+especially@（〜の中で）特に@Especially, I like Nakai.@特に私は中居君が好きだ@0@av
+instead@代わりに@I do instead of him@彼の代わりに私がする@0@av
+either@〜のどちらか@either you or her(she)@君か彼女のどちらか@0@av
+thus@したがって@~. Thus ~@〜だ。したがって、〜だ@0@o

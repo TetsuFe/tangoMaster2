@@ -1,0 +1,20 @@
+joke@冗談@It's a funny joke.@それは面白い冗談だ。@0@n
+actor@俳優@a popular actor@人気俳優@0@n
+hero@英雄@want to be a hero@英雄になりたい@0@n
+coast@海岸@run along the coast@海岸沿いを走る@0@n
+cash@現金@buy a car in cash@車を現金で買う@0@n
+gap@差・格差@the gap between ~@〜間の差@0@n
+guard@守衛・守る@guard my head@頭を守る@0@v
+ease@楽・安らぎ@earn money with ease@楽にお金を稼ぐ@0@n
+army@軍隊@withdraw army from ~@軍隊を〜から撤退させる@0@n
+fool@馬鹿@make a fool of me@私を馬鹿にする@0@n
+sake@目的・理由@for the sake of ~@〜のために@0@n
+twin@双子の@give birth to twins@双子を産む@0@n
+shadow@影・影で覆う@shadow of death@死の影@0@n
+setting@環境・設定@setting of a goal@目標の設定@0@n
+impossible@不可能な@be impossible to do@〜するのは不可能だ@0@a
+wild@野生の@the wild animals@野生動物@0@a
+dead@死体・死んだ@come to a dead end@行き詰まる@0@a
+unique@独特の・特有の@be unique to Japan@日本特有のものだ@0@a
+regular@通常の・定期的@a regular meeting@定例（定期開催の）会議@0@a
+overseas@海外へ・海外の@overseas market@海外市場@0@av

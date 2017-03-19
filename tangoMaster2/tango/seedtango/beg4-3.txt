@@ -1,0 +1,20 @@
+refugee@難民・逃亡者@political refugee@政治的難民@0@n
+senior@年上の@a senior member@先輩@0@a
+shy@内気な@Don't be shy.@恥ずかしがらないで。@0@a
+indispensable@必要不可欠な@indispensable tool@必要不可欠な道具@0@a
+selfish@利己的な@a selfish behavior@自己中心的な行動@0@a
+incredible@信じられない@it's incredible!@信じられない！@0@a
+respect@尊敬する@respect my teacher@私の先生を尊敬している@0@v
+exercise@運動する@exercise the right@権利を行使する@0@v
+subject@主題・被験者@a subject of study@研究の主題@0@n
+strange@変な・奇妙な@he has a strange habit@彼には変な癖がある@0@a
+science@科学@study science@科学を学ぶ@0@n
+secretary@秘書・書記官@hire new secretary@新しい秘書を雇う@0@n
+cellphone@携帯電話@use a cellphone@携帯電話を使う@0@n
+aloud@大きな声で@cry aloud@大声で（泣き）叫ぶ@0@av
+although@〜だけれども@although it's raining,@雨が降っているけど@0@o
+choice@選択@have no choice but to do@〜するしか選択肢がない@0@n
+decrease@減少・減少する@~ decreased by 10%@〜が10%減少した@0@v
+disagree@同意しない@disagree with her@彼女の意見に同意しない@0@v
+disappear@姿を消す@disappear into the dark@暗闇に姿を消す@0@v
+foreigner@外国人@jobs for foreigners@外国人向けの仕事@0@n

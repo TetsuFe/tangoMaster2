@@ -1,0 +1,20 @@
+colony@植民地@British colony@イギリスの植民地@0@n
+quarrel@口論・苦情@have a quarrel with@〜との口論@0@n
+layer@層@ozon layer@オゾン層@0@n
+clue@手がかり@a clue to mystery@謎を解く手がかり@0@n
+fiction@作り話@a complete fiction@完全な作り話@0@n
+district@地域・地区@an agricultural district@農業地帯（地区）@0@n
+prison@刑務所@live in prison@刑務所で過ごす@0@n
+executive@重役・執行役員@an executive committee@執行委員会@0@n
+justice@正義・公正@with justice@公正に@0@n
+procedure@手続き@legal procedure@法的手続き@0@n
+heaven@天国@go to heaven@天国に行く@0@n
+luxury@贅沢品・贅沢@lived in luxury@ぜいたくな生活をする@0@n
+fund@資金@lack of funds@資金不足@0@n
+interval@間隔@at 5-minites intervals@５分間隔で@0@n
+committee@委員会@a budget committee@予算委員会@0@n
+atomic@原子力の@an atomic bomb@原子爆弾@0@a
+priority@優先事項@a top(first) priority@最優先事項@0@n
+impulse@衝動@resist my impulse@衝動を抑える@0@n
+satellite@衛星@artificial satellite@人工衛星@0@n
+insight@洞察・考察@a insight into life@人生に対する洞察@0@n

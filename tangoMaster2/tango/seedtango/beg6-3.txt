@@ -1,0 +1,20 @@
+pollution@汚染・公害@environmental pollution@環境汚染@0@n
+profit@利益@make a profit@利益を得る@0@n
+technique@技術@ a technique of ~@〜の技術@0@n
+emotion@感情@appeal to the emotion@感情に訴える@0@n
+cancer@癌・がん@lung cancer@肺がん@0@n
+billion@10億の@7 billion people@七十億の人@0@n
+youth@若者・若さ@She lost her youth.@彼女は若さを失った@0@n
+confidence@信頼・自信@betray my confidence@私の信頼を裏切る@0@n
+edge@角・端・刃@the edge of a table@テーブルの角（端）@0@n
+household@家庭の・家族@household affairs@家事@0@a
+vocabulary@語彙@expand my vocabulary@自分の語彙を増やす@0@n
+enemy@敵@a natural enemy@天敵@0@n
+instrument@器具・楽器@a medical instrument@医療器具@0@n
+weapon@武器・兵器@a nuclear weapon@核兵器@0@n
+earthquake@地震@an earthquake occurred@地震が起こった@0@n
+victim@犠牲者@victims of the war@戦争の犠牲者@0@n
+fuel@燃料@fossil fuel@化石燃料@0@n
+ancestor@先祖・祖先@the ancestors of ~@〜の祖先@0@n
+violence@暴力@resort to violence@暴力に訴える@0@n
+disaster@災害@the natural disaster@自然災害@0@n

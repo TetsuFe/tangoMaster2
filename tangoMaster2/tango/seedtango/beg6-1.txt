@@ -1,0 +1,20 @@
+region@地方・地域@tropical regions@熱帯地方@0@n
+characteristic@特徴・独特の@unique characteristics@独特の特徴@0@n
+occasion@場合・時@on this occasion@この場合、@0@n
+principle@原則・主義@principles of economics@経済学の原則@0@n
+scene@場面・風景@at the scene of ~@〜の現場で@0@n
+basis@根拠・基礎@on the basis of ~@〜に基づいて@0@n
+audience@観客・聴衆@a large audience@大勢の観客@0@n
+conflict@対立・紛争@a conflict between ~@〜と〜の対立@0@n
+atmosphere@大気・雰囲気@in the atmosphere@大気中の@0@n
+reward@報酬・報いる@as a reward@報酬として@0@n
+background@背景・経歴@the social background@社会的背景@0@n
+harm@害・害する@do harm to my health@私の健康を害する@0@n
+capacity@容量・能力@the capacity to learn@学習する能力@0@n
+vote@投票・投票する@the right to vote@投票権@0@n
+officer@役人・幹部@a police officer@警察官@0@n
+immigrant@移民@immigrants from ~@〜からの移民@0@n
+situation@状況@in this situation@この状況で@0@n
+knowledge@知識@have no knowledge@知識が全くない@0@n
+nation@国家・国民@nation state@国民国家@0@n
+lack@不足・欠如@lack of resources@資源不足@0@n

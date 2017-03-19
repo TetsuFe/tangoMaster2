@@ -1,0 +1,20 @@
+comment@論評・論評する@comments on this book@この本に対する論評@0@v
+pose@姿勢@the list of yoga pose@ヨガの姿勢のリスト@0@n
+law@法律・法@against the law@法律に違反して@0@n
+moment@瞬間・時@at that moment@その瞬間に@0@n
+community@社会・団体@a local community@地域社会@0@n
+human being@人間・人類@human being and animal@人間と動物@0@n
+memory@記憶・思い出@lose my memory@記憶を失う@0@n
+bit@少し@use a little bit@少しだけ使う@0@n
+birth@誕生・出産@give birth to a baby girl@女の子を出産する@0@n
+meal@食事@have a meal at midnight@真夜中に食事をとる@0@n
+goal@目的・目標@achiive the goal@目標を達成する@0@n
+flight@飛行・フライト@a flight to Canada@カナダ行きの便@0@n
+gas@ガス@export of natural gas@天然ガスの輸出@0@n
+sheet@用紙・シーツ@put a sheet on my bed@ベッドにシーツを敷く@0@n
+drug@薬・麻薬@sell illegal drugs@違法薬物を売る@0@n
+post@投稿する・郵便@work in the post office@郵便局で働く@0@n
+guests@客@invite guests to a party@パーティに客を招待する@0@n
+guide@ガイド・案内@follow the guide@ガイドについて行く@0@n
+flow@流れ・流れる@the flow of the river@その川の流れ@0@n
+interview@面接・会見する@have a job interview@仕事の面接を受ける@0@n

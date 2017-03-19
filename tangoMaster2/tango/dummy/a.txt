@@ -1,0 +1,379 @@
+fun@楽しい@Playing with you is fun.@あなたと遊ぶのは楽しい@0@a
+different@異なる・違う@a different reason@異なる理由@0@a
+difficult@難しい@difficult homework@難しい宿題@0@a
+foreign@外国の@study foreign cultures@外国文化を学ぶ@0@a
+necessary@必要な@it is necessary to do@〜する必要がある@0@a
+famous@有名な@be famous for ~@〜で有名だ@0@a
+afraid@恐れる@be afraid of criticism@批判を恐れる@0@a
+busy@忙しい@be busy with one's work@仕事で忙しい@0@a
+heavy@重い・ひどい@a heavy load@重い積荷@0@a
+dangerous@危険な@be dangerous to do@〜するのは危険だ@0@a
+tired@疲れる・退屈だ@be tired of life@人生に疲れる@0@a
+angry@怒っている@get angry with her@彼女に腹を立てる@0@a
+careful@気をつける@be careful not to do@〜しないよう気をつける@0@a
+cheap@安い・安価な@be cheaper than ~@〜よりも安い@0@a
+glad@嬉しい@be glad to see you@あなたに会えて嬉しい@0@a
+another@もう一つの@one after another@次々と@0@a
+loud@大きな@Speak in a loud voice@大きな声で話しなさい@0@a
+clever@賢い・器用な@she looks clever@彼女は賢そうだ@0@a
+dirty@汚い・汚れた@clean a dirty room@汚れた部屋を掃除する@0@a
+absent@欠席している@be absent from school@学校を欠席している@0@a
+delicious@美味しい@it's delicious!@おいしい！@0@a
+serious@深刻な・真面目な@	serious damage@深刻な被害@0@a
+expensive@高価な@expensive furniture@高級家具@0@a
+favorite@特に好きな@my favorite actor@私の好きな俳優@0@a
+able@できる@I will be able to win@勝てるだろう@0@a
+sure@確信している@I'm sure that ~@〜であると確信している@0@a
+least@最も小さい@need at least 3 years@少なくとも３年は必要だ@0@a
+several@いくつかの@several years ago@数年前に@0@a
+whole@〜の全て・全体@succeed as a whole@全体として成功する@0@a
+main@主な@main theme@主題@0@a
+deep@深い@deep sorrow@深い悲しみ@0@a
+true@正しい@If it is true,@もしそれが正しいなら@0@a
+wide@幅の広い@the wide street@幅の広い道@0@a
+dark@暗い・黒い@a girl with dark eyes@黒い目の少女@0@a
+ordinary@普通の・平凡な@ordinary people@一般人@0@a
+bright@明るい@this room is too bright@この部屋は明るすぎる@0@a
+constant@一定の・継続的@at a constant speed@一定の速度で@0@a
+dear@親愛なる@my dear daughter@私の愛する娘@0@a
+honest@正直な@my honest opinion@私の正直な意見@0@a
+proud@誇りに思う@be proud of my son@息子は私の誇りだ@0@a
+asleep@眠っている@fall asleep on the job@仕事中に寝てしまう@0@a
+smart@賢い・素早い@he is so smart@彼はとても賢い@0@a
+crazy@狂気の@be crazy about ~@〜に夢中だ@0@a
+clear@明確な@a clear purpose@明確な目的@0@a
+relative@親戚・比較的@be relative to ~@〜と関係がある@0@a
+common@共通の・普通の@a common goal@共通の目標@0@a
+likely@〜しそうだ@be likely to win@彼が勝つ可能性が高い@0@a
+particular@特定の@a particular person@特定の人@0@a
+available@利用できる@A be available to ~@〜はAを利用できる@0@a
+ready@準備できている@be ready to go@行く準備ができている@0@a
+correct@正しい@the correct answer@正しい答え@0@a
+familiar@親しい@be familiar with ~@〜に詳しい・と親しい@0@a
+worth@価値がある@be worth doing@〜する価値がある@0@a
+involved@関わる@be involved in ~@〜に関わっている@0@a
+obvious@明確な@an obvious difference@明確な違い@0@a
+positive@積極的・肯定的@ a positive attitude@積極的な態度@0@a
+global@世界的な@a global issue@世界的な問題@0@a
+awake@起きている@kept me awake@起きたままにする@0@a
+calm@冷静な@Calm down!@落ち着いて！@0@a
+occasionally@たまに@see him occasionally@たまに彼に会う@0@a
+general@一般的な@a general opinion@一般的な意見@0@a
+various@様々な@various kinds of ~@さまざまな種類の〜@0@a
+similar@似ている@be similar to ~@〜に似ている@0@a
+recent@最近の@in recent years@近年@0@a
+essential@必要な・本質的@essential requirement@必要な条件@0@a
+huge@巨大な@a huge building@巨大な建物@0@a
+terrible@ひどい@terrible disaster@大災害@0@a
+comfortable@快適な@a comfortable life@快適な暮らし@0@a
+convenient@便利な@a convenient method@便利な方法@0@a
+strict@厳しい@strict rules@厳しい規則@0@a
+stupid@馬鹿な@Don't be stupid!@馬鹿なことはやめろ！@0@a
+senior@年上の@a senior member@先輩@0@a
+shy@内気な@Don't be shy.@恥ずかしがらないで。@0@a
+indispensable@必要不可欠な@indispensable tool@必要不可欠な道具@0@a
+selfish@利己的な@a selfish behavior@自己中心的な行動@0@a
+incredible@信じられない@it's incredible!@信じられない！@0@a
+strange@変な・奇妙な@he has a strange habit@彼には変な癖がある@0@a
+funny@面白い@you are funny@あなたは面白い人だ@0@a
+impossible@不可能な@be impossible to do@〜するのは不可能だ@0@a
+wild@野生の@the wild animals@野生動物@0@a
+dead@死体・死んだ@come to a dead end@行き詰まる@0@a
+unique@独特の・特有の@be unique to Japan@日本特有のものだ@0@a
+regular@通常の・定期的@a regular meeting@定例（定期開催の）会議@0@a
+upper@上の@the upper class@上流階級@0@a
+pale@真っ青な@You look pale@顔が真っ青だね@0@a
+personal@個人的な@my personal opinion@私の個人的意見@0@a
+fascinate@魅力的な@a fascinating woman@魅力的な女性@0@a
+amazing@驚異的な@an amazing discovery@驚くべき発見@0@a
+household@家庭の・家族@household affairs@家事@0@a
+plenty@十分多くの@plenty of time@十分な時間@0@a
+public@公共の@public spaces@公共の場@0@a
+equal@同じ・平等な@are equal in ability@同等の能力だ@0@a
+private@私的な@private property@私的財産@0@a
+native@母国の@a native language@母国語@0@a
+complex@複雑な@a complex situation@複雑な状況@0@a
+willing@喜んで〜する@be willing to help@喜んで手伝う@0@a
+current@現在の・流れ@current address@現在の住所@0@a
+male@男の・男性@male voice@男性の声@0@a
+proper@適切な@the proper person@適した人物@0@a
+capable@能力がある@be capable of doing@〜する能力がある@0@a
+independent@独立した@be independent of A@Aから独立している@0@a
+significant@重要な@a significant change@重要な変化@0@a
+upset@動揺している@be upset by news@その知らせに動揺する@0@a
+previous@以前の@previous chapter@前の章@0@a
+specific@特定の・明確な@a specific purpose@明確な目的@0@a
+superior@優れている@be superior to ~@〜より優れている@0@a
+efficient@効率のいい@more efficient way@より効率のよい方法@0@a
+narrow@狭い@a narrow street@狭い道@0@a
+nervous@神経質な@feel nervous@神経質になる@0@a
+negative@否定的な@a negative response@否定的な反応@0@a
+anxious@心配な@be anxious about ~@〜が心配だ@0@a
+thin@薄い・細い@he is thin@彼は痩せている@0@a
+tough@タフな・堅い@a tough worker@タフな労働者@0@a
+contrary@反対の・逆の@on the contrary@逆に@0@a
+complete@完全な@a complete failure@完全な失敗@0@a
+aware@気づいている@be aware of ~@〜に気づいている@0@a
+practical@実用的な@practical skills@実用的な技術@0@a
+entire@全体の@the entire area@地区全域@0@a
+active@活動的な@active discussion@活発な議論@0@a
+mental@精神の・心の@a mental disorder@精神障害@0@a
+accurate@正確な@accurate analyses@正確な分析@0@a
+sufficient@十分な@sufficient food@十分な食料@0@a
+urban@都市部の@urban problem@都市問題@0@a
+permanent@永久の@permanent peace@恒久の平和@0@a
+brief@簡潔な・短い@brief explanation@簡潔な説明@0@a
+slight@少しの@a slight difference@少しの違い@0@a
+military@軍事的な@military forces@軍隊@0@a
+solid@個体の・硬い@solid rock@硬い岩@0@a
+folk@民族の・人々@folk music@民族音楽・民謡@0@a
+annual@年に一度の@annual event@年に一度のイベント@0@a
+concrete@具体的な@concrete example@具体例@0@a
+apt@しがちである@be apt to be late@遅刻しがちである@0@a
+modest@控えめな@modest attitude@謙虚な態度@0@a
+relevant@関係のある@be relevant to me@私に関係がある@0@a
+desperate@必死の@desperate effort@必死の努力@0@a
+precious@貴重・大切な@precious metal@貴金属@0@a
+reluctant@したくない@be reluctant to do@〜したくない@0@a
+vague@曖昧な@a vague expression@曖昧な表現@0@a
+numerous@多くの@numerous visitors@たくさんの訪問者@0@a
+rural@田舎の@rural town@田舎の町@0@a
+odd@奇妙な・奇数@odd number@奇数@0@a
+indifferent@無関心な@indifferent attitude@無関心な態度@0@a
+initial@初期の@initial step@最初の段階@0@a
+crucial@重要な@crucial decisions@重大な決断@0@a
+flexible@柔軟な@flexible thinking@柔軟な考え方@0@a
+grateful@感謝している@be grateful for his help@彼の助けに感謝する@0@a
+present@現在の@at present@現在、@0@a
+bully@いじめる@bullying@いじめ@0@a
+sudden@突然の・急な@All of a sudden, ~@突然、〜だ@0@a
+safe@安全な@be safe for swimming@泳いでも安全な場所だ@0@a
+scientific@科学的な@scientific methods@科学的な方法@0@a
+action@行動・活動@take action to do@〜のために行動を起こす@0@a
+cultural@文化的な@cultural differences@文化的な違い@0@a
+endangered@絶滅寸前の@an endangered species@絶滅危惧種@0@a
+psychological@心理学の@psychological research@心理学的研究@0@a
+healthy@健康な@maintain a healthy body@健康な体を維持する@0@a
+helpful@有益だ・便利な@this book is helpful to me@この本は私に有益だ@0@a
+humorous@ユーモアのある@humorous stories@ユーモアのある話@0@a
+poor@貧乏な・下手な@poor English@下手な英語@0@a
+central@中心の@the central part of ~@〜の中心部@0@a
+false@偽の・間違った@false tears@偽りの涙@0@a
+royal@王の@the royal family@王室@0@a
+gentle@優しい@be gentle with women@女性に対して優しい@0@a
+lazy@怠惰な・だるい@Don't be lazy@怠けるな！@0@a
+smooth@滑らかな@smooth skin@すべすべした肌@0@a
+parallel@平行な@have no parallel@匹敵するものがない@0@a
+vital@重要な@a vital role@重要な役割@0@a
+awful@ひどい@an awful mistake@ひどい失敗@0@a
+obscure@明確でない@obscure reason@はっきりしない理由@0@a
+innocent@無罪の・無垢な@innocent people@罪の無い人々@0@a
+underlying@根本的な@underlying problem@根本的な問題@0@a
+brilliant@素晴らしい@brilliant idea@素晴らしい考え@0@a
+decent@きちんとした@decent clothes@きちんとした服装@0@a
+marvelous@驚くべき@a marvelous discovery@驚くべき発見@0@a
+misleading@誤解を招く@a misleading expression@誤解を招く表現@0@a
+vivid@鮮やかな@vivid memories@鮮やかな思い出@0@a
+miserable@惨めな@a miserable life@惨めな生活@0@a
+visible@目に見える@visible stars@目に見える星@0@a
+raw@生の・非圧縮の@raw meat@生の肉@0@a
+urgent@緊急の@urgent call@緊急の電話@0@a
+adequate@十分な@adequate funds@十分な資金@0@a
+aggressive@攻撃的な@aggressive claims@攻撃的な主張@0@a
+profound@深い・重要な@a profound thought@深い考え@0@a
+hostile@敵の・敵国の@a hostile army@敵軍@0@a
+acid@酸の・酸性の@acid rain@酸性雨@0@a
+ugly@醜い@an ugly face@醜い顔@0@a
+harsh@厳しい@a harsh attitude@厳しい態度@0@a
+helpless@無力な@a helpless child@無力な子供@0@a
+up-to-date@最新の@up-to-date research@最新の研究@0@a
+moderate@適度な@moderate exercise@適度な運動@0@a
+fluent@流暢な@speak fluent English@流暢な英語を話す@0@a
+promising@有望な@a promising student@前途有望な学生@0@a
+deaf@難聴の@a deaf person@聴覚障がい者@0@a
+medieval@中世の@medieval Europe@中世ヨーロッパ@0@a
+literary@文学の@literary history@文学の歴史@0@a
+clinical@臨床の・病院の@clinical test@臨床実験@0@a
+alternative@二者択一の@alternative choices@二つに一つの選択@0@a
+distant@遠い@a distant memory@遠い昔の記憶@0@a
+secondary@二次的な@a secondary infection@二次感染@0@a
+technological@科学技術の@technological innovation@技術革新@0@a
+automatic@自動の@an automatic door@自動ドア@0@a
+attendant@付き添いの@an attendant nurse@付き添いの看護師@0@a
+academic@学問的・大学の@an academic interest in ~@〜への学問的関心@0@a
+additional@追加の@an additional charge@追加料金@0@a
+defensive@防御の・自衛の@take defensive actions@自衛行動をとる@0@a
+dishonest@正直でない@dishonest person@正直でない人@0@a
+downward@下へ・下向きの@downward slope@下り坂@0@a
+dramatic@劇的な・劇の@dramatic finale@劇的な結末@0@a
+elegant@上品な・優雅な@elegant dress@上品な服装@0@a
+enjoyable@楽しい・愉快な@have an enjoyable time@楽しい時間を過ごす@0@a
+extra@追加の・臨時の@an extra charge@追加料金@0@a
+facial@顔の@facial expression@表情@0@a
+fashionable@流行の@fashionable clothes@流行の（おしゃれな）服@0@a
+genetics@遺伝学@specialize in genetics@遺伝学を専攻する@0@a
+handful@一握りの@a handful of sand@一握りのすな@0@a
+historical@歴史的@a historical evidence@史実@0@a
+humane@人道的な@humane treatment@人道的な扱い@0@a
+inadequate@不十分な@inadequate food supply@不十分な食糧供給@0@a
+informed@知識のある@a well‐informed person@有識者・もの知り@0@a
+definite@明確な・一定の@have no definite answer@明確な答えをもたない@0@a
+subsequent@その後の@the subsequent change@その後の変化@0@a
+sensible@賢明な@it is sensible of you to do@〜するとは君は賢明だ@0@a
+outer@外側の@the outer wall@外壁@0@a
+legal@法的な・合法の@legal matters@法的な問題@0@a
+ancient@古代の@an ancient civilization@古代文明@0@a
+primitive@原始的な@primitive culture@原始的な文化@0@a
+terminal@終点・末期の@a terminal station@終着駅@0@a
+peculiar@特有の・変な@peculiar taste@独特な味@0@a
+vain@無駄な@work in vain@無駄に働く@0@a
+silly@馬鹿な@silly jokes@馬鹿な冗談@0@a
+ecological@生態学の@ecological system@生態系@0@a
+affordable@手ごろな@This is an affordable price@これは手ごろな価格だ@0@a
+agreeable@快い・賛成して@agreeable weather@気持ちの良い天気@0@a
+conclusive@最終的な@a conclusive answer@最終的な答え@0@a
+constructive@建設的な@a constructive opinion@建設的な意見@0@a
+disable@身体障害にする@be disabled in the war@戦争で身体障害者になる@0@a
+documentary@事実を基にした@the documentary film@ドキュメンタリー映画@0@a
+fairy@妖精・お伽話の@a fairy tale@おとぎ話@0@a
+hybrid@雑種の・混成の@a hybrid car@ハイブリッドカー@0@a
+mass@大量の・大衆@mass production@大量生産@0@a
+local@地方の・普通の@a local government@地方自治体@0@a
+physical@肉体の@physical strength@体力@0@a
+pleasant@楽しい@a pleasant chat@楽しいおしゃべり@0@a
+chemical@化学の@a chemical change@化学変化@0@a
+conscious@気づいている@be conscious of ~@〜に気づく@0@a
+fundamental@基本的な@fundamental rights@基本的権利@0@a
+alike@似ている@We are all alike@私たちは似た者同士だ@0@a
+domestic@国内の・家庭の@domestic problem@国内問題@0@a
+moral@道徳的・道徳@moral responsibility@道徳的な責任@0@a
+prime@主な・最高の@a prime candidate@最有力候補者@0@a
+nuclear@原子力の@nuclear weapons@原子力兵器@0@a
+curious@知りたがる@be curious about ~@〜について知りたがる@0@a
+civil@市民の@a civil war@内戦@0@a
+political@政治的な@a political party@政党@0@a
+typical@典型的な@a typical case@典型的な例@0@a
+ideal@理想的な@an ideal boss@理想の上司@0@a
+appropriate@適切な@an appropriate decision@適切な判断@0@a
+empty@空の@an empty purse@からっぽの財布@0@a
+rapid@急速な@rapid growth@急成長・急増@0@a
+excellent@素晴らしい@excellent choice@素晴らしい選択@0@a
+potential@潜在的な@potential ability@潜在能力@0@a
+enormous@莫大な@an enormous appetite@ものすごい食欲@0@a
+rare@珍しい@rare disease@珍しい病気@0@a
+complicated@複雑な@a complicated situation@複雑な状況@0@a
+tiny@小さな@a tiny kitten@小さな子猫@0@a
+considerable@かなりの@considerable savings@多額の貯金@0@a
+sensitive@敏感な@be sensitive to ~@〜に敏感だ@0@a
+broad@広い・幅広い@a broad street@幅の広い道路@0@a
+polite@礼儀正しい@be polite to adults@大人の前で礼儀正しい@0@a
+sharp@急激な@a sharp rise@急激な上昇@0@a
+rude@失礼な@made a rude reply@失礼な返事をした@0@a
+elderly@高齢の@elderly people@高齢者@0@a
+severe@厳しい@a severe illness@重い病気@0@a
+drown@溺れている@drowning child@溺れている子供@0@a
+equivalent@同等の@be equivalent to ~@〜に相当する@0@a
+atomic@原子力の@an atomic bomb@原子爆弾@0@a
+rough@雑な@rough manners@不作法@0@a
+contemporary@現代の@contemporary art@現代美術@0@a
+accustomed@慣れている@be accustomed to ~@〜に慣れる@0@a
+steady@安定した@steady relationship@安定した関係@0@a
+dull@退屈な・鈍い@dull speech@退屈な話@0@a
+loose@ゆるい@loose clothes@ゆるゆるの服@0@a
+delicate@繊細な・もろい@delicate balance@微妙なバランス@0@a
+internal@内部の@internal organs@内蔵@0@a
+casual@普段の@casual clothes@普段着@0@a
+mature@成熟した@mature plan@よく練られた計画@0@a
+overall@全体的な@overall abolition@全面的廃止@0@a
+tight@きつい@tight schedule@過密なスケジュール@0@a
+genuine@真の・本物の@genuine love@心からの愛@0@a
+intimate@親密な@an intimate relationship@親密な（男女の）関係@0@a
+sophisticated@精巧な@sophisticated computer@精巧なコンピュータ@0@a
+passive@消極的な@passive attitude@受け身の態度@0@a
+ethnic@民族の@ethnic minorities@少数民族@0@a
+noble@貴族の・崇高な@noble mind@崇高な精神@0@a
+faint@かすかな@a faint hope@かすかな希望@0@a
+awkward@気まずい・下手@an awkward silence@気まずい沈黙@0@a
+consistent@一致している@consistent with ideas@考えと一致する@0@a
+dense@濃い・密な@a dense forest@密林@0@a
+thrilled@ぞくぞくする@be thrilled with terror@恐怖にぞくぞくする@0@a
+inner@内側の@inner thoughts@内なる思い@0@a
+fond@好んでいる@be fond of ~@〜が好きだ@0@a
+minor@比較的小さい@a minor problem@比較的小さな問題@0@a
+isolated@孤立した@an isolated patient@隔離された患者@0@a
+generous@気前のよい@a generous man@気前のよい人@0@a
+tropical@熱帯の@tropical rain forests@熱帯雨林@0@a
+principal@主な・主要な@principal cities@主要な都市@0@a
+temporary@一時的な@temporary job@一時的な仕事@0@a
+artificial@人工の@artificial intelligence@人工知能@0@a
+remote@遠く離れた@remote village@へんぴな村@0@a
+abstract@抽象的・概要@an abstract argument@抽象的な議論@0@a
+excessive@過剰な@excessive drinking@過度の飲酒@0@a
+ashamed@恥ずかしい@ashamed of my past@恥ずかしい過去@0@a
+tremendous@膨大な@a tremendous explosion@凄まじい爆発@0@a
+pure@純粋な@pure gold@純金@0@a
+stable@安定した@stable income@安定した収入@0@a
+ultimate@究極的な@theultimate decision@最終目標@0@a
+solar@太陽の@solar ray@太陽光@0@a
+subtle@微妙な@a subtle difference@微妙な違い@0@a
+conservative@保守的な@a conservative politician@保守的な政治家@0@a
+intense@強い・激しい@intense heat@猛暑@0@a
+cruel@残酷な@cruel treatment@残酷な扱い@0@a
+rational@合理的な@rational decision@合理的な判断@0@a
+rigid@固い・厳格な@a rigid discipline@厳格な規律@0@a
+verbal@言語の@verbal ability@言語能力@0@a
+optimistic@楽観的な@an optimistic view@楽観的な見方@0@a
+lively@快活な@a lively girl@元気のいい女の子@0@a
+overwhelming@圧倒的な@an overwhelming majority@圧倒的多数@0@a
+racial@人種の@racial discrimination@人種差別@0@a
+prominent@著名な@a prominent writer@著名な作家@0@a
+federal@連邦制の@the Federal Government@連邦政府@0@a
+ridiculous@ばかな@ridiculous idea@ばかげた考え@0@a
+imaginary@空想・架空の@an imaginary world@架空の世界@0@a
+imaginative@想像力豊かな@an imaginative child@想像力豊かな子供@0@a
+liberal@自由主義の@liberal politics@自由主義の政治@0@a
+prior@前の@prior to ~@〜に先立って@0@a
+outstanding@目立った@an outstanding ability@傑出した能力@0@a
+elaborate@丁寧な@an elaborate plan@念入りな計画@0@a
+radical@急進的な@a radical politician@過激な政治家@0@a
+manual@体の・手動の@manual work@肉体労働@0@a
+intellectual@知的な・知能の@intellectual faculties@知能@0@a
+keen@熱心な・鋭い@be keen on ~@〜に熱中している@0@a
+novel@斬新な・小説@a novel idea@斬新な考え@0@a
+classic@古典の・昔の@classic literature@古典文学@0@a
+latest@最新の@the latest news@最新のニュース@0@a
+eager@〜したがる@be eager to do@〜したい・したがる@0@a
+successful@成功した@a successful experiment@成功した実験@0@a
+sustainable@持続可能な@sustainable development@持続可能な開発@0@a
+simple@単純な・簡単な@a simple question@簡単な（単純な）問題@0@a
+so-called@いわゆる@she is a so‐called feminist@いわゆるフェミニストだ@0@a
+bold@大胆な・勇敢な@be bold to do@〜するなんて大胆だ@0@a
+accidental@偶然の・事故の@an accidental death@事故死@0@a
+classical@古典の@classical music@クラシック音楽@0@a
+confident@自信のある@be confident of victory@勝利を確信する@0@a
+creative@創造的・独創的@have a creative idea@独創的な考えをもつ@0@a
+destined@〜な運命である@was destined to fail@失敗する運命だった@0@a
+doubtful@疑わしい@be doubtful of his story@彼の話を疑う@0@a
+dry@乾いている@a dry towel@乾いたタオル@0@a
+wet@湿っている@the washing is still wet@洗濯物はまだ湿っている@0@a
+endless@永遠の・無限の@an endless desert@無限に広がる砂漠@0@a
+exclusive@高級な・排他的@an exclusive community@排他的な組織@0@a
+exotic@異国風の@exotic music@異国風の音楽@0@a
+foolish@ばかな@it is foolish of you to do@〜するなんて君はばかだ@0@a
+far@遠い@far from here@ここから遠い@0@a
+historic@歴史的重要な@a historic event@歴史的事件@0@a
+inefficient@効率が悪い@inefficient system@効率の悪いシステム@0@a
+comprehensive@包括的・総合的@comprehensive evaluation@総合的評価@0@a
+precise@正確な@precise calculations@正確な計算@0@a
+controversial@議論になる@controversial topic@議論になりやすい話題@0@a
+desirable@望ましい@desirable surroundings@望ましい環境s@0@a
+magnificent@壮大な・雄大な@a magnificent view@壮大な眺め@0@a
+evident@明らかな@become evident@明らかになる@0@a
+commercial@商業の@commercial use@商用利用@0@a
+fair@正当な・公平な@a fair judgment@公平な判断@0@a
+plain@簡単な・平地@speak in plain English@簡単な英語で話す@0@a
+official@公式の・公の@an official record@公式記録@0@a
+reasonable@合理的な@a reasonable choice@合理的な選択@0@a
+vast@広大な@a vast farm@広大な農地@0@a
+financial@財政の・金融の@financial crisis@金融危機@0@a
+widespread@広まっている@a widespread rumor@広まっている噂@0@a

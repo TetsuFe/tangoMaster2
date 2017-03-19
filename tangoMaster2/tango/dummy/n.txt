@@ -1,0 +1,757 @@
+place@場所@the place I will go to@私が行く予定の場所@0@n
+fact@事実@a novel based on fact@事実を基にした小説@0@n
+culture@文化@western culture@西洋文化@0@n
+age@年齢@at the age of six@６歳の時に@0@n
+history@歴史@the history of Japan@日本の歴史@0@n
+future@未来・将来@in the future@将来は・いつかは@0@n
+dream@夢@my dream is ...@私の夢は・・・@0@n
+price@値段・対価@put a high price on ~@〜に高い値段をつける@0@n
+weather@天気@weather forecast@天気予報@0@n
+conversation@会話@a conversation with ~@〜との会話@0@n
+opinion@意見@public opinion@世論@0@n
+noise@騒音・音@because of the noise@その騒音のせいで@0@n
+mail@手紙@send a mail to her@彼女に手紙を送る@0@n
+mathematics@数学@study mathematics@数学を学ぶ@0@n
+homework@宿題@submit a homework@宿題を提出する@0@n
+bike@自転車@come to scholl by bike@自転車で学校に行く@0@n
+headache@頭痛@I have a headache.@頭痛がします。@0@n
+hometown@出身地・故郷@work in my hometown@自分の故郷で働く@0@n
+experience@経験@learn by experiences@経験から学ぶ@0@n
+individual@個人・個人の@in individual cases@個々の場合に応じて@0@n
+influence@影響@have an influence on ~@〜に影響を与える@0@n
+neighbor@隣人@close neighbors@親しい隣人@0@n
+height@高さ・身長@What's your height?@あなたの身長は？@0@n
+purpose@目的@on purpose@わざと@0@n
+behavior@行動・振る舞い@polite behavior@礼儀正しい振る舞い@0@n
+environment@環境@protect the environment@環境を保護する@0@n
+job@仕事・職@work at a part-time job@アルバイトの仕事をする@0@n
+light@光・火をつける@turn off the light@明かりを消す@0@n
+century@世紀@in 20th century@二十世紀に@0@n
+area@地域・区域@in this area@この地域では@0@n
+information@情報@get the information@その情報を得る@0@n
+land@土地・陸@cultivate the land@土地を耕す@0@n
+past@過去@in the past@過去には@0@n
+health@健康@do harm to your health@あなたの健康を害する@0@n
+space@空間・宇宙@launch into space@宇宙に向けて打ち上がる@0@n
+side@側面・〜側@the right side of ~@〜の右側@0@n
+adult@大人@goods for adults@大人向けの商品@0@n
+forest@林@tropical rain forest@熱帯雨林@0@n
+fear@不安・恐れる@a fear of losing my job@職を失う恐怖@0@n
+ability@能力@ability to speak English@英語を話す能力@0@n
+accident@事故・災難@causes traffic accidents@交通事故を引き起こす@0@n
+average@平均・平均の@average income@平均収入@0@n
+success@成功@success in business@ビジネスでの成功@0@n
+note@記録・メモ@take a note about ~@〜についてのメモをとる@0@n
+blood@血・血液@high blood pressure@高血圧@0@n
+date@日付・日にち@ditermine the date@日にちを決める@0@n
+sale@販売@be (now) on sale@販売中@0@n
+tourist@旅行客@a Chinese tourist@中国人の観光客@0@n
+none@全く〜ない@none of this concerns me@これは私に全く関係ない@0@n
+scale@規模・尺度@the scale on a ruler@ものさしの目盛り@0@n
+bath@お風呂@take a bath@風呂に入る@0@n
+block@ブロック・角@Go for three blocks@３ブロック分進みなさい@0@n
+host@開催者@host mather@ホームステイ先の母@0@n
+humor@ユーモア@sense of humor@ユーモアのセンス@0@n
+grass@草・草原@lie down on the grass@草むらの上で寝転ぶ@0@n
+guy@人・男@hey, guys@やあ、君たち@0@n
+knee@膝@sit on her knees@膝の上に座る@0@n
+chest@胸@a pain in the chest@胸の痛み@0@n
+stairs@階段@go up the stairs@階段を上がる@0@n
+midnight@真夜中@go out at midnight@真夜中に外出する@0@n
+focus@焦点を当てる@focus on the issue@問題に焦点を当てる@0@n
+stress@緊張・重圧@stress-related illness@ストレス性の病気@0@n
+seat@座席・座らせる@reserve a seat@座席を予約する@0@n
+tear@涙・破る@tore the letter@手紙を破った@0@n
+result@結果@as a result,@結果として、@0@n
+society@社会・会@modern society@現代社会@0@n
+trouble@困難・厄介事@have trouble doing@〜するのに苦労する@0@n
+effect@効果・影響@side effects@副作用@0@n
+rate@比率・割合@the birth rate@出生率@0@n
+custom@慣習・習慣@follow local customs@地方の慣習に従う@0@n
+traffic@交通・交通の@traffic jam@交通渋滞@0@n
+patient@患者・我慢強い@an isolated patient@隔離された患者@0@n
+favor@お願い@May I ask your favor?@お願いしていいですか@0@n
+benefit@利益@for my benefit@自分の利益のために@0@n
+pain@痛み・苦痛@relieve the pain@痛みを和らげる@0@n
+kid@子供@I have three kids@３人の子供がいる@0@n
+climate@気温・温度@a warm climate@温暖な気候@0@n
+grade@成績・学年@gets good grades@よい成績をとる@0@n
+agency@代理店@a travel agency@旅行代理店@0@n
+appointment@予約・指名@make an appointment@予約する@0@n
+quantity@量@large quantities of@膨大な量の@0@n
+government@政府・行政@the U.S. government@アメリカ政府@0@n
+effort@努力@make an effort@努力する@0@n
+population@人口@population growth@人口の増加@0@n
+quality@質@water quality@水質@0@n
+attitude@態度・考え@the attitude to us@私たちに対する態度@0@n
+opportunity@機会@get an opportunity@機会を得る@0@n
+disease@病気・病@heart disease@心臓病@0@n
+habit@習慣・癖@a habit of doing@〜する習慣@0@n
+desire@願望・望み@a desire to be ~@〜になりたいという願望@0@n
+responsibility@責任@take responsibility for ~@〜の責任をとる@0@n
+task@仕事・作業@a difficult task@難しい仕事@0@n
+experiment@実験・実験する@make new experiment@新しい実験をする@0@n
+brain@脳・頭脳@brain death@脳死@0@n
+tradition@伝統・慣例@by tradition@伝統的に@0@n
+weight@重さ・体重@lift heavy weights@重いものを持ち上げる@0@n
+impression@印象@first impression@第一印象@0@n
+temperature@気温・温度@room temperature@部屋の気温@0@n
+stranger@他人・外来者@be a stranger to me@私の知らない人だ@0@n
+bottom@底@the bottom of a cup@カップの底@0@n
+status@地位・状態@raise my social status@社会的地位を上げる@0@n
+colleague@同僚@close colleagues@親しい同僚@0@n
+insect@虫・昆虫@catch an insect@虫を捕まえる@0@n
+facility@施設・簡単@public facilities@公共施設@0@n
+sum@合計・金額@the whole sum@全額・総和@0@n
+courage@勇気・度胸@courage to confess@告白する勇気@0@n
+furniture@家具@a piece of furniture@いくつかの家具@0@n
+temple@寺・神殿@The Kiyomizu Temple@清水寺@0@n
+garbage@ごみ@throw away garbage@ゴミを投げ捨てる@0@n
+refugee@難民・逃亡者@political refugee@政治的難民@0@n
+subject@主題・被験者@a subject of study@研究の主題@0@n
+science@科学@study science@科学を学ぶ@0@n
+secretary@秘書・書記官@hire new secretary@新しい秘書を雇う@0@n
+cellphone@携帯電話@use a cellphone@携帯電話を使う@0@n
+choice@選択@have no choice but to do@〜するしか選択肢がない@0@n
+foreigner@外国人@jobs for foreigners@外国人向けの仕事@0@n
+hobby@趣味@my hobby is tennis@私の趣味はテニスです@0@n
+illness@病気@recover from the illness@病気から回復する@0@n
+pose@姿勢@the list of yoga pose@ヨガの姿勢のリスト@0@n
+law@法律・法@against the law@法律に違反して@0@n
+moment@瞬間・時@at that moment@その瞬間に@0@n
+community@社会・団体@a local community@地域社会@0@n
+human being@人間・人類@human being and animal@人間と動物@0@n
+memory@記憶・思い出@lose my memory@記憶を失う@0@n
+bit@少し@use a little bit@少しだけ使う@0@n
+birth@誕生・出産@give birth to a baby girl@女の子を出産する@0@n
+meal@食事@have a meal at midnight@真夜中に食事をとる@0@n
+goal@目的・目標@achiive the goal@目標を達成する@0@n
+flight@飛行・フライト@a flight to Canada@カナダ行きの便@0@n
+gas@ガス@export of natural gas@天然ガスの輸出@0@n
+sheet@用紙・シーツ@put a sheet on my bed@ベッドにシーツを敷く@0@n
+drug@薬・麻薬@sell illegal drugs@違法薬物を売る@0@n
+post@投稿する・郵便@work in the post office@郵便局で働く@0@n
+guests@客@invite guests to a party@パーティに客を招待する@0@n
+guide@ガイド・案内@follow the guide@ガイドについて行く@0@n
+flow@流れ・流れる@the flow of the river@その川の流れ@0@n
+interview@面接・会見する@have a job interview@仕事の面接を受ける@0@n
+joke@冗談@It's a funny joke.@それは面白い冗談だ。@0@n
+actor@俳優@a popular actor@人気俳優@0@n
+hero@英雄@want to be a hero@英雄になりたい@0@n
+coast@海岸@run along the coast@海岸沿いを走る@0@n
+cash@現金@buy a car in cash@車を現金で買う@0@n
+gap@差・格差@the gap between ~@〜間の差@0@n
+ease@楽・安らぎ@earn money with ease@楽にお金を稼ぐ@0@n
+army@軍隊@withdraw army from ~@軍隊を〜から撤退させる@0@n
+fool@馬鹿@make a fool of me@私を馬鹿にする@0@n
+sake@目的・理由@for the sake of ~@〜のために@0@n
+twin@双子の@give birth to twins@双子を産む@0@n
+shadow@影・影で覆う@shadow of death@死の影@0@n
+setting@環境・設定@setting of a goal@目標の設定@0@n
+value@値段・価値@realize the value@その価値に気づく@0@n
+trade@貿易・貿易する@free trade@自由貿易@0@n
+risk@危険・リスク@at the risk of ~@〜の危険を承知で@0@n
+feature@特徴・特集@features of human@人間の特徴@0@n
+region@地方・地域@tropical regions@熱帯地方@0@n
+characteristic@特徴・独特の@unique characteristics@独特の特徴@0@n
+occasion@場合・時@on this occasion@この場合、@0@n
+principle@原則・主義@principles of economics@経済学の原則@0@n
+scene@場面・風景@at the scene of ~@〜の現場で@0@n
+basis@根拠・基礎@on the basis of ~@〜に基づいて@0@n
+audience@観客・聴衆@a large audience@大勢の観客@0@n
+conflict@対立・紛争@a conflict between ~@〜と〜の対立@0@n
+atmosphere@大気・雰囲気@in the atmosphere@大気中の@0@n
+reward@報酬・報いる@as a reward@報酬として@0@n
+background@背景・経歴@the social background@社会的背景@0@n
+harm@害・害する@do harm to my health@私の健康を害する@0@n
+capacity@容量・能力@the capacity to learn@学習する能力@0@n
+vote@投票・投票する@the right to vote@投票権@0@n
+officer@役人・幹部@a police officer@警察官@0@n
+immigrant@移民@immigrants from ~@〜からの移民@0@n
+situation@状況@in this situation@この状況で@0@n
+knowledge@知識@have no knowledge@知識が全くない@0@n
+nation@国家・国民@nation state@国民国家@0@n
+lack@不足・欠如@lack of resources@資源不足@0@n
+skill@技術@improve my skill@技術を向上させる@0@n
+role@役割@play an important role@役割を担う@0@n
+author@著者・作者@my favorite author@私の好きな作家@0@n
+shape@形・姿@the shape of a woman@女性の姿@0@n
+advantage@利点・有利@take advantage of ~@〜を利用する@0@n
+detail@詳細@explain it in detail@詳細に説明する@0@n
+distance@距離@short/long distance@短/長距離@0@n
+clothes@服・衣服@put on my clothes@服を着る@0@n
+standard@標準・基準@the standard of living@生活水準@0@n
+organization@組織・団体@establish a organization@組織を設立する@0@n
+resource@資源@natural resources@天然資源@0@n
+customer@客・取引先@a reguler customer@常連客@0@n
+species@（分類上の）種@endangered species@絶滅危惧種@0@n
+passenger@乗客@passangers on a bus@バスの乗客@0@n
+crime@犯罪・罪@commit a crime@罪を犯す@0@n
+majority@多数派@the majority of woman@大多数の女性@0@n
+equipment@装置・備品@laboratory equipments@実験室の備品@0@n
+strength@強さ@strength of will@意志の強さ@0@n
+circumstances@状況・事情@present circumstance@現在の状況@0@n
+religion@宗教@believe in religion@宗教を信じる@0@n
+pollution@汚染・公害@environmental pollution@環境汚染@0@n
+profit@利益@make a profit@利益を得る@0@n
+technique@技術@ a technique of ~@〜の技術@0@n
+emotion@感情@appeal to the emotion@感情に訴える@0@n
+cancer@癌・がん@lung cancer@肺がん@0@n
+billion@10億の@7 billion people@七十億の人@0@n
+youth@若者・若さ@She lost her youth.@彼女は若さを失った@0@n
+confidence@信頼・自信@betray my confidence@私の信頼を裏切る@0@n
+edge@角・端・刃@the edge of a table@テーブルの角（端）@0@n
+vocabulary@語彙@expand my vocabulary@自分の語彙を増やす@0@n
+enemy@敵@a natural enemy@天敵@0@n
+instrument@器具・楽器@a medical instrument@医療器具@0@n
+weapon@武器・兵器@a nuclear weapon@核兵器@0@n
+earthquake@地震@an earthquake occurred@地震が起こった@0@n
+victim@犠牲者@victims of the war@戦争の犠牲者@0@n
+fuel@燃料@fossil fuel@化石燃料@0@n
+ancestor@先祖・祖先@the ancestors of ~@〜の祖先@0@n
+violence@暴力@resort to violence@暴力に訴える@0@n
+disaster@災害@the natural disaster@自然災害@0@n
+storm@嵐@a heavy storm@激しい嵐@0@n
+former@前の・前者@prefer the former@前者の方が好きだ@0@n
+latter@後者@former and latter@前者と後者@0@n
+burden@負担・荷物@be a burden to you@あなたの負担になる@0@n
+access@接近・利用@gain access to 〜@〜を利用する（へ行く）@0@n
+treasure@財宝・貴重品@look for treasure@財宝を探す@0@n
+vehicle@乗り物・手段@a space vehicle@宇宙船@0@n
+perspective@観点・見通し@a distorted perspective@歪んだ物の見方@0@n
+witness@目撃者・見る@a witness of (to) ~ @〜の目撃者@0@n
+border@国境・境界@cross the border@国境を越える@0@n
+fee@料金・手数料@an admission fee@入場料@0@n
+slave@奴隷@work like a slave@奴隷のように働く@0@n
+faculty@学部・能力@the mental faculties@知的能力@0@n
+span@期間・範囲@for a short span@短い期間に@0@n
+version@版・型@buy an old version@旧型を買う@0@n
+horizon@地平線・範囲@above the horizon@地平線の上に@0@n
+jam@混雑@avoid traffic jam@交通渋滞を避ける@0@n
+constitution@憲法・組織@the Japanese constitution@日本国憲法@0@n
+organ@器官・臓器@internal organs@内臓@0@n
+prey@獲物・犠牲@become a prey to ~@〜のえじきになる@0@n
+venture@冒険・企業@a joint venture@合弁企業@0@n
+mission@任務・使命@a sense of mission@使命感@0@n
+shade@陰・日陰@in the shade@日陰で@0@n
+stereotype@固定観念@racial stereotypes@人種への固定観念@0@n
+output@生産高・出力@increase output@生産高を増やす@0@n
+convention@慣習・伝統@break a conventions@慣習を破る@0@n
+sensation@感覚・大流行@auditory sensation@聴覚@0@n
+peer@仲間・貴族@a hereditary peer@世襲貴族@0@n
+gravity@重力@zero gravity@無重力@0@n
+incident@出来事・事件@a strange incident@奇妙な出来事@0@n
+laboratory@研究所@science laboratory@科学研究所@0@n
+analysis@分析@analysis of DNA@DNAの分析（に基づくなど)@0@n
+poverty@貧乏・貧困@live in poverty@貧乏な暮らしをする@0@n
+shortage@不足@water shortage@水不足@0@n
+wage@賃金@work for low wages@安い賃金で働く@0@n
+tax@税金@pay income tax@所得税を払う@0@n
+leisure@暇・余暇@have no leisure@暇がない@0@n
+barrier@壁・改札口@a language barrier@言葉の壁@0@n
+category@分類・種類@fall into the category@そのカテゴリーに属する@0@n
+reputation@評判・噂@the shop's reputation@そのお店の評判@0@n
+sympathy@同情・共感@feel sympathy@同情する@0@n
+era@時代@Meiji era@明治時代@0@n
+agriculture@農業の@engage in agriculture@農業に従事する@0@n
+murder@殺人・殺人事件@mass murder@大量殺人@0@n
+destination@目的地@reach destination@目的地に着く@0@n
+muscle@筋肉@voluntary muscles@随意筋@0@n
+fever@熱@a slight (high) fever@微熱（高熱）@0@n
+privilege@特権@privilege hierarchy@特権階級@0@n
+prosperity@繁栄@cultural prosperity@文化的繁栄@0@n
+genius@天才・才能@a writer of genius@才能のある作家@0@n
+seed@種@plant pumpkin seeds@カボチャの種をまく@0@n
+theme@主題・題名@theme of a haiku@俳句の題@0@n
+boundary@境界線@the boundary between ~@〜と〜の境界線@0@n
+ambition@望み・野心@ambition for power@権力への野心@0@n
+forecast@予想する@forecast the weather@天気を予報する@0@n
+psychology@心理学@study psychology@心理学を研究する@0@n
+shelf@棚@book shelf@本棚@0@n
+candidate@候補者@candidates for mayor@市長候補@0@n
+obstacle@障害・困難@overcome an obstacle@障害を乗り越える@0@n
+tribe@部族・族@a cannibal tribe@食人族@0@n
+budget@予算・生活費@government budget@政府予算（案）@0@n
+cough@咳・咳をする@have a cough@せきが出る@0@n
+fate@運命・命運@decide her fate@彼女の運命を決める@0@n
+inhabitant@住民@inhabitant of Japan@日本の住民（日本人）@0@n
+fossil@化石@fossil fuels@化石燃料@0@n
+motive@動機@motive for murder@殺人の動機@0@n
+suburb@郊外@live in the suburbs@郊外に住む@0@n
+passion@情熱@feel his passion@彼の情熱を感じる@0@n
+horror@恐怖@in horror@恐ろしくて@0@n
+logic@論理・理屈@specius logic@もっともらしい理屈@0@n
+rumor@噂・評判@spread a rumor@うわさを広める@0@n
+illusion@幻想・空想@only illusion@ただの幻想@0@n
+option@選択・付加物@have no option@選択肢がない@0@n
+commerce@商業・貿易@domestic commerce@国内取引@0@n
+refrigerator@冷蔵庫@latest refrigerator@最新モデルの冷蔵庫@0@n
+famine@飢餓・飢え@serious famine@深刻な食糧不足@0@n
+diversity@多様性@cultural diversity@文化的多様性@0@n
+thumb@親指@thumb of right hand@右手の親指@0@n
+envelope@封筒@a letter in envelope@封筒の中の手紙@0@n
+discrimination@差別・区別@sexual discrimination@男女差別@0@n
+virus@ウイルス@a virus disease@ウイルス性疾患@0@n
+bond@きずな@strong bonds@強いきずな@0@n
+astronaut@宇宙飛行士@astronaut exam@宇宙飛行士の試験@0@n
+dialect@方言@the local dialect@地方の方言@0@n
+thief@泥棒@juwel thief@宝石泥棒@0@n
+yard@庭・ヤード@play in the yard@庭で遊ぶ@0@n
+lung@肺@lung cancer@肺ガン@0@n
+opponent@敵・反対者@defeat an opponent@ライバルを倒す@0@n
+mammal@哺乳類@whale is mammal@鯨は哺乳類である@0@n
+telescope@望遠鏡@astronomical telescope@天体望遠鏡@0@n
+suicide@自殺@commit a suicide@自殺をする@0@n
+habitat@生息地・居住地@the habitat of bears@クマの生息地@0@n
+linguistics@言語学の@linguistic lectures@言語学の授業@0@n
+talent@才能・芸能人@envy his talent@彼の才能に嫉妬する@0@n
+character@特徴・文字@Chinese character@漢字@0@n
+fault@責任・欠点@find fault with~@〜の粗探しをする@0@n
+greenhouse@温室@greenhouse gases@温室効果ガス@0@n
+stimulation@刺激@stimulation and reaction@刺激と反応@0@n
+safety@安全性@make sure of the safety@安全を確かめる@0@n
+sex@性別@sex discrimination@性差別@0@n
+smell@匂い（がする）@This flower smells sweet@この花は甘い匂いがする@0@n
+automobile@自動車@wash an automobile@自動車を洗う@0@n
+bathroom@トイレ・浴室@go to the bathroom@トイレ（浴室）に行く@0@n
+anywhere@どこでも@I can go anywhere@どこへでも行ける@0@n
+childhood@子供時代@in my childhood@私が子供だった頃@0@n
+condition@状況・条件@on this condition@この状況（条件）で@0@n
+difficulty@困難・苦労@have difficulty in doing@〜するのに苦労する@0@n
+dish@皿・料理@wash the dishes@皿を洗う@0@n
+expert@専門家・熟練者@at expert in psychology@心理学の専門家@0@n
+hunger@飢え・空腹@suffer from hunger@飢えに苦しむ@0@n
+discipline@しつけ・規律@keep discipline@規律を守る@0@n
+shine@輝き・輝く@the shine of gold@金の輝き@0@n
+living@生活・存命の@living things@生き物・動物@0@n
+belief@信仰・確信@have a belief in God@神への信仰心を持つ@0@n
+doubt@疑い・疑う@have no doubt about him@彼を全く疑っていない@0@n
+nurse@看護師@work as a nurse@看護師として働く@0@n
+series@連続・シリーズ@a series of articles@連載記事@0@n
+error@誤り・間違い@an error in spelling@綴りの間違い@0@n
+spot@場所@go to my favorite spot@お気に入りの場所へ行く@0@n
+blank@空欄@fill in the blanks@空欄を埋める@0@n
+salary@給料@get a high salary@高い給料を得る@0@n
+battle@戦い@avoid the battle@戦いを避ける@0@n
+pupil@生徒・児童@teach math to pupils@生徒たちに数学を教える@0@n
+code@規則・記号@a dress code@服装の規定@0@n
+mystery@謎@remains a mystery@〜には謎が残っている@0@n
+label@ラベル@put a label on a box@箱にラベルを貼る@0@n
+root@根・根源@the root of all evil@諸悪の根源@0@n
+joy@喜び@be filled with joy@喜びでいっぱいになる@0@n
+shore@海岸・岸@walk along the shore@海岸に沿って歩く@0@n
+poet@詩人@a famous poet@有名な詩人@0@n
+fellow@仲間・やつ@a stupid fellow@ばかなやつ@0@n
+contract@契約（書）@sign a contract@契約にサインする@0@n
+stuff@もの・材料@soft stuff@柔らかいもの@0@n
+enthusiasm@情熱・熱中@with enthusiasm@熱中して@0@n
+honor@名誉・敬意@it is a honor to do@〜できて光栄です@0@n
+territory@領域・領土@defend their territory.@彼らの領土（縄張り）を守る@0@n
+statistics@統計・統計学@by the statistics@統計によると@0@n
+grain@穀物@grain production@穀物生産高@0@n
+strain@張る・緊張@put a strain on ~@〜に負担をかける@0@n
+interaction@相互作用@interacion between ~@〜と〜の交流@0@n
+administration@行政・管理@military administration@軍事政権@0@n
+counterpart@片方・代わり@Japanese counterpart@日本版@0@n
+mine@鉱山・掘る@a coal mine@炭鉱@0@n
+craft@工芸品@a traditional craft@伝統工芸@0@n
+stroke@卒中・打撃@die of a stroke@脳卒中で死ぬ@0@n
+vessel@船・管@a blood vessel@血管@0@n
+tide@潮流・風潮@go with the tide@風潮に従う@0@n
+unit@単位・構成単位@a unit of society@社会の一構成単位@0@n
+virtue@徳・善行@virtue and vice@美徳と悪徳@0@n
+tale@物語@tell a fairy tale@おとぎ話を語る@0@n
+reform@改革@political reform@政治改革@0@n
+profession@職業・同郷者@teaching profession@教職@0@n
+companion@仲間@a companion in arms@戦友@0@n
+affection@愛情@a deep affection@深い愛情@0@n
+tension@緊張・張力@relieve tension@緊張を和らげる@0@n
+scheme@計画・組織@perfect scheme@完璧な計画@0@n
+insult@侮辱する・侮辱@a deliberate insult@意図的な侮辱@0@n
+harvest@収穫@an abundant harvest@豊かな収穫@0@n
+editor@編集・編集長@an editor of magazine@雑誌の編集者@0@n
+crew@乗組員@crews of  a ship@船の乗組員たち@0@n
+consent@同意・同意する@without my consent@私の同意なしに@0@n
+component@構成要素@components of body@体の構成要素@0@n
+wheat@小麦@plant wheat@小麦を植える@0@n
+usage@用法・使い方@common usage@一般的用法@0@n
+fatigue@疲労@mental fatigue@精神的疲労@0@n
+portion@一部・分け前@a portion of blame@責任の一端@0@n
+organism@有機体・生物@microscopic organism@微生物@0@n
+myth@神話@Greek myths@ギリシャ神話@0@n
+funeral@葬式@attend a funeral@葬式に出席する@0@n
+congress@議会@a member of Congress@国会議員@0@n
+estate@土地・財産@a real estate@不動産@0@n
+strategy@戦略@military strategy@イギリスの軍事戦略@0@n
+conservation@保護・保存@wildlife conservation@野生動物保護@0@n
+surgery@手術・外科@surgery and medicine@外科と内科@0@n
+superstition@迷信@believe in superstitions@迷信を信じる@0@n
+guilty@有罪@guilty deed@犯行@0@n
+literacy@読み書きできる@literacy rate@識字率@0@n
+grammer@文法@grammer and idiom@文法と慣用句@0@n
+court@法廷・裁判所@court@法廷@0@n
+glory@栄光・名誉@for the glory of ~@~の名誉のために@0@n
+advance@進歩・進める@advances in chemistry@化学の進歩@0@n
+affair@事件・物事@world affair@世界状勢@0@n
+string@ひも・糸・文字@a piece of string@一本のひも@0@n
+symbol@象徴・記号・印@the symbol of peace@平和の象徴@0@n
+sailor@船乗り・水兵@my father was a sailor@私の父は船乗りだった@0@n
+section@部分・区間・節@the section of the road@道路の一区間@0@n
+separation@分離・離脱@the separation of A and B@AとBの分離@0@n
+session@期間・会議@an extraordinary session@臨時会議@0@n
+slope@坂・斜面@go up a steep slope@急な坂をのぼる@0@n
+avoidance@回避・逃避@tax avoidance@租税回避@0@n
+bacteria@細菌@bacteria that cause ~@〜を引き起こす細菌@0@n
+ballet@バレエ@watch a ballet@バレエを観る@0@n
+bullet@銃弾@the bullet hit the wall@銃弾は壁に当たった@0@n
+bee@蜂@a queen bee@女王蜂@0@n
+bible@聖書@read a bible@聖書を読む@0@n
+boss@上司・社長@a kind boss@優しい上司@0@n
+ceiling@天井@a room with high ceiling@高い天井の部屋@0@n
+certainty@確信・確実性@have no certainty of ~@〜に対する確信をもつ@0@n
+chain@鎖・連鎖@a door chain@ドアチェーン@0@n
+academy@専門学校・学会@an academy of music@音楽学校@0@n
+adjustment@調節・調整@need adjustment@調整が必要だ@0@n
+airline@航空会社（の）@an airline company@航空会社@0@n
+anger@怒り@tremble in anger@怒りで我を忘れる@0@n
+apartment@アパート@live in the apartment@そのアパートに住んでいる@0@n
+attack@攻撃・攻撃する@I was suddenly attacked@私は突然襲われた@0@n
+channel@水路・海峡@the Bristol Channel@ブリストル海峡@0@n
+confirmation@確認・確証@a confirmation of purchase@購入確認@0@n
+counter@レジ・逆の@the counter direction@逆方向@0@n
+crack@ひび・砕ける@a crack in the bone@骨のひび@0@n
+creativity@創造性・独創性@feed my creativity@独創性を養う@0@n
+curiosity@好奇心@from curiosity@好奇心から@0@n
+director@仕切り役・重役@the sales director@営業部長@0@n
+dominance@支配・優勢@male dominance@男性の優位@0@n
+elimination@除去・削除@elimination of waste@無駄の除去@0@n
+engineer@技術者・機関士@a civil engineer@土木技師@0@n
+enjoyment@楽しみ・喜び@with enjoyment@楽しんで@0@n
+estimation@評価・尊重@in my estimation@私の見たところでは@0@n
+farmer@農場主・農家@a banana farmer@バナナ農場主@0@n
+fertilizer@肥料@a chemical fertilizer@科学肥料@0@n
+feminism@男女同権主義@a supporter of feminism@フェミニズム支持者@0@n
+fingerprint@指紋@take his fingerprint@彼の指紋を取る@0@n
+fur@毛皮の@wear a fur coat@毛皮のコートを着る@0@n
+grammar@文法@use correct grammar@正しい文法を使う@0@n
+grandchild@孫@play with grandchildren@孫たちと遊ぶ@0@n
+hall@会館・ホール@a city hall@市のホール@0@n
+image@画像・印象・像@a good image of ~@〜への良い印象@0@n
+imagination@想像・想像力@is beyond imagination@想像を絶している@0@n
+inability@できないこと@inability to work@働けないこと@0@n
+index@索引・指標@health index@健康の指標@0@n
+scope@範囲・視野@out of the scope of ~@〜の範囲を越えて@0@n
+suspicion@疑惑・疑い@have a suspicion that ~@〜ではないかと疑う@0@n
+parliament@議会・下院@a Member of Parliament@下院議員@0@n
+vase@花瓶@break the vase@花瓶を割る@0@n
+match@試合・合う@the wrestling match@レスリングの試合@0@n
+material@物質・材料@raw material@原料@0@n
+passage@節・通路@read a passage from@〜の一節を読む@0@n
+department@部署・学部@the personnel department@（企業の）人事部@0@n
+delight@喜び・喜ばせる@be delighted with ~@〜を喜ぶ@0@n
+branch@枝・一部門@cut a branch@木の枝を切る@0@n
+square@平方の・四角@1 square meter@1平方メートル@0@n
+function@機能・働き@the function of the heart@心臓の機能@0@n
+contrast@対比・対照@the contrast between ~@〜と〜の対比@0@n
+civilization@文明@an ancient civilization@古代文明@0@n
+scholar@学者・研究者@a great scholar@偉大な学者@0@n
+instruction@指示@follow instructions@指示に従う@0@n
+notion@概念・考え@a strange notion@妙な考え@0@n
+campaign@運動@a political campaign@政治運動・政治活動@0@n
+carbon@炭素@carbon dioxide@二酸化炭素@0@n
+pardon@許し@ask pardon for ~@〜に対する許しを乞う@0@n
+pile@積み重ね@a pile of books@大量の本@0@n
+worship@崇拝・礼拝@a place of worship@礼拝所@0@n
+acquaintance@知り合い@only an acquaintance@単なる知り合い@0@n
+distress@苦難・困難@be in distress@苦境におちいる@0@n
+flock@群@a flock of sheep@ヒツジの群れ@0@n
+lord@神・支配者@ praise the Lord@神をたたえる@0@n
+reception@歓迎・反応@get a reception@歓迎を受ける@0@n
+blessing@恩恵・祈り@ask a blessing@食前の祈りをする@0@n
+ethic@倫理@medical ethics@医療倫理@0@n
+mankind@人類の@all mankind@全人類@0@n
+symptom@症状・前兆@symptoms of depression@鬱の症状@0@n
+oxygen@酸素@oxygen molecule@酸素分子@0@n
+physician@医者・内科医@physician association@医師会@0@n
+anthropology@人類学@Anthropology class@人類学の授業@0@n
+merchant@商人@a timber merchant@材木商@0@n
+priest@神父・聖職者@a Catholic priest@カトリック教会の神父@0@n
+astronomy@天文学@astronomical probability@天文学的確率@0@n
+particle@粒子・粒@particles of sand@砂の粒@0@n
+protein@タンパク質@high-protein food@高タンパク質の食べ物@0@n
+molecule@分子@sugar molecule@糖分子@0@n
+grocery@日用品・食料品@grocery store@日用品店@0@n
+pursuit@追求・追跡@in pursuit of@〜を追い求めて@0@n
+bamboo@竹@is made from bamboo@竹でできている@0@n
+cage@おり・かご@escape from the cage@おりから逃げる@0@n
+adequacy@適切・妥当性@evaluate the adequacy of ~@〜の妥当性を評価する@0@n
+admittance@許可・入場許可@No admittance@立ち入り禁止@0@n
+dedication@献身的姿勢@dedication to ~@〜への献身的姿勢@0@n
+detective@探偵・刑事@hire a private detective@私立探偵を雇う@0@n
+disability@障害・無能@physical disability@肉体的障害@0@n
+engineering@工学@electrical engineering@電気工学@0@n
+fountain@噴水・泉@chocolate fountain@チョコレートファウンテン@0@n
+guidance@案内・指導@under his guidance@彼の指導の下で@0@n
+hive@（ハチの）巣@honeybees make a hive@ミツバチが巣を作る@0@n
+grant@助成金・補助金@a grant for research@研究のための補助金@0@n
+service@事業・サービス@public services@公共事業@0@n
+industry@工業・産業@a heavy industry@重工業@0@n
+progress@前進・進歩@the progress of ~@〜の進歩@0@n
+excuse@弁解・許す@make a excuse@弁解する@0@n
+economy@経済・節約@domestic economy@国内経済@0@n
+sight@視界・見解@disappear from sight@視界から消える@0@n
+project@企画・突き出る@a building project@建設計画@0@n
+duty@義務@it's my duty to fight@戦うのが私の義務だ@0@n
+element@要素@the important element@重要な要素@0@n
+revolution@革命・回転@before the revolution@革命が起こる前は@0@n
+quarter@四分の一@the quater of a year@一年の四分の一@0@n
+flood@洪水・殺到@the flood occurred@洪水が発生した@0@n
+desert@砂漠@in the desert@砂漠で@0@n
+trend@傾向・流行@the trend toward ~@〜へ向かう傾向@0@n
+impact@影響・衝撃@have an impact on ~@〜に影響を与える@0@n
+institution@制定・機関@government institutions@行政機関@0@n
+minister@大臣@the Minister of Finance@財務大臣@0@n
+proportion@割合・調和@the proportion of A to B@AのBに対する割合@0@n
+transport@輸送する・輸送@by public transport@公共交通機関で@0@n
+resident@住民・住む@a foreign resident@外国人居住者@0@n
+context@文脈@in this context@この文脈において@0@n
+period@期間・時代@for a long period@長い間@0@n
+source@源・原因@a heat source@熱源@0@n
+method@方法・手段@an effective method@効果的な手法@0@n
+crowd@群衆・群がる@a crowd of people@大勢の人々@0@n
+instance@例@for instance@例えば@0@n
+technology@（科学）技術@industrial technology@工業（科学）技術@0@n
+generation@世代@the next generation@次世代@0@n
+evidence@証拠@look for an evidence@証拠を探す@0@n
+decade@10年間@a decade ago@10年前に@0@n
+loss@損失・損害@a loss of $1 million@100万ドルの損失@0@n
+aspect@側面・方向@in all aspects of ~@〜のあらゆる面から@0@n
+theory@理論・学説@illustrate my theory@私の理論を証明する@0@n
+statement@記述・発言@make a statement@陳述（発言）する@0@n
+professor@教授@a professor at ~ University@〜大学の教授@0@n
+surface@表面@the smooth surface@なめらかな表面@0@n
+factor@要因・原因@the main factor@主な要因@0@n
+policy@政策・方針@foreign policy@外交政策@0@n
+goods@もの・商品@household goods@家財道具@0@n
+creature@生き物・生物@creature in the sea@海洋生物@0@n
+labor@労働・労働者@physical labor@肉体労働@0@n
+citizen@市民・住民@a U.S. citizen@アメリカ市民@0@n
+career@経歴@a carrer as lawyer@弁護士としての経歴@0@n
+income@所得・収入@income and expenses@収入と支出@0@n
+origin@起源・原点@the origin of life@生命の起源@0@n
+planet@惑星@the moon is not a planet@月は惑星ではない@0@n
+construction@建設・建築物@under construction@建設中で@0@n
+lecture@講義・教訓@give a lecture on ~@〜に関する授業をする@0@n
+crisis@危機@a financial crisis@金融危機@0@n
+device@装置・機器@an electronic device@電子機器@0@n
+path@道・道路@the path to success@成功への道@0@n
+stream@流れ・小川@against the stream@流れに逆らって@0@n
+soil@土壌・土地@the rich soil@肥えた土壌@0@n
+debate@討論@a debate on war@戦争についての討論@0@n
+universe@宇宙@create the universe@宇宙を創造する@0@n
+electricity@電気・電力@generate electricity@発電する@0@n
+castle@城@build a sand castle@砂の城をつくる@0@n
+infant@赤ん坊・幼い@infant mortality rate@乳幼児死亡率@0@n
+consequence@結果・重要性@a natural consequence@当然の結果@0@n
+stock@株式・在庫品@keep ~ in stock@〜を在庫として残す@0@n
+rank@地位・階級@people of high rank@高い地位の人@0@n
+democracy@民主主義@liberal democracy@自由民主主義@0@n
+emergency@緊急事態@in an emergency@緊急事には@0@n
+track@足跡・道@tire tracks@タイヤの跡@0@n
+routine@日常の・日課@routine business@いつもの仕事@0@n
+row@行列・漕ぐ@a row of tree@並木@0@n
+wheel@車輪・旋回@the front(rear) wheel@前（後）輪@0@n
+dawn@夜明け・始まり@dawn of civilization@文明の始まり@0@n
+welfare@福祉・幸福@social welfare@社会福祉@0@n
+faith@信頼・信念@lose faith in him@彼への信頼をなくす@0@n
+occupation@職業・占領@an army of occupation@占領軍@0@n
+kingdom@王国・界@the United Kingdom@英国・イギリス@0@n
+objective@目標・客観的@an objective opinion@客観的意見@0@n
+shelter@避難所@shelter from a storm@嵐から逃げ場所@0@n
+trial@試練・試行@troubles and trials@困難と試練@0@n
+frame@枠・窓枠@a picture frame@絵の額縁@0@n
+enterprise@企業@government enterprise@官営企業@0@n
+load@荷物・積む@carry a load@荷物を運ぶ@0@n
+prejudice@偏見・侵害@racial prejudice@人種的偏見@0@n
+trap@罠・捕まえる@fall into a trap@わなにはまる@0@n
+temper@気性・怒り@keep my temper@怒りを抑える@0@n
+wound@傷・傷つける@a fatal wound@致命傷@0@n
+tune@曲・調和@popular tune@人気の歌@0@n
+disgust@嫌悪感@feel disgust at ~@〜にうんざりする@0@n
+poison@毒・毒の@die by poison@毒で死ぬ@0@n
+inquiry@質問・調査@make inquiries@問い合わせる@0@n
+award@賞・与える@win an award@賞を獲得する@0@n
+strip@一切れ・剥ぐ@a strip of paper @紙切れ@0@n
+client@依頼人・客@lawyer and client@弁護士と依頼人@0@n
+core@核・核心@core of problems@問題の核心@0@n
+frontier@未開の地・国境@frontier disputes@国境紛争@0@n
+compound@化合物@a compound eye@（昆虫の）複眼@0@n
+abuse@虐待・乱用@child abuse@児童虐待@0@n
+continent@大陸@Antarctic Continent@南極大陸@0@n
+insurance@保険@pay car insurance@車の保険料を払う@0@n
+site@場所・サイト@a construction site of ~@〜の建設用地@0@n
+aid@援助@finacialaidtoIraq@イラクへの財政的援助@0@n
+exception@例外@without exception@例外なしに@0@n
+wisdom@知恵・賢さ@have the wisdom@賢明である@0@n
+union@組織・団結@a labor union@労働組合@0@n
+document@文書・書類@sign documents@書類にサインする@0@n
+volume@量・容量・巻@a series of 10-volumes@全10巻のシリーズ@0@n
+ceremony@儀式・式@ar religious ceremony@宗教的儀式@0@n
+dispute@紛争・論争@settle a disputes@紛争を解決する@0@n
+landscape@風景・景色@a landscape painter@風景画家@0@n
+prospect@見通し・将来@future prospects@将来の見通し@0@n
+corporation@企業・自治体@a private corporation@私企業@0@n
+colony@植民地@British colony@イギリスの植民地@0@n
+quarrel@口論・苦情@have a quarrel with@〜との口論@0@n
+layer@層@ozon layer@オゾン層@0@n
+clue@手がかり@a clue to mystery@謎を解く手がかり@0@n
+fiction@作り話@a complete fiction@完全な作り話@0@n
+district@地域・地区@an agricultural district@農業地帯（地区）@0@n
+prison@刑務所@live in prison@刑務所で過ごす@0@n
+executive@重役・執行役員@an executive committee@執行委員会@0@n
+justice@正義・公正@with justice@公正に@0@n
+procedure@手続き@legal procedure@法的手続き@0@n
+heaven@天国@go to heaven@天国に行く@0@n
+luxury@贅沢品・贅沢@lived in luxury@ぜいたくな生活をする@0@n
+fund@資金@lack of funds@資金不足@0@n
+interval@間隔@at 5-minites intervals@５分間隔で@0@n
+committee@委員会@a budget committee@予算委員会@0@n
+priority@優先事項@a top(first) priority@最優先事項@0@n
+impulse@衝動@resist my impulse@衝動を抑える@0@n
+satellite@衛星@artificial satellite@人工衛星@0@n
+insight@洞察・考察@a insight into life@人生に対する洞察@0@n
+instinct@本能@on(by) instinct@本能的に・勘で@0@n
+empire@帝国@the Roman Empire@ローマ帝国@0@n
+architecture@建築・構造@modern architecture@現代建築@0@n
+hardship@苦境・困難@face hardship@困難に直面する@0@n
+voyage@航海・旅@a voyage to Asia@アジアへの航海@0@n
+mechanism@仕組み@a complex mechanism@複雑な仕組み@0@n
+tragedy@悲劇@tragedy happened suddenly@悲劇は突然起こった@0@n
+fare@料金・運賃@pay a train fare@電車の運賃をはらう@0@n
+debt@借金@the national debt@国債@0@n
+extinction@絶滅@face extinction@絶滅寸前である@0@n
+purse@財布・賞金@the public purse@国庫@0@n
+explosion@爆発@population explosion@人口爆発@0@n
+wildlife@野生生物@protect wildlife@野生生物を保護する@0@n
+bay@湾@Tokyo bay@東京湾@0@n
+penalty@刑罰・罰則@the death penalty@死刑@0@n
+heritage@遺産@world heritage@世界遺産@0@n
+grief@悲しみ@feel deep grief@深い悲しみを感じる@0@n
+commodity@商品・物@commodity prices@物価@0@n
+statue@像@the Statue of Liberty@自由の女神像@0@n
+departure@出発@time of departure@出発時刻@0@n
+phase@段階@enter next phase@次の段階に入る@0@n
+pioneer@先駆者@pioneer of IT@ITの先駆者@0@n
+trait@特徴・性質@national traits@国民性@0@n
+column@コラム・列@write a column@コラムを書く@0@n
+curriculum@教育課程@highschool curriculum@高校の教育課程@0@n
+geography@地理・地理学@geography of my town@私の町の地理@0@n
+ritual@儀式@a religious ritual@宗教的な儀式@0@n
+outcome@結果・成果@outcome of a race@レースの結果@0@n
+flavor@味・風味@flavor of cinnamon@シナモンの風味@0@n
+nursing@看護@nursing school@看護学校@0@n
+lane@レーン・車線@4-lane highway@4車線の高速道路@0@n
+gender@性別（文化的）@gender equality@男女平等@0@n
+nutrition@栄養@exercise and nutrition@運動と栄養@0@n
+web@蜘蛛の巣@spider's web@蜘蛛の巣@0@n
+emission@排出(量)@emissions of CO2@二酸化炭素の排出@0@n
+ape@類人猿@monkeys and apes@猿と類人猿@0@n
+fierce@激しい・獰猛@a fierce tiger@獰猛な虎@0@n
+pronunciation@発音@good pronunciation@良い発音@0@n
+accuracy@正確さ・精度@lose accuracy@精度を低下させる@0@n
+translation@翻訳@machine translation@機械（による）翻訳@0@n
+journal@雑誌@read journal@雑誌を読む@0@n
+requirement@要求・条件@graduation requirements@卒業要件@0@n
+view@見解・眺め@specialist's view@専門家の見解@0@n
+gift@贈り物・才能@gift for music@音楽の才能@0@n
+sorrow@悲しみ@chain of sorrow@悲しみの連鎖@0@n
+farm@農場@visit this farm@この農場を訪れる@0@n
+coal@石炭@work in coal mine@炭鉱で働く@0@n
+sweat@汗@wipe the sweat@汗を拭う@0@n
+literature@文学・文字@Japanese literature@日本文学@0@n
+subway@地下鉄@go to school by subway@地下鉄で学校に行く@0@n
+surrounding@周りの・環境@the surrounding scenery@周囲の景色@0@n
+roof@屋根・屋上@climb on to the roof@屋根に登る@0@n
+sample@見本・標本@obtain a sample of cells@細胞の標本を得る@0@n
+semester@学期@the first semester is over@一学期が終わった@0@n
+silence@沈黙・静寂@break the silence@沈黙を破る@0@n
+tour@旅行・観光旅行@a tour around Europe@ヨーロッパ旅行@0@n
+bread@パン・生計@eat bread in the morning@朝にパンを食べる@0@n
+business@商業・仕事@it's not your business@あなたには関係ない@0@n
+attention@注意・注目@pay attention to ~@〜に注意を払う@0@n
+agreement@合意・賛成@reach an agreement@合意に至る@0@n
+airport@空港@an international airport@国際空港@0@n
+chapter@章・期間@read chapter 1@第一章を読む@0@n
+clay@粘土@play with clay@粘土で遊ぶ@0@n
+consciousness@意識・自覚@lose my consciousness@意識を失う@0@n
+curve@曲線・曲がり角@sharp curve@急カーブ@0@n
+design@設計・デザイン@a design for a dress@洋服のデザイン@0@n
+diet@食物・食事制限@a balanced diet@バランスのとれた食事@0@n
+disagreement@不一致・相違@be in disagreement with@〜と意見が一致しない@0@n
+disappearance@失踪・消滅@disappearance of ~@〜の失踪・消滅@0@n
+discovery@発見@make a great discovery@新発見をする@0@n
+dust@ほこり・ごみ@be covered with dust@ほこりをかぶっている@0@n
+elsewhere@他のどこかで@go elsewhere@他の場所へ行く@0@n
+employer@雇用者@skills employers want@雇用主が求めるスキル@0@n
+employee@従業員@employee complaints@従業員の不満@0@n
+essay@随筆・エッセイ@write an essay about ~@〜についてのエッセイを書く@0@n
+everywhere@どこでも@look everywhere for ~@あらゆる場所で〜を探す@0@n
+exam@試験@take an entrance exam@入学試験を受ける@0@n
+examination@試験・診察@cheat in an examination@試験で不正をする@0@n
+excitement@興奮・刺激@in excitement@興奮して@0@n
+factory@工場@an automobile factory@自動車工場@0@n
+feather@羽・羽毛@light as a feather@羽のように軽い@0@n
+wing@翼@eagle's wings@鷲の翼@0@n
+feeling@気持ち・感覚@a good feeling for her@彼女への好感@0@n
+field@分野・場所@the field of medicine@医学の分野@0@n
+form@形・用紙@fill in the form@用紙に記入する@0@n
+film@映画・薄い膜@make a film@映画を作成する@0@n
+flash@光る・閃光@the lightning flashs@稲妻が光る@0@n
+flu@インフルエンザ@have flu@インフルエンザにかかる@0@n
+spring@春・泉・ばね@hot spring@温泉@0@n
+freedom@自由@have the freedom of speech@言論の自由がある@0@n
+friendship@友情@a friendship between ~@〜間の友情@0@n
+gesture@身振り・手振り@use gestures effectively@手振りを有効に使う@0@n
+growth@成長・発展@the rapid growth of ~@〜の急成長@0@n
+guest@客・招待客@invited five guests@五人の客を招待した@0@n
+harmony@調和@in harmony with ~@〜と調和して@0@n
+hole@穴・穴を掘る@dig a hole in the ground@地面に穴を掘る@0@n
+housework@家事@help with the housework@家事を手伝う@0@n
+importance@重要性@know the importance@重要性をわかっている@0@n
+insistence@主張・強要@insistence on the right@権利を主張する@0@n
+location@位置・場所@a good location for ~@〜に適した場所だ@0@n
+damage@害・損害@cause heavy damage to ~@〜に大きな害を与える@0@n
+chief@主な・長@a chief of the department@部長@0@n
+soldier@兵士@train soldiers@兵士を訓練する@0@n
+journey@旅@make a journey@旅行をする@0@n
+route@経路・道@decide the route@道を決定する@0@n
+plate@皿・板@use a plate@皿を使う@0@n
+license@免許@get a license@免許を取る@0@n
+cave@洞窟@explore in the cave@洞窟の中を探検する@0@n
+mate@夫・妻・友@look for a mate@夫・妻を探す@0@n
+ladder@はしご@climb a ladder@はしごを登る@0@n
+loan@ローン・貸付@take a loan@ローンを借りる@0@n
+daily@日常の・日毎の@daily routine@日課@0@n
+range@範囲@a wide range of ~@広範囲の〜@0@n
+appearance@外見・出席@judge by appearances@見かけで判断する@0@n
+spirit@精神・心@in the sprite@心の中で@0@n
+medium@手段・中間の@by the medium of ~@〜を手段として@0@n
+property@財産・特徴@lose my property@財産を失う@0@n
+security@安全・安全保障@national security@国家の安全保障@0@n
+volunteer@志願者@volunteer activities@ボランティア活動@0@n
+structure@構造@social structure@社会構造@0@n
+concept@概念・構想@the concept of dog@犬という概念@0@n
+wealth@富・財産@a man of great wealth@大金持ち@0@n
+phenomenon@現象@a natural phenomenon@自然現象@0@n
+survey@調査・調べる@conduct a survey@調査する@0@n
+crop@作物@grow some crops@作物を育てる@0@n
+substance@物質@a chemical substance@化学物質@0@n
+philosophy@哲学@study the philosophy@哲学を学ぶ@0@n
+conference@会議@hold a conference@会議を開催する@0@n
+cartoon@漫画・アニメ@my favorite cartoon@私の一番好きな漫画@0@n
+gene@遺伝子@inherit genes@遺伝子を受け継ぐ@0@n
+advertisement@広告@advertisement agency@広告代理店@0@n
+evolution@進化・発展@the dramatic evolution@劇的な発展@0@n
+cell@細胞@cancer cells@ガン細胞@0@n
+evil@悪い・悪@a necessary evil@必要悪@0@n
+spoil@台無しにする@spoil the crops@作物がだめになる@0@n

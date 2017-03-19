@@ -1,0 +1,20 @@
+weather@天気@weather forecast@天気予報@0@n
+conversation@会話@a conversation with ~@〜との会話@0@n
+opinion@意見@public opinion@世論@0@n
+fun@楽しい@Playing with you is fun.@あなたと遊ぶのは楽しい@0@a
+noise@騒音・音@because of the noise@その騒音のせいで@0@n
+mail@手紙@send a mail to her@彼女に手紙を送る@0@n
+hurry@急ぐ・急ぎ@be in a hurry to do@〜するために急ぐ@0@v
+mathematics@数学@study mathematics@数学を学ぶ@0@n
+homework@宿題@submit a homework@宿題を提出する@0@n
+bike@自転車@come to scholl by bike@自転車で学校に行く@0@n
+headache@頭痛@I have a headache.@頭痛がします。@0@n
+hometown@出身地・故郷@work in my hometown@自分の故郷で働く@0@n
+different@異なる・違う@a different reason@異なる理由@0@a
+difficult@難しい@difficult homework@難しい宿題@0@a
+foreign@外国の@study foreign cultures@外国文化を学ぶ@0@a
+necessary@必要な@it is necessary to do@〜する必要がある@0@a
+famous@有名な@be famous for ~@〜で有名だ@0@a
+afraid@恐れる@be afraid of criticism@批判を恐れる@0@a
+busy@忙しい@be busy with one's work@仕事で忙しい@0@a
+heavy@重い・ひどい@a heavy load@重い積荷@0@a

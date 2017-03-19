@@ -1,0 +1,20 @@
+add@加える・足す@add salt to a dish@塩を料理に加える@0@v
+contain@含んでいる@contain 3 balls@３つの球が入っている@0@v
+exchange@交換する@exchange yen for dollars@円をドルに交換する@0@v
+obtain@得る@obtain the right@権利を得る@0@v
+differ@異なる@differ from the fact@事実と異なる@0@v
+promote@促進する@promote him to do@彼が〜するよう促す@0@v
+permit@許す@permit him to play@彼が遊ぶことを許す@0@v
+inform@知らせる@inform him of ~@〜を彼に知らせる@0@v
+oppose@反対する@oppose the new law@新しい法律に反対する@0@v
+praise@ほめる@praise him for ~@〜について彼をほめる@0@v
+handle@扱う・取っ手@handle the problem@問題に対処する@0@v
+possess@持つ・抑える@possess three cars@3台の車を持つ@0@v
+stare@見つめる@stare at each other@見つめ合う@0@v
+absorb@吸収する@was absorbed in ~@〜に夢中になる@0@v
+resemble@似る@resemble her mather@彼女の母に似ている@0@v
+consume@消費する@consume the energy@エネルギーを消費する@0@v
+compete@競争する@compete with him@彼と競争する@0@v
+quit@やめる@quit a job@仕事をやめる@0@v
+announce@発表する@announce the plan@その計画を発表する@0@v
+emphasize@強調する@emphasize that ~@〜だと強調する@0@v

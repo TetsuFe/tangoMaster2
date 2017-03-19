@@ -1,0 +1,20 @@
+diminish@弱める・衰える@the power diminished@力が衰えた@0@v
+conceive@思う・想像する@conceive that ~@〜であると思う@0@v
+conceal@隠す@conceal my identity@自分の身分を隠す@0@v
+restore@修復する@restore a temple@寺を修復する@0@v
+utter@発する・完全な@utter a word@言葉を発する@0@v
+flee@逃げる@flee from the enemy@敵から逃げる@0@v
+offend@不快にする@he offended me@彼は私を怒らせた@0@v
+weave@織る・編む@weave a sweater@セーターを編む@0@v
+install@取り付ける@install an equipment@装置を取り付ける@0@v
+pile@積み重ね@a pile of books@大量の本@0@n
+worship@崇拝・礼拝@a place of worship@礼拝所@0@n
+acquaintance@知り合い@only an acquaintance@単なる知り合い@0@n
+distress@苦難・困難@be in distress@苦境におちいる@0@n
+flock@群@a flock of sheep@ヒツジの群れ@0@n
+lord@神・支配者@ praise the Lord@神をたたえる@0@n
+reception@歓迎・反応@get a reception@歓迎を受ける@0@n
+blessing@恩恵・祈り@ask a blessing@食前の祈りをする@0@n
+ethic@倫理@medical ethics@医療倫理@0@n
+terminal@終点・末期の@a terminal station@終着駅@0@a
+mankind@人類の@all mankind@全人類@0@n

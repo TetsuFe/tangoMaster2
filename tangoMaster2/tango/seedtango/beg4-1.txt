@@ -1,0 +1,20 @@
+available@利用できる@A be available to ~@〜はAを利用できる@0@a
+ready@準備できている@be ready to go@行く準備ができている@0@a
+correct@正しい@the correct answer@正しい答え@0@a
+familiar@親しい@be familiar with ~@〜に詳しい・と親しい@0@a
+worth@価値がある@be worth doing@〜する価値がある@0@a
+involved@関わる@be involved in ~@〜に関わっている@0@a
+obvious@明確な@an obvious difference@明確な違い@0@a
+positive@積極的・肯定的@ a positive attitude@積極的な態度@0@a
+global@世界的な@a global issue@世界的な問題@0@a
+awake@起きている@kept me awake@起きたままにする@0@a
+calm@冷静な@Calm down!@落ち着いて！@0@a
+actually@実は・実際に@actually he is kind@実は彼は優しい@0@av
+nearly@ほとんど@nearly ten o'clock@10時近くに@0@av
+exactly@正確に@repeat at exactly@正確に繰り返す@0@av
+occasionally@たまに@see him occasionally@たまに彼に会う@0@a
+seldom@めったにない@seldom see her@彼女に滅多に会わない@0@o
+general@一般的な@a general opinion@一般的な意見@0@a
+various@様々な@various kinds of ~@さまざまな種類の〜@0@a
+similar@似ている@be similar to ~@〜に似ている@0@a
+recent@最近の@in recent years@近年@0@a

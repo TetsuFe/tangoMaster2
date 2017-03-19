@@ -1,0 +1,20 @@
+institution@制定・機関@government institutions@行政機関@0@n
+minister@大臣@the Minister of Finance@財務大臣@0@n
+proportion@割合・調和@the proportion of A to B@AのBに対する割合@0@n
+transport@輸送する・輸送@by public transport@公共交通機関で@0@n
+resident@住民・住む@a foreign resident@外国人居住者@0@n
+context@文脈@in this context@この文脈において@0@n
+period@期間・時代@for a long period@長い間@0@n
+source@源・原因@a heat source@熱源@0@n
+method@方法・手段@an effective method@効果的な手法@0@n
+crowd@群衆・群がる@a crowd of people@大勢の人々@0@n
+instance@例@for instance@例えば@0@n
+technology@（科学）技術@industrial technology@工業（科学）技術@0@n
+generation@世代@the next generation@次世代@0@n
+evidence@証拠@look for an evidence@証拠を探す@0@n
+decade@10年間@a decade ago@10年前に@0@n
+loss@損失・損害@a loss of $1 million@100万ドルの損失@0@n
+aspect@側面・方向@in all aspects of ~@〜のあらゆる面から@0@n
+theory@理論・学説@illustrate my theory@私の理論を証明する@0@n
+statement@記述・発言@make a statement@陳述（発言）する@0@n
+professor@教授@a professor at ~ University@〜大学の教授@0@n

@@ -1,0 +1,20 @@
+enthusiasm@情熱・熱中@with enthusiasm@熱中して@0@n
+honor@名誉・敬意@it is a honor to do@〜できて光栄です@0@n
+territory@領域・領土@defend their territory.@彼らの領土（縄張り）を守る@0@n
+statistics@統計・統計学@by the statistics@統計によると@0@n
+grain@穀物@grain production@穀物生産高@0@n
+strain@張る・緊張@put a strain on ~@〜に負担をかける@0@n
+interaction@相互作用@interacion between ~@〜と〜の交流@0@n
+parallel@平行な@have no parallel@匹敵するものがない@0@a
+administration@行政・管理@military administration@軍事政権@0@n
+counterpart@片方・代わり@Japanese counterpart@日本版@0@n
+mine@鉱山・掘る@a coal mine@炭鉱@0@n
+craft@工芸品@a traditional craft@伝統工芸@0@n
+stroke@卒中・打撃@die of a stroke@脳卒中で死ぬ@0@n
+vessel@船・管@a blood vessel@血管@0@n
+tide@潮流・風潮@go with the tide@風潮に従う@0@n
+unit@単位・構成単位@a unit of society@社会の一構成単位@0@n
+virtue@徳・善行@virtue and vice@美徳と悪徳@0@n
+tale@物語@tell a fairy tale@おとぎ話を語る@0@n
+reform@改革@political reform@政治改革@0@n
+profession@職業・同郷者@teaching profession@教職@0@n

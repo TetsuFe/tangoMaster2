@@ -1,0 +1,20 @@
+instinct@本能@on(by) instinct@本能的に・勘で@0@n
+empire@帝国@the Roman Empire@ローマ帝国@0@n
+architecture@建築・構造@modern architecture@現代建築@0@n
+hardship@苦境・困難@face hardship@困難に直面する@0@n
+voyage@航海・旅@a voyage to Asia@アジアへの航海@0@n
+mechanism@仕組み@a complex mechanism@複雑な仕組み@0@n
+tragedy@悲劇@tragedy happened suddenly@悲劇は突然起こった@0@n
+fare@料金・運賃@pay a train fare@電車の運賃をはらう@0@n
+debt@借金@the national debt@国債@0@n
+extinction@絶滅@face extinction@絶滅寸前である@0@n
+purse@財布・賞金@the public purse@国庫@0@n
+explosion@爆発@population explosion@人口爆発@0@n
+wildlife@野生生物@protect wildlife@野生生物を保護する@0@n
+bay@湾@Tokyo bay@東京湾@0@n
+penalty@刑罰・罰則@the death penalty@死刑@0@n
+heritage@遺産@world heritage@世界遺産@0@n
+grief@悲しみ@feel deep grief@深い悲しみを感じる@0@n
+commodity@商品・物@commodity prices@物価@0@n
+statue@像@the Statue of Liberty@自由の女神像@0@n
+departure@出発@time of departure@出発時刻@0@n

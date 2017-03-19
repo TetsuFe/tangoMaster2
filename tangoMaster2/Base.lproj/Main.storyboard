@@ -94,7 +94,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-xp-qNq">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-xp-qNq">
                                         <rect key="frame" x="234" y="32" width="62" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xCk-xp-qNq" secondAttribute="height" multiplier="31:14" id="oWR-2U-Eay"/>
@@ -440,7 +440,7 @@
                                     <segue destination="PfQ-8y-B7c" kind="presentation" id="YdY-nT-zFn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2z-0k-iwj">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2z-0k-iwj">
                                 <rect key="frame" x="233.5" y="32" width="62.5" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="B2z-0k-iwj" secondAttribute="height" multiplier="31:14" id="XWf-qV-7z6"/>
@@ -657,7 +657,7 @@
                                     <segue destination="dVC-RJ-p16" kind="presentation" id="MeD-Zl-Ofu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-sh-Afs">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-sh-Afs">
                                 <rect key="frame" x="234" y="32" width="62" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QfU-sh-Afs" secondAttribute="height" multiplier="31:14" id="wq4-jB-9rW"/>
@@ -1634,7 +1634,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBE-BW-pBG">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBE-BW-pBG">
                                         <rect key="frame" x="234" y="32" width="62" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NBE-BW-pBG" secondAttribute="height" multiplier="31:14" id="5Q7-cI-Jhu"/>
@@ -1832,6 +1832,6 @@
         <image name="un_nigate" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vOY-ZE-hQI"/>
+        <segue reference="vJf-0X-qqA"/>
     </inferredMetricsTieBreakers>
 </document>

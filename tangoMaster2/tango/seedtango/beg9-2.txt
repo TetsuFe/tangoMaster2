@@ -1,0 +1,20 @@
+pull@引っ張る@pull a rope@ひもを引く@0@v
+hunt@狩る@hunt foxes to eat@食べるために狐を狩る@0@v
+lay@置く・産む@lay my bag on a table@机にカバンを置く@0@v
+ring@指輪・鳴らす@ring a bell@ベルを鳴らす@0@v
+gather@集める・集まる@members gathered in ~@メンバーが〜に集まる@0@v
+link@関係・つなぐ@be linked to you@あなたに関係がある@0@v
+mix@混ぜる@mix flour and milk@小麦粉と牛乳を混ぜる@0@v
+sail@帆船・航海する@the ship sails for China@その船は中国へ出港する@0@v
+dig@掘る@dig a hole@穴を掘る@0@v
+wrap@包む@wrap a gift in the paper@贈り物を包装紙で包む@0@v
+shine@輝き・輝く@the shine of gold@金の輝き@0@n
+living@生活・存命の@living things@生き物・動物@0@n
+belief@信仰・確信@have a belief in God@神への信仰心を持つ@0@n
+doubt@疑い・疑う@have no doubt about him@彼を全く疑っていない@0@n
+nurse@看護師@work as a nurse@看護師として働く@0@n
+series@連続・シリーズ@a series of articles@連載記事@0@n
+error@誤り・間違い@an error in spelling@綴りの間違い@0@n
+spot@場所@go to my favorite spot@お気に入りの場所へ行く@0@n
+blank@空欄@fill in the blanks@空欄を埋める@0@n
+salary@給料@get a high salary@高い給料を得る@0@n

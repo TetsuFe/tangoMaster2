@@ -1,0 +1,20 @@
+grass@草・草原@lie down on the grass@草むらの上で寝転ぶ@0@n
+guy@人・男@hey, guys@やあ、君たち@0@n
+knee@膝@sit on her knees@膝の上に座る@0@n
+chest@胸@a pain in the chest@胸の痛み@0@n
+stairs@階段@go up the stairs@階段を上がる@0@n
+midnight@真夜中@go out at midnight@真夜中に外出する@0@n
+sure@確信している@I'm sure that ~@〜であると確信している@0@a
+least@最も小さい@need at least 3 years@少なくとも３年は必要だ@0@a
+several@いくつかの@several years ago@数年前に@0@a
+whole@〜の全て・全体@succeed as a whole@全体として成功する@0@a
+alone@一人で@Leave me alone.@放っておいてくれ。@0@av
+main@主な@main theme@主題@0@a
+deep@深い@deep sorrow@深い悲しみ@0@a
+true@正しい@If it is true,@もしそれが正しいなら@0@a
+wide@幅の広い@the wide street@幅の広い道@0@a
+dark@暗い・黒い@a girl with dark eyes@黒い目の少女@0@a
+ordinary@普通の・平凡な@ordinary people@一般人@0@a
+friendly@親切な・親しい@friendly relation@親しい関係@0@av
+bright@明るい@this room is too bright@この部屋は明るすぎる@0@a
+constant@一定の・継続的@at a constant speed@一定の速度で@0@a

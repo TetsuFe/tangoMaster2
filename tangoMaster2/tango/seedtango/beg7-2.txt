@@ -1,0 +1,20 @@
+assure@保証する@assure that ~@〜だと保証する@0@v
+crash@ぶつかる・衝突@crash into the wall@壁に激突する@0@v
+cheer@元気づける@cheer up players@選手たちを元気づける@0@v
+breed@育てる@breed sheep@羊を飼育する@0@v
+prohibit@禁止する@prohibit A from doing@Aが〜するを禁じる@0@v
+collapse@倒れる@collapsed on the job@仕事中に倒れた@0@v
+scare@恐れさせる@be scared of ~@〜を恐れる@0@v
+deprive@奪う@deprive him of ~@彼から〜を奪う@0@v
+correspond@一致する@correspond to my idea@私の考えと一致する@0@v
+cheat@だます@cheat my friends@友達をだます@0@v
+forgive@許す@forgive him for doing@彼が〜したことを許す@0@v
+envy@羨む・妬む@envy her success@彼女の成功を羨む@0@v
+prompt@促す@prompt him to do@彼に〜するよう促す@0@v
+endanger@危険にさらす@endangered species@絶滅器具種@0@v
+persist@貫き通す@persist in my opinion@自分の意見を貫き通す@0@v
+score@点・点をとる@score 10 points@10点を取る@0@v
+accomplish@達成する@accomplish my task@仕事をやり遂げる@0@v
+hesitate@ためらう@hesitate to tell@言うのをためらう@0@v
+endure@耐える@endure pain@苦痛に耐える@0@v
+translate@翻訳する@translate A into B@AをBに翻訳する@0@v

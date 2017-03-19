@@ -1,0 +1,20 @@
+owe@負う・おかげだ@I owe my success to you@私の成功は君のおかげだ@0@v
+seat@座席・座らせる@reserve a seat@座席を予約する@0@n
+accept@受け入れる@accept the truth@事実を受け入れる@0@v
+occur@起こる@the accident occurred@その事故は起こった@0@v
+avoid@避ける@to avoid accidents,@事故を避けるために@0@v
+marry@結婚する@get married with him@彼と結婚する@0@v
+determine@決定する@determine where to go@どこに行くか決める@0@v
+discuss@議論する@discuss the theme@その議題を議論する@0@v
+enable@可能にする@enable me to do@私が〜することを可能にする@0@v
+intend@意図する@intend to go out@外出するつもりだ@0@v
+invent@発明する@invent the telephone@電話を発明する@0@v
+select@選ぶ@select the answer@答えを選ぶ@0@v
+propose@提案する@propose a new way@新しいやり方を提案する@0@v
+criticize@批判する@criticize him for doing@〜した彼を非難する@0@v
+tear@涙・破る@tore the letter@手紙を破った@0@n
+result@結果@as a result,@結果として、@0@n
+society@社会・会@modern society@現代社会@0@n
+trouble@困難・厄介事@have trouble doing@〜するのに苦労する@0@n
+effect@効果・影響@side effects@副作用@0@n
+rate@比率・割合@the birth rate@出生率@0@n

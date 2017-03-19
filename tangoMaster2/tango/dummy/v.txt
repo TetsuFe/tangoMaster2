@@ -1,0 +1,518 @@
+help@手伝う@help him to clean@彼が掃除するのを手伝う@0@v
+try@挑戦する・試す@try to be popular@人気者になろうとする@0@v
+grow@育つ@grew up in Tokyo@東京で育った@0@v
+enjoy@楽しむ@enjoy watching TV@テレビを見るのを楽しむ@0@v
+choose@選ぶ@choose one from the list@リストの中から一つ選ぶ@0@v
+spend@過ごす・費やす@spend money on ~@〜のためにお金を使う@0@v
+arrive@到着する@arrive at the station@駅に着く@0@v
+forget@忘れる@forget what he said@彼の言ったことを忘れる@0@v
+wish@願う・願い@I wish I could fly@飛べればいいのになあ@0@v
+born@生まれて@I was born in Tokyo@私は東京で生まれた@0@v
+wake@起床する@wake up early@早く起床する@0@v
+blow@吹く@The strong wind blew.@強い風が吹いた@0@v
+hurry@急ぐ・急ぎ@be in a hurry to do@〜するために急ぐ@0@v
+excite@興奮させる@an exciting movie@面白い映画@0@v
+surprise@驚かせる@be surprised to hear it@それを聞いて驚く@0@v
+follow@従う・追う@follow the guide@ガイドについていく@0@v
+consider@考える@consider why he did@なぜ彼が〜したか考える@0@v
+increase@増加する@increase by 10 percent@１０％増加する@0@v
+expect@期待する@expect you to come@君が来ると期待する@0@v
+decide@決める@decide to retire@退職すると決める@0@v
+include@含む@include some elements@いくつかの要素を含む@0@v
+reach@届く・着く@reach the station@駅に到着する@0@v
+allow@許す@allow him to go out@彼に外出を許可する@0@v
+suggest@提案する@suggest my plan@私の企画を提案する@0@v
+worry@心配する@worry about her@彼女を心配する@0@v
+depend@頼る@depend on my parents@家族に依存している@0@v
+share@共有する@share water with her@水を彼女と分け合う@0@v
+support@手伝う@support the candidate@その候補者を支持する@0@v
+improve@向上させる@improve my ability@能力を向上させる@0@v
+notice@気づく@notice the difference@その違いに気づく@0@v
+prevent@防ぐ@prevent him from sleeping@彼が寝るのを防ぐ@0@v
+prepare@準備する@prepare dinner for him@彼用の夕食を準備する@0@v
+join@参加する・入る@join the tennis club@テニス部に入る@0@v
+introduce@紹介する@introduce my friend to you@君に友人を紹介する@0@v
+admit@認める・許す@admit her to go out@彼女に外出を許す@0@v
+belong@所属している@belong to soccer club@サッカー部に所属する@0@v
+afford@余裕がある@can't afford to buy ~@〜を買う余裕はない@0@v
+remind@思い出させる@remind me the memory@記憶を思い出させる@0@v
+disappoint@失望させる@be disappointed with you@あなたに失望する@0@v
+delay@遅らせる@the train is delayed@電車が遅れている@0@v
+devote@専念する@devote myself to studying@勉強に専念する@0@v
+regret@後悔する@regret my decision@決断を後悔する@0@v
+injure@怪我をさせる@be injured in ~@〜のせいで負傷する@0@v
+explain@説明する@explain the meaning@その理由を説明する@0@v
+solve@解決する@solve the problem@問題を解決する@0@v
+borrow@借りる@borrow an eraser@消しゴムを借りる@0@v
+advise@助言する@advise him to do@〜すべきと彼に助言する@0@v
+recommend@勧める@recommend this book@この本を勧める@0@v
+invite@招く・招待する@invite tragedies@悲劇を招く@0@v
+hold@持つ・保持する@hold the door open@ドアを開けたままにする@0@v
+let@させる・許す@let her go to school@彼女を学校に行かせる@0@v
+appear@現れる・見える@he appeared in this city@彼はこの街に現れrた@0@v
+win@勝つ・勝ち取る@win the prize@賞を勝ち取る@0@v
+dress@服・服を着せる@put on a dress@服を着る@0@v
+communicate@会話する@communicate with him@彼と話す@0@v
+drop@落下・落とす@drop a ball@ボールを落とす@0@v
+throw@投げる@throw away a bottle@瓶をごみに捨てる@0@v
+collect@集める@collect stamps@切手を集める@0@v
+repeat@繰り返す@repeat he word@その言葉を繰り返し言う@0@v
+request@要求する・頼む@request him to work@彼に働いてくれと頼む@0@v
+dislike@嫌いだ@I dislike that teacher@私はあの先生が嫌いだ@0@v
+bite@噛む@the dog bit my hand@その犬は私の手を噛んだ@0@v
+boil@沸騰させる@boiled egg@ゆでたまご@0@v
+contact@接触する@contact the spy@スパイに接触する@0@v
+develop@発展させる@a developing country@発展途上国@0@v
+provide@提供する@provide him with a copy@彼にコピーを渡す@0@v
+continue@続ける@continue to try@挑戦し続ける@0@v
+remain@残る・留まる@remain here@ここに留まる@0@v
+force@強いる@be forced to work@働くことを強いられる@0@v
+require@必要とする@require her help@彼女の助けが必要だ@0@v
+cost@費用がかかる@it costs me $5@それは５ドルかかる@0@v
+tend@傾向がある@tend to die early@早くに死ぬ傾向がある@0@v
+regard@みなす@regard it as the truth@それを真実とみなす@0@v
+recognize@気づく・認める@recognize my mistake@失敗に気づく@0@v
+suppose@〜だと思う@be supposed to help him@彼を手伝う予定だ@0@v
+raise@上げる・育てる@raise my blood pressure@血圧を上げる@0@v
+prefer@好む@prefer tennis to baseball@野球よりテニスが好きだ@0@v
+enter@入る・入学する@enter the high school@高校に入学する@0@v
+suffer@受ける・苦しむ@suffer from the pain@その痛みに苦しむ@0@v
+describe@説明する@describe my opinion@私の意見を説明する@0@v
+mistake@間違える@mistake salt for sugar@塩を砂糖と間違える@0@v
+prove@証明する@prove his innocent@彼の無実を証明する@0@v
+treat@扱う@treat her as a child@彼女を子供扱いする@0@v
+relate@関係付ける@be related to ~@〜と関係がある@0@v
+compare@比較する@compare her with me@彼女と私を比較する@0@v
+search@探す@search for my dog@私の犬を探す@0@v
+refuse@拒否する@refuse a request@要求を拒否する@0@v
+perform@上演する・行う@perform the concert@コンサートを上演する@0@v
+graduate@卒業する@graduate from the college@大学を卒業する@0@v
+insist@主張する@insist on the right@権利を主張する@0@v
+convince@納得させる@be convinced of the truth@その事実に納得する@0@v
+respond@答える・応じる@respond to a question@質問に答える@0@v
+shake@振る・揺らす@shake the bottle@瓶を振る@0@v
+consist@構成される@it consists of iron@それは鉄でできている@0@v
+preserve@保護する@preserve nature@自然を保護する@0@v
+concentrate@集中する@concentrate on my task@自分の仕事に集中する@0@v
+repair@修理する@repair the car@車を修理する@0@v
+reserve@予約する@reserve a room@部屋を予約する@0@v
+own@持つ・自分の@own a cottage@山荘を所持している@0@v
+cure@治す@cure him of his cold@彼のカゼを治す@0@v
+embarrass@恥ずかしくする@be embarrassed by my fault@失敗が恥ずかしい@0@v
+participate@参加する@participate in the competition@その大会に参加する@0@v
+owe@負う・おかげだ@I owe my success to you@私の成功は君のおかげだ@0@v
+accept@受け入れる@accept the truth@事実を受け入れる@0@v
+occur@起こる@the accident occurred@その事故は起こった@0@v
+avoid@避ける@to avoid accidents,@事故を避けるために@0@v
+marry@結婚する@get married with him@彼と結婚する@0@v
+determine@決定する@determine where to go@どこに行くか決める@0@v
+discuss@議論する@discuss the theme@その議題を議論する@0@v
+enable@可能にする@enable me to do@私が〜することを可能にする@0@v
+intend@意図する@intend to go out@外出するつもりだ@0@v
+invent@発明する@invent the telephone@電話を発明する@0@v
+select@選ぶ@select the answer@答えを選ぶ@0@v
+propose@提案する@propose a new way@新しいやり方を提案する@0@v
+criticize@批判する@criticize him for doing@〜した彼を非難する@0@v
+attempt@試みる@attempt to do@〜しようと試みる@0@v
+research@研究・調べる@research the history@歴史を研究する@0@v
+rob@盗む・奪う@rob him of his bag@彼からカバンを盗む@0@v
+interfere@妨害する@interfere with my sleep@私の安眠を妨害する@0@v
+respect@尊敬する@respect my teacher@私の先生を尊敬している@0@v
+exercise@運動する@exercise the right@権利を行使する@0@v
+decrease@減少・減少する@~ decreased by 10%@〜が10%減少した@0@v
+disagree@同意しない@disagree with her@彼女の意見に同意しない@0@v
+disappear@姿を消す@disappear into the dark@暗闇に姿を消す@0@v
+wear@着る・使い古す@the shoes are worn out@その靴はぼろぼろだ@0@v
+happen@起こる@the accidents happened@その事故は起こった@0@v
+seem@〜のようだ@he seems to know ~@彼は〜を知っていそうだ@0@v
+discover@発見する@discover the new truth@新事実を発見する@0@v
+act@行動する@act as a guide@ガイドを務める@0@v
+fight@戦う・戦い@fight with my boyfriend@彼氏と口論する@0@v
+pick@選び取る@pick up the can@缶を拾い上げる@0@v
+promise@約束・約束する@promise to help you@君を助けると約束する@0@v
+push@押す@push the button@そのボタンを押す@0@v
+hide@隠す・隠れる@hide my true feeling@本当の気持ちを隠す@0@v
+climb@登る@climb a mountain@山に登る@0@v
+relax@くつろぐ@the song relaxes me@歌は私を落ち着かせる@0@v
+recycle@再生利用@recycled paper@再生紙@0@v
+roll@転がる・進む@the ball roll down ~@球が〜で転がり落ちる@0@v
+lift@持ち上げる@lift a heavy baggage@重い荷物を持ち上げる@0@v
+hire@雇う@hire an interpreter@通訳を雇う@0@v
+comment@論評・論評する@comments on this book@この本に対する論評@0@v
+guard@守衛・守る@guard my head@頭を守る@0@v
+offer@申し出る@offer to lend you ~@君に〜を貸そう@0@v
+realize@知る・達成する@realize the goal@目標を達成する@0@v
+demand@要求する・需要@demand the money@金を要求する@0@v
+encourage@激励する@encourage her to study@彼女に勉強を勧める@0@v
+gain@得る@gain self confidence@自信を得る@0@v
+apply@適用する@apply the law to this case@この件に法を適用する@0@v
+seek@探し求める@seek for the solution@解決策を探し求める@0@v
+claim@主張する@claim that ~@〜だと主張する．@0@v
+draw@書く、引く@draw a picture@絵を描く@0@v
+approach@近づく・方法@approach the president@社長に接近する@0@v
+bore@退屈させる@a boring speech@退屈な演説@0@v
+survive@生き残る@survive in desert@砂漠で生き残る@0@v
+represent@表現する@A dove represents peace@鳩は平和の象徴である@0@v
+indicate@示す@the data indicates that@そのデータは〜を示す@0@v
+acquire@習得する@acquire new skill@新しい技術を習得する@0@v
+escape@逃げる@escape from the enemy@敵から逃避する@0@v
+reveal@暴露する@reveal the secret@その秘密を暴露する@0@v
+surround@囲む@be surrounded by lake@湖に囲まれている@0@v
+suit@適している@are suited for the hat@その帽子が似合っている@0@v
+estimate@推定する@estimate that ~@〜になると推定する@0@v
+earn@稼ぐ@earn much money@多くのお金をかせぐ@0@v
+remove@取り除く@remove a stain from ~@〜からシミを除く@0@v
+associate@関連づける@associate A with B@AとBを連想する@0@v
+attract@注意を引く@attract their interests@彼らの興味を引く@0@v
+rely@頼る@rely on my intuition@自分の直感を頼る@0@v
+adopt@採用する@adopt her plan@彼女の案を採用する@0@v
+hurt@傷つける@hurted my feelings@私の心を傷つけた@0@v
+blame@責める@blame him for losing@敗北を彼のせいにする@0@v
+persuade@説得する@persuade him to study@勉強するよう説得する@0@v
+admire@褒める@admire him for ~@〜のことで彼をほめる@0@v
+struggle@もがく@struggle to overcome@乗り越えようともがく@0@v
+arrange@整える@arrange a party@パーティの準備をする@0@v
+employ@雇う@employ his as engineer@彼を技師として雇う@0@v
+display@示す・展示する@display the works@作品を展示する@0@v
+encounter@偶然出会う@encounter my aunt@叔母に偶然出会う@0@v
+exhaust@疲れ果てる@be exhausted by works@仕事で疲れ果てる@0@v
+adapt@適応する@adapt to the change@変化に適応する@0@v
+import@輸入する@import cars from U.S.@米国から車を輸入する@0@v
+frighten@恐怖を与える@be frightened of a ghost@幽霊を恐れる@0@v
+recover@回復する@recover from illness@病気から回復する@0@v
+suspect@疑う@suspect he told a lie@彼が嘘をついたと疑う@0@v
+expose@さらす@expose me to the danger@危険に身をさらす@0@v
+perceive@気づく@perceive him entering@彼が入ったと気づく@0@v
+derive@得る@be derived from ~@〜に由来する@0@v
+commit@犯す・任せる@commit a crime@犯罪を犯す@0@v
+impose@課す・強いる@impose a tax on incomes@所得に税を課す@0@v
+restrict@制限する@restrict freedom of ~@〜の自由を制限する@0@v
+compose@構成する@be composed of ~@〜で構成される@0@v
+exist@存在する@the creature exists@その生物は存在する@0@v
+protect@守る@protect A trom danger@Aを危険から守る@0@v
+affect@影響を与える@affecte your health@君の健康に影響する@0@v
+ignore@無視する@ignore his advice@彼の忠告を無視する@0@v
+guess@推測する@I guess that ~@私は〜だと思う@0@v
+complain@不満を言う@complain about ~@〜について不満を言う@0@v
+achieve@達成する@achieve the goal@目標を達成する@0@v
+divide@分ける・割る@divide an apple in half@リンゴを二つにわける@0@v
+distinguish@区別する@distinguish A from B@AとBを区別する@0@v
+educate@教育する@educate children@子供を教育する@0@v
+trust@信頼・信用する@betrayed my trust@私の信頼を裏切った@0@v
+overcome@打ち勝つ@overcome the difficulties@困難に打ち勝つ@0@v
+predict@予測する@predict that ~@〜が起こると予測する@0@v
+investigate@調査する@investigate the cause@原因を調査する@0@v
+pretend@ふりをする@pretend to study@勉強するふりをする@0@v
+taste@味・味がする@it tastes sour.@酸っぱい味がする@0@v
+interpret@解釈する@interpret A as B@Aの意味をBと解釈する@0@v
+cease@やめる・終わる@the rain ceased@雨が止む@0@v
+resist@抵抗する@resist the pressure@圧力に抵抗する@0@v
+interrupt@中断させる@interrupt his work@彼の仕事を中断させる@0@v
+illustrate@例証する@illustrated the theory@理論を証明する@0@v
+arrest@逮捕する@arrest A for B@Aを〜の容疑で逮捕する@0@v
+stimulate@刺激する@stimulate his curiosity@彼の好奇心を刺激する@0@v
+assure@保証する@assure that ~@〜だと保証する@0@v
+crash@ぶつかる・衝突@crash into the wall@壁に激突する@0@v
+cheer@元気づける@cheer up players@選手たちを元気づける@0@v
+breed@育てる@breed sheep@羊を飼育する@0@v
+prohibit@禁止する@prohibit A from doing@Aが〜するを禁じる@0@v
+collapse@倒れる@collapsed on the job@仕事中に倒れた@0@v
+scare@恐れさせる@be scared of ~@〜を恐れる@0@v
+deprive@奪う@deprive him of ~@彼から〜を奪う@0@v
+correspond@一致する@correspond to my idea@私の考えと一致する@0@v
+cheat@だます@cheat my friends@友達をだます@0@v
+forgive@許す@forgive him for doing@彼が〜したことを許す@0@v
+envy@羨む・妬む@envy her success@彼女の成功を羨む@0@v
+prompt@促す@prompt him to do@彼に〜するよう促す@0@v
+endanger@危険にさらす@endangered species@絶滅器具種@0@v
+persist@貫き通す@persist in my opinion@自分の意見を貫き通す@0@v
+score@点・点をとる@score 10 points@10点を取る@0@v
+accomplish@達成する@accomplish my task@仕事をやり遂げる@0@v
+hesitate@ためらう@hesitate to tell@言うのをためらう@0@v
+endure@耐える@endure pain@苦痛に耐える@0@v
+translate@翻訳する@translate A into B@AをBに翻訳する@0@v
+guarantee@保証する@guarantee the success@成功を保証する@0@v
+greet@挨拶する@greet politely.@礼儀正しく挨拶する@0@v
+apologize@謝る@apologize for ~@〜について謝る@0@v
+fade@徐々に消える@memories fade away@記憶が消えていく@0@v
+evaluate@評価する@evaluate her ability@彼女の能力を評価する@0@v
+scold@叱る@scold him for doing@〜した彼を叱る@0@v
+postpone@延期する@postpone the game@試合を延期する@0@v
+divorce@離婚・離婚する@divorce her husband@夫と離婚する@0@v
+charm@魅力・魅了する@were charmed with ~@魅了される@0@v
+pause@休止・止まる@pause to see him@彼をみるために止まった@0@v
+deny@拒否する@deny his offer@彼の申し出を断る@0@v
+pay@払う・報いる@pay attention to @~に注意を払う@0@v
+settle@住み着く@be settled in A@Aに住んでしばらくたつ@0@v
+deliver@渡す・伝える@deliver a message@伝言を伝える@0@v
+satisfy@満たす@satisfy all requirements@全ての条件を満たす@0@v
+shout@叫ぶ@shout for help@助けを求めて叫ぶ@0@v
+bark@吠える@The dog barked fiercely@その犬は激しく吠えた@0@v
+cross@十字架・渡る@cross the street@道路を渡る@0@v
+fill@満たす@be filled with joy@喜びでいっぱいになる@0@v
+abandon@捨てる・やめる@abandon my plan@計画を途中でやめる@0@v
+anticipate@予期する@anticipate that ~@〜だと予期する・期待する@0@v
+create@作り出す@create the world@この世を創造する@0@v
+lie@嘘・横になる@He lay down on the bed.@彼はベッドで横になった@0@v
+rise@上がる・上昇@the sun rise in the east@太陽が東に昇る@0@v
+hang@吊るす・掛ける@hang a hat on the hook@フックに帽子を掛ける@0@v
+pull@引っ張る@pull a rope@ひもを引く@0@v
+hunt@狩る@hunt foxes to eat@食べるために狐を狩る@0@v
+lay@置く・産む@lay my bag on a table@机にカバンを置く@0@v
+ring@指輪・鳴らす@ring a bell@ベルを鳴らす@0@v
+gather@集める・集まる@members gathered in ~@メンバーが〜に集まる@0@v
+link@関係・つなぐ@be linked to you@あなたに関係がある@0@v
+mix@混ぜる@mix flour and milk@小麦粉と牛乳を混ぜる@0@v
+sail@帆船・航海する@the ship sails for China@その船は中国へ出港する@0@v
+dig@掘る@dig a hole@穴を掘る@0@v
+wrap@包む@wrap a gift in the paper@贈り物を包装紙で包む@0@v
+limit@制限する@limit the speed@速度を制限する@0@v
+base@根拠付ける@be based on a fact@事実に基づいている@0@v
+reduce@減らす@reduce the budget@予算を減らす@0@v
+establish@設立する@establish a new company@新会社を設立する@0@v
+refer@言及する@refer to the incident@事件について言及する@0@v
+destroy@破壊する@destroy the facility@施設を破壊する@0@v
+mention@述べる@Don't mention it.@どういたしまして。@0@v
+judge@判断する@judge from the evidence@証拠から判断する@0@v
+reflect@反映する@reflect his sorrow@彼の悲しみを反映する@0@v
+argue@主張する@argue that ~@〜と主張する@0@v
+reply@返事する@reply to his letter@彼の手紙に返事をする@0@v
+decline@下がる・衰退@the decline of the empire@帝国の衰退@0@v
+confuse@困惑させる@be confused by ~@〜に困惑する@0@v
+vary@変化する@one's mood varies from ~@気分が〜次第で変わる@0@v
+examine@調べる@examine the details@詳細を調べる@0@v
+contribute@貢献する@contribute to the success@その成功に貢献する@0@v
+connect@つなぐ@connect Japan with China@日本と中国とを繋ぐ@0@v
+reject@拒否する@reject the proposal@提案を拒否する@0@v
+threaten@脅す@threaten to kill a child@子供を殺すと脅す@0@v
+extend@延長する@extend the deadline@締め切りを延長する@0@v
+expand@拡大する@expand the territory@領土を拡大する@0@v
+disturb@妨げる@No one disturbs me@誰も私を邪魔しない@0@v
+engage@携わる・雇う@engage in agriculture@農業に携わる@0@v
+bother@困らせる@Don's bother me@私を困らせないでくれ@0@v
+appeal@訴える・求める@appeal to him for help@彼に助けを求める@0@v
+combine@くっつける@combine A with B@AとBをくっつける@0@v
+remark@述べる・発言@remark that it is true@それは本当だと述べる@0@v
+release@解放する@release a bird from cage@鳥を檻から解放する@0@v
+rent@借りる・家賃@rent an apartment@アパートを借りる@0@v
+identify@見分ける@identify the body@死体の身元を特定する@0@v
+conclude@結論を出す@conclude that@〜という結論を出す@0@v
+neglect@無視する・怠る@neglect human rights@人権を無視する@0@v
+adjust@調節する@adjust a telescope@望遠鏡を調節する@0@v
+pursue@追い求める@pursue my goal@目標を追い求める@0@v
+demonstrate@証明する@demonstrate that ~@〜を証明する@0@v
+stretch@伸ばす@stretch my arms@腕を伸ばす@0@v
+reverse@逆にする@reverse the position@立場を逆転する@0@v
+capture@捕まえる@capture the cat@猫を捕まえる@0@v
+produce@作る@produce the car@その車を製造する@0@v
+express@表現する@express my feelings@気持ちを表現する@0@v
+launch@発射する@launch a rocket@ロケットを発射する@0@v
+foster@養う@foster a child@子供を養う@0@v
+deserve@価値がある@deserve admiration@賞賛に値する@0@v
+punish@罰する@punish a criminal@犯罪者を罰する@0@v
+deceive@だます@deceive my friends@友人をだます@0@v
+vanish@消える@The man vanished@男は突然姿を消した@0@v
+regulate@規制する@regulate air pollution@大気汚染を規制する@0@v
+distribute@配布する@distribute equally@平等に分配する@0@v
+exceed@超える@exceed the limit@限界を超える@0@v
+wipe@拭きとる@wipe my face@顔をふく@0@v
+unite@団結させる@unite two countries@二国を併合する@0@v
+leap@跳ぶ@leaps into a pond@池に飛びこむ@0@v
+exaggerate@誇張する@exaggerate a story@話を大げさに語る@0@v
+modify@修正する@modify the plan@計画を修正する@0@v
+scream@悲鳴をあげる@scream for help@助けてと悲鳴をあげる@0@v
+attain@達成する@attain the goal@目標を達成する@0@v
+rub@こする@rub my eyes@目をこする@0@v
+assert@主張する@assert that ~@〜だと主張する@0@v
+drift@漂う・漂流物@a boat drifts@舟が漂流する@0@v
+tackle@タックルする@tackle the opponent@相手にタックルする@0@v
+infect@感染させる@infeced with flu@インフルエンザに感染する@0@v
+urge@説得する@urge him to work@働くよう彼を説得する@0@v
+bake@焼く@bake bread in an oven@オーブンでパンを焼く@0@v
+compromise@和解する・妥協@compromise with him@彼と和解する@0@v
+manufacture@製造する・製造@manufacture the cars@車を製造する@0@v
+alarm@警告・不安にする@sound the alarm@警告音を鳴らす@0@v
+attach@取り付ける@attach the label@ラベルをつける@0@v
+explore@探検する@explore the island@島を探検する@0@v
+alter@変更する@alter the plan@その計画を変更する@0@v
+weigh@重さがある@weigh 1 kilograms@１キロの重さがある@0@v
+substitute@〜で代用する@substitute pork for beef@牛の代わりに豚を使う@0@v
+specialize@専門とする@specialize in economics@経済学を専攻する@0@v
+astonish@驚かせる@astonished everybody@周囲を驚かせた@0@v
+confine@閉じ込める@confine to a room@部屋に閉じ込める@0@v
+sew@縫う@sew a dress@ドレスを縫う@0@v
+resort@訴える・行楽地@resort to violence@暴力に訴える@0@v
+equip@装備する@equip my room with ~@〜を部屋に備え付ける@0@v
+startle@驚かせる@startling news@びっくりする知らせ@0@v
+compel@強いる@compel him to do@彼に〜するよう強いる@0@v
+diminish@弱める・衰える@the power diminished@力が衰えた@0@v
+conceive@思う・想像する@conceive that ~@〜であると思う@0@v
+conceal@隠す@conceal my identity@自分の身分を隠す@0@v
+restore@修復する@restore a temple@寺を修復する@0@v
+utter@発する・完全な@utter a word@言葉を発する@0@v
+flee@逃げる@flee from the enemy@敵から逃げる@0@v
+offend@不快にする@he offended me@彼は私を怒らせた@0@v
+weave@織る・編む@weave a sweater@セーターを編む@0@v
+install@取り付ける@install an equipment@装置を取り付ける@0@v
+pump@排出する@pump gases@ガスを排出する@0@v
+dye@染める・染料@dye my hair brown@髪を茶色に染める@0@v
+add@加える・足す@add salt to a dish@塩を料理に加える@0@v
+contain@含んでいる@contain 3 balls@３つの球が入っている@0@v
+exchange@交換する@exchange yen for dollars@円をドルに交換する@0@v
+obtain@得る@obtain the right@権利を得る@0@v
+differ@異なる@differ from the fact@事実と異なる@0@v
+promote@促進する@promote him to do@彼が〜するよう促す@0@v
+permit@許す@permit him to play@彼が遊ぶことを許す@0@v
+inform@知らせる@inform him of ~@〜を彼に知らせる@0@v
+oppose@反対する@oppose the new law@新しい法律に反対する@0@v
+praise@ほめる@praise him for ~@〜について彼をほめる@0@v
+handle@扱う・取っ手@handle the problem@問題に対処する@0@v
+possess@持つ・抑える@possess three cars@3台の車を持つ@0@v
+stare@見つめる@stare at each other@見つめ合う@0@v
+absorb@吸収する@was absorbed in ~@〜に夢中になる@0@v
+resemble@似る@resemble her mather@彼女の母に似ている@0@v
+consume@消費する@consume the energy@エネルギーを消費する@0@v
+compete@競争する@compete with him@彼と競争する@0@v
+quit@やめる@quit a job@仕事をやめる@0@v
+announce@発表する@announce the plan@その計画を発表する@0@v
+emphasize@強調する@emphasize that ~@〜だと強調する@0@v
+retire@退職する@retire from the company@会社を退職する@0@v
+transform@変える@transform A into B@AをBに変える@0@v
+defeat@倒す・負かす@defeat my opponent@対戦相手を倒す@0@v
+sign@合図・署名する@sign a contract@契約書にサインする@0@v
+ensure@確実にする@ensure a success@成功を確実にする@0@v
+obey@従う@obey the order@命令に従う@0@v
+eliminate@除去する@eliminate barriers@壁を無くす@0@v
+celebrate@祝う@celebrate her graduation@彼女の卒業を祝う@0@v
+transfer@移す・移る@transfer A from B to C@AをBからCへ移す@0@v
+confront@直面する@confront a problem@問題に直面する@0@v
+depress@落ち込ませる@be depressed@落ち込んでいる@0@v
+cultivate@耕す・養う@cultivate my ability@能力を養う@0@v
+fulfill@果たす・満たす@fulfill my duties@義務を果たす@0@v
+transmit@送る・伝える@transmit a letter@手紙を送る@0@v
+found@設立する@found a company@会社を設立する@0@v
+burst@爆発する@burst into tears@突然わっと泣き出す@0@v
+bow@おじぎする@bow to the president@社長におじぎする@0@v
+dismiss@却下する@dismiss the suggestion@その提案を却下する@0@v
+oblige@強いる@be obliged to work@働かざるを得ない@0@v
+invest@投資する@invest time in studying@勉強に時間を費やす@0@v
+grasp@握る・把握する@grasp the issue@問題を把握する@0@v
+overlook@見渡す・見逃す@overlooked his faults@彼の過ちを大目に見る@0@v
+accuse@責める・訴える@accused him of ~@〜について彼を非難する@0@v
+frustrate@イライラさせる@be frustrated by~@〜にイライラする@0@v
+register@登録する@register the name@名前を登録する@0@v
+cast@投げる@cast a fishing line@釣り糸を投げる@0@v
+attribute@〜のせいにする@attribute the failure to ~@その失敗は〜のせいだ@0@v
+ban@禁止する@ban smoking@喫煙を禁止する@0@v
+resolve@解決する@resolve the problem@問題を解決する@0@v
+exhibit@示す・展示する@exhibit paintings@絵を展示する@0@v
+convert@変える@convert water into steam@水を水蒸気に変える@0@v
+assign@割り当てる@assign work to members@仕事を割り当てる@0@v
+nod@うなずく@nodded in agreement@頷いて同意する@0@v
+elect@選ぶ@be elected mayer@市長に選ばれる@0@v
+acknowledge@認める@acknowledge it as true@それが事実と認める@0@v
+descend@降りる・下る@the elevator descends@エレベータが下る@0@v
+irritate@苛立たせる@be irritate by~@〜にイライラする@0@v
+pronounce@発音する@pronounce correctly@正確に発音する@0@v
+decorate@飾る@be decorated with ~@〜で飾られている@0@v
+chase@追う@chase the car@その車を追跡する@0@v
+prevail@広まっている@the bias prevails@偏見が広まっている@0@v
+sigh@ため息をつく@sigh deeply@深くため息をつく@0@v
+withdraw@引く・撤退する@withdraw from a fight@戦闘から撤退する@0@v
+detect@見つける@detect the cause@原因をつきとめる@0@v
+multiply@掛ける@multiply 3 by 4@3を4倍する@0@v
+spill@こぼす@spill juice@ジュースをこぼす@0@v
+shrink@縮む・ひるむ@the sweater shrank@セーターが縮んだ@0@v
+heal@治す・癒す@heal the wound@傷を治す@0@v
+stem@幹・由来する@stem from fear@恐れから生じる@0@v
+tap@たたく@tap my son's head@息子の頭をたたく@0@v
+annoy@いらだたせる@be annoyed by~@〜にイライラする@0@v
+bury@埋める@bury a dead person@死人を埋葬する@0@v
+cope@対処する@cope with a crisis@危機に対処する@0@v
+pour@注ぐ@pour a cup of tea@一杯のお茶を注ぐ@0@v
+dominate@支配する@male‐dominated@男性優位の@0@v
+confirm@確認する@confirm the theory@理論を証明する@0@v
+entertain@楽しませる@entertain a guest@客をもてなす@0@v
+defend@守る@defend a city@都市を守る@0@v
+forbid@禁止する@forbid him to do@彼が〜するのを禁じる@0@v
+broadcast@放送する@broadcast a drama@ドラマを放送する@0@v
+sacrifice@犠牲する@sacrifice my life@我が身を犠牲にする@0@v
+glance@チラッと見る@glance at my watch@腕時計をちらりと見る@0@v
+retain@保持する@retain a receipt@レシートをとっておく@0@v
+calculate@計算する@calculate the cost@コストを計算する@0@v
+sink@沈む@sinking ship@沈んでいく船@0@v
+rescue@救う@rescue a boby@赤ん坊を救う@0@v
+beg@乞う・頼む@beg him to do@彼に〜してと頼む@0@v
+generate@生み出す@generate electricity@電力を生み出す@0@v
+sustain@維持する@sustain life@命を維持する@0@v
+float@浮かぶ@float on water@水に浮かぶ@0@v
+chat@しゃべる@chat with friends@友達とおしゃべりする@0@v
+cooperate@協力する@cooperate with him@彼と協力する@0@v
+inherit@受け継ぐ@inherit genes@遺伝子を受け継ぐ@0@v
+seize@掴む@seize his arm@彼の腕をつかむ@0@v
+conquer@征服する@conquer the world@世界を征服する@0@v
+melt@溶ける@Ice melts at 0℃@氷は０℃で溶ける@0@v
+invade@侵攻する@invade Russia@ロシアに侵攻する@0@v
+scatter@ばらまく@scatter clothes@服を脱ぎ散らかす@0@v
+abolish@廃止する@abolish the system@制度を廃止する@0@v
+undergo@経験する@undergo a failure@失敗を経験する@0@v
+bend@曲げる@bend the wire@針金を曲げる@0@v
+assist@手伝う@assist him to study@彼の勉強を手伝う@0@v
+polish@磨く@polish the shoes@靴を磨く@0@v
+grab@掴む・捕まえる@grabbed the bag@カバンをひったくる@0@v
+confess@告白する@confess that I did it@私がやったと告白する@0@v
+fold@折りたたむ@with my arms folded@腕を組みながら@0@v
+twist@ねじる@twist my ankle@足首を捻挫する@0@v
+extract@抽出する@extract oil from seeds@種から油を抽出する@0@v
+bump@ぶつかる@bump into him@彼に偶然出会う@0@v
+sweep@掃く・一掃する@sweep a room clean@部屋を綺麗に掃く@0@v
+whisper@ささやく@whisper in his ear.@彼の耳元でささやく@0@v
+protest@抗議する@protest the regulation@規制に反対する@0@v
+review@批評する・検討@got good reviews@高評価を得る@0@v
+imitate@真似をする@imitate father's habit@父の癖を真似する@0@v
+conduct@行う・案内する@conduct a tour@旅行を実施する@0@v
+imply@意味する@it implies that ~@それは〜を意味する@0@v
+publish@出版する@publish a book@本を出版する@0@v
+set@置く・設定する@set the alarm for 7 am@アラームを７時に設定する@0@v
+brush@磨く・ブラシ@brush my teeth@歯を磨く@0@v
+burn@燃える・燃やす@Straw burns easily@わらは燃えやすい@0@v
+control@管理する・制御@out of control@手に負えなくなって@0@v
+expend@費やす@expend much time on ~@〜に多くの時間を費やす@0@v
+grind@砕く・磨く@grind coffee beans@コーヒー豆を挽く@0@v
+heat@熱・熱する@heat some milk@牛乳を温める@0@v
+hit@ぶつかる・打つ@hit on a good idea@良い考えが思いつく@0@v
+imagine@想像する@can't imagine@想像できない@0@v
+immigrate@移住する@immigrate to England@イギリスへ移住する@0@v
+enhance@増す・高める@enhance my reputation@自分の評判を高める@0@v
+separate@分離させる@separate A from B@AからBを分離させる@0@v
+spread@広げる@spread a folded blanket@畳んだ絨毯を広げる@0@v
+aim@狙う・目標@aim at the target@標的をねらう@0@v
+warn@警告する@warn you not to drink@飲酒するなと警告する@0@v
+rush@殺到・急ぐ@rush into the room@部屋へ急いで行く@0@v
+operate@操作する@operate the machine@機械を操作する@0@v
+puzzle@悩ませる・謎@be puzzled by ~@〜に頭を悩ませる@0@v
+occupy@占領する@occupie a lot of space@場の大部分を占める@0@v
+freeze@凍る・凍らせる@freeze to death@凍死する@0@v
+shift@移す・移動@	shift a table to living room@机を居間に移す@0@v
+approve@認める・賛成する@approve (of) their marriage@結婚を承認する@0@v
+amuse@楽しませる@be amused by his jokes@彼の冗談で笑う@0@v
+ruin@破滅させる@ruin his life@彼の人生を破滅させる@0@v
+accompany@同伴する・伴う@accompany my friends@友達に付き添う@0@v
+trace@跡・追跡する@find the trace@痕跡を見つける@0@v
+arise@生じる@accidents arise from ~@〜が原因で事故は起こる@0@v
+define@定義する@define A as B@AをBと定義する@0@v
+breathe@呼吸する@breathe deeply@深呼吸する@0@v
+purchase@購入・購入する@purchased the land@土地を購入する@0@v
+recall@思い出す@recall a promise@約束を思い出す@0@v
+wander@歩き回る@wander around ~@〜中を歩き回る@0@v
+convey@伝える・運ぶ@convey my feelings@私の気持ちを伝える@0@v
+declare@宣言する@declared independence@独立を宣言した@0@v
+proceed@続行する@proceeded to tell@続けて話をする@0@v
+consult@相談する@consult a teacher@先生に相談する@0@v
+inspire@鼓舞する@inspire him to try@挑戦せよと彼を鼓舞する@0@v
+qualify@資格を与える@be qualified to work@働く資格を得る@0@v
+starve@飢える@starve to death@飢え死にする@0@v
+constitute@占める@constitute 20% of GDP@GDPの20%を占める@0@v
+appoint@任命する@appointed a director@重役を任命する@0@v
+lean@もたれる@lean against ~@〜にもたれる@0@v
+undertake@引き受ける@undertake a task@仕事を引き受ける@0@v

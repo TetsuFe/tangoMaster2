@@ -1,0 +1,20 @@
+strip@一切れ・剥ぐ@a strip of paper @紙切れ@0@n
+client@依頼人・客@lawyer and client@弁護士と依頼人@0@n
+core@核・核心@core of problems@問題の核心@0@n
+frontier@未開の地・国境@frontier disputes@国境紛争@0@n
+compound@化合物@a compound eye@（昆虫の）複眼@0@n
+abuse@虐待・乱用@child abuse@児童虐待@0@n
+continent@大陸@Antarctic Continent@南極大陸@0@n
+insurance@保険@pay car insurance@車の保険料を払う@0@n
+site@場所・サイト@a construction site of ~@〜の建設用地@0@n
+aid@援助@finacialaidtoIraq@イラクへの財政的援助@0@n
+exception@例外@without exception@例外なしに@0@n
+wisdom@知恵・賢さ@have the wisdom@賢明である@0@n
+union@組織・団結@a labor union@労働組合@0@n
+document@文書・書類@sign documents@書類にサインする@0@n
+volume@量・容量・巻@a series of 10-volumes@全10巻のシリーズ@0@n
+ceremony@儀式・式@ar religious ceremony@宗教的儀式@0@n
+dispute@紛争・論争@settle a disputes@紛争を解決する@0@n
+landscape@風景・景色@a landscape painter@風景画家@0@n
+prospect@見通し・将来@future prospects@将来の見通し@0@n
+corporation@企業・自治体@a private corporation@私企業@0@n

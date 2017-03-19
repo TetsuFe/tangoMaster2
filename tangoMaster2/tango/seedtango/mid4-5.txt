@@ -1,0 +1,20 @@
+outstanding@目立った@an outstanding ability@傑出した能力@0@a
+elaborate@丁寧な@an elaborate plan@念入りな計画@0@a
+radical@急進的な@a radical politician@過激な政治家@0@a
+manual@体の・手動の@manual work@肉体労働@0@a
+frankly@素直に@speak frankly@率直に話す@0@av
+thoroughly@徹底的に@defeat thoroughly@徹底的に倒きのめす@0@av
+pronunciation@発音@good pronunciation@良い発音@0@n
+imitate@真似をする@imitate father's habit@父の癖を真似する@0@v
+intellectual@知的な・知能の@intellectual faculties@知能@0@a
+inevitably@必ず・必然的に@people inevitably die@誰もが必ず死ぬ@0@av
+keen@熱心な・鋭い@be keen on ~@〜に熱中している@0@a
+accuracy@正確さ・精度@lose accuracy@精度を低下させる@0@n
+translation@翻訳@machine translation@機械（による）翻訳@0@n
+journal@雑誌@read journal@雑誌を読む@0@n
+requirement@要求・条件@graduation requirements@卒業要件@0@n
+conduct@行う・案内する@conduct a tour@旅行を実施する@0@v
+view@見解・眺め@specialist's view@専門家の見解@0@n
+essentially@本質的には@essentially same@本質的には同じ@0@av
+permanently@永久に@permanently delete@永久に削除する@0@av
+novel@斬新な・小説@a novel idea@斬新な考え@0@a

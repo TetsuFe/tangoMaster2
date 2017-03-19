@@ -1,0 +1,20 @@
+frustrate@イライラさせる@be frustrated by~@〜にイライラする@0@v
+register@登録する@register the name@名前を登録する@0@v
+cast@投げる@cast a fishing line@釣り糸を投げる@0@v
+attribute@〜のせいにする@attribute the failure to ~@その失敗は〜のせいだ@0@v
+ban@禁止する@ban smoking@喫煙を禁止する@0@v
+resolve@解決する@resolve the problem@問題を解決する@0@v
+exhibit@示す・展示する@exhibit paintings@絵を展示する@0@v
+convert@変える@convert water into steam@水を水蒸気に変える@0@v
+assign@割り当てる@assign work to members@仕事を割り当てる@0@v
+nod@うなずく@nodded in agreement@頷いて同意する@0@v
+elect@選ぶ@be elected mayer@市長に選ばれる@0@v
+acknowledge@認める@acknowledge it as true@それが事実と認める@0@v
+drown@溺れている@drowning child@溺れている子供@0@a
+descend@降りる・下る@the elevator descends@エレベータが下る@0@v
+irritate@苛立たせる@be irritate by~@〜にイライラする@0@v
+pronounce@発音する@pronounce correctly@正確に発音する@0@v
+decorate@飾る@be decorated with ~@〜で飾られている@0@v
+chase@追う@chase the car@その車を追跡する@0@v
+prevail@広まっている@the bias prevails@偏見が広まっている@0@v
+sigh@ため息をつく@sigh deeply@深くため息をつく@0@v

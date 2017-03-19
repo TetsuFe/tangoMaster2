@@ -1,0 +1,20 @@
+phase@段階@enter next phase@次の段階に入る@0@n
+pioneer@先駆者@pioneer of IT@ITの先駆者@0@n
+trait@特徴・性質@national traits@国民性@0@n
+column@コラム・列@write a column@コラムを書く@0@n
+curriculum@教育課程@highschool curriculum@高校の教育課程@0@n
+geography@地理・地理学@geography of my town@私の町の地理@0@n
+ritual@儀式@a religious ritual@宗教的な儀式@0@n
+outcome@結果・成果@outcome of a race@レースの結果@0@n
+flavor@味・風味@flavor of cinnamon@シナモンの風味@0@n
+nursing@看護@nursing school@看護学校@0@n
+lane@レーン・車線@4-lane highway@4車線の高速道路@0@n
+gender@性別（文化的）@gender equality@男女平等@0@n
+nutrition@栄養@exercise and nutrition@運動と栄養@0@n
+web@蜘蛛の巣@spider's web@蜘蛛の巣@0@n
+emission@排出(量)@emissions of CO2@二酸化炭素の排出@0@n
+ape@類人猿@monkeys and apes@猿と類人猿@0@n
+rough@雑な@rough manners@不作法@0@a
+contemporary@現代の@contemporary art@現代美術@0@a
+accustomed@慣れている@be accustomed to ~@〜に慣れる@0@a
+steady@安定した@steady relationship@安定した関係@0@a

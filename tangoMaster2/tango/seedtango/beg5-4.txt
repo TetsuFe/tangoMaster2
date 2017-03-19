@@ -1,0 +1,20 @@
+struggle@もがく@struggle to overcome@乗り越えようともがく@0@v
+arrange@整える@arrange a party@パーティの準備をする@0@v
+employ@雇う@employ his as engineer@彼を技師として雇う@0@v
+display@示す・展示する@display the works@作品を展示する@0@v
+encounter@偶然出会う@encounter my aunt@叔母に偶然出会う@0@v
+exhaust@疲れ果てる@be exhausted by works@仕事で疲れ果てる@0@v
+adapt@適応する@adapt to the change@変化に適応する@0@v
+fascinate@魅力的な@a fascinating woman@魅力的な女性@0@a
+import@輸入する@import cars from U.S.@米国から車を輸入する@0@v
+amazing@驚異的な@an amazing discovery@驚くべき発見@0@a
+frighten@恐怖を与える@be frightened of a ghost@幽霊を恐れる@0@v
+recover@回復する@recover from illness@病気から回復する@0@v
+suspect@疑う@suspect he told a lie@彼が嘘をついたと疑う@0@v
+expose@さらす@expose me to the danger@危険に身をさらす@0@v
+perceive@気づく@perceive him entering@彼が入ったと気づく@0@v
+derive@得る@be derived from ~@〜に由来する@0@v
+commit@犯す・任せる@commit a crime@犯罪を犯す@0@v
+impose@課す・強いる@impose a tax on incomes@所得に税を課す@0@v
+restrict@制限する@restrict freedom of ~@〜の自由を制限する@0@v
+compose@構成する@be composed of ~@〜で構成される@0@v

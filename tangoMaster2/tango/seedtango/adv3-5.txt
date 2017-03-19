@@ -1,0 +1,20 @@
+adequacy@適切・妥当性@evaluate the adequacy of ~@〜の妥当性を評価する@0@n
+admittance@許可・入場許可@No admittance@立ち入り禁止@0@n
+affordable@手ごろな@This is an affordable price@これは手ごろな価格だ@0@a
+agreeable@快い・賛成して@agreeable weather@気持ちの良い天気@0@a
+conclusive@最終的な@a conclusive answer@最終的な答え@0@a
+constructive@建設的な@a constructive opinion@建設的な意見@0@a
+dedication@献身的姿勢@dedication to ~@〜への献身的姿勢@0@n
+detective@探偵・刑事@hire a private detective@私立探偵を雇う@0@n
+disability@障害・無能@physical disability@肉体的障害@0@n
+disable@身体障害にする@be disabled in the war@戦争で身体障害者になる@0@a
+documentary@事実を基にした@the documentary film@ドキュメンタリー映画@0@a
+dye@染める・染料@dye my hair brown@髪を茶色に染める@0@v
+engineering@工学@electrical engineering@電気工学@0@n
+fairy@妖精・お伽話の@a fairy tale@おとぎ話@0@a
+firmly@しっかりと@hold her hand firmly@しっかりと彼女の手を握る@0@av
+fountain@噴水・泉@chocolate fountain@チョコレートファウンテン@0@n
+guidance@案内・指導@under his guidance@彼の指導の下で@0@n
+hive@（ハチの）巣@honeybees make a hive@ミツバチが巣を作る@0@n
+hybrid@雑種の・混成の@a hybrid car@ハイブリッドカー@0@a
+grant@助成金・補助金@a grant for research@研究のための補助金@0@

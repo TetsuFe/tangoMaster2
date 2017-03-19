@@ -1,0 +1,20 @@
+recommend@勧める@recommend this book@この本を勧める@0@v
+experience@経験@learn by experiences@経験から学ぶ@0@n
+individual@個人・個人の@in individual cases@個々の場合に応じて@0@n
+influence@影響@have an influence on ~@〜に影響を与える@0@n
+neighbor@隣人@close neighbors@親しい隣人@0@n
+height@高さ・身長@What's your height?@あなたの身長は？@0@n
+purpose@目的@on purpose@わざと@0@n
+behavior@行動・振る舞い@polite behavior@礼儀正しい振る舞い@0@n
+environment@環境@protect the environment@環境を保護する@0@n
+serious@深刻な・真面目な@	serious damage@深刻な被害@0@a
+therefore@ゆえに@~, therefore, ~@〜で、ゆえに、〜だ@0@o
+expensive@高価な@expensive furniture@高級家具@0@a
+favorite@特に好きな@my favorite actor@私の好きな俳優@0@a
+necessarily@必ず@not necessarily ~@必ずしも〜とは限らない@0@av
+invite@招く・招待する@invite tragedies@悲劇を招く@0@v
+able@できる@I will be able to win@勝てるだろう@0@a
+however@しかし@However, ...@しかし、...@0@av
+hold@持つ・保持する@hold the door open@ドアを開けたままにする@0@v
+let@させる・許す@let her go to school@彼女を学校に行かせる@0@v
+appear@現れる・見える@he appeared in this city@彼はこの街に現れrた@0@v

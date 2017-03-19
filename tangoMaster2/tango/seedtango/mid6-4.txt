@@ -1,0 +1,20 @@
+convey@伝える・運ぶ@convey my feelings@私の気持ちを伝える@0@v
+declare@宣言する@declared independence@独立を宣言した@0@v
+range@範囲@a wide range of ~@広範囲の〜@0@n
+official@公式の・公の@an official record@公式記録@0@a
+appearance@外見・出席@judge by appearances@見かけで判断する@0@n
+spirit@精神・心@in the sprite@心の中で@0@n
+medium@手段・中間の@by the medium of ~@〜を手段として@0@n
+property@財産・特徴@lose my property@財産を失う@0@n
+security@安全・安全保障@national security@国家の安全保障@0@n
+volunteer@志願者@volunteer activities@ボランティア活動@0@n
+structure@構造@social structure@社会構造@0@n
+concept@概念・構想@the concept of dog@犬という概念@0@n
+wealth@富・財産@a man of great wealth@大金持ち@0@n
+phenomenon@現象@a natural phenomenon@自然現象@0@n
+survey@調査・調べる@conduct a survey@調査する@0@n
+crop@作物@grow some crops@作物を育てる@0@n
+substance@物質@a chemical substance@化学物質@0@n
+philosophy@哲学@study the philosophy@哲学を学ぶ@0@n
+conference@会議@hold a conference@会議を開催する@0@n
+cartoon@漫画・アニメ@my favorite cartoon@私の一番好きな漫画@0@n

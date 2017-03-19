@@ -1,0 +1,20 @@
+opportunity@機会@get an opportunity@機会を得る@0@n
+disease@病気・病@heart disease@心臓病@0@n
+habit@習慣・癖@a habit of doing@〜する習慣@0@n
+desire@願望・望み@a desire to be ~@〜になりたいという願望@0@n
+responsibility@責任@take responsibility for ~@〜の責任をとる@0@n
+task@仕事・作業@a difficult task@難しい仕事@0@n
+experiment@実験・実験する@make new experiment@新しい実験をする@0@n
+brain@脳・頭脳@brain death@脳死@0@n
+tradition@伝統・慣例@by tradition@伝統的に@0@n
+weight@重さ・体重@lift heavy weights@重いものを持ち上げる@0@n
+impression@印象@first impression@第一印象@0@n
+temperature@気温・温度@room temperature@部屋の気温@0@n
+stranger@他人・外来者@be a stranger to me@私の知らない人だ@0@n
+bottom@底@the bottom of a cup@カップの底@0@n
+status@地位・状態@raise my social status@社会的地位を上げる@0@n
+colleague@同僚@close colleagues@親しい同僚@0@n
+insect@虫・昆虫@catch an insect@虫を捕まえる@0@n
+common@共通の・普通の@a common goal@共通の目標@0@a
+likely@〜しそうだ@be likely to win@彼が勝つ可能性が高い@0@a
+particular@特定の@a particular person@特定の人@0@a

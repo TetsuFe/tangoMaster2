@@ -1,0 +1,20 @@
+surface@表面@the smooth surface@なめらかな表面@0@n
+factor@要因・原因@the main factor@主な要因@0@n
+policy@政策・方針@foreign policy@外交政策@0@n
+goods@もの・商品@household goods@家財道具@0@n
+creature@生き物・生物@creature in the sea@海洋生物@0@n
+labor@労働・労働者@physical labor@肉体労働@0@n
+citizen@市民・住民@a U.S. citizen@アメリカ市民@0@n
+career@経歴@a carrer as lawyer@弁護士としての経歴@0@n
+income@所得・収入@income and expenses@収入と支出@0@n
+origin@起源・原点@the origin of life@生命の起源@0@n
+planet@惑星@the moon is not a planet@月は惑星ではない@0@n
+construction@建設・建築物@under construction@建設中で@0@n
+lecture@講義・教訓@give a lecture on ~@〜に関する授業をする@0@n
+crisis@危機@a financial crisis@金融危機@0@n
+device@装置・機器@an electronic device@電子機器@0@n
+path@道・道路@the path to success@成功への道@0@n
+stream@流れ・小川@against the stream@流れに逆らって@0@n
+soil@土壌・土地@the rich soil@肥えた土壌@0@n
+debate@討論@a debate on war@戦争についての討論@0@n
+universe@宇宙@create the universe@宇宙を創造する@0@n

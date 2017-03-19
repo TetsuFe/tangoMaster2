@@ -1,0 +1,20 @@
+civilization@文明@an ancient civilization@古代文明@0@n
+scholar@学者・研究者@a great scholar@偉大な学者@0@n
+instruction@指示@follow instructions@指示に従う@0@n
+notion@概念・考え@a strange notion@妙な考え@0@n
+campaign@運動@a political campaign@政治運動・政治活動@0@n
+carbon@炭素@carbon dioxide@二酸化炭素@0@n
+legal@法的な・合法の@legal matters@法的な問題@0@a
+ancient@古代の@an ancient civilization@古代文明@0@a
+primitive@原始的な@primitive culture@原始的な文化@0@a
+weigh@重さがある@weigh 1 kilograms@１キロの重さがある@0@v
+substitute@〜で代用する@substitute pork for beef@牛の代わりに豚を使う@0@v
+specialize@専門とする@specialize in economics@経済学を専攻する@0@v
+astonish@驚かせる@astonished everybody@周囲を驚かせた@0@v
+confine@閉じ込める@confine to a room@部屋に閉じ込める@0@v
+sew@縫う@sew a dress@ドレスを縫う@0@v
+resort@訴える・行楽地@resort to violence@暴力に訴える@0@v
+equip@装備する@equip my room with ~@〜を部屋に備え付ける@0@v
+pardon@許し@ask pardon for ~@〜に対する許しを乞う@0@n
+startle@驚かせる@startling news@びっくりする知らせ@0@v
+compel@強いる@compel him to do@彼に〜するよう強いる@0@v

@@ -1,0 +1,20 @@
+neither@〜も〜もない@Neither he nor you@彼でもあなたでもない@0@av
+abroad@海外へ@go abroad to study@勉強のために海外へ行く@0@av
+during@〜の間@during summer vacation@夏休みの間@0@o
+whether@〜かどうか@whether he comes@彼が来るかどうか@0@o
+nor@〜も〜もない@have neither A nor B@AもBもない@0@av
+unless@〜しない限り@unless it rains@雨が降らない限り@0@o
+ought@〜すべきだ@ought not to fight@戦うべきではない@0@o
+follow@従う・追う@follow the guide@ガイドについていく@0@v
+consider@考える@consider why he did@なぜ彼が〜したか考える@0@v
+increase@増加する@increase by 10 percent@１０％増加する@0@v
+expect@期待する@expect you to come@君が来ると期待する@0@v
+decide@決める@decide to retire@退職すると決める@0@v
+include@含む@include some elements@いくつかの要素を含む@0@v
+reach@届く・着く@reach the station@駅に到着する@0@v
+allow@許す@allow him to go out@彼に外出を許可する@0@v
+suggest@提案する@suggest my plan@私の企画を提案する@0@v
+worry@心配する@worry about her@彼女を心配する@0@v
+depend@頼る@depend on my parents@家族に依存している@0@v
+share@共有する@share water with her@水を彼女と分け合う@0@v
+support@手伝う@support the candidate@その候補者を支持する@0@v

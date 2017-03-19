@@ -1,0 +1,20 @@
+battle@戦い@avoid the battle@戦いを避ける@0@n
+pupil@生徒・児童@teach math to pupils@生徒たちに数学を教える@0@n
+code@規則・記号@a dress code@服装の規定@0@n
+mystery@謎@remains a mystery@〜には謎が残っている@0@n
+label@ラベル@put a label on a box@箱にラベルを貼る@0@n
+root@根・根源@the root of all evil@諸悪の根源@0@n
+joy@喜び@be filled with joy@喜びでいっぱいになる@0@n
+shore@海岸・岸@walk along the shore@海岸に沿って歩く@0@n
+poet@詩人@a famous poet@有名な詩人@0@n
+fellow@仲間・やつ@a stupid fellow@ばかなやつ@0@n
+central@中心の@the central part of ~@〜の中心部@0@a
+false@偽の・間違った@false tears@偽りの涙@0@a
+royal@王の@the royal family@王室@0@a
+gentle@優しい@be gentle with women@女性に対して優しい@0@a
+lazy@怠惰な・だるい@Don't be lazy@怠けるな！@0@a
+smooth@滑らかな@smooth skin@すべすべした肌@0@a
+simply@単に・全く@simply like it@単にそれが好きなだけだ@0@av
+forth@前に@swing back and forth@前後に揺れる@0@av
+unlike@異なって@he is diligent unlike me@私と異なり彼は勤勉だ@0@o
+whereas@一方で@~, whereas, ~@〜な一方、〜である@0@o

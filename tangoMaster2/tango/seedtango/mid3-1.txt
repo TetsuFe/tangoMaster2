@@ -1,0 +1,20 @@
+polish@磨く@polish the shoes@靴を磨く@0@v
+grab@掴む・捕まえる@grabbed the bag@カバンをひったくる@0@v
+confess@告白する@confess that I did it@私がやったと告白する@0@v
+fold@折りたたむ@with my arms folded@腕を組みながら@0@v
+twist@ねじる@twist my ankle@足首を捻挫する@0@v
+extract@抽出する@extract oil from seeds@種から油を抽出する@0@v
+bump@ぶつかる@bump into him@彼に偶然出会う@0@v
+sweep@掃く・一掃する@sweep a room clean@部屋を綺麗に掃く@0@v
+whisper@ささやく@whisper in his ear.@彼の耳元でささやく@0@v
+stock@株式・在庫品@keep ~ in stock@〜を在庫として残す@0@n
+rank@地位・階級@people of high rank@高い地位の人@0@n
+democracy@民主主義@liberal democracy@自由民主主義@0@n
+emergency@緊急事態@in an emergency@緊急事には@0@n
+protest@抗議する@protest the regulation@規制に反対する@0@v
+track@足跡・道@tire tracks@タイヤの跡@0@n
+routine@日常の・日課@routine business@いつもの仕事@0@n
+row@行列・漕ぐ@a row of tree@並木@0@n
+wheel@車輪・旋回@the front(rear) wheel@前（後）輪@0@n
+dawn@夜明け・始まり@dawn of civilization@文明の始まり@0@n
+welfare@福祉・幸福@social welfare@社会福祉@0@n

@@ -1,0 +1,20 @@
+upper@上の@the upper class@上流階級@0@a
+pale@真っ青な@You look pale@顔が真っ青だね@0@a
+personal@個人的な@my personal opinion@私の個人的意見@0@a
+indeed@実に・本当に@be indeed interesting@実に面白い@0@av
+highly@非常に・高く@be highly pleased with ~@〜がとても嬉しい@0@av
+naturally@当然・常識的に@it is naturally a joke@それは当然冗談だ@0@av
+badly@ひどく@he was badly injured@彼はひどい怪我をした@0@av
+afterwards@その後@afterwards he came@その後彼は現れた@0@av
+downtown@都市部へ@go downtown to shop@買い物に都市部へ行く@0@av
+besides@その上・除いで@Besides me, he bought it@私と、彼もそれを買った@0@o
+offer@申し出る@offer to lend you ~@君に〜を貸そう@0@v
+realize@知る・達成する@realize the goal@目標を達成する@0@v
+demand@要求する・需要@demand the money@金を要求する@0@v
+encourage@激励する@encourage her to study@彼女に勉強を勧める@0@v
+gain@得る@gain self confidence@自信を得る@0@v
+apply@適用する@apply the law to this case@この件に法を適用する@0@v
+seek@探し求める@seek for the solution@解決策を探し求める@0@v
+claim@主張する@claim that ~@〜だと主張する．@0@v
+draw@書く、引く@draw a picture@絵を描く@0@v
+approach@近づく・方法@approach the president@社長に接近する@0@v

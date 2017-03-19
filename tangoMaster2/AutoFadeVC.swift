@@ -35,7 +35,7 @@ class AutoFadeVC: UIViewController {
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
         if appDelegate.modeTag == 0{
             fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt")
+            tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             
             print("tokui")
         }else if appDelegate.modeTag == 1{
@@ -267,7 +267,7 @@ class AutoFadeVC: UIViewController {
         
         if appDelegate.modeTag == 0{
             fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt")
+            tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             for r in 0..<tango.count/6{
                 let hash = getHashNum(tango[6*r])
                 list[hash] = addListNIR(list: list,eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5])

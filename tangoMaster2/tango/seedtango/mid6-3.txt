@@ -1,0 +1,20 @@
+spread@広げる@spread a folded blanket@畳んだ絨毯を広げる@0@v
+aim@狙う・目標@aim at the target@標的をねらう@0@v
+warn@警告する@warn you not to drink@飲酒するなと警告する@0@v
+rush@殺到・急ぐ@rush into the room@部屋へ急いで行く@0@v
+operate@操作する@operate the machine@機械を操作する@0@v
+puzzle@悩ませる・謎@be puzzled by ~@〜に頭を悩ませる@0@v
+occupy@占領する@occupie a lot of space@場の大部分を占める@0@v
+freeze@凍る・凍らせる@freeze to death@凍死する@0@v
+shift@移す・移動@	shift a table to living room@机を居間に移す@0@v
+approve@認める・賛成する@approve (of) their marriage@結婚を承認する@0@v
+amuse@楽しませる@be amused by his jokes@彼の冗談で笑う@0@v
+ruin@破滅させる@ruin his life@彼の人生を破滅させる@0@v
+accompany@同伴する・伴う@accompany my friends@友達に付き添う@0@v
+trace@跡・追跡する@find the trace@痕跡を見つける@0@v
+arise@生じる@accidents arise from ~@〜が原因で事故は起こる@0@v
+define@定義する@define A as B@AをBと定義する@0@v
+breathe@呼吸する@breathe deeply@深呼吸する@0@v
+purchase@購入・購入する@purchased the land@土地を購入する@0@v
+recall@思い出す@recall a promise@約束を思い出す@0@v
+wander@歩き回る@wander around ~@〜中を歩き回る@0@v

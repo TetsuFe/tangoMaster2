@@ -1,0 +1,20 @@
+forever@永遠に@Nobody lives forever.@永遠に生きる人はいない@0@av
+funny@面白い@you are funny@あなたは面白い人だ@0@a
+wear@着る・使い古す@the shoes are worn out@その靴はぼろぼろだ@0@v
+happen@起こる@the accidents happened@その事故は起こった@0@v
+hobby@趣味@my hobby is tennis@私の趣味はテニスです@0@n
+illness@病気@recover from the illness@病気から回復する@0@n
+seem@〜のようだ@he seems to know ~@彼は〜を知っていそうだ@0@v
+discover@発見する@discover the new truth@新事実を発見する@0@v
+act@行動する@act as a guide@ガイドを務める@0@v
+fight@戦う・戦い@fight with my boyfriend@彼氏と口論する@0@v
+pick@選び取る@pick up the can@缶を拾い上げる@0@v
+promise@約束・約束する@promise to help you@君を助けると約束する@0@v
+push@押す@push the button@そのボタンを押す@0@v
+hide@隠す・隠れる@hide my true feeling@本当の気持ちを隠す@0@v
+climb@登る@climb a mountain@山に登る@0@v
+relax@くつろぐ@the song relaxes me@歌は私を落ち着かせる@0@v
+recycle@再生利用@recycled paper@再生紙@0@v
+roll@転がる・進む@the ball roll down ~@球が〜で転がり落ちる@0@v
+lift@持ち上げる@lift a heavy baggage@重い荷物を持ち上げる@0@v
+hire@雇う@hire an interpreter@通訳を雇う@0@v

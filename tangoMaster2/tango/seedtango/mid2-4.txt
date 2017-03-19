@@ -1,0 +1,20 @@
+withdraw@引く・撤退する@withdraw from a fight@戦闘から撤退する@0@v
+detect@見つける@detect the cause@原因をつきとめる@0@v
+multiply@掛ける@multiply 3 by 4@3を4倍する@0@v
+spill@こぼす@spill juice@ジュースをこぼす@0@v
+shrink@縮む・ひるむ@the sweater shrank@セーターが縮んだ@0@v
+heal@治す・癒す@heal the wound@傷を治す@0@v
+stem@幹・由来する@stem from fear@恐れから生じる@0@v
+tap@たたく@tap my son's head@息子の頭をたたく@0@v
+annoy@いらだたせる@be annoyed by~@〜にイライラする@0@v
+bury@埋める@bury a dead person@死人を埋葬する@0@v
+cope@対処する@cope with a crisis@危機に対処する@0@v
+pour@注ぐ@pour a cup of tea@一杯のお茶を注ぐ@0@v
+dominate@支配する@male‐dominated@男性優位の@0@v
+confirm@確認する@confirm the theory@理論を証明する@0@v
+entertain@楽しませる@entertain a guest@客をもてなす@0@v
+defend@守る@defend a city@都市を守る@0@v
+forbid@禁止する@forbid him to do@彼が〜するのを禁じる@0@v
+broadcast@放送する@broadcast a drama@ドラマを放送する@0@v
+sacrifice@犠牲する@sacrifice my life@我が身を犠牲にする@0@v
+glance@チラッと見る@glance at my watch@腕時計をちらりと見る@0@v

@@ -30,7 +30,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     }
     
     func updateCell(){
-        let tango = readFileGetWordArray(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber], extent: "txt")
+        let tango = readFileGetWordArray(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber], extent: "txt",inDirectory: "tango/seedtango")
         listForTable = Array<NewImageReibun>()
         cell = Array<ListCell>()
         

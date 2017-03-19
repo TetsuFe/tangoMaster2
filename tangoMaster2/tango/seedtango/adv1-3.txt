@@ -1,0 +1,20 @@
+companion@仲間@a companion in arms@戦友@0@n
+affection@愛情@a deep affection@深い愛情@0@n
+tension@緊張・張力@relieve tension@緊張を和らげる@0@n
+scheme@計画・組織@perfect scheme@完璧な計画@0@n
+insult@侮辱する・侮辱@a deliberate insult@意図的な侮辱@0@n
+harvest@収穫@an abundant harvest@豊かな収穫@0@n
+editor@編集・編集長@an editor of magazine@雑誌の編集者@0@n
+crew@乗組員@crews of  a ship@船の乗組員たち@0@n
+consent@同意・同意する@without my consent@私の同意なしに@0@n
+component@構成要素@components of body@体の構成要素@0@n
+wheat@小麦@plant wheat@小麦を植える@0@n
+usage@用法・使い方@common usage@一般的用法@0@n
+fatigue@疲労@mental fatigue@精神的疲労@0@n
+portion@一部・分け前@a portion of blame@責任の一端@0@n
+organism@有機体・生物@microscopic organism@微生物@0@n
+myth@神話@Greek myths@ギリシャ神話@0@n
+funeral@葬式@attend a funeral@葬式に出席する@0@n
+congress@議会@a member of Congress@国会議員@0@n
+estate@土地・財産@a real estate@不動産@0@n
+strategy@戦略@military strategy@イギリスの軍事戦略@0@n
