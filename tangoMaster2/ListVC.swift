@@ -30,7 +30,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     }
     
     func updateCell(){
-        let tango = readFileGetWordArray(testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber], extent: "txt")
+        let tango = readFileGetWordArray(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber], extent: "txt")
         listForTable = Array<NewImageReibun>()
         cell = Array<ListCell>()
         
@@ -38,7 +38,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
             listForTable.append(NewImageReibun(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5]))
         }
         //苦手ラベルをつけるために苦手を参照
-        let nigateArray:Array<String> = getfile(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber])
+        let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber])
         //苦手配列の英語と同じ英語に苦手ラベルづけ
         for r in 0..<nigateArray.count/6{
             if nigateArray[6*r+4] == "1"{
@@ -65,7 +65,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
                 updateCell()
                 imageTableView.reloadData()
             }else if appDelegate.chapterNumber == 0{
-                appDelegate.chapterNumber = testFileNamesArray[appDelegate.problemCategory].count-1
+                appDelegate.chapterNumber = fileNames[appDelegate.problemCategory].count-1
                 updateCell()
                 imageTableView.reloadData()
             }
@@ -74,7 +74,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
             if(appDelegate.chapterNumber != 0){
                 //これはよくない。苦手があるchapterの数を調べた方がいい（newChapterで代用できないか？
                 //意味は一応同じ。一つ前（先）のchpaterに苦手がなければ進まない
-                if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
+                if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
                     appDelegate.chapterNumber -= 1
                     updateCell()
                     imageTableView.reloadData()
@@ -86,7 +86,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     @IBAction func nextChapButton(_ sender: Any) {
         if(appDelegate.modeTag == 0){
-            if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1){
+            if(appDelegate.chapterNumber < fileNames[appDelegate.problemCategory].count-1){
                 appDelegate.chapterNumber += 1
                 updateCell()
                 imageTableView.reloadData()
@@ -97,8 +97,8 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
             }
         }else if(appDelegate.modeTag == 1){
             //次のchapterを調べるので、次があることを確認する
-            if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
-                if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
+            if(appDelegate.chapterNumber < nigateFileNames[appDelegate.problemCategory].count-1){
+                if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
                     appDelegate.chapterNumber += 1
                     updateCell()
                     imageTableView.reloadData()

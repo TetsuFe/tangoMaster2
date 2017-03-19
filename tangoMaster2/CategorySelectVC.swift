@@ -33,7 +33,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     
     var is_category_top:Bool = true
     
-    let fileNames = [beginnerFileNames,midFileNames]
     var fileNameCells = Array<Array<CategorySelectCell>>()
     var chapterNameCells = Array<Array<CategorySelectCell>>()
     
@@ -60,13 +59,13 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         //greenColor = newButton.layer.backgroundColor
         
         for category in 0..<chapterNames.count{
-            newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: testFileNamesArray[category].count))
+            newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: fileNames[category].count))
         }
         
         //appDelegate.chapterNumber = newChapterNumber
         
         //各chapterの苦手単語数を取得
-        for fileName in testNigateFileNamesArray[appDelegate.problemCategory]{
+        for fileName in nigateFileNames[appDelegate.problemCategory]{
             nigateTangoVolumeArray.append(getNigateTangoVolume(fileName: fileName))
         }
         print(appDelegate.chapterNumber)

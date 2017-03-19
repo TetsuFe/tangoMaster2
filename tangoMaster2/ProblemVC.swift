@@ -134,7 +134,7 @@ class ProblemVC: UIViewController {
         var fileName = String()
         var tango = Array<String>()
         if appDelegate.modeTag == 0{
-            fileName = testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
             tango = readFileGetWordArray(fileName, extent: "txt")
             for r in 0..<tango.count/6{
                 sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber)))
@@ -142,7 +142,7 @@ class ProblemVC: UIViewController {
             //print("tokui")
         //単一の苦手節に対してのProblem
         }else if appDelegate.modeTag == 1{
-            fileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
             tango = getfile(fileName:fileName)
             for r in 0..<tango.count/6{
                 sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber)))
@@ -154,7 +154,7 @@ class ProblemVC: UIViewController {
         //苦手chpaterの全範囲のProblem
         }else if appDelegate.modeTag == 2{
             for i in 0..<2{
-                fileName = testNigateFileNamesArray[appDelegate.problemCategory
+                fileName = nigateFileNames[appDelegate.problemCategory
                     ][i]
                 let tempTango = getfile(fileName:fileName)
                 for j in tempTango{

@@ -41,7 +41,7 @@ class ListCell:UITableViewCell{
     @IBAction func buttonTapped(_ sender: AnyObject) {
         
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let preserveFileName = testNigateFileNamesArray[appDelegate.problemCategory][Int(self.chapterNumber)!]
+        let preserveFileName = nigateFileNames[appDelegate.problemCategory][Int(self.chapterNumber)!]
         checkButton.isEnabled = false //login_btnはUIButtonです
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {

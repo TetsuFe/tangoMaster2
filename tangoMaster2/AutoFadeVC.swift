@@ -34,18 +34,18 @@ class AutoFadeVC: UIViewController {
         //let chapterNumber = appDelegate.chapterNumber
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
         if appDelegate.modeTag == 0{
-            fileName = testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
             tango = readFileGetWordArray(fileName, extent: "txt")
             
             print("tokui")
         }else if appDelegate.modeTag == 1{
-            fileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
             tango = getfile(fileName:fileName)
             print("nigate")
         } //苦手chpaterの全範囲のProblem
         else if appDelegate.modeTag == 2{
             for i in 0..<2{
-                fileName = testNigateFileNamesArray[appDelegate.problemCategory
+                fileName = nigateFileNames[appDelegate.problemCategory
                     ][i]
                 let tempTango = getfile(fileName:fileName)
                 for j in tempTango{
@@ -205,13 +205,13 @@ class AutoFadeVC: UIViewController {
                     appDelegate.chapterNumber -= 1
                     changeFile()
                 }else if appDelegate.chapterNumber == 0{
-                    appDelegate.chapterNumber = testFileNamesArray[appDelegate.problemCategory].count-1
+                    appDelegate.chapterNumber = fileNames[appDelegate.problemCategory].count-1
                     changeFile()
                 }
                 
             }else if(appDelegate.modeTag == 1){
                 if(appDelegate.chapterNumber != 0){
-                    if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
+                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
                         appDelegate.chapterNumber -= 1
                         changeFile()
                     }
@@ -229,7 +229,7 @@ class AutoFadeVC: UIViewController {
         //ボタンをタップした時に実行するメソッドを指定
         if(appDelegate.modeTag != 2){
             if(appDelegate.modeTag == 0){
-                if(appDelegate.chapterNumber < testFileNamesArray[appDelegate.problemCategory].count-1){
+                if(appDelegate.chapterNumber < fileNames[appDelegate.problemCategory].count-1){
                     appDelegate.chapterNumber += 1
                     changeFile()
                 }else{
@@ -238,8 +238,8 @@ class AutoFadeVC: UIViewController {
                 }
             }else if(appDelegate.modeTag == 1){
                 //次のchapterを調べるので、次があることを確認する
-                if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
-                    if getNigateTangoVolume(fileName: testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
+                if(appDelegate.chapterNumber < nigateFileNames[appDelegate.problemCategory].count-1){
+                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
                         appDelegate.chapterNumber += 1
                         changeFile()
                     }
@@ -266,7 +266,7 @@ class AutoFadeVC: UIViewController {
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
         
         if appDelegate.modeTag == 0{
-            fileName = testFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
             tango = readFileGetWordArray(fileName, extent: "txt")
             for r in 0..<tango.count/6{
                 let hash = getHashNum(tango[6*r])
@@ -275,7 +275,7 @@ class AutoFadeVC: UIViewController {
             print("tokui")
         }else if appDelegate.modeTag == 1{
             
-            fileName = testNigateFileNamesArray[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
             tango = getfile(fileName:fileName)
             for r in 0..<tango.count/6{
                 //苦手だけを代入

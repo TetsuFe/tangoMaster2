@@ -1262,7 +1262,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Kj-PG-qkF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sk-b4-pQP">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sk-b4-pQP">
                                         <rect key="frame" x="48" y="36" width="19" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4sk-b4-pQP" secondAttribute="height" multiplier="1:1" id="XfC-Qp-xeo"/>
@@ -1283,7 +1283,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byj-qF-fiO">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byj-qF-fiO">
                                         <rect key="frame" x="253" y="36" width="19" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="byj-qF-fiO" secondAttribute="height" multiplier="1:1" id="K95-ZD-Kro"/>

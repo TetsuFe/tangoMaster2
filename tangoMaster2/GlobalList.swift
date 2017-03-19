@@ -48,8 +48,8 @@ let fileVolumes:Array<Int> = [45,30,15] //900/20, 600/20, 300/20, 1000/20
 
 //テストは2*2で行う
 //最終的には〇〇fileNamesを使う
-//let testFileNamesArray = [["tangoTest0","tangoTest1"],["tangoTest2","tangoTest3"]]
-//let testNigateFileNamesArray =  [["nbeg1-1","nbeg1-2"],["nigateTest2","nigateTest3"]]
+//let fileNames = [["tangoTest0","tangoTest1"],["tangoTest2","tangoTest3"]]
+//let nigateFileNames =  [["nbeg1-1","nbeg1-2"],["nigateTest2","nigateTest3"]]
 
 let sectionList:Array<String> = ["大学受験初級900","大学受験中級600","大学受験上級300"]
 
@@ -57,12 +57,14 @@ let sectionList:Array<String> = ["大学受験初級900","大学受験中級600"
 let beginnerFileNames = ["beg1-1", "beg1-2", "beg1-3", "beg1-4", "beg1-5", "beg2-1", "beg2-2", "beg2-3", "beg2-4", "beg2-5", "beg3-1", "beg3-2", "beg3-3", "beg3-4", "beg3-5", "beg4-1", "beg4-2", "beg4-3", "beg4-4", "beg4-5", "beg5-1", "beg5-2", "beg5-3", "beg5-4", "beg5-5", "beg6-1", "beg6-2", "beg6-3", "beg6-4", "beg6-5", "beg7-1", "beg7-2", "beg7-3", "beg7-4", "beg7-5", "beg8-1", "beg8-2", "beg8-3", "beg8-4", "beg8-5", "beg9-1", "beg9-2", "beg9-3", "beg9-4", "beg9-5"]
 let midFileNames = ["mid1-1", "mid1-2", "mid1-3", "mid1-4", "mid1-5", "mid2-1", "mid2-2", "mid2-3", "mid2-4", "mid2-5", "mid3-1", "mid3-2", "mid3-3", "mid3-4", "mid3-5", "mid4-1", "mid4-2", "mid4-3", "mid4-4", "mid4-5", "mid5-1", "mid5-2", "mid5-3", "mid5-4", "mid5-5", "mid6-1", "mid6-2", "mid6-3", "mid6-4", "mid6-5"]
 let advancedFileName = ["adv1-1", "adv1-2", "adv1-3", "adv1-4", "adv1-5", "adv2-1", "adv2-2", "adv2-3", "adv2-4", "adv2-5", "adv3-1", "adv3-2", "adv3-3", "adv3-4", "adv3-5"]
-let testFileNamesArray:Array<Array<String>> = [beginnerFileNames,midFileNames,advancedFileName]
+let fileNames:Array<Array<String>> = [beginnerFileNames,midFileNames,advancedFileName]
+
 
 let nbeginnerFileNames = ["nbeg1-1", "nbeg1-2", "nbeg1-3", "nbeg1-4", "nbeg1-5", "nbeg2-1", "nbeg2-2", "nbeg2-3", "nbeg2-4", "nbeg2-5", "nbeg3-1", "nbeg3-2", "nbeg3-3", "nbeg3-4", "nbeg3-5", "nbeg4-1", "nbeg4-2", "nbeg4-3", "nbeg4-4", "nbeg4-5", "nbeg5-1", "nbeg5-2", "nbeg5-3", "nbeg5-4", "nbeg5-5", "nbeg6-1", "nbeg6-2", "nbeg6-3", "nbeg6-4", "nbeg6-5", "nbeg7-1", "nbeg7-2", "nbeg7-3", "nbeg7-4", "nbeg7-5", "nbeg8-1", "nbeg8-2", "nbeg8-3", "nbeg8-4", "nbeg8-5", "nbeg9-1", "nbeg9-2", "nbeg9-3", "nbeg9-4", "nbeg9-5"]
 let nmidFileNames = ["nmid1-1", "nmid1-2", "nmid1-3", "nmid1-4", "nmid1-5", "nmid2-1", "nmid2-2", "nmid2-3", "nmid2-4", "nmid2-5", "nmid3-1", "nmid3-2", "nmid3-3", "nmid3-4", "nmid3-5", "nmid4-1", "nmid4-2", "nmid4-3", "nmid4-4", "nmid4-5", "nmid5-1", "nmid5-2", "nmid5-3", "nmid5-4", "nmid5-5", "nmid6-1", "nmid6-2", "nmid6-3", "nmid6-4", "nmid6-5"]
 let nadvancedFileName = ["nadv1-1", "nadv1-2", "nadv1-3", "nadv1-4", "nadv1-5", "nadv2-1", "nadv2-2", "nadv2-3", "nadv2-4", "nadv2-5", "nadv3-1", "nadv3-2", "nadv3-3", "nadv3-4", "nadv3-5"]
-let testNigateFileNamesArray:Array<Array<String>> =  [nbeginnerFileNames,nmidFileNames,nadvancedFileName]
+let nigateFileNames:Array<Array<String>> =  [nbeginnerFileNames,nmidFileNames,nadvancedFileName]
+
 
 let beginnerChapterNames = ["chapter1","chapter2","chapter3","chapter4","chapter5","chapter6","chapter7","chapter8","chapter9"]
 let midChapterNames = ["chapter1","chapter2","chapter3","chapter4","chapter5","chapter6"]
