@@ -24,7 +24,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     override var shouldAutorotate : Bool{
         return true
     }
-
     
     @IBOutlet weak var begButton: UIButton!
     @IBOutlet weak var midButton: UIButton!
@@ -34,7 +33,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     
     var is_category_top:Bool = true
     
-    let fileNames = [beginnerFileNames,intermidFileNames]
+    let fileNames = [beginnerFileNames,midFileNames]
     var fileNameCells = Array<Array<CategorySelectCell>>()
     var chapterNameCells = Array<Array<CategorySelectCell>>()
     
@@ -61,7 +60,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         //greenColor = newButton.layer.backgroundColor
         
         for category in 0..<chapterNames.count{
-            newChapterNumbers.append(getNewChapter(fileName: checkFileNamesArray[category], chapterVolume: testFileNamesArray[category].count))
+            newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: testFileNamesArray[category].count))
         }
         
         //appDelegate.chapterNumber = newChapterNumber
@@ -83,7 +82,6 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
          normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
          normalCells[i].setCell(chapterNames[appDelegate.problemCategory][i])
          }
-         
          */
         var countOfCell = 0
         for j in 0..<chapterNames.count{
@@ -160,7 +158,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 if appDelegate.sceneTag == 3{
                     return 1
                 }else{
-                    return fileNames[appDelegate.problemCategory].count/2
+                    return chapterNames[appDelegate.problemCategory].count
                 }
             }else{
                 return 0
@@ -259,7 +257,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             }else if appDelegate.sceneTag == 1{
                 if indexPath.row <= (newChapterNumbers[appDelegate.problemCategory]+1)/5{
                     appDelegate.chapterNumber = indexPath.row
-                    for i in 0..<fileNames[appDelegate.problemCategory].count{
+                    for i in 0..<chapterNames[appDelegate.problemCategory].count{
                         normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
                         normalCells[i].setCell(fileNames[appDelegate.problemCategory][i])
                     }
@@ -268,7 +266,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 }
             }else{
                 appDelegate.chapterNumber = indexPath.row
-                for i in 0..<fileNames[appDelegate.problemCategory].count{
+                for i in 0..<chapterNames[appDelegate.problemCategory].count{
                     normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
                     normalCells[i].setCell(fileNames[appDelegate.problemCategory][i])
                 }
@@ -279,12 +277,12 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             if appDelegate.sceneTag == 1{
                 //問題の場合のみ、クリアしていない単語を解けないようにする
                 if indexPath.row <= newChapterNumbers[appDelegate.problemCategory]{
-                    appDelegate.sectionNumber = indexPath.row
+                    appDelegate.setsuNumber = indexPath.row
                     goScene()
                     //categorySelectTable.reloadData()
                 }
             }else{
-                appDelegate.sectionNumber = indexPath.row
+                appDelegate.setsuNumber = indexPath.row
                 goScene()
             }
         }

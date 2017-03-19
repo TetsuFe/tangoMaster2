@@ -29,7 +29,7 @@ class CardVC: UIViewController {
         super.viewDidAppear(true)
         
         
-        newChapterNumber = getNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
+        newChapterNumber = getNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
 
         var fileName = String()
        
@@ -204,11 +204,14 @@ class CardVC: UIViewController {
         leftSwipeButton.removeTarget(self, action: #selector(goNextAndAddBehind), for: .touchUpInside)
         leftSwipeButton.addTarget(self, action: #selector(retry),for: .touchUpInside)
         leftSwipeButton.isEnabled = true
+        leftSwipeButton.layer.borderWidth = 1.0
         
         rightSwipeButton.title = "次のchapterへ"
         rightSwipeButton.removeTarget(self, action: #selector(goNextCard), for: .touchUpInside)
         rightSwipeButton.addTarget(self, action: #selector(goNextChapter), for: .touchUpInside)
         rightSwipeButton.isEnabled = true
+        rightSwipeButton.layer.borderWidth = 1.0
+
         
         goProblemButton.removeTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
         goProblemButton.addTarget(self, action: #selector(goProblem), for: .touchUpInside)
@@ -235,6 +238,7 @@ class CardVC: UIViewController {
          */
         
         //次のchapterを調べる。
+        //次のchapterがあればスワイプを有効に
         if(appDelegate.modeTag == 0){
             if appDelegate.chapterNumber == testFileNamesArray[appDelegate.problemCategory].count-1{
                 rightSwipeButton.isEnabled = false
@@ -243,8 +247,8 @@ class CardVC: UIViewController {
         }
             
         else if appDelegate.modeTag == 1{
-            rightSwipeButton.isEnabled = false
-            rightSwipeButton.backgroundColor = UIColor.clear
+            //rightSwipeButton.isEnabled = false
+            //rightSwipeButton.backgroundColor = UIColor.clear
         }else if appDelegate.modeTag == 2{
             
         }

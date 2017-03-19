@@ -18,7 +18,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var problemVolume:Int = 20
     //var problemStartPoint:Int = 0
     var problemCategory:Int = 0
-    var sectionNumber:Int = 0
+    var setsuNumber:Int = 0
     var sceneTag:Int = 0
     var modeTag:Int = 0
     var cardMoveSetting:Bool = true

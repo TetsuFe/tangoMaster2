@@ -39,28 +39,22 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         
         var graphs = Array<TangoProgressGraph>()
         
-        //let ratios = [0.8,0.6,0.2,1]
+
         var newChapterNumbers = getNewChapterArray()
-        //現在・上級を作っていないのでその分を追加
-        while(newChapterNumbers.count < 4){
-            newChapterNumbers.append(0)
-        }
+
         var ratios = Array<Double>()
-        for i in 0..<chapterVolumes.count {
-            if(i == 0){
-                newChapterNumbers[i] = 50
-                ratios.append(50.0/Double(chapterVolumes[i]))
-            }
-            else if(i > 0 && i < 3){
-                ratios.append(Double(newChapterNumbers[i]) / Double(chapterVolumes[i]))
-            }
+
+        //+1しているのは、合計の分
+        for i in 0..<sectionList.count+1{
+            if(i < 3){
+                ratios.append(Double(newChapterNumbers[i]) / Double(fileVolumes[i]))
                 //3番目は3種類の合計
-            else{
+            }else{
                 let sumchapnum = Double(newChapterNumbers.reduce(0,{$0+$1}))
                 print(sumchapnum)
-                let sumchapvolume = chapterVolumes.reduce(0,{$0+$1})
+                let sumchapvolume = fileVolumes.reduce(0,{$0+$1})
                 print(sumchapvolume)
-                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / Double(chapterVolumes.reduce(0, {$0 + $1})))
+                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / Double(fileVolumes.reduce(0, {$0 + $1})))
             }
             print(ratios[i])
         }

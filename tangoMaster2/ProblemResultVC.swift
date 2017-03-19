@@ -34,7 +34,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         resultTableView.delegate = self
         resultTableView.dataSource = self
         
-        let wrongArray = getfile(fileName:testWrongTangoArray[appDelegate.problemCategory
+        let wrongArray = getfile(fileName:incorrectFileNames[appDelegate.problemCategory
             ][appDelegate.chapterNumber])
         let correctArray = getfile(fileName: "correct")
         
@@ -139,7 +139,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             goNextProblem.isEnabled = false
         }
         
-        let newChapterNumber = getNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
+        let newChapterNumber = getNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], chapterVolume: testFileNamesArray[appDelegate.problemCategory].count)
         
         if(newChapterNumber > appDelegate.chapterNumber){
             //次のchapterを調べるので、次があることを確認する
@@ -152,10 +152,10 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 }
             }
             
-            //これおかしい。if文でtestNigateFileNamesArrayつかっているのに後でtestWrongTangoArray使ってる。
+            //これおかしい。if文でtestNigateFileNamesArrayつかっているのに後でincorrectFileNames使ってる。
             if(appDelegate.modeTag == 2){
                 if(appDelegate.chapterNumber < testNigateFileNamesArray[appDelegate.problemCategory].count-1){
-                    if getWrongTangoVolume(fileName:testWrongTangoArray[appDelegate.problemCategory][appDelegate.chapterNumber+1]) == 0{
+                    if getWrongTangoVolume(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber+1]) == 0{
                         goNextProblem.layer.backgroundColor = UIColor.gray.cgColor
                         goNextProblem.isEnabled = false
                     }
@@ -188,17 +188,17 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             comment[0] = "Perfect"
             comment[1] = ""
             resultImage.image = UIImage(named: "90ten.jpg")
-            //writeNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
+            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
         }else if(100*retryCount/problemVolume <= 10 && 100*retryCount/problemVolume > 0){
             comment[0] = "Excellent"
             comment[1] = ""
             resultImage.image = UIImage(named: "80ten.jpg")
-            //writeNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
+            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
         }else if(100*retryCount/problemVolume <= 20 && 100*retryCount/problemVolume > 10 ){
             comment[0] = "Good"
             comment[1] = ""
             resultImage.image = UIImage(named: "70ten.jpg")
-            //writeNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
+            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
         }else if(100*retryCount/problemVolume <= 30  && 100*retryCount/problemVolume > 20){
             comment[0] = "Not Bad"
             comment[1] = ""
@@ -215,11 +215,11 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func judgeAndWriteNewChapter(retryCount : Int,problemVolume:Int){
         if(appDelegate.modeTag == 0){
             if(100*retryCount/problemVolume == 0){
-                writeNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
+                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
             }else if(100*retryCount/problemVolume <= 10 && 100*retryCount/problemVolume > 0){
-                writeNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
+                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
             }else if(100*retryCount/problemVolume <= 20 && 100*retryCount/problemVolume > 10 ){
-                writeNewChapter(fileName: checkFileNamesArray[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
+                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber, chapterVolume: testNigateFileNamesArray[appDelegate.problemCategory].count)
             }
         }
     }

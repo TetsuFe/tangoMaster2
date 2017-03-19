@@ -40,21 +40,16 @@ class ProblemResultProgressVC: UIViewController {
             newChapterNumbers.append(0)
         }
         var ratios = Array<Double>()
-        for i in 0..<chapterVolumes.count {
-            if(i == 0){
-                newChapterNumbers[i] = 50
-                ratios.append(50.0/Double(chapterVolumes[i]))
-            }
-            else if(i > 0 && i < 3){
-                ratios.append(Double(newChapterNumbers[i]) / Double(chapterVolumes[i]))
-            }
+        for i in 0..<sectionList.count+1 {
+            if(i < 3){
+                ratios.append(Double(newChapterNumbers[i]) / Double(fileVolumes[i]))
                 //3番目は3種類の合計
-            else{
+            }else{
                 let sumchapnum = Double(newChapterNumbers.reduce(0,{$0+$1}))
                 print(sumchapnum)
-                let sumchapvolume = chapterVolumes.reduce(0,{$0+$1})
+                let sumchapvolume = fileVolumes.reduce(0,{$0+$1})
                 print(sumchapvolume)
-                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / Double(chapterVolumes.reduce(0, {$0 + $1})))
+                ratios.append(Double(newChapterNumbers.reduce(0, {$0 + $1})) / Double(fileVolumes.reduce(0, {$0 + $1})))
             }
             print(ratios[i])
         }

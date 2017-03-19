@@ -458,7 +458,7 @@ class ProblemVC: UIViewController {
     var tango = Array<SixWithChapter>()
     
     func setResult(_ sevenList:Array<SixWithChapter>){
-        deleteFile(fileName: testWrongTangoArray[appDelegate.problemCategory
+        deleteFile(fileName: incorrectFileNames[appDelegate.problemCategory
             ][appDelegate.chapterNumber])
         deleteFile(fileName: "correct")
         
@@ -466,8 +466,8 @@ class ProblemVC: UIViewController {
         print("setResultwrong:\(wrongArray.count)")
         for k in 0..<wrongArray.count{
             if(wrongArray[k] == 1){
-                //writeSixFile(fileName:testWrongTangoArray[appDelegate.problemCategory][appDelegate.chapterNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
-                writeSevenFile(fileName:testWrongTangoArray[appDelegate.problemCategory
+                //writeSixFile(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
+                writeSevenFile(fileName:incorrectFileNames[appDelegate.problemCategory
                 ][appDelegate.chapterNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!,chapterNumber:sevenList[k].chapterNumber!)
                 print("wrongファイルセット完了？")
             }else{
