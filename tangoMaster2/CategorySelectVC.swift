@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
-
+class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
     //status bar's color is while
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -25,11 +25,19 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         return true
     }
     
+    
+    @IBAction func backButton(_ sender: Any) {
+       _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
     @IBOutlet weak var begButton: UIButton!
     @IBOutlet weak var midButton: UIButton!
     @IBOutlet weak var highButton: UIButton!
     @IBOutlet weak var toeicButton: UIButton!
     @IBOutlet weak var categorySelectTable: UITableView!
+    
+    @IBOutlet weak var modeLabel: UILabel!
     
     var is_category_top:Bool = true
     
@@ -45,13 +53,24 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
     var newChapterNumber = Int()
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var listForTable = Array<Array<String>>()
-    var normalCells = Array<CategorySelectCell>()
+    //var normalCells = Array<CategorySelectCell>()
     var graphCells = Array<CategorySelectWithGraphCell>()
     var newChapterNumbers = Array<Int>()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(appDelegate.modeTag == 0){
+            modeLabel.text = "リスト"
+        }else if(appDelegate.modeTag == 1){
+            modeLabel.text = "テスト"
+        }else if(appDelegate.modeTag == 2){
+            modeLabel.text = "カード"
+        }else if(appDelegate.modeTag == 3){
+            modeLabel.text = "苦手"
+        }
+        self.navigationController?.setNavigationBarHidden(true, animated:false)
+        self.automaticallyAdjustsScrollViewInsets = false
         appDelegate.modeTag = 0
         print("viewDidloaded")
         
@@ -145,6 +164,8 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
         highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
         toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
+        
+       
     }
     
 
@@ -165,7 +186,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         }else {
             //section range = {0...4}(max:beginner's situation)
             if section == 0{
-                return 2
+                return 5
             }else{
                 return 0
             }
@@ -225,7 +246,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             }else{
                 cell.backgroundColor = UIColor.orange
             }
-            cell.setCell(fileNames[appDelegate.problemCategory][indexPath.row])
+            cell.setCell(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+indexPath.row])
             return cell
         }
     }
@@ -256,21 +277,25 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
             }else if appDelegate.sceneTag == 1{
                 if indexPath.row <= (newChapterNumbers[appDelegate.problemCategory]+1)/5{
                     appDelegate.chapterNumber = indexPath.row
-                    for i in 0..<chapterNames[appDelegate.problemCategory].count{
+                    /*
+                    for i in 0..<5{
                         normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
-                        normalCells[i].setCell(fileNames[appDelegate.problemCategory][i])
+                        normalCells[i].setCell(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+i])
                     }
-                    categorySelectTable.reloadData()
+ */
                     is_category_top = false
+                    categorySelectTable.reloadData()
                 }
             }else{
                 appDelegate.chapterNumber = indexPath.row
-                for i in 0..<chapterNames[appDelegate.problemCategory].count{
+                /*
+                for i in 0..<5{
                     normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
-                    normalCells[i].setCell(fileNames[appDelegate.problemCategory][i])
+                    normalCells[i].setCell(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+i])
                 }
-                categorySelectTable.reloadData()
+ */
                 is_category_top = false
+                categorySelectTable.reloadData()
             }
         }else{
             if appDelegate.sceneTag == 1{
@@ -285,6 +310,7 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
                 goScene()
             }
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func categoryChange(_ category:Int){
@@ -342,12 +368,18 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         var secondViewController = UIViewController()
         if  appDelegate.sceneTag == 0{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newList") as!  ListVC
+            self.navigationController?.pushViewController(secondViewController, animated: true)
         }else if  appDelegate.sceneTag == 1{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
+            self.present(secondViewController, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(secondViewController, animated: true)
         }else if appDelegate.sceneTag == 2{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCard") as!  CardVC
+            self.present(secondViewController, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(secondViewController, animated: true)
         }else if  appDelegate.sceneTag == 3{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as!  NigateListVC
+            self.navigationController?.pushViewController(secondViewController, animated: true)
         }else if appDelegate.sceneTag == 4{
             //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as!  StorySelectVC
         }
@@ -355,8 +387,11 @@ class CategorySelectVC: UIViewController ,UITableViewDelegate,UITableViewDataSou
         // Viewの移動する.
         //UIApplication.shared.keyWindow?.rootViewController = secondViewController
         //こちらはエラーwhose view is not in window hierarky
-        self.present(secondViewController, animated: true, completion: nil)
+        
     }
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

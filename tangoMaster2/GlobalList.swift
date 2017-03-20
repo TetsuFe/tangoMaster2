@@ -692,3 +692,15 @@ func writeSixFile(fileName:String,eng: String, jpn: String, engPhrase: String, j
         filer?.closeFile()
     }
 }
+
+func backNearestNaviVC(currentVC:UIViewController){
+    var presenting = currentVC.presentingViewController!
+    while(true){
+        if presenting is UINavigationController{
+            presenting.dismiss(animated: true, completion: nil)
+            break
+        }
+        presenting = presenting.presentingViewController!
+    }
+}
+

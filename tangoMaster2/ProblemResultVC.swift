@@ -25,6 +25,11 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var retryButton: UIButton!
     @IBOutlet weak var storyButton: UIButton!
     
+    @IBAction func backButton2(_ sender: Any) {
+        backNearestNaviVC(currentVC:self)
+    }
+    
+    
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewWillAppear(_ animated: Bool) {
@@ -339,9 +344,9 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func goProblem(){
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
         // Viewの移動する.
-        UIApplication.shared.keyWindow?.rootViewController = secondViewController
+        //UIApplication.shared.keyWindow?.rootViewController = secondViewController
         //こちらはエラーwhose view is not in window hierarky
-        //   self.present(secondViewController, animated: true, completion: nil)
+           self.present(secondViewController, animated: true, completion: nil)
     }
     
     func goNext(){
@@ -368,10 +373,12 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
         // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
         // OKボタン
+        
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
+            /*
             let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier:"categorySelect") as! CategorySelectVC
             // アニメーションを設定する.
             //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
@@ -379,6 +386,8 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             //secondViewController.piyo = self.hoge
             // Viewの移動する.
             self.present(secondViewController, animated: true, completion: nil)
+ */
+        backNearestNaviVC(currentVC:self)
             
         })
         // キャンセルボタン

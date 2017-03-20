@@ -59,14 +59,16 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     }
     
     
-    var backgroundTaskID : UIBackgroundTaskIdentifier = 0
+    //var backgroundTaskID : UIBackgroundTaskIdentifier = 0
     
     func applicationWillResignActive(_ application: UIApplication) {
+        /*
         self.backgroundTaskID = application.beginBackgroundTask(){
             [weak self] in
             application.endBackgroundTask((self?.backgroundTaskID)!)
             self?.backgroundTaskID = UIBackgroundTaskInvalid
         }
+ */
     }
  
     func applicationWillEnterForeground(_ application: UIApplication) {

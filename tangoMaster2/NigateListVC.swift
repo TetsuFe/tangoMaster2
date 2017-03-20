@@ -15,6 +15,11 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
         return .lightContent
     }
     
+    
+    @IBAction func backButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     @IBOutlet weak var goCardButton: UIButton!
     @IBOutlet weak var goAutoFadeButton: UIButton!
     @IBOutlet weak var goTestButton: UIButton!

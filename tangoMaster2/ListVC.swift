@@ -15,6 +15,11 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         return .lightContent
     }
     
+    
+    @IBAction func backButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

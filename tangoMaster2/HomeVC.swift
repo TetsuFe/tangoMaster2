@@ -8,7 +8,14 @@
 
 import UIKit
 
-class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate{
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if(navigationController!.viewControllers.count > 1){
+            return true
+        }
+        return false
+    }
     
     //status bar's color is while
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,6 +34,8 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated:false)
         homeTableView.dataSource = self
         homeTableView.delegate = self
     }
@@ -100,9 +109,12 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
         }else{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
-            self.present(secondViewController, animated: true, completion: nil)
+            //self.present(secondViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(secondViewController, animated: true)
 
         }
+        //選択時の色の変更をすぐ消す
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func makeTangoProgressGraph(superViewWidth:CGFloat,superViewHeight:CGFloat,graphMaxWidth:CGFloat,labelName:String,ratio:Double,number:Int)->TangoProgressGraph{

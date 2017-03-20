@@ -23,6 +23,11 @@ class CardVC: UIViewController {
     @IBOutlet weak var superCardView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
+    
+    @IBAction func backButton2(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     var sevenDatas = Array<SixWithChapter>()
     
     override func viewDidAppear(_ animated: Bool) {
@@ -673,11 +678,18 @@ class CardVC: UIViewController {
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
-            let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
+            //let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
             
             
             // Viewの移動する.
-            self.present(secondViewController, animated: true, completion: nil)
+            //self.present(secondViewController, animated: true, completion: nil)
+            /*
+            let newRootVC = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as!  CategorySelectVC
+            let navigationController = UINavigationController(rootViewController: newRootVC)
+            
+            UIApplication.shared.keyWindow?.rootViewController = navigationController
+ */
+            self.dismiss(animated: true, completion: nil)
             
         })
         // キャンセルボタン

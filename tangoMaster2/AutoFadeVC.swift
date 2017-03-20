@@ -400,14 +400,18 @@ class AutoFadeVC: UIViewController {
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
-            var secondViewController = UIViewController()
+            //var secondViewController = UIViewController()
+            /*
             if(self.appDelegate.modeTag == 0){
                 secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newList") as! ListVC
             }else{
                 secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMyList") as! NigateListVC
             }
+ 
             // Viewの移動する.
             self.present(secondViewController, animated: true, completion: nil)
+ */
+            self.dismiss(animated: true, completion: nil)
             
         })
         // キャンセルボタン

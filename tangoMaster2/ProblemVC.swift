@@ -27,6 +27,13 @@ class ProblemVC: UIViewController {
     @IBOutlet weak var backProblemButton: UIButton!
     @IBOutlet weak var backPageButton: UIButton!
     
+    
+       
+    @IBAction func backButton2(_ sender: Any) {
+        backNearestNaviVC(currentVC:self)
+    }
+    
+    
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     
@@ -502,10 +509,12 @@ class ProblemVC: UIViewController {
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
-            let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
+            //let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
             
             // Viewの移動する.
-            self.present(secondViewController, animated: true, completion: nil)
+            //self.present(secondViewController, animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
+            backNearestNaviVC(currentVC:self)
         })
         // キャンセルボタン
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
