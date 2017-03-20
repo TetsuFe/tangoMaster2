@@ -154,18 +154,18 @@ class ProblemVC: UIViewController {
         var fileName = String()
         var tango = Array<String>()
         if appDelegate.modeTag == 0{
-            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             for r in 0..<tango.count/6{
-                sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber)))
+                sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber*5+appDelegate.setsuNumber)))
             }
             //print("tokui")
         //単一の苦手節に対してのProblem
         }else if appDelegate.modeTag == 1{
-            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             tango = getfile(fileName:fileName)
             for r in 0..<tango.count/6{
-                sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber)))
+                sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber*5+appDelegate.setsuNumber)))
             }
             for seven in sevenList{
                 print(seven.eng!,seven.jpn!,seven.engReibun!,seven.jpnReibun!,seven.nigateFlag!,seven.partOfSpeech!)
@@ -173,16 +173,18 @@ class ProblemVC: UIViewController {
         
         //苦手chpaterの全範囲のProblem
         }else if appDelegate.modeTag == 2{
-            for i in 0..<2{
-                fileName = nigateFileNames[appDelegate.problemCategory
-                    ][i]
-                let tempTango = getfile(fileName:fileName)
-                for j in tempTango{
-                    print(j)
-                }
-                tango = tango + tempTango
-                for r in 0..<tempTango.count/6{
-                    sevenList.append(SixWithChapter(eng: tempTango[6*r],jpn:tempTango[6*r+1],engReibun:tempTango[6*r+2],jpnReibun:tempTango[6*r+3],nigateFlag: tempTango[6*r+4],partOfSpeech:tempTango[6*r+5],chapterNumber:String(i)))
+            for setsu in 0..<5{
+                for chapter in 0..<chapterNames[appDelegate.problemCategory].count{
+                    fileName = nigateFileNames[appDelegate.problemCategory
+                        ][chapter*5+setsu]
+                    let tempTango = getfile(fileName:fileName)
+                    for j in tempTango{
+                        print(j)
+                    }
+                    tango = tango + tempTango
+                    for r in 0..<tempTango.count/6{
+                        sevenList.append(SixWithChapter(eng: tempTango[6*r],jpn:tempTango[6*r+1],engReibun:tempTango[6*r+2],jpnReibun:tempTango[6*r+3],nigateFlag: tempTango[6*r+4],partOfSpeech:tempTango[6*r+5],chapterNumber:String(chapter*5+setsu)))
+                    }
                 }
             }
             for j in tango{
@@ -479,16 +481,16 @@ class ProblemVC: UIViewController {
     
     func setResult(_ sevenList:Array<SixWithChapter>){
         deleteFile(fileName: incorrectFileNames[appDelegate.problemCategory
-            ][appDelegate.chapterNumber])
+            ][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
         deleteFile(fileName: "correct")
         
         
         print("setResultwrong:\(wrongArray.count)")
         for k in 0..<wrongArray.count{
             if(wrongArray[k] == 1){
-                //writeSixFile(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
+                //writeSixFile(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
                 writeSevenFile(fileName:incorrectFileNames[appDelegate.problemCategory
-                ][appDelegate.chapterNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!,chapterNumber:sevenList[k].chapterNumber!)
+                ][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!,chapterNumber:sevenList[k].chapterNumber!)
                 print("wrongファイルセット完了？")
             }else{
                 //writeSixFile(fileName:"correct",eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
