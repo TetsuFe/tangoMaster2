@@ -356,11 +356,13 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         goScene()
     }
     
+    /*
     func GoReview(){
         //苦手だけを読み込む
         appDelegate.modeTag = 1
         goScene()
     }
+ */
     
     
     func goScene(){

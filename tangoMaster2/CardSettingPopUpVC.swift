@@ -26,11 +26,11 @@ class CardSettingPopUpVC: UIViewController {
 
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.showAnimate()
-        print("appdelegate.cardSetting: \(appDelegate.cardMoveSetting)")
+        print("appdelegate.cardSetting: \(appDelegate.canCardSwipe)")
         swipeSettingButton.addTarget(self, action: #selector(pushedSwipeButton), for: .touchUpInside)
         
         buttonSettingButton.addTarget(self, action: #selector(pushedButtonButton), for: .touchUpInside)
-        if(appDelegate.cardMoveSetting){
+        if(appDelegate.canCardSwipe){
             swipeSettingButton.setImage(UIImage(named:"card_setting_pushed.png"), for: .normal)
             
             buttonSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
@@ -62,7 +62,7 @@ class CardSettingPopUpVC: UIViewController {
             if (finished)
             {
                 //あやビューに設定変更を適用
-                if(self.appDelegate.cardMoveSetting){
+                if(self.appDelegate.canCardSwipe){
                     if let parentViewController:CardVC = self.parent as! CardVC?{
                         parentViewController.leftSwipeButton.isEnabled = false
                         parentViewController.rightSwipeButton.isEnabled = false
@@ -87,7 +87,7 @@ class CardSettingPopUpVC: UIViewController {
     func pushedButtonButton(){
         print("push button button")
 
-        appDelegate.cardMoveSetting = false
+        appDelegate.canCardSwipe = false
 
         swipeSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
         buttonSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
@@ -96,7 +96,7 @@ class CardSettingPopUpVC: UIViewController {
     
     func pushedSwipeButton(){
         print("push swipe button")
-        appDelegate.cardMoveSetting = true
+        appDelegate.canCardSwipe = true
         
         buttonSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
         swipeSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)

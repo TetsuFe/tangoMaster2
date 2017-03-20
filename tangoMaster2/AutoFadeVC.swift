@@ -31,22 +31,22 @@ class AutoFadeVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        //let chapterNumber = appDelegate.chapterNumber
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
         if appDelegate.modeTag == 0{
-            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             
             print("tokui")
         }else if appDelegate.modeTag == 1{
-            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            appDelegate.setsuNumber = 0
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             tango = getfile(fileName:fileName)
             print("nigate")
         } //苦手chpaterの全範囲のProblem
         else if appDelegate.modeTag == 2{
-            for i in 0..<2{
+            for i in 0..<5{
                 fileName = nigateFileNames[appDelegate.problemCategory
-                    ][i]
+                    ][appDelegate.chapterNumber*5+i]
                 let tempTango = getfile(fileName:fileName)
                 for j in tempTango{
                     print(j)
@@ -78,8 +78,7 @@ class AutoFadeVC: UIViewController {
         self.engLabel.isHidden = false
         self.jpnLabel.alpha = 0
         self.jpnLabel.isHidden = false
-        //self.tangoImage.alpha = 0
-        //self.tangoImage.isHidden = false
+
         timer = Timer.scheduledTimer(timeInterval: timerInterval, target:self, selector:#selector(update), userInfo:nil, repeats: true)
         timer.fire()
         
@@ -92,7 +91,11 @@ class AutoFadeVC: UIViewController {
         reverseButton.addTarget(self, action: #selector
             (reverse), for: .touchUpInside)
         
-        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.chapterNumber%5)
+        if(appDelegate.modeTag != 2){
+        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
+        }else{
+            categoryLabel.text =  arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-苦手"
+        }
         
         //stopOrPlayButton.title("一時停止")
         speedButton.title = "速さ:\(timerInterval)"
@@ -201,26 +204,57 @@ class AutoFadeVC: UIViewController {
         if(appDelegate.modeTag != 2){
             //ボタンをタップした時に実行するメソッドを指定
             if(appDelegate.modeTag == 0){
-                if(appDelegate.chapterNumber > 0){
-                    appDelegate.chapterNumber -= 1
+                if appDelegate.chapterNumber*5+appDelegate.setsuNumber > 0{
+                    if appDelegate.setsuNumber == 0{
+                        appDelegate.setsuNumber = 4
+                        appDelegate.chapterNumber -= 1
+                    }else{
+                        appDelegate.setsuNumber -= 1
+                    }
                     changeFile()
-                }else if appDelegate.chapterNumber == 0{
-                    appDelegate.chapterNumber = fileNames[appDelegate.problemCategory].count-1
+                }else if appDelegate.chapterNumber*5+appDelegate.setsuNumber == 0{
+                    appDelegate.chapterNumber = chapterNames[appDelegate.problemCategory].count-1
+                    appDelegate.setsuNumber = 4
                     changeFile()
                 }
                 
             }else if(appDelegate.modeTag == 1){
-                if(appDelegate.chapterNumber != 0){
-                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber-1]) != 0{
-                        appDelegate.chapterNumber -= 1
+                if(appDelegate.chapterNumber*5+appDelegate.setsuNumber != 0){
+                    while(true){
+                        if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber-1]) != 0{
+                            if appDelegate.setsuNumber == 0{
+                                appDelegate.setsuNumber = 4
+                                appDelegate.chapterNumber -= 1
+                            }else{
+                                appDelegate.setsuNumber -= 1
+                            }
+                            changeFile()
+                            break
+                        }else{
+                            if appDelegate.setsuNumber == 0{
+                                appDelegate.setsuNumber = 4
+                                appDelegate.chapterNumber -= 1
+                            }else{
+                                appDelegate.setsuNumber -= 1
+                            }
+                        }
+                    }
+                }else{
+                    /*
+                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][fileNames[appDelegate.problemCategory].count-1]) != 0{
+                        appDelegate.chapterNumber = chapterNames[appDelegate.problemCategory].count-1
+                        appDelegate.setsuNumber = 4
                         changeFile()
                     }
+ */
                 }
             }
+            /*
             if self.count == sortedImageReibunArray.count-1 && sortedImageReibunArray.count != 1{
                 self.count -= 1
                 changeFile()
             }
+ */
             changeCategoryLabel()
         }
     }
@@ -229,33 +263,71 @@ class AutoFadeVC: UIViewController {
         //ボタンをタップした時に実行するメソッドを指定
         if(appDelegate.modeTag != 2){
             if(appDelegate.modeTag == 0){
-                if(appDelegate.chapterNumber < fileNames[appDelegate.problemCategory].count-1){
-                    appDelegate.chapterNumber += 1
+                if(appDelegate.chapterNumber < chapterNames[appDelegate.problemCategory].count-1){
+                    if appDelegate.setsuNumber == 4{
+                        appDelegate.setsuNumber = 0
+                        appDelegate.chapterNumber += 1
+                    }else{
+                        appDelegate.setsuNumber += 1
+                    }
                     changeFile()
                 }else{
                     appDelegate.chapterNumber = 0
+                    appDelegate.setsuNumber = 0
                     changeFile()
                 }
             }else if(appDelegate.modeTag == 1){
                 //次のchapterを調べるので、次があることを確認する
-                if(appDelegate.chapterNumber < nigateFileNames[appDelegate.problemCategory].count-1){
+                if(appDelegate.chapterNumber*5+appDelegate.setsuNumber != chapterNames[appDelegate.problemCategory].count-1){
+                    while(true){
+                        if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber+1]) != 0{
+                            if appDelegate.setsuNumber == 4{
+                                appDelegate.setsuNumber = 0
+                                appDelegate.chapterNumber += 1
+                            }else{
+                                appDelegate.setsuNumber += 1
+                            }
+                            changeFile()
+                            break
+                        }else{
+                            if appDelegate.setsuNumber == 4{
+                                appDelegate.setsuNumber = 0
+                                appDelegate.chapterNumber += 1
+                            }else{
+                                appDelegate.setsuNumber += 1
+                            }
+                        }
+                    }
+                }else{
+                    /*
+                if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][fileNames[appDelegate.problemCategory].count-1]) != 0{
+                    appDelegate.chapterNumber = 0
+                    appDelegate.setsuNumber = 0
+                    changeFile()
+                }
+ */
+            }/*
+                if(appDelegate.chapterNumber < chapterNames[appDelegate.problemCategory].count-1){
                     if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
                         appDelegate.chapterNumber += 1
                         changeFile()
                     }
                 }
+ */
             }
-            if self.count == sortedImageReibunArray.count-1 &&  sortedImageReibunArray.count != 1{
+            /*
+            if self.count == sortedImageReibunArray.count-1 && sortedImageReibunArray.count != 1{
                 self.count -= 1
                 changeFile()
             }
+ */
             changeCategoryLabel()
         }
     }
     
     
     func changeCategoryLabel(){
-        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.chapterNumber%5)
+        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
     }
     
     func  changeFile(){
@@ -266,7 +338,7 @@ class AutoFadeVC: UIViewController {
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
         
         if appDelegate.modeTag == 0{
-            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             for r in 0..<tango.count/6{
                 let hash = getHashNum(tango[6*r])
@@ -275,7 +347,7 @@ class AutoFadeVC: UIViewController {
             print("tokui")
         }else if appDelegate.modeTag == 1{
             
-            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             tango = getfile(fileName:fileName)
             for r in 0..<tango.count/6{
                 //苦手だけを代入

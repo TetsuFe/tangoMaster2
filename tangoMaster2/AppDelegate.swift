@@ -21,7 +21,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var setsuNumber:Int = 0
     var sceneTag:Int = 0
     var modeTag:Int = 0
-    var cardMoveSetting:Bool = true
+    var canCardSwipe:Bool = true
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     
