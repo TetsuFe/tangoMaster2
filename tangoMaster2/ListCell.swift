@@ -16,13 +16,13 @@ class ListCell:UITableViewCell{
     @IBOutlet weak var jpnPhrase: UILabel!
     @IBOutlet weak var checkButton: UIButton!
     var partOfSpeech = String()
-    var chapterNumber = String()
+    var chapterSetsuNumber = String()
     
     //var list = Array<NewImageReibun>()
     
     private var nigateFlag = "0"
     
-    func setCell(_ tangoImageReibun: NewImageReibun,chapterNumber:String) {
+    func setCell(_ tangoImageReibun: NewImageReibun,chapterSetsuNumber:String) {
         print("setCell")
         engLabel.text = tangoImageReibun.eng
         jpnLabel.text = tangoImageReibun.jpn
@@ -35,13 +35,13 @@ class ListCell:UITableViewCell{
         }else{
             checkButton.setImage(UIImage(named:"nigate")!, for: UIControlState())
         }
-        self.chapterNumber = chapterNumber
+        self.chapterSetsuNumber = chapterSetsuNumber
     }
     
     @IBAction func buttonTapped(_ sender: AnyObject) {
         
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let preserveFileName = nigateFileNames[appDelegate.problemCategory][Int(self.chapterNumber)!]
+        let preserveFileName = nigateFileNames[appDelegate.problemCategory][Int(self.chapterSetsuNumber)!]
         checkButton.isEnabled = false //login_btnはUIButtonです
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
@@ -53,7 +53,7 @@ class ListCell:UITableViewCell{
             checkButton.setImage(UIImage(named:"un_nigate")!, for: UIControlState())
             //ON
             writeSixFile(fileName:preserveFileName,eng:engLabel.text!,jpn:jpnLabel.text!,engPhrase:engPhrase.text!,jpnPhrase:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech: partOfSpeech)
-            setCell(NewImageReibun(eng:engLabel.text!,jpn:jpnLabel.text!,engReibun:engPhrase.text!,jpnReibun:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech:partOfSpeech),chapterNumber:chapterNumber)
+            setCell(NewImageReibun(eng:engLabel.text!,jpn:jpnLabel.text!,engReibun:engPhrase.text!,jpnReibun:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech:partOfSpeech),chapterSetsuNumber:chapterSetsuNumber)
         }
         else{
             self.nigateFlag = "0"
@@ -69,7 +69,7 @@ class ListCell:UITableViewCell{
             for r in 0..<list.count{
                 writeSixFile(fileName:preserveFileName,eng: list[r].eng!, jpn: list[r].jpn!, engPhrase: list[r].engReibun!, jpnPhrase: list[r].jpnReibun!,nigateFlag:list[r].nigateFlag!,partOfSpeech: list[r].partOfSpeech!)
             }
-            setCell(NewImageReibun(eng:engLabel.text!,jpn:jpnLabel.text!,engReibun:engPhrase.text!,jpnReibun:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech:partOfSpeech),chapterNumber:chapterNumber)
+            setCell(NewImageReibun(eng:engLabel.text!,jpn:jpnLabel.text!,engReibun:engPhrase.text!,jpnReibun:jpnPhrase.text!,nigateFlag:nigateFlag,partOfSpeech:partOfSpeech),chapterSetsuNumber:chapterSetsuNumber)
         }
     }
 }

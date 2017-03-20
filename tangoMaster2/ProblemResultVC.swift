@@ -95,7 +95,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             print("wrong")
             wrongCell.append(resultTableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
             )
-            wrongCell[r].setCell(wrongList[r],chapterNumber:wrongList[r].chapterNumber!)
+            wrongCell[r].setCell(wrongList[r],chapterSetsuNumber:wrongList[r].chapterNumber!)
         }
         
         
@@ -103,7 +103,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             print("correct")
             correctCell.append(resultTableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
             )
-            correctCell[r].setCell(correctList[r],chapterNumber:correctList[r].chapterNumber!)
+            correctCell[r].setCell(correctList[r],chapterSetsuNumber:correctList[r].chapterNumber!)
         }
         
         for j in 0..<correctList.count{

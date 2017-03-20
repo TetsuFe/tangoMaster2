@@ -15,7 +15,6 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
         return .lightContent
     }
     
-    
     @IBAction func backButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
@@ -26,6 +25,8 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var imageTableView: UITableView!
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var nigateSectionList = Array<String>()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,9 +51,10 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
                 for r in 0..<tango.count/6{
                     cellsArray[cIndex].append(imageTableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
                     )
-                    cellsArray[cIndex][r].setCell(listForTable[r],chapterNumber:String(i))
+                    cellsArray[cIndex][r].setCell(listForTable[r],chapterSetsuNumber:String(i))
                 }
                 cIndex += 1
+                self.nigateSectionList.append(nigateFileNames[appDelegate.problemCategory][i])
             }
         }
         imageTableView.dataSource = self
@@ -83,7 +85,8 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
      セクションの数を返す.
      */
     func numberOfSections(in tableView: UITableView) -> Int {
-        return nigateFileNames[appDelegate.problemCategory].count
+        //return nigateFileNames[appDelegate.problemCategory].count
+        return nigateSectionList.count
     }
     
     /*
@@ -91,7 +94,8 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
      */
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //先頭の一文字n(苦手nigate)を消して表示
-        let s = nigateFileNames[appDelegate.problemCategory][section]
+        let s = nigateSectionList[section]
+        //let s = nigateFileNames[appDelegate.problemCategory][section]
         return s.substring(from: s.index(after: s.startIndex))
     }
     
