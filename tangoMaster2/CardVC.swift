@@ -40,10 +40,10 @@ class CardVC: UIViewController {
         var fileName = String()
        
         if(appDelegate.modeTag == 0){
-            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             cardDatas = getAllTangos(fileName:fileName)
         }else if appDelegate.modeTag == 1{
-            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
             let tangos = getfile(fileName: fileName)
             for r in 0..<tangos.count/6{
                 cardDatas.append(NewImageReibun(eng: tangos[6*r],jpn:tangos[6*r+1],engReibun:tangos[6*r+2],jpnReibun:tangos[6*r+3],nigateFlag:tangos[6*r+4],partOfSpeech:tangos[6*r+5]))
@@ -51,16 +51,18 @@ class CardVC: UIViewController {
         }else if appDelegate.modeTag == 2{
             var tango = Array<String>()
             //chpaterNumber
-            for i in 0..<2{
-                let fileName = nigateFileNames[appDelegate.problemCategory
-                    ][i]
-                let tempTango = getfile(fileName:fileName)
-                for j in tempTango{
-                    print(j)
-                }
-                tango = tango + tempTango
-                for r in 0..<tempTango.count/6{
-                    sevenDatas.append(SixWithChapter(eng: tempTango[6*r],jpn:tempTango[6*r+1],engReibun:tempTango[6*r+2],jpnReibun:tempTango[6*r+3],nigateFlag: tempTango[6*r+4],partOfSpeech:tempTango[6*r+5],chapterNumber:String(i)))
+            for setsu in 0..<5{
+                for chapter in 0..<chapterNames[appDelegate.problemCategory].count{
+                    let fileName = nigateFileNames[appDelegate.problemCategory
+                        ][chapter*5+setsu]
+                    let tempTango = getfile(fileName:fileName)
+                    for j in tempTango{
+                        print(j)
+                    }
+                    tango = tango + tempTango
+                    for r in 0..<tempTango.count/6{
+                        sevenDatas.append(SixWithChapter(eng: tempTango[6*r],jpn:tempTango[6*r+1],engReibun:tempTango[6*r+2],jpnReibun:tempTango[6*r+3],nigateFlag: tempTango[6*r+4],partOfSpeech:tempTango[6*r+5],chapterNumber:String(chapter*5+setsu)))
+                    }
                 }
             }
             for j in tango{
@@ -74,7 +76,7 @@ class CardVC: UIViewController {
 
         //テスト中なので、とりあえず、ファイルの全てを取れるようにしておく。基本、苦手もファイル名が変わるだけで形式は同じ
         //苦手配列の英語と同じ英語に苦手ラベルづけ
-        let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber])
+        let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
         for r in 0..<nigateArray.count/6{
             if nigateArray[6*r+4] == "1"{
                 for i in 0..<cardDatas.count{
@@ -268,7 +270,7 @@ class CardVC: UIViewController {
         var preserveFileName = String()
         print("count : " + String(count))
         if(appDelegate.modeTag != 2){
-            preserveFileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+            preserveFileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
 
             if cardDatas[count].nigateFlag! == "0"{
                 print("nigate add")
@@ -377,7 +379,7 @@ class CardVC: UIViewController {
         //次のchapterを調べる。
         //次のchapterがあればスワイプを有効に
         if(appDelegate.modeTag == 0){
-            if appDelegate.chapterNumber == fileNames[appDelegate.problemCategory].count-1{
+            if appDelegate.chapterNumber*5+appDelegate.setsuNumber == fileNames[appDelegate.problemCategory].count-1{
                 rightSwipeButton.isEnabled = false
                 rightSwipeButton.backgroundColor = UIColor.clear
             }
@@ -393,9 +395,9 @@ class CardVC: UIViewController {
         
         
         //現在のchapterを調べる。こちらはProblemに行けるかを判定
-        if(appDelegate.chapterNumber <= nigateFileNames[appDelegate.problemCategory].count-1){
-            if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]) == 0{
-                print(getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]))
+        if(appDelegate.chapterNumber*5+appDelegate.setsuNumber <= nigateFileNames[appDelegate.problemCategory].count-1){
+            if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]) == 0{
+                print(getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]))
                 goNigateProblemButton.isEnabled = false
                 goNigateProblemButton.backgroundColor = UIColor.clear
             }else{
@@ -409,15 +411,15 @@ class CardVC: UIViewController {
     
     func retry(){
         //if(appDelegate.chapterNumber-1 < newChapterNumber){
-        if(appDelegate.chapterNumber-1 < fileNames[appDelegate.problemCategory].count-1){
+        if(appDelegate.chapterNumber*5+appDelegate.setsuNumber-1 < fileNames[appDelegate.problemCategory].count-1){
             retryCount = 0
             self.count = 0
             var fileName = String()
             if(appDelegate.modeTag == 0){
-                fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+                fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
                 cardDatas = getAllTangos(fileName:fileName)
             }else if appDelegate.modeTag == 1{
-                fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber]
+                fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
                 let tangos = getfile(fileName: fileName)
                 cardDatas = Array<NewImageReibun>()
                 for r in 0..<tangos.count/6{
@@ -453,7 +455,7 @@ class CardVC: UIViewController {
             }
             
             //苦手配列の英語と同じ英語に苦手ラベルづけ
-            let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber])
+            let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
             for r in 0..<nigateArray.count/6{
                 if nigateArray[6*r+4] == "1"{
                     for i in 0..<cardDatas.count{
@@ -523,7 +525,12 @@ class CardVC: UIViewController {
             cardWorkFlag = true
             
         }else{
-            appDelegate.chapterNumber -= 1
+            if appDelegate.setsuNumber == 0{
+                appDelegate.chapterNumber -= 1
+                appDelegate.setsuNumber = 4
+            }else{
+                appDelegate.setsuNumber -= 1
+            }
         }
         //}
     }
@@ -595,7 +602,12 @@ class CardVC: UIViewController {
     }
     
     func goNextChapter(){
-        appDelegate.chapterNumber += 1
+        if appDelegate.setsuNumber == 4{
+            appDelegate.chapterNumber += 1
+            appDelegate.setsuNumber = 0
+        }else{
+            appDelegate.setsuNumber += 1
+        }
         retry()
     }
     

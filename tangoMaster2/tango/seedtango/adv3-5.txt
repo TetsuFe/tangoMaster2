@@ -17,4 +17,4 @@ fountain@噴水・泉@chocolate fountain@チョコレートファウンテン@0@
 guidance@案内・指導@under his guidance@彼の指導の下で@0@n
 hive@（ハチの）巣@honeybees make a hive@ミツバチが巣を作る@0@n
 hybrid@雑種の・混成の@a hybrid car@ハイブリッドカー@0@a
-grant@助成金・補助金@a grant for research@研究のための補助金@0@
+grant@助成金・補助金@a grant for research@研究のための補助金@0@n
