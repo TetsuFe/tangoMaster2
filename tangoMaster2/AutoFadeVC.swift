@@ -92,9 +92,9 @@ class AutoFadeVC: UIViewController {
             (reverse), for: .touchUpInside)
         
         if(appDelegate.modeTag != 2){
-        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
+        categoryLabel.text = categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
         }else{
-            categoryLabel.text =  arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-苦手"
+            categoryLabel.text =  categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-苦手"
         }
         
         //stopOrPlayButton.title("一時停止")
@@ -327,7 +327,7 @@ class AutoFadeVC: UIViewController {
     
     
     func changeCategoryLabel(){
-        categoryLabel.text = arrayCategory[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
+        categoryLabel.text = categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
     }
     
     func  changeFile(){

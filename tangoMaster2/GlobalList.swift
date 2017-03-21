@@ -35,7 +35,7 @@ extension Character
     }
 }
 
-let arrayCategory = ["大学受験初級","大学受験中級","大学受験上級","Toeic"]
+let categoryNames = ["大学受験初級","大学受験中級","大学受験上級"]
 
 let wrongbeginnerFileNames = ["wbeg1-1", "wbeg1-2", "wbeg1-3", "wbeg1-4", "wbeg1-5", "wbeg2-1", "wbeg2-2", "wbeg2-3", "wbeg2-4", "wbeg2-5", "wbeg3-1", "wbeg3-2", "wbeg3-3", "wbeg3-4", "wbeg3-5", "wbeg4-1", "wbeg4-2", "wbeg4-3", "wbeg4-4", "wbeg4-5", "wbeg5-1", "wbeg5-2", "wbeg5-3", "wbeg5-4", "wbeg5-5", "wbeg6-1", "wbeg6-2", "wbeg6-3", "wbeg6-4", "wbeg6-5", "wbeg7-1", "wbeg7-2", "wbeg7-3", "wbeg7-4", "wbeg7-5", "wbeg8-1", "wbeg8-2", "wbeg8-3", "wbeg8-4", "wbeg8-5", "wbeg9-1", "wbeg9-2", "wbeg9-3", "wbeg9-4", "wbeg9-5"]
 let wrongmidFileNames = ["wmid1-1", "wmid1-2", "wmid1-3", "wmid1-4", "wmid1-5", "wmid2-1", "wmid2-2", "wmid2-3", "wmid2-4", "wmid2-5", "wmid3-1", "wmid3-2", "wmid3-3", "wmid3-4", "wmid3-5", "wmid4-1", "wmid4-2", "wmid4-3", "wmid4-4", "wmid4-5", "wmid5-1", "wmid5-2", "wmid5-3", "wmid5-4", "wmid5-5", "wmid6-1", "wmid6-2", "wmid6-3", "wmid6-4", "wmid6-5"]

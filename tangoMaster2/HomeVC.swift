@@ -29,7 +29,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
     @IBOutlet weak var homeTableView: UITableView!
     
     //tableView
-    let labelNames = ["単語一覧","単語テスト","単語カード","苦手リスト"]
+    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト"]
     let imageNames = ["list.png","test.png","card.png","nigatelist.png"]
     
     override func viewDidLoad() {
@@ -39,14 +39,26 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
         homeTableView.dataSource = self
         homeTableView.delegate = self
     }
+    
+    var graphs = Array<TangoProgressGraph>()
+    let levelLabelNames = ["初級","中級","上級","合計"]
+    
 
     override func viewDidAppear(_ animated : Bool){
         super.viewDidAppear(true)
+        if graphs.count != 0{
+            for i in 0..<levelLabelNames.count{
+                graphs[i].label1.removeFromSuperview()
+                graphs[i].label2.removeFromSuperview()
+                graphs[i].coloredGraph.removeFromSuperview()
+                graphs[i].nonColoredGraph.removeFromSuperview()
+            }
+            graphs = Array<TangoProgressGraph>()
+        }
         
         graphView.backgroundColor = UIColor.orange
         let graphMaxWidth = 4*graphView.frame.width/6
         
-        var graphs = Array<TangoProgressGraph>()
         
 
         var newChapterNumbers = getNewChapterArray()
@@ -68,7 +80,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
             print(ratios[i])
         }
         
-        let labelNames = ["初級","中級","上級","合計"]
+        //let labelNames = ["初級","中級","上級","合計"]
         
         //タイトルの追加
         let graphTitle = UILabel(frame: CGRect(x:0,y:0, width: graphView.frame.width, height: graphView.frame.height/6))
@@ -77,9 +89,9 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
         
         //グラフの追加
         
-        for i in 0..<labelNames.count{
+        for i in 0..<levelLabelNames.count{
             
-            graphs.append(makeTangoProgressGraph(superViewWidth: graphView.frame.width, superViewHeight: graphView.frame.height, graphMaxWidth: graphMaxWidth, labelName: labelNames[i], ratio: ratios[i],number:i+1))
+            graphs.append(makeTangoProgressGraph(superViewWidth: graphView.frame.width, superViewHeight: graphView.frame.height, graphMaxWidth: graphMaxWidth, labelName: levelLabelNames[i], ratio: ratios[i],number:i+1))
             
             graphView.addSubview(graphs[i].label1)
             graphView.addSubview(graphs[i].label2)
@@ -90,14 +102,14 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
-        return labelNames.count
+        return sceneLabelNames.count
     }
     
     func tableView(_ tableView : UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         
         let cell: HomeSelectCell = homeTableView.dequeueReusableCell(withIdentifier: "HomeSelectCell") as! HomeSelectCell
         
-        cell.setCell(labelNames[indexPath.row],imageNames[indexPath.row])
+        cell.setCell(sceneLabelNames[indexPath.row],imageNames[indexPath.row])
         return cell
     }
     
