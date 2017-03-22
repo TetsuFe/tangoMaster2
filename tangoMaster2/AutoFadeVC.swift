@@ -29,6 +29,10 @@ class AutoFadeVC: UIViewController {
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    var nigateExistingFileNames = Array<String>()
+    
+    var nigate2FileIndex:Int = 0
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
@@ -44,18 +48,29 @@ class AutoFadeVC: UIViewController {
             print("nigate")
         } //苦手chpaterの全範囲のProblem
         else if appDelegate.modeTag == 2{
-            for i in 0..<5{
-                fileName = nigateFileNames[appDelegate.problemCategory
-                    ][appDelegate.chapterNumber*5+i]
-                let tempTango = getfile(fileName:fileName)
-                for j in tempTango{
-                    print(j)
+            for setsu in 0..<5{
+                for chapter in 0..<nigateFileNames[appDelegate.problemCategory].count/5{
+                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][chapter*5+setsu]) != 0{
+                        
+                        nigateExistingFileNames.append(nigateFileNames[appDelegate.problemCategory
+                            ][chapter*5+setsu])
+                        /*
+                        let tempTango = getfile(fileName:fileName)
+                        for j in tempTango{
+                            print(j)
+                        }
+                        tango = tango + tempTango
+ */
+                    }
                 }
-                tango = tango + tempTango
             }
+            /*
             for j in tango{
                 print(j)
             }
+ */
+            fileName = nigateExistingFileNames[0]
+            tango = getfile(fileName: fileName)
         }else{
             
         }
@@ -94,7 +109,8 @@ class AutoFadeVC: UIViewController {
         if(appDelegate.modeTag != 2){
         categoryLabel.text = categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
         }else{
-            categoryLabel.text =  categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-苦手"
+            //categoryLabel.text =  categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-苦手"
+            categoryLabel.text =  categoryNames[appDelegate.problemCategory]+" "+"chapter"+nigateExistingFileNames[0].substring(from: nigateExistingFileNames[0].index(nigateExistingFileNames[0].startIndex,offsetBy:4))
         }
         
         //stopOrPlayButton.title("一時停止")
@@ -240,13 +256,8 @@ class AutoFadeVC: UIViewController {
                         }
                     }
                 }else{
-                    /*
-                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][fileNames[appDelegate.problemCategory].count-1]) != 0{
-                        appDelegate.chapterNumber = chapterNames[appDelegate.problemCategory].count-1
-                        appDelegate.setsuNumber = 4
-                        changeFile()
-                    }
- */
+                    //nigateMode == 2
+                    
                 }
             }
             /*
@@ -255,8 +266,17 @@ class AutoFadeVC: UIViewController {
                 changeFile()
             }
  */
-            changeCategoryLabel()
+            
+        }else{
+            if nigate2FileIndex > 0{
+                nigate2FileIndex -= 1
+                changeFile()
+            }else{
+                nigate2FileIndex = nigateExistingFileNames.count-1
+                changeFile()
+            }
         }
+        changeCategoryLabel()
     }
     
     @IBAction func goNextChapter(_ sender: Any) {
@@ -298,15 +318,8 @@ class AutoFadeVC: UIViewController {
                             }
                         }
                     }
-                }else{
-                    /*
-                if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][fileNames[appDelegate.problemCategory].count-1]) != 0{
-                    appDelegate.chapterNumber = 0
-                    appDelegate.setsuNumber = 0
-                    changeFile()
-                }
- */
-            }/*
+                
+                }/*
                 if(appDelegate.chapterNumber < chapterNames[appDelegate.problemCategory].count-1){
                     if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber+1]) != 0{
                         appDelegate.chapterNumber += 1
@@ -321,13 +334,27 @@ class AutoFadeVC: UIViewController {
                 changeFile()
             }
  */
-            changeCategoryLabel()
+            
+        }else{
+            if nigate2FileIndex < nigateExistingFileNames.count-1{
+                nigate2FileIndex += 1
+                changeFile()
+            }else{
+                nigate2FileIndex = 0
+                changeFile()
+            }
         }
+        changeCategoryLabel()
     }
     
     
     func changeCategoryLabel(){
-        categoryLabel.text = categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
+        
+        if appDelegate.modeTag != 2{
+            categoryLabel.text = categoryNames[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
+        }else{
+            categoryLabel.text =  categoryNames[appDelegate.problemCategory]+" "+"chapter"+nigateExistingFileNames[nigate2FileIndex].substring(from: nigateExistingFileNames[nigate2FileIndex].index(nigateExistingFileNames[nigate2FileIndex].startIndex,offsetBy:4))
+        }
     }
     
     func  changeFile(){
@@ -360,6 +387,16 @@ class AutoFadeVC: UIViewController {
             print("nigate")
         }else {
             
+            fileName = nigateExistingFileNames[nigate2FileIndex]
+            tango = getfile(fileName:fileName)
+            for r in 0..<tango.count/6{
+                //苦手だけを代入
+                if(tango[6*r+4] == "1"){
+                    let hash = getHashNum(tango[6*r])
+                    list[hash] = addListNIR(list: list,eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5])
+                }
+            }
+
         }
         sortedImageReibunArray = getArrayNIRFromList(list: list)
         //sortedImageReibunArray = deleteWordFromArray(eng:engLabel.text!,list2:sortedImageReibunArray)

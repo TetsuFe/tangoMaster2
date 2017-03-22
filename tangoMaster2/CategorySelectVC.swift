@@ -176,7 +176,7 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             
             var count = 0
             for j in 0..<chapterNames.count{
-                for i in 0..<chapterNames[j].count{
+                for _ in 0..<chapterNames[j].count{
                     labels[count].removeFromSuperview()
                     coloredGraphs[count].removeFromSuperview()
                     labels2[count].removeFromSuperview()
