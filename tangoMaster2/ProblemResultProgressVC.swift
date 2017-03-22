@@ -90,7 +90,8 @@ class ProblemResultProgressVC: UIViewController {
         
         //どのカテゴリが変化するのか調べる progressID = appDelegate.problemCategory
         //progressID = Int(arc4random()) % 4
-        progressID = 1
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        progressID = appDelegate.problemCategory
         
         //後にprogressDrawでも使うので、endとは区別する必要あり
         originProgressBarFrame = graphs[progressID].coloredGraph.frame
@@ -98,16 +99,44 @@ class ProblemResultProgressVC: UIViewController {
         graphs[progressID].coloredGraph.removeFromSuperview()
         graphs[progressID].label2.removeFromSuperview()
         
-        begin = originProgressBarFrame.width/3
-        
+        //各カテゴリで一つクリアしたときのグラフの増減をゴールから逆算
+        if progressID == 0{
+            //900/20 = 45
+            begin = originProgressBarFrame.width-graphMaxWidth/45
+        }else if progressID == 1{
+            //600/20 = 30
+            begin = originProgressBarFrame.width-graphMaxWidth/30
+        }else if progressID == 2{
+            //300/20 = 15
+            begin = originProgressBarFrame.width-graphMaxWidth/15
+        }else{
+            //progressID は0..<3なので、ここには入らない。あくまでも仮. 
+            //all 1800/20 = 90 実際にアニメーションはなし
+            //begin = originProgressBarFrame.width-graphMaxWidth/90
+        }
         end = originProgressBarFrame.width
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(progressDraw), userInfo: nil, repeats: true)
     }
     
     func progressDraw(){
-        if(begin <= end){
-            self.begin += step
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if(appDelegate.isProblemCleared){
+            if(begin <= end){
+                self.begin += step
+                drawer.removeFromSuperview()
+                drawer = ColoredDrawer(frame: CGRect(x: originProgressBarFrame.origin.x, y: originProgressBarFrame.origin.y, width: begin, height: originProgressBarFrame.height))
+                popUpView.addSubview(drawer)
+                percentLabel.removeFromSuperview()
+                percentLabel = UILabel(frame: CGRect(x:5*popUpView.frame.width/6,y:CGFloat(progressID+1)*popUpView.frame.height/6, width: popUpView.frame.width/6, height: popUpView.frame.height/7))
+                percentLabel.text = "\(Int(100*begin / (2*popUpView.frame.width/3)))%"
+                popUpView.addSubview(percentLabel)
+            }else{
+                timer.invalidate()
+                print("timer finished")
+            }
+        }else{
+            self.begin = end
             drawer.removeFromSuperview()
             drawer = ColoredDrawer(frame: CGRect(x: originProgressBarFrame.origin.x, y: originProgressBarFrame.origin.y, width: begin, height: originProgressBarFrame.height))
             popUpView.addSubview(drawer)
@@ -115,7 +144,6 @@ class ProblemResultProgressVC: UIViewController {
             percentLabel = UILabel(frame: CGRect(x:5*popUpView.frame.width/6,y:CGFloat(progressID+1)*popUpView.frame.height/6, width: popUpView.frame.width/6, height: popUpView.frame.height/7))
             percentLabel.text = "\(Int(100*begin / (2*popUpView.frame.width/3)))%"
             popUpView.addSubview(percentLabel)
-        }else{
             timer.invalidate()
             print("timer finished")
         }

@@ -115,8 +115,8 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //scoreLabel.text = "正解率 : "+String(wrongArray.count/6+correctArray.count/6 - wrongCount)+" / "+String(wrongArray.count/6+correctArray.count/6)
         scoreLabel.text = "正解率 : "+String(wrongArray.count/7+correctArray.count/7 - wrongCount)+" / "+String(wrongArray.count/7+correctArray.count/7)
         
-        makeFinishLabel(retryCount : wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
-        judgeAndWriteNewChapter(retryCount :wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
+        makeFinishLabel(incorrectCount : wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
+        judgeAndWriteNewChapter(incorrectCount :wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
         showPopUpProgressView()
         
         goNextProblem.layer.borderWidth = 0
@@ -183,48 +183,53 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var correctList = Array<SixWithChapter>()
     
     
-    func makeFinishLabel(retryCount : Int,problemVolume:Int){
+    func makeFinishLabel(incorrectCount : Int,problemVolume:Int){
         // Labelを生成.
         var comment:[String] = ["",""]
-        print(retryCount)
-        print(100*retryCount/problemVolume)
+        print(incorrectCount)
+        print(100*incorrectCount/problemVolume)
         //正解率が80パーセント以上で合格。writeNewChapterする
-        if(100*retryCount/problemVolume == 0){
+        if(100*incorrectCount/problemVolume == 0){
             comment[0] = "Perfect"
             comment[1] = ""
             resultImage.image = UIImage(named: "90ten.jpg")
+            appDelegate.isProblemCleared = true
             //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
-        }else if(100*retryCount/problemVolume <= 10 && 100*retryCount/problemVolume > 0){
+        }else if(100*incorrectCount/problemVolume <= 10 && 100*incorrectCount/problemVolume > 0){
             comment[0] = "Excellent"
             comment[1] = ""
             resultImage.image = UIImage(named: "80ten.jpg")
+            appDelegate.isProblemCleared = true
             //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
-        }else if(100*retryCount/problemVolume <= 20 && 100*retryCount/problemVolume > 10 ){
+        }else if(100*incorrectCount/problemVolume <= 20 && 100*incorrectCount/problemVolume > 10 ){
             comment[0] = "Good"
             comment[1] = ""
             resultImage.image = UIImage(named: "70ten.jpg")
+            appDelegate.isProblemCleared = true
             //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
-        }else if(100*retryCount/problemVolume <= 30  && 100*retryCount/problemVolume > 20){
+        }else if(100*incorrectCount/problemVolume <= 30  && 100*incorrectCount/problemVolume > 20){
             comment[0] = "Not Bad"
             comment[1] = ""
             resultImage.image = UIImage(named: "60ten.jpg")
-        }else if(100*retryCount/problemVolume > 30){
+            appDelegate.isProblemCleared = false
+        }else if(100*incorrectCount/problemVolume > 30){
             comment[0] = "No Sence"
             comment[1] = ""
             resultImage.image = UIImage(named: "50ten.jpg")
+            appDelegate.isProblemCleared = false
         }
-        print("値は\(100*retryCount/problemVolume)")
+        print("値は\(100*incorrectCount/problemVolume)")
         print(comment[0])
     }
     
-    func judgeAndWriteNewChapter(retryCount : Int,problemVolume:Int){
+    func judgeAndWriteNewChapter(incorrectCount : Int,problemVolume:Int){
         if(appDelegate.modeTag == 0){
             print("appDelegate.chapterNumber*5+appDelegate.setsuNumber: \(appDelegate.chapterNumber*5+appDelegate.setsuNumber)")
-            if(100*retryCount/problemVolume == 0){
+            if(100*incorrectCount/problemVolume == 0){
                 writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
-            }else if(100*retryCount/problemVolume <= 10 && 100*retryCount/problemVolume > 0){
+            }else if(100*incorrectCount/problemVolume <= 10 && 100*incorrectCount/problemVolume > 0){
                 writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
-            }else if(100*retryCount/problemVolume <= 20 && 100*retryCount/problemVolume > 10 ){
+            }else if(100*incorrectCount/problemVolume <= 20 && 100*incorrectCount/problemVolume > 10 ){
                 writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
             }
         }
