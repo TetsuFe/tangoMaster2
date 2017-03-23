@@ -28,17 +28,17 @@ share@共有する@share water with her@水を彼女と分け合う@0@v
 support@手伝う@support the candidate@その候補者を支持する@0@v
 improve@向上させる@improve my ability@能力を向上させる@0@v
 notice@気づく@notice the difference@その違いに気づく@0@v
-prevent@防ぐ@prevent him from sleeping@彼が寝るのを防ぐ@0@v
+prevent@防ぐ@prevent him from doing@彼が〜するのを防ぐ@0@v
 prepare@準備する@prepare dinner for him@彼用の夕食を準備する@0@v
 join@参加する・入る@join the tennis club@テニス部に入る@0@v
-introduce@紹介する@introduce my friend to you@君に友人を紹介する@0@v
+introduce@紹介する@introduce him to you@彼を君に紹介する@0@v
 admit@認める・許す@admit her to go out@彼女に外出を許す@0@v
 belong@所属している@belong to soccer club@サッカー部に所属する@0@v
 afford@余裕がある@can't afford to buy ~@〜を買う余裕はない@0@v
 remind@思い出させる@remind me the memory@記憶を思い出させる@0@v
-disappoint@失望させる@be disappointed with you@あなたに失望する@0@v
+disappoint@失望させる@be disappointed with ~@〜に失望する@0@v
 delay@遅らせる@the train is delayed@電車が遅れている@0@v
-devote@専念する@devote myself to studying@勉強に専念する@0@v
+devote@専念する@devote myself to seeing@見ることに専念する@0@v
 regret@後悔する@regret my decision@決断を後悔する@0@v
 injure@怪我をさせる@be injured in ~@〜のせいで負傷する@0@v
 explain@説明する@explain the meaning@その理由を説明する@0@v
@@ -86,9 +86,9 @@ compare@比較する@compare her with me@彼女と私を比較する@0@v
 search@探す@search for my dog@私の犬を探す@0@v
 refuse@拒否する@refuse a request@要求を拒否する@0@v
 perform@上演する・行う@perform the concert@コンサートを上演する@0@v
-graduate@卒業する@graduate from the college@大学を卒業する@0@v
+graduate@卒業する@graduate from ~@〜を卒業する@0@v
 insist@主張する@insist on the right@権利を主張する@0@v
-convince@納得させる@be convinced of the truth@その事実に納得する@0@v
+convince@納得させる@be convinced of ~@〜に納得する@0@v
 respond@答える・応じる@respond to a question@質問に答える@0@v
 shake@振る・揺らす@shake the bottle@瓶を振る@0@v
 consist@構成される@it consists of iron@それは鉄でできている@0@v
@@ -98,8 +98,8 @@ repair@修理する@repair the car@車を修理する@0@v
 reserve@予約する@reserve a room@部屋を予約する@0@v
 own@持つ・自分の@own a cottage@山荘を所持している@0@v
 cure@治す@cure him of his cold@彼のカゼを治す@0@v
-embarrass@恥ずかしくする@be embarrassed by my fault@失敗が恥ずかしい@0@v
-participate@参加する@participate in the competition@その大会に参加する@0@v
+embarrass@恥ずかしくする@be embarrassed by ~@〜して恥ずかしい@0@v
+participate@参加する@participate in the event@そのイベントに参加する@0@v
 owe@負う・おかげだ@I owe my success to you@私の成功は君のおかげだ@0@v
 accept@受け入れる@accept the truth@事実を受け入れる@0@v
 occur@起こる@the accident occurred@その事故は起こった@0@v
@@ -251,7 +251,7 @@ bark@吠える@The dog barked fiercely@その犬は激しく吠えた@0@v
 cross@十字架・渡る@cross the street@道路を渡る@0@v
 fill@満たす@be filled with joy@喜びでいっぱいになる@0@v
 abandon@捨てる・やめる@abandon my plan@計画を途中でやめる@0@v
-anticipate@予期する@anticipate that ~@〜だと予期する・期待する@0@v
+anticipate@予期する@anticipate that ~@〜だと予期（期待）する@0@v
 create@作り出す@create the world@この世を創造する@0@v
 lie@嘘・横になる@He lay down on the bed.@彼はベッドで横になった@0@v
 rise@上がる・上昇@the sun rise in the east@太陽が東に昇る@0@v
@@ -269,7 +269,7 @@ wrap@包む@wrap a gift in the paper@贈り物を包装紙で包む@0@v
 limit@制限する@limit the speed@速度を制限する@0@v
 base@根拠付ける@be based on a fact@事実に基づいている@0@v
 reduce@減らす@reduce the budget@予算を減らす@0@v
-establish@設立する@establish a new company@新会社を設立する@0@v
+establish@設立する@establish a school@学校を設立する@0@v
 refer@言及する@refer to the incident@事件について言及する@0@v
 destroy@破壊する@destroy the facility@施設を破壊する@0@v
 mention@述べる@Don't mention it.@どういたしまして。@0@v
@@ -279,10 +279,10 @@ argue@主張する@argue that ~@〜と主張する@0@v
 reply@返事する@reply to his letter@彼の手紙に返事をする@0@v
 decline@下がる・衰退@the decline of the empire@帝国の衰退@0@v
 confuse@困惑させる@be confused by ~@〜に困惑する@0@v
-vary@変化する@one's mood varies from ~@気分が〜次第で変わる@0@v
+vary@変化する@my mood varies from ~@気分が〜次第で変わる@0@v
 examine@調べる@examine the details@詳細を調べる@0@v
-contribute@貢献する@contribute to the success@その成功に貢献する@0@v
-connect@つなぐ@connect Japan with China@日本と中国とを繋ぐ@0@v
+contribute@貢献する@contribute to society@社会に貢献する@0@v
+connect@つなぐ@connect A with B@AとBとを繋げる@0@v
 reject@拒否する@reject the proposal@提案を拒否する@0@v
 threaten@脅す@threaten to kill a child@子供を殺すと脅す@0@v
 extend@延長する@extend the deadline@締め切りを延長する@0@v
@@ -493,8 +493,8 @@ operate@操作する@operate the machine@機械を操作する@0@v
 puzzle@悩ませる・謎@be puzzled by ~@〜に頭を悩ませる@0@v
 occupy@占領する@occupie a lot of space@場の大部分を占める@0@v
 freeze@凍る・凍らせる@freeze to death@凍死する@0@v
-shift@移す・移動@	shift a table to living room@机を居間に移す@0@v
-approve@認める・賛成する@approve (of) their marriage@結婚を承認する@0@v
+shift@移す・移動@shift a table to ~@机を〜に移す@0@v
+approve@認める・賛成する@approve their marriage@結婚を承認する@0@v
 amuse@楽しませる@be amused by his jokes@彼の冗談で笑う@0@v
 ruin@破滅させる@ruin his life@彼の人生を破滅させる@0@v
 accompany@同伴する・伴う@accompany my friends@友達に付き添う@0@v
@@ -516,3 +516,4 @@ constitute@占める@constitute 20% of GDP@GDPの20%を占める@0@v
 appoint@任命する@appointed a director@重役を任命する@0@v
 lean@もたれる@lean against ~@〜にもたれる@0@v
 undertake@引き受ける@undertake a task@仕事を引き受ける@0@v
+overwhelm@圧倒する@an overwhelming power@圧倒的な権力@0@v

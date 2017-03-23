@@ -5,8 +5,8 @@ similarly@同様に・同じく@Similarly, he can also do@同様に、彼も〜�
 simple@単純な・簡単な@a simple question@簡単な（単純な）問題@0@a
 sincerely@心から・敬具@I sincerely hope that ...@...を心から願う@0@av
 slightly@かすかに・少し@increase slightly@少し増加する@0@av
-so-called@いわゆる@she is a so‐called feminist@いわゆるフェミニストだ@0@a
-someday@いつか@You will success someday.@いつかきっと成功するさ。@0@av
+so-called@いわゆる@is a so‐called feminist@いわゆるフェミニストだ@0@a
+someday@いつか@will success someday@いつかきっと成功する@0@av
 tour@旅行・観光旅行@a tour around Europe@ヨーロッパ旅行@0@n
 behind@〜の後ろに@He hid behind me@彼は私の後ろに隠れた@0@o
 bold@大胆な・勇敢な@be bold to do@〜するなんて大胆だ@0@a

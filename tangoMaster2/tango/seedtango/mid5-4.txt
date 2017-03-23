@@ -5,7 +5,7 @@ disagreement@不一致・相違@be in disagreement with@〜と意見が一致し
 disappearance@失踪・消滅@disappearance of ~@〜の失踪・消滅@0@n
 discovery@発見@make a great discovery@新発見をする@0@n
 doubtful@疑わしい@be doubtful of his story@彼の話を疑う@0@a
-dramatically@dramatically increase@急激に増加する@0@av
+dramatically@急激に・劇的に@dramatically increase@急激に増加する@0@av
 dry@乾いている@a dry towel@乾いたタオル@0@a
 wet@湿っている@the washing is still wet@洗濯物はまだ湿っている@0@a
 dust@ほこり・ごみ@be covered with dust@ほこりをかぶっている@0@n

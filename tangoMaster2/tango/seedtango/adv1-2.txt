@@ -1,6 +1,6 @@
 enthusiasm@情熱・熱中@with enthusiasm@熱中して@0@n
 honor@名誉・敬意@it is a honor to do@〜できて光栄です@0@n
-territory@領域・領土@defend their territory.@彼らの領土（縄張り）を守る@0@n
+territory@領域・領土@defend their territory@彼らの領土を守る@0@n
 statistics@統計・統計学@by the statistics@統計によると@0@n
 grain@穀物@grain production@穀物生産高@0@n
 strain@張る・緊張@put a strain on ~@〜に負担をかける@0@n

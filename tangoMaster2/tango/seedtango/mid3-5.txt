@@ -4,7 +4,7 @@ architecture@建築・構造@modern architecture@現代建築@0@n
 hardship@苦境・困難@face hardship@困難に直面する@0@n
 voyage@航海・旅@a voyage to Asia@アジアへの航海@0@n
 mechanism@仕組み@a complex mechanism@複雑な仕組み@0@n
-tragedy@悲劇@tragedy happened suddenly@悲劇は突然起こった@0@n
+tragedy@悲劇@the tragedy happened@悲劇が起こった@0@n
 fare@料金・運賃@pay a train fare@電車の運賃をはらう@0@n
 debt@借金@the national debt@国債@0@n
 extinction@絶滅@face extinction@絶滅寸前である@0@n

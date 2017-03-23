@@ -14,7 +14,7 @@ inefficient@効率が悪い@inefficient system@効率の悪いシステム@0@a
 insistence@主張・強要@insistence on the right@権利を主張する@0@n
 location@位置・場所@a good location for ~@〜に適した場所だ@0@n
 ultimately@最終的に@ultimately decide ~@最終的に〜を決める@0@av
-comprehensive@包括的・総合的@comprehensive evaluation@総合的評価@0@a
+responsibility@責任@take responsibility for ~@〜の責任をとる@0@n
 precise@正確な@precise calculations@正確な計算@0@a
 controversial@議論になる@controversial topic@議論になりやすい話題@0@a
 enhance@増す・高める@enhance my reputation@自分の評判を高める@0@v

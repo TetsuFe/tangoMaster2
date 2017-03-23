@@ -1,6 +1,6 @@
 anymore@今では、もはや@don't live here anymore@もう既にここにはいない@0@av
 accidental@偶然の・事故の@an accidental death@事故死@0@a
-accidentally@偶然に・誤って@break a glass accidentally@誤ってコップを割る@0@av
+accidentally@偶然に・誤って@break a cup accidentally@誤ってカップを壊す@0@av
 deliberately@わざと・慎重に@didn't do deliberately@わざと〜した訳ではない@0@av
 afterward@後で・その後@I'll go there afterward.@後でそこに行きます@0@av
 agreement@合意・賛成@reach an agreement@合意に至る@0@n
@@ -8,11 +8,11 @@ airport@空港@an international airport@国際空港@0@n
 chapter@章・期間@read chapter 1@第一章を読む@0@n
 classical@古典の@classical music@クラシック音楽@0@a
 clay@粘土@play with clay@粘土で遊ぶ@0@n
-commonly@一般に・いつも@women commonly live long@女性は一般に長生きする@0@av
+commonly@一般に・いつも@commonly used idioms@よく使われる慣用句@0@av
 completely@完全に@completely forgot@完全に忘れていた@0@av
 confident@自信のある@be confident of victory@勝利を確信する@0@a
-consciousness@意識・自覚@lose my consciousness@意識を失う@0@n
-consequently@結果的に@consequently, I refused it@結果的に、私は断った@0@av
+awareness@自覚・気づき@awareness of my ~@自分の〜への気づき@0@n
+consequently@結果的に@Consequently, I won@結果的に、私は勝った@0@av
 control@管理する・制御@out of control@手に負えなくなって@0@v
 creative@創造的・独創的@have a creative idea@独創的な考えをもつ@0@a
 currently@現在は@currently work in a bank@現在は銀行で働いている@0@av

@@ -1,7 +1,7 @@
 limit@制限する@limit the speed@速度を制限する@0@v
 base@根拠付ける@be based on a fact@事実に基づいている@0@v
 reduce@減らす@reduce the budget@予算を減らす@0@v
-establish@設立する@establish a new company@新会社を設立する@0@v
+establish@設立する@establish a school@学校を設立する@0@v
 refer@言及する@refer to the incident@事件について言及する@0@v
 destroy@破壊する@destroy the facility@施設を破壊する@0@v
 mention@述べる@Don't mention it.@どういたしまして。@0@v
@@ -11,10 +11,10 @@ argue@主張する@argue that ~@〜と主張する@0@v
 reply@返事する@reply to his letter@彼の手紙に返事をする@0@v
 decline@下がる・衰退@the decline of the empire@帝国の衰退@0@v
 confuse@困惑させる@be confused by ~@〜に困惑する@0@v
-vary@変化する@one's mood varies from ~@気分が〜次第で変わる@0@v
+vary@変化する@my mood varies from ~@気分が〜次第で変わる@0@v
 examine@調べる@examine the details@詳細を調べる@0@v
-contribute@貢献する@contribute to the success@その成功に貢献する@0@v
-connect@つなぐ@connect Japan with China@日本と中国とを繋ぐ@0@v
+contribute@貢献する@contribute to society@社会に貢献する@0@v
+connect@つなぐ@connect A with B@AとBとを繋げる@0@v
 reject@拒否する@reject the proposal@提案を拒否する@0@v
 threaten@脅す@threaten to kill a child@子供を殺すと脅す@0@v
 extend@延長する@extend the deadline@締め切りを延長する@0@v

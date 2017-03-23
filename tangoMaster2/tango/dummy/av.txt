@@ -43,7 +43,7 @@ largely@主に@be largely due to ~@主に〜が原因だ@0@av
 mostly@ほとんど@he mostly sleeps@彼は大抵いつも寝ている@0@av
 somewhat@多少は@somewhat better@多少良い@0@av
 precisely@丁度・正確に@precisely at ten@丁度１０時に@0@av
-meanwhile@その間・一方@Meanwhile, I was sleeping@一方その頃、私は寝ていた@0@av
+meanwhile@その間・一方@Meanwhile, I studied@一方、私は勉強していた@0@av
 lonely@寂しい@a lonely old man@孤独な老人@0@av
 approximately@約・およそ@approximately 100m@およそ100m@0@av
 unwilling@気が進まない@unwilling to do@〜するのに気が進まない@0@av
@@ -90,21 +90,21 @@ essentially@本質的には@essentially same@本質的には同じ@0@av
 permanently@永久に@permanently delete@永久に削除する@0@av
 entirely@全く・完全に@not entirely@全く〜しないわけではない@0@av
 apart@離れて@live apart from my son@息子と離れて暮らす@0@av
-successfully@うまく@He got away successfully.@彼はうまく逃げ切った@0@av
+successfully@うまく@got away successfully@うまく逃げ切った@0@av
 similarly@同様に・同じく@Similarly, he can also do@同様に、彼も〜できる@0@av
 sincerely@心から・敬具@I sincerely hope that ...@...を心から願う@0@av
 slightly@かすかに・少し@increase slightly@少し増加する@0@av
-someday@いつか@You will success someday.@いつかきっと成功するさ。@0@av
+someday@いつか@will success someday@いつかきっと成功する@0@av
 briefly@簡潔に言うと@Please tell me briefly.@簡潔に話してください@0@av
 carefully@注意深く@drive carefully@注意深く運転する@0@av
 annually@毎年・年一回の@~ be held annually@〜は毎年開催される@0@av
 anymore@今では、もはや@don't live here anymore@もう既にここにはいない@0@av
-accidentally@偶然に・誤って@break a glass accidentally@誤ってコップを割る@0@av
+accidentally@偶然に・誤って@break a cup accidentally@誤ってカップを壊す@0@av
 deliberately@わざと・慎重に@didn't do deliberately@わざと〜した訳ではない@0@av
 afterward@後で・その後@I'll go there afterward.@後でそこに行きます@0@av
-commonly@一般に・いつも@women commonly live long@女性は一般に長生きする@0@av
+commonly@一般に・いつも@commonly used idioms@よく使われる慣用句@0@av
 completely@完全に@completely forgot@完全に忘れていた@0@av
-consequently@結果的に@consequently, I refused it@結果的に、私は断った@0@av
+consequently@結果的に@Consequently, I won@結果的に、私は勝った@0@av
 currently@現在は@currently work in a bank@現在は銀行で働いている@0@av
 directly@直接・すぐに@went directly to ~@〜に直行する@0@av
 dramatically@急激に・劇的に@dramatically increase@急激に増加する@0@av

@@ -2,7 +2,7 @@ opportunity@機会@get an opportunity@機会を得る@0@n
 disease@病気・病@heart disease@心臓病@0@n
 habit@習慣・癖@a habit of doing@〜する習慣@0@n
 desire@願望・望み@a desire to be ~@〜になりたいという願望@0@n
-responsibility@責任@take responsibility for ~@〜の責任をとる@0@n
+usual@普段の・普通の@as usual@普段通りに@0@a
 task@仕事・作業@a difficult task@難しい仕事@0@n
 experiment@実験・実験する@make new experiment@新しい実験をする@0@n
 brain@脳・頭脳@brain death@脳死@0@n

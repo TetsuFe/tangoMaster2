@@ -13,7 +13,7 @@ flash@光る・閃光@the lightning flashs@稲妻が光る@0@n
 flu@インフルエンザ@have flu@インフルエンザにかかる@0@n
 foolish@ばかな@it is foolish of you to do@〜するなんて君はばかだ@0@a
 spring@春・泉・ばね@hot spring@温泉@0@n
-freedom@自由@have the freedom of speech@言論の自由がある@0@n
+freedom@自由@have the freedom of ~@〜の自由がある@0@n
 friendship@友情@a friendship between ~@〜間の友情@0@n
 further@さらに遠くへ@go further away@さらに遠くへ行く@0@av
 far@遠い@far from here@ここから遠い@0@a

@@ -46,7 +46,7 @@ blood@血・血液@high blood pressure@高血圧@0@n
 date@日付・日にち@ditermine the date@日にちを決める@0@n
 sale@販売@be (now) on sale@販売中@0@n
 tourist@旅行客@a Chinese tourist@中国人の観光客@0@n
-none@全く〜ない@none of this concerns me@これは私に全く関係ない@0@n
+none@全て〜ない@none of this is real@このどれもが現実でない@0@n
 scale@規模・尺度@the scale on a ruler@ものさしの目盛り@0@n
 bath@お風呂@take a bath@風呂に入る@0@n
 block@ブロック・角@Go for three blocks@３ブロック分進みなさい@0@n
@@ -190,7 +190,6 @@ crime@犯罪・罪@commit a crime@罪を犯す@0@n
 majority@多数派@the majority of woman@大多数の女性@0@n
 equipment@装置・備品@laboratory equipments@実験室の備品@0@n
 strength@強さ@strength of will@意志の強さ@0@n
-circumstances@状況・事情@present circumstance@現在の状況@0@n
 religion@宗教@believe in religion@宗教を信じる@0@n
 pollution@汚染・公害@environmental pollution@環境汚染@0@n
 profit@利益@make a profit@利益を得る@0@n
@@ -290,7 +289,6 @@ famine@飢餓・飢え@serious famine@深刻な食糧不足@0@n
 diversity@多様性@cultural diversity@文化的多様性@0@n
 thumb@親指@thumb of right hand@右手の親指@0@n
 envelope@封筒@a letter in envelope@封筒の中の手紙@0@n
-discrimination@差別・区別@sexual discrimination@男女差別@0@n
 virus@ウイルス@a virus disease@ウイルス性疾患@0@n
 bond@きずな@strong bonds@強いきずな@0@n
 astronaut@宇宙飛行士@astronaut exam@宇宙飛行士の試験@0@n
@@ -346,7 +344,7 @@ contract@契約（書）@sign a contract@契約にサインする@0@n
 stuff@もの・材料@soft stuff@柔らかいもの@0@n
 enthusiasm@情熱・熱中@with enthusiasm@熱中して@0@n
 honor@名誉・敬意@it is a honor to do@〜できて光栄です@0@n
-territory@領域・領土@defend their territory.@彼らの領土（縄張り）を守る@0@n
+territory@領域・領土@defend their territory.@彼らの領土を守る@0@n
 statistics@統計・統計学@by the statistics@統計によると@0@n
 grain@穀物@grain production@穀物生産高@0@n
 strain@張る・緊張@put a strain on ~@〜に負担をかける@0@n
@@ -397,7 +395,7 @@ string@ひも・糸・文字@a piece of string@一本のひも@0@n
 symbol@象徴・記号・印@the symbol of peace@平和の象徴@0@n
 sailor@船乗り・水兵@my father was a sailor@私の父は船乗りだった@0@n
 section@部分・区間・節@the section of the road@道路の一区間@0@n
-separation@分離・離脱@the separation of A and B@AとBの分離@0@n
+separation@分離・離脱@the separation of ~@〜の分離@0@n
 session@期間・会議@an extraordinary session@臨時会議@0@n
 slope@坂・斜面@go up a steep slope@急な坂をのぼる@0@n
 avoidance@回避・逃避@tax avoidance@租税回避@0@n
@@ -417,7 +415,7 @@ anger@怒り@tremble in anger@怒りで我を忘れる@0@n
 apartment@アパート@live in the apartment@そのアパートに住んでいる@0@n
 attack@攻撃・攻撃する@I was suddenly attacked@私は突然襲われた@0@n
 channel@水路・海峡@the Bristol Channel@ブリストル海峡@0@n
-confirmation@確認・確証@a confirmation of purchase@購入確認@0@n
+confirmation@確認・確証@for a confirmation of ~@〜の確認のために@0@n
 counter@レジ・逆の@the counter direction@逆方向@0@n
 crack@ひび・砕ける@a crack in the bone@骨のひび@0@n
 creativity@創造性・独創性@feed my creativity@独創性を養う@0@n
@@ -447,7 +445,7 @@ vase@花瓶@break the vase@花瓶を割る@0@n
 match@試合・合う@the wrestling match@レスリングの試合@0@n
 material@物質・材料@raw material@原料@0@n
 passage@節・通路@read a passage from@〜の一節を読む@0@n
-department@部署・学部@the personnel department@（企業の）人事部@0@n
+department@部署・学部@the department of ~@〜部・〜学部・〜科@0@n
 delight@喜び・喜ばせる@be delighted with ~@〜を喜ぶ@0@n
 branch@枝・一部門@cut a branch@木の枝を切る@0@n
 square@平方の・四角@1 square meter@1平方メートル@0@n
@@ -528,7 +526,7 @@ loss@損失・損害@a loss of $1 million@100万ドルの損失@0@n
 aspect@側面・方向@in all aspects of ~@〜のあらゆる面から@0@n
 theory@理論・学説@illustrate my theory@私の理論を証明する@0@n
 statement@記述・発言@make a statement@陳述（発言）する@0@n
-professor@教授@a professor at ~ University@〜大学の教授@0@n
+professor@教授@a professor at ~@〜大学の教授@0@n
 surface@表面@the smooth surface@なめらかな表面@0@n
 factor@要因・原因@the main factor@主な要因@0@n
 policy@政策・方針@foreign policy@外交政策@0@n
@@ -626,7 +624,7 @@ architecture@建築・構造@modern architecture@現代建築@0@n
 hardship@苦境・困難@face hardship@困難に直面する@0@n
 voyage@航海・旅@a voyage to Asia@アジアへの航海@0@n
 mechanism@仕組み@a complex mechanism@複雑な仕組み@0@n
-tragedy@悲劇@tragedy happened suddenly@悲劇は突然起こった@0@n
+tragedy@悲劇@the tragedy happened@悲劇が起こった@0@n
 fare@料金・運賃@pay a train fare@電車の運賃をはらう@0@n
 debt@借金@the national debt@国債@0@n
 extinction@絶滅@face extinction@絶滅寸前である@0@n
@@ -683,7 +681,6 @@ agreement@合意・賛成@reach an agreement@合意に至る@0@n
 airport@空港@an international airport@国際空港@0@n
 chapter@章・期間@read chapter 1@第一章を読む@0@n
 clay@粘土@play with clay@粘土で遊ぶ@0@n
-consciousness@意識・自覚@lose my consciousness@意識を失う@0@n
 curve@曲線・曲がり角@sharp curve@急カーブ@0@n
 design@設計・デザイン@a design for a dress@洋服のデザイン@0@n
 diet@食物・食事制限@a balanced diet@バランスのとれた食事@0@n
@@ -709,7 +706,7 @@ film@映画・薄い膜@make a film@映画を作成する@0@n
 flash@光る・閃光@the lightning flashs@稲妻が光る@0@n
 flu@インフルエンザ@have flu@インフルエンザにかかる@0@n
 spring@春・泉・ばね@hot spring@温泉@0@n
-freedom@自由@have the freedom of speech@言論の自由がある@0@n
+freedom@自由@have the freedom of ~@〜の自由がある@0@n
 friendship@友情@a friendship between ~@〜間の友情@0@n
 gesture@身振り・手振り@use gestures effectively@手振りを有効に使う@0@n
 growth@成長・発展@the rapid growth of ~@〜の急成長@0@n
@@ -720,8 +717,7 @@ housework@家事@help with the housework@家事を手伝う@0@n
 importance@重要性@know the importance@重要性をわかっている@0@n
 insistence@主張・強要@insistence on the right@権利を主張する@0@n
 location@位置・場所@a good location for ~@〜に適した場所だ@0@n
-damage@害・損害@cause heavy damage to ~@〜に大きな害を与える@0@n
-chief@主な・長@a chief of the department@部長@0@n
+damage@害・損害@cause damage to ~@〜に損害を与える@0@n
 soldier@兵士@train soldiers@兵士を訓練する@0@n
 journey@旅@make a journey@旅行をする@0@n
 route@経路・道@decide the route@道を決定する@0@n
@@ -755,3 +751,5 @@ evolution@進化・発展@the dramatic evolution@劇的な発展@0@n
 cell@細胞@cancer cells@ガン細胞@0@n
 evil@悪い・悪@a necessary evil@必要悪@0@n
 spoil@台無しにする@spoil the crops@作物がだめになる@0@n
+awareness@自覚・気づき@awareness of my ~@自分の〜への気づき@0@n
+rhythm@リズム@in a constant rhythm@一定のリズムで@0@n

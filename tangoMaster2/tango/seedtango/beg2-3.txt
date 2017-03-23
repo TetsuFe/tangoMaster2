@@ -12,7 +12,7 @@ blood@血・血液@high blood pressure@高血圧@0@n
 date@日付・日にち@ditermine the date@日にちを決める@0@n
 sale@販売@be (now) on sale@販売中@0@n
 tourist@旅行客@a Chinese tourist@中国人の観光客@0@n
-none@全く〜ない@none of this concerns me@これは私に全く関係ない@0@n
+none@全て〜ない@none of this is real@このどれもが現実でない@0@n
 scale@規模・尺度@the scale on a ruler@ものさしの目盛り@0@n
 bath@お風呂@take a bath@風呂に入る@0@n
 block@ブロック・角@Go for three blocks@３ブロック分進みなさい@0@n

@@ -7,7 +7,7 @@ height@高さ・身長@What's your height?@あなたの身長は？@0@n
 purpose@目的@on purpose@わざと@0@n
 behavior@行動・振る舞い@polite behavior@礼儀正しい振る舞い@0@n
 environment@環境@protect the environment@環境を保護する@0@n
-serious@深刻な・真面目な@	serious damage@深刻な被害@0@a
+serious@深刻な・真面目な@serious damage@深刻な被害@0@a
 therefore@ゆえに@~, therefore, ~@〜で、ゆえに、〜だ@0@o
 expensive@高価な@expensive furniture@高級家具@0@a
 favorite@特に好きな@my favorite actor@私の好きな俳優@0@a

@@ -5,7 +5,7 @@ modest@控えめな@modest attitude@謙虚な態度@0@a
 relevant@関係のある@be relevant to me@私に関係がある@0@a
 desperate@必死の@desperate effort@必死の努力@0@a
 precisely@丁度・正確に@precisely at ten@丁度１０時に@0@av
-meanwhile@その間・一方@Meanwhile, I was sleeping@一方その頃、私は寝ていた@0@av
+meanwhile@その間・一方@Meanwhile, I studied@一方、私は勉強していた@0@av
 lonely@寂しい@a lonely old man@孤独な老人@0@av
 precious@貴重・大切な@precious metal@貴金属@0@a
 reluctant@したくない@be reluctant to do@〜したくない@0@a

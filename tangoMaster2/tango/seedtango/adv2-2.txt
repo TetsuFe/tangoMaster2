@@ -1,6 +1,6 @@
 secondary@二次的な@a secondary infection@二次感染@0@a
 section@部分・区間・節@the section of the road@道路の一区間@0@n
-separation@分離・離脱@the separation of A and B@AとBの分離@0@n
+separation@分離・離脱@the separation of ~@〜の分離@0@n
 session@期間・会議@an extraordinary session@臨時会議@0@n
 slope@坂・斜面@go up a steep slope@急な坂をのぼる@0@n
 technological@科学技術の@technological innovation@技術革新@0@a

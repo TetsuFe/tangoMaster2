@@ -1,8 +1,8 @@
 desirable@望ましい@desirable surroundings@望ましい環境s@0@a
 magnificent@壮大な・雄大な@a magnificent view@壮大な眺め@0@a
 evident@明らかな@become evident@明らかになる@0@a
-damage@害・損害@cause heavy damage to ~@〜に大きな害を与える@0@n
-chief@主な・長@a chief of the department@部長@0@n
+damage@害・損害@cause damage to ~@〜に損害を与える@0@n
+chief@主な・長@the chief cook@料理長@0@a
 separate@分離させる@separate A from B@AからBを分離させる@0@v
 soldier@兵士@train soldiers@兵士を訓練する@0@n
 journey@旅@make a journey@旅行をする@0@n

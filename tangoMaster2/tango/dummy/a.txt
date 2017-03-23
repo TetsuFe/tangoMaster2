@@ -1,3 +1,5 @@
+chief@主な・長@the chief cook@料理長@0@a
+usual@普段の・普通の@as usual@普段通りに@0@a
 fun@楽しい@Playing with you is fun.@あなたと遊ぶのは楽しい@0@a
 different@異なる・違う@a different reason@異なる理由@0@a
 difficult@難しい@difficult homework@難しい宿題@0@a
@@ -19,7 +21,7 @@ clever@賢い・器用な@she looks clever@彼女は賢そうだ@0@a
 dirty@汚い・汚れた@clean a dirty room@汚れた部屋を掃除する@0@a
 absent@欠席している@be absent from school@学校を欠席している@0@a
 delicious@美味しい@it's delicious!@おいしい！@0@a
-serious@深刻な・真面目な@	serious damage@深刻な被害@0@a
+serious@深刻な・真面目な@serious damage@深刻な被害@0@a
 expensive@高価な@expensive furniture@高級家具@0@a
 favorite@特に好きな@my favorite actor@私の好きな俳優@0@a
 able@できる@I will be able to win@勝てるだろう@0@a
@@ -71,7 +73,6 @@ strict@厳しい@strict rules@厳しい規則@0@a
 stupid@馬鹿な@Don't be stupid!@馬鹿なことはやめろ！@0@a
 senior@年上の@a senior member@先輩@0@a
 shy@内気な@Don't be shy.@恥ずかしがらないで。@0@a
-indispensable@必要不可欠な@indispensable tool@必要不可欠な道具@0@a
 selfish@利己的な@a selfish behavior@自己中心的な行動@0@a
 incredible@信じられない@it's incredible!@信じられない！@0@a
 strange@変な・奇妙な@he has a strange habit@彼には変な癖がある@0@a
@@ -154,7 +155,7 @@ cultural@文化的な@cultural differences@文化的な違い@0@a
 endangered@絶滅寸前の@an endangered species@絶滅危惧種@0@a
 psychological@心理学の@psychological research@心理学的研究@0@a
 healthy@健康な@maintain a healthy body@健康な体を維持する@0@a
-helpful@有益だ・便利な@this book is helpful to me@この本は私に有益だ@0@a
+helpful@有益だ・便利な@the book is helpful to me@その本は私に有益だ@0@a
 humorous@ユーモアのある@humorous stories@ユーモアのある話@0@a
 poor@貧乏な・下手な@poor English@下手な英語@0@a
 central@中心の@the central part of ~@〜の中心部@0@a
@@ -324,7 +325,6 @@ rigid@固い・厳格な@a rigid discipline@厳格な規律@0@a
 verbal@言語の@verbal ability@言語能力@0@a
 optimistic@楽観的な@an optimistic view@楽観的な見方@0@a
 lively@快活な@a lively girl@元気のいい女の子@0@a
-overwhelming@圧倒的な@an overwhelming majority@圧倒的多数@0@a
 racial@人種の@racial discrimination@人種差別@0@a
 prominent@著名な@a prominent writer@著名な作家@0@a
 federal@連邦制の@the Federal Government@連邦政府@0@a
@@ -346,7 +346,7 @@ eager@〜したがる@be eager to do@〜したい・したがる@0@a
 successful@成功した@a successful experiment@成功した実験@0@a
 sustainable@持続可能な@sustainable development@持続可能な開発@0@a
 simple@単純な・簡単な@a simple question@簡単な（単純な）問題@0@a
-so-called@いわゆる@she is a so‐called feminist@いわゆるフェミニストだ@0@a
+so-called@いわゆる@is a so‐called feminist@いわゆるフェミニストだ@0@a
 bold@大胆な・勇敢な@be bold to do@〜するなんて大胆だ@0@a
 accidental@偶然の・事故の@an accidental death@事故死@0@a
 classical@古典の@classical music@クラシック音楽@0@a
@@ -377,3 +377,5 @@ reasonable@合理的な@a reasonable choice@合理的な選択@0@a
 vast@広大な@a vast farm@広大な農地@0@a
 financial@財政の・金融の@financial crisis@金融危機@0@a
 widespread@広まっている@a widespread rumor@広まっている噂@0@a
+sexual@性別の@sexual discrimination@性的差別@0@a
+meaningless@無意味な@a meaningless effort@無意味な努力@0@a

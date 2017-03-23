@@ -17,4 +17,4 @@ loss@損失・損害@a loss of $1 million@100万ドルの損失@0@n
 aspect@側面・方向@in all aspects of ~@〜のあらゆる面から@0@n
 theory@理論・学説@illustrate my theory@私の理論を証明する@0@n
 statement@記述・発言@make a statement@陳述（発言）する@0@n
-professor@教授@a professor at ~ University@〜大学の教授@0@n
+professor@教授@a professor at ~@〜大学の教授@0@n

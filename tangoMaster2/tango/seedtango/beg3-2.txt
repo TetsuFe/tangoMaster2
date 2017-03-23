@@ -2,10 +2,10 @@ compare@比較する@compare her with me@彼女と私を比較する@0@v
 search@探す@search for my dog@私の犬を探す@0@v
 refuse@拒否する@refuse a request@要求を拒否する@0@v
 perform@上演する・行う@perform the concert@コンサートを上演する@0@v
-graduate@卒業する@graduate from the college@大学を卒業する@0@v
+graduate@卒業する@graduate from ~@〜を卒業する@0@v
 insist@主張する@insist on the right@権利を主張する@0@v
 focus@焦点を当てる@focus on the issue@問題に焦点を当てる@0@n
-convince@納得させる@be convinced of the truth@その事実に納得する@0@v
+convince@納得させる@be convinced of ~@〜に納得する@0@v
 stress@緊張・重圧@stress-related illness@ストレス性の病気@0@n
 respond@答える・応じる@respond to a question@質問に答える@0@v
 shake@振る・揺らす@shake the bottle@瓶を振る@0@v
@@ -16,5 +16,5 @@ repair@修理する@repair the car@車を修理する@0@v
 reserve@予約する@reserve a room@部屋を予約する@0@v
 own@持つ・自分の@own a cottage@山荘を所持している@0@v
 cure@治す@cure him of his cold@彼のカゼを治す@0@v
-embarrass@恥ずかしくする@be embarrassed by my fault@失敗が恥ずかしい@0@v
-participate@参加する@participate in the competition@その大会に参加する@0@v
+embarrass@恥ずかしくする@be embarrassed by ~@〜して恥ずかしい@0@v
+participate@参加する@participate in the event@そのイベントに参加する@0@v

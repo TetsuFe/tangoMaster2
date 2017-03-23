@@ -13,7 +13,7 @@ eager@〜したがる@be eager to do@〜したい・したがる@0@a
 literature@文学・文字@Japanese literature@日本文学@0@n
 subway@地下鉄@go to school by subway@地下鉄で学校に行く@0@n
 successful@成功した@a successful experiment@成功した実験@0@a
-successfully@うまく@He got away successfully.@彼はうまく逃げ切った@0@av
+successfully@うまく@got away successfully@うまく逃げ切った@0@av
 surrounding@周りの・環境@the surrounding scenery@周囲の景色@0@n
 sustainable@持続可能な@sustainable development@持続可能な開発@0@a
 roof@屋根・屋上@climb on to the roof@屋根に登る@0@n

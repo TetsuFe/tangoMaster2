@@ -16,5 +16,5 @@ crime@犯罪・罪@commit a crime@罪を犯す@0@n
 majority@多数派@the majority of woman@大多数の女性@0@n
 equipment@装置・備品@laboratory equipments@実験室の備品@0@n
 strength@強さ@strength of will@意志の強さ@0@n
-circumstances@状況・事情@present circumstance@現在の状況@0@n
+meaningless@無意味な@a meaningless effort@無意味な努力@0@a
 religion@宗教@believe in religion@宗教を信じる@0@n

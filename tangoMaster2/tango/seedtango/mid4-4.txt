@@ -9,7 +9,7 @@ rigid@固い・厳格な@a rigid discipline@厳格な規律@0@a
 verbal@言語の@verbal ability@言語能力@0@a
 optimistic@楽観的な@an optimistic view@楽観的な見方@0@a
 lively@快活な@a lively girl@元気のいい女の子@0@a
-overwhelming@圧倒的な@an overwhelming majority@圧倒的多数@0@a
+overwhelm@圧倒する@an overwhelming power@圧倒的な権力@0@v
 racial@人種の@racial discrimination@人種差別@0@a
 prominent@著名な@a prominent writer@著名な作家@0@a
 federal@連邦制の@the Federal Government@連邦政府@0@a
