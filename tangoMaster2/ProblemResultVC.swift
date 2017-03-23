@@ -26,7 +26,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var storyButton: UIButton!
     
     @IBAction func backButton2(_ sender: Any) {
-        backNearestNaviVC(currentVC:self)
+        backToSelect()
     }
     
     

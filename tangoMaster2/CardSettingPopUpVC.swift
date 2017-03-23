@@ -75,7 +75,7 @@ class CardSettingPopUpVC: UIViewController {
                         parentViewController.leftSwipeButton.isEnabled = true
                         parentViewController.rightSwipeButton.isEnabled = true
                         parentViewController.leftSwipeButton.backgroundColor = UIColor.orange
-                        parentViewController.rightSwipeButton.backgroundColor = UIColor.green
+                        parentViewController.rightSwipeButton.backgroundColor = UIColor(red:  0.225346 ,green: 0.870325, blue: 0.104825, alpha: 1)
                     }
                 }
                 self.view.removeFromSuperview()

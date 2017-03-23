@@ -192,7 +192,7 @@
 				TargetAttributes = {
 					19C239FF1E1E8077008B0D9F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9Q76QMRKQ2;
+						DevelopmentTeam = 7VDG358L4M;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -387,11 +387,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9Q76QMRKQ2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7VDG358L4M;
 				INFOPLIST_FILE = tangoMaster2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Testu.tangoMaster2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Testu2723mental.tangoMaster2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -404,11 +405,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9Q76QMRKQ2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7VDG358L4M;
 				INFOPLIST_FILE = tangoMaster2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Testu.tangoMaster2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Testu2723mental.tangoMaster2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

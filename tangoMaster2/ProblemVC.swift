@@ -30,7 +30,7 @@ class ProblemVC: UIViewController {
     
        
     @IBAction func backButton2(_ sender: Any) {
-        backNearestNaviVC(currentVC:self)
+        backPage()
     }
     
     

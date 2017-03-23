@@ -25,7 +25,8 @@ class CardVC: UIViewController {
     
     
     @IBAction func backButton2(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        backToSelect()
     }
     
     var sevenDatas = Array<SixWithChapter>()
@@ -514,7 +515,7 @@ class CardVC: UIViewController {
             finishView.removeFromSuperview()
             initializeButtonColor()
             //initializeButtonAction()
-            //initializeButtonBorder()
+            initializeButtonBorder()
             goNigateProblemButton.layer.borderWidth = 0.0
             goProblemButton.layer.borderWidth = 0.0
             goProblemButton.isEnabled = false
@@ -544,7 +545,7 @@ class CardVC: UIViewController {
             rightSwipeButton.backgroundColor = UIColor.clear
         }else{
             leftSwipeButton.backgroundColor = UIColor.orange
-            rightSwipeButton.backgroundColor = UIColor.green
+            rightSwipeButton.backgroundColor = UIColor(red:  0.225346 ,green: 0.870325, blue: 0.104825, alpha: 1)
         }
     }
     
@@ -579,11 +580,8 @@ class CardVC: UIViewController {
         goNigateProblemButton.layer.borderColor = UIColor.white.cgColor
         leftSwipeButton.layer.borderColor = UIColor.white.cgColor
         rightSwipeButton.layer.borderColor = UIColor.white.cgColor
-        
-        if !appDelegate.canCardSwipe {
-            leftSwipeButton.layer.borderWidth = 1
-            rightSwipeButton.layer.borderWidth = 1
-        }
+        leftSwipeButton.layer.borderWidth = 0
+        rightSwipeButton.layer.borderWidth = 0
     }
     
     var newChapterNumber = Int()
