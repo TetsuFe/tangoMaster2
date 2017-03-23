@@ -162,7 +162,7 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
      セクションのタイトルを返す.
      */
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+" "+String(appDelegate.setsuNumber+1)
+        return sectionList[appDelegate.problemCategory]+" "+chapterNames[appDelegate.problemCategory][appDelegate.chapterNumber]+"-"+String(appDelegate.setsuNumber+1)
     }
 
     override func didReceiveMemoryWarning() {
