@@ -113,7 +113,7 @@ class ProblemVC: UIViewController {
             }
         }
         */
-        let partsOfSpeechCodes:Array<String>= ["n","a","av","v","o"]//各品詞を集めたファイル
+        let partsOfSpeechCodes:Array<String> = ["n","a","av","v","o"]//各品詞を集めたファイル
         var array = Array<Array<String>>(repeating:[],count:5)
         for i in 0..<partsOfSpeechCodes.count{
             array[i] = readFileGetWordArray(partsOfSpeechCodes[i], extent: "txt", inDirectory:"tango/dummy")
