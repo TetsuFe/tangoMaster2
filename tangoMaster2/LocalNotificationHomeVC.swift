@@ -71,7 +71,6 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
             notificationMinutesIndexUserDefaults.set(row,forKey:"notificationMinutesIndex")
             print("分の行は\(row)")
         }
-        
     }
     
     
@@ -87,7 +86,8 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
         let notificationMinutesUserDefaults = UserDefaults.standard
         notificationMinutesUserDefaults.set(oldMinutes,forKey:"notificationMinutes")
         let notificationMinutesIndexUserDefaults = UserDefaults.standard
-        notificationMinutesIndexUserDefaults.set(oldHoursIndex,forKey:"notificationMinutesIndex")
+        notificationMinutesIndexUserDefaults.set(oldMinutesIndex,forKey:"notificationMinutesIndex")
+        
         readStoredDurationAndSetPicker()
     }
     
@@ -99,8 +99,8 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
         }
         if UserDefaults.standard.object(forKey: "notificationMinutesIndex") != nil {
             notificationDurationPicker.selectRow(UserDefaults.standard.integer(forKey: "notificationMinutesIndex"), inComponent: 1, animated: true)
-            oldMinutes = UserDefaults.standard.integer(forKey: "notificationHours")
-            oldMinutesIndex = UserDefaults.standard.integer(forKey: "notificationHoursIndex")
+            oldMinutes = UserDefaults.standard.integer(forKey: "notificationMinutes")
+            oldMinutesIndex = UserDefaults.standard.integer(forKey: "notificationMinutesIndex")
             print(
                 "分の行は\(UserDefaults.standard.integer(forKey: "notificationMinutesIndex"))")
         }
@@ -116,7 +116,7 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
         notificationDurationPicker.delegate = self
         notificationDurationPicker.dataSource = self
         //保存した値を読み込み、pickerに反映
-       readStoredDurationAndSetPicker()
+        readStoredDurationAndSetPicker()
         
         
         cancelButton.addTarget(self,action: #selector(cancelChangeDuration),for: .touchUpInside)

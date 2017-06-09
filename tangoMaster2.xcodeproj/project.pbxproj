@@ -43,6 +43,7 @@
 		19C23A831E1E82AB008B0D9F /* tangoData2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A481E1E82AB008B0D9F /* tangoData2.txt */; };
 		19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A4F1E1E82AB008B0D9F /* ListCell.swift */; };
 		97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */; };
+		97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */; };
 		97F1FF381EE2C72200EC81B2 /* LocalNotificationHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F1FF371EE2C72200EC81B2 /* LocalNotificationHomeVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		19C23A481E1E82AB008B0D9F /* tangoData2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoData2.txt; sourceTree = "<group>"; };
 		19C23A4F1E1E82AB008B0D9F /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNotificationListVC.swift; sourceTree = "<group>"; };
+		97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCategorySelectVC.swift; sourceTree = "<group>"; };
 		97F1FF371EE2C72200EC81B2 /* LocalNotificationHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationHomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				97F1FF371EE2C72200EC81B2 /* LocalNotificationHomeVC.swift */,
 				19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */,
 				199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */,
+				97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */,
 				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
 				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
 				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
@@ -262,6 +265,7 @@
 				19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */,
 				19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */,
 				19C23A6F1E1E82AB008B0D9F /* AutoFadeVC.swift in Sources */,
+				97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */,
 				19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */,
 				19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */,
 				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,

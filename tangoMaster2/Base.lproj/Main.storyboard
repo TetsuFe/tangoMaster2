@@ -1508,6 +1508,24 @@
             </objects>
             <point key="canvasLocation" x="-4539.375" y="-344.36619718309862"/>
         </scene>
+        <!--Notification Category SelectVC-->
+        <scene sceneID="4dp-NB-gnp">
+            <objects>
+                <viewController id="9F0-wC-sif" customClass="NotificationCategorySelectVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sFS-wj-nuJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1VU-bE-3NC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qnH-L5-yuE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFF-rg-fvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3650" y="-116"/>
+        </scene>
         <!--Custom Notification ListVC-->
         <scene sceneID="0Ih-Nv-PFN">
             <objects>
