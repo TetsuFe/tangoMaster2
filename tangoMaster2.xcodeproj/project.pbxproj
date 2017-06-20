@@ -26,7 +26,7 @@
 		19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */; };
 		19C23A601E1E82AB008B0D9F /* dangoEngStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */; };
 		19C23A611E1E82AB008B0D9F /* dangoStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A251E1E82AB008B0D9F /* dangoStory.txt */; };
-		19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A281E1E82AB008B0D9F /* GlobalList.swift */; };
+		19C23A641E1E82AB008B0D9F /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A281E1E82AB008B0D9F /* utils.swift */; };
 		19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */; };
 		19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */; };
 		19C23A6B1E1E82AB008B0D9F /* JpnEngImgTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */; };
@@ -71,7 +71,7 @@
 		19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectVC.swift; sourceTree = "<group>"; };
 		19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dangoEngStory.txt; sourceTree = "<group>"; };
 		19C23A251E1E82AB008B0D9F /* dangoStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dangoStory.txt; sourceTree = "<group>"; };
-		19C23A281E1E82AB008B0D9F /* GlobalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalList.swift; sourceTree = "<group>"; };
+		19C23A281E1E82AB008B0D9F /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSelectCell.swift; sourceTree = "<group>"; };
 		19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReibunTango.swift; sourceTree = "<group>"; };
 		19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnEngImgTango.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				1924974A1E1E83AB00E032B9 /* Jpn.swift */,
 				19C23A1F1E1E82AB008B0D9F /* CardTango.swift */,
 				19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */,
-				19C23A281E1E82AB008B0D9F /* GlobalList.swift */,
+				19C23A281E1E82AB008B0D9F /* utils.swift */,
 				19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */,
 				19C23A1C1E1E82AB008B0D9F /* CALayer+XibConfiguration.h */,
 				19C23A3E1E1E82AB008B0D9F /* NSCharacterSet_empyt.h */,
@@ -273,7 +273,7 @@
 				19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */,
 				199FD87F1E63B074008381D7 /* HelpSelectCell.swift in Sources */,
 				97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */,
-				19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */,
+				19C23A641E1E82AB008B0D9F /* utils.swift in Sources */,
 				1924974B1E1E83AB00E032B9 /* Jpn.swift in Sources */,
 				19C23A721E1E82AB008B0D9F /* NewImageReibun.swift in Sources */,
 				19C23A711E1E82AB008B0D9F /* HomeVC.swift in Sources */,
