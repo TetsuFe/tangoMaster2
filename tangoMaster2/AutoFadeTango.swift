@@ -1,5 +1,5 @@
 //
-//  AutoFadeTangp.swift
+//  AutoFadeTango.swift
 //  tangoMaster5
 //
 //  Created by Tetsu on 2016/10/29.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AutoFadeTangp:CardTango{
+class AutoFadeTango:CardTango{
     var imagaPath:String?
     init(eng:String,jpn:String,soundPath:String,imagePath:String){
         super.init(eng:eng,jpn:jpn,soundPath:soundPath)
