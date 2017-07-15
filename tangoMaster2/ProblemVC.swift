@@ -485,16 +485,17 @@ class ProblemVC: UIViewController {
         deleteFile(fileName: "correct")
         
         
+        
         print("setResultwrong:\(wrongArray.count)")
         for k in 0..<wrongArray.count{
             if(wrongArray[k] == 1){
-                //writeSixFile(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
+                //writeSixFile(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!)
                 writeSevenFile(fileName:incorrectFileNames[appDelegate.problemCategory
-                ][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!,chapterNumber:sevenList[k].chapterNumber!)
+                ][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!,chapterNumber:sevenList[correctArray[k]].chapterNumber!)
                 print("wrongファイルセット完了？")
             }else{
-                //writeSixFile(fileName:"correct",eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
-                writeSevenFile(fileName:"correct",eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!,chapterNumber:sevenList[k].chapterNumber!)
+                //writeSixFile(fileName:"correct",eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!)
+                writeSevenFile(fileName:"correct",eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!,chapterNumber:sevenList[correctArray[k]].chapterNumber!)
                 print("correctファイルセット完了？")
             }
         }
