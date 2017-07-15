@@ -65,7 +65,6 @@ let nmidFileNames = ["nmid1-1", "nmid1-2", "nmid1-3", "nmid1-4", "nmid1-5", "nmi
 let nadvancedFileName = ["nadv1-1", "nadv1-2", "nadv1-3", "nadv1-4", "nadv1-5", "nadv2-1", "nadv2-2", "nadv2-3", "nadv2-4", "nadv2-5", "nadv3-1", "nadv3-2", "nadv3-3", "nadv3-4", "nadv3-5"]
 let nigateFileNames:Array<Array<String>> =  [nbeginnerFileNames,nmidFileNames,nadvancedFileName]
 
-
 let beginnerChapterNames = ["chapter1","chapter2","chapter3","chapter4","chapter5","chapter6","chapter7","chapter8","chapter9"]
 let midChapterNames = ["chapter1","chapter2","chapter3","chapter4","chapter5","chapter6"]
 let advancedChapterNames = ["chapter1","chapter2","chapter3"]
@@ -704,3 +703,64 @@ func backNearestNaviVC(currentVC:UIViewController){
     }
 }
 
+/*ファイルポインタ取得のコード
+let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+
+// -- start check directory --
+let fileManager = FileManager.default
+var isDir : ObjCBool = false
+
+fileManager.fileExists(atPath: path, isDirectory: &isDir)
+
+if !isDir.boolValue{
+    try! fileManager.createDirectory(atPath: path ,withIntermediateDirectories: false, attributes: nil)
+}
+ let filepath1 = "\(path)/\(fileName+".txt")"
+ let filew: FileHandle? = FileHandle(forWritingAtPath: filepath1)
+ // 保存処理 初回のみfilew == nilなので、初回のみ新規につくられる
+ if(filew == nil){
+ try! fileObject.write(toFile: "\(path)/\(fileName+".txt")", atomically: true, encoding: String.Encoding.utf8)
+ }
+ filew?.closeFile()
+
+ let filer: FileHandle? = FileHandle(forReadingAtPath: filepath1)
+
+*/
+
+extension FileHandle{
+    func readLine() -> String?{
+        print("readline")
+        //読み込み用で開くforReadingAtPath
+        let seekStep = 256
+        let encoding : String.Encoding = .utf8
+        let delimData = "\n".data(using: encoding)
+        var buffer = Data(capacity: 256)
+        print("offset \(self.offsetInFile)")
+        //let tempData = self.readData(ofLength: seekStep)
+        print("offset \(self.offsetInFile)")
+        var atEof = false
+        while !atEof {
+            let tmpData = self.readData(ofLength: seekStep)
+            if tmpData.count > 0 {
+                buffer.append(tmpData)
+            } else {
+                // EOF or read error.
+                atEof = true
+                if buffer.count > 0 {
+                    // Buffer contains last line in file (not terminated by delimiter).
+                    let line = String(data: buffer as Data, encoding: encoding)
+                    buffer.count = 0
+                    return line
+                }
+            }
+            if let range = buffer.range(of: delimData!) {
+                // Convert complete line (excluding the delimiter) to a string:
+                let line = String(data: buffer.subdata(in: 0..<range.lowerBound), encoding: encoding)
+                // Remove line (and the delimiter) from the buffer:
+                buffer.removeSubrange(0..<range.upperBound)
+                return line
+            }
+        }
+        return nil
+    }
+}

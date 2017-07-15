@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
+class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource, UITableViewDelegate,UITableViewDataSource{
 
     //status bar's color is while
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -26,16 +26,35 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
     }
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        notificationDurationPicker.delegate = self
+        notificationDurationPicker.dataSource = self
+        notificationHomeTable.delegate = self
+        notificationHomeTable.dataSource = self
+        //保存した値を読み込み、pickerに反映
+        readStoredDurationAndSetPicker()
+        
+        cancelButton.addTarget(self,action: #selector(cancelChangeDuration),for: .touchUpInside)
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    
     @IBAction func backButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let hoursList:Array<UInt> = [0,1,2,3,4,5,6,7,8,9,10,11,12,24]
     let minutesList:Array<UInt> = [1,5,10,20,30,60,120,180]
     
-    
     @IBOutlet weak var notificationDurationPicker: UIPickerView!
+    
+    @IBOutlet weak var notificationHomeTable: UITableView!
+    
+    let notificationLabelNames = ["自由に選ぶ","苦手","自分で登録"]
+    let imageNames = ["normallist.png","nigatelist.png","manual.png"]
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -46,16 +65,17 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
         if component == 0{
             return hoursList.count
         }else{
+            //if component == 1{
             return minutesList.count
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0{
-            return String(hoursList[row])
+            return String(hoursList[row])+"時間"
         }else{
             //if component == 1{
-            return String(minutesList[row])
+            return String(minutesList[row])+"分"
         }
     }
     
@@ -66,6 +86,7 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
             let notificationMinutesIndexUserDefaults = UserDefaults.standard
             notificationMinutesIndexUserDefaults.set(row,forKey:"notificationHoursIndex")
         }else{
+            //if component == 1{
             notificationMinutesUserDefaults.set(minutesList[row],forKey:"notificationMinutes")
             let notificationMinutesIndexUserDefaults = UserDefaults.standard
             notificationMinutesIndexUserDefaults.set(row,forKey:"notificationMinutesIndex")
@@ -101,9 +122,59 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
             notificationDurationPicker.selectRow(UserDefaults.standard.integer(forKey: "notificationMinutesIndex"), inComponent: 1, animated: true)
             oldMinutes = UserDefaults.standard.integer(forKey: "notificationMinutes")
             oldMinutesIndex = UserDefaults.standard.integer(forKey: "notificationMinutesIndex")
-            print(
-                "分の行は\(UserDefaults.standard.integer(forKey: "notificationMinutesIndex"))")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
+        return notificationLabelNames.count
+    }
+    
+    func tableView(_ tableView : UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
+        
+        let cell: HomeSelectCell = notificationHomeTable.dequeueReusableCell(withIdentifier: "HomeSelectCell") as! HomeSelectCell
+        
+        cell.setCell(notificationLabelNames[indexPath.row],imageNames[indexPath.row])
+        return cell
+    }
+    
+    //Cellが選択された際に呼び出される
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        appDelegate.notificationSceneTag = indexPath.row
+        var secondViewController = UIViewController()
+        if indexPath.row == 0{
+            
+        }else if indexPath.row == 1{
+            
+        }else if indexPath.row == 2{
+            
+        }else if indexPath.row == 3{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
+            //self.present(secondViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
+        //選択時の色の変更をすぐ消す
+        //tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    @IBAction func decideCategoryButton(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        // -1は初期値。tableの中の何も選択していないとエラーにする
+        if appDelegate.notificationSceneTag != -1{
+            //アラートビューを使って「選択してください！」と警告する
+        }else if appDelegate.notificationSceneTag == 0{
+            userDefaults.set("free", forKey: "notificationCategory1")
+        }else if appDelegate.notificationSceneTag == 1{
+            userDefaults.set("nigate", forKey: "notificationCategory1")
+        }else if appDelegate.notificationSceneTag == 2{
+            userDefaults.set("manual", forKey: "notificationCategory1")
+        }
+        //読み込みのとき
+        //let userDefaults = UserDefaults.standard
+        //.string(forKey: "notificationCategory1")
+        //if (userDefaults.object(forKey: "notificationCategory1") != nil) {
+        //print("データ有り")
+        //}
     }
     
     var oldHours:Int = 1
@@ -111,18 +182,7 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
     var oldMinutes:Int = 1
     var oldMinutesIndex:Int = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        notificationDurationPicker.delegate = self
-        notificationDurationPicker.dataSource = self
-        //保存した値を読み込み、pickerに反映
-        readStoredDurationAndSetPicker()
-        
-        
-        cancelButton.addTarget(self,action: #selector(cancelChangeDuration),for: .touchUpInside)
-
-        // Do any additional setup after loading the view.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -30,7 +30,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
     
     //tableView
     let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語通知設定"]
-    let imageNames = ["list.png","test.png","card.png","nigatelist.png,","bell.png"]
+    let imageNames = ["normallist.png","test.png","card.png","nigatelist.png,","bell.png"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

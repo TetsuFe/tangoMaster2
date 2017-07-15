@@ -5,9 +5,10 @@
 //  Created by Satoshi Yoshio on 2017/06/09.
 //  Copyright © 2017年 Tetsu. All rights reserved.
 //
-
-import UIKit
 /*
+import UIKit
+
+
 class NotificationCategorySelectVC: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
     //status bar's color is while
@@ -31,7 +32,6 @@ class NotificationCategorySelectVC: UIViewController, UITableViewDelegate,UITabl
     
     //上のcategoryボタンを削除
     @IBOutlet weak var categorySelectTable: UITableView!
-    
     @IBOutlet weak var modeLabel: UILabel!
     
     var is_category_top:Bool = true
@@ -53,10 +53,6 @@ class NotificationCategorySelectVC: UIViewController, UITableViewDelegate,UITabl
         print("viewDidloaded")
         if(appDelegate.sceneTag == 0){
             modeLabel.text = "リスト"
-        }else if(appDelegate.sceneTag == 1){
-            modeLabel.text = "テスト"
-        }else if(appDelegate.sceneTag == 2){
-            modeLabel.text = "カード"
         }else if(appDelegate.sceneTag == 3){
             modeLabel.text = "苦手"
         }
@@ -80,65 +76,10 @@ class NotificationCategorySelectVC: UIViewController, UITableViewDelegate,UITabl
         for j in 0..<chapterNames.count{
             for i in 0..<chapterNames[j].count{
                 graphCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectWithGraphCell") as! CategorySelectWithGraphCell)
-                
-                var ratio = Double()
-                
-                //ラベルがchapter1のように少し長いため、その分graphの長さを短く設定4/6 -> 4/7
-                let graphMaxWidth = 4*graphCells[i].frame.width/7
-                
-                let superViewWidth = graphCells[i].frame.width
-                let superViewHeight = graphCells[i].frame.height
-                print(graphCells[i].frame.width,graphCells[i].frame.height)
-                
-                //TODO: newChapterNumberがレベルカテゴリごとに必要
-                if i < (newChapterNumbers[j]) / 5 {
-                    ratio = 1
-                }else if i == (newChapterNumbers[j]) / 5{
-                    ratio = Double((newChapterNumbers[j]) % 5) / 5
-                }else{
-                    ratio = 0
-                }
-                
-                labels.append(UILabel(frame: CGRect(x:0,y:0, width: superViewWidth/4, height: superViewHeight/2)))
-                
-                coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/4, y: 0.1*superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
-                
-                labels2.append(UILabel(frame: CGRect(x:superViewWidth/4 + CGFloat(ratio) * graphMaxWidth + CGFloat(1.0 - ratio) * graphMaxWidth,y:0, width: superViewWidth/6, height: superViewHeight/2)))
-                
-                nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/4 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
-                
-                
-                labels[countOfCell].text = chapterNames[j][i]
-                labels2[countOfCell].text = String(Int(ratio*100)) + "%"
-                
-                labels[countOfCell].center.y = graphCells[countOfCell].center.y
-                labels2[countOfCell].center.y = graphCells[countOfCell].center.y
-                coloredGraphs[countOfCell].center.y = graphCells[countOfCell].center.y
-                nonColoredGraphs[countOfCell].center.y = graphCells[countOfCell].center.y
-                print("center:\(graphCells[countOfCell].center.y)")
-                
-                graphCells[countOfCell].backgroundColor = UIColor.orange
-                
-                graphCells[countOfCell].contentView.addSubview(labels[countOfCell])
-                graphCells[countOfCell].contentView.addSubview(coloredGraphs[countOfCell])
-                graphCells[countOfCell].contentView.addSubview(labels2[countOfCell])
-                graphCells[countOfCell].contentView.addSubview(nonColoredGraphs[countOfCell])
-                
                 countOfCell = countOfCell + 1
             }
         }
         print("c = \(graphCells.count)")
-        
-        //appDelegate.problemCategory = 0
-        begButton.backgroundColor = UIColor.blue
-        midButton.backgroundColor = UIColor.gray
-        highButton.backgroundColor = UIColor.gray
-        toeicButton.backgroundColor = UIColor.gray
-        
-        begButton.addTarget(self, action: #selector(toBeg), for: .touchUpInside)
-        midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
-        highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
-        toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
     }
     
     var firstDraw = false
@@ -174,58 +115,13 @@ class NotificationCategorySelectVC: UIViewController, UITableViewDelegate,UITabl
             
             var countOfCell = 0
             
-            //graphCells = Array<CategorySelectWithGraphCell>()
-            labels = Array<UILabel>()
-            coloredGraphs = Array<ColoredDrawer>()
-            labels2 = Array<UILabel>()
-            nonColoredGraphs = Array<NonColoredDrawer>()
-            
+
             for j in 0..<chapterNames.count{
                 for i in 0..<chapterNames[j].count{
-                    graphCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectWithGraphCell") as! CategorySelectWithGraphCell)
                     
-                    var ratio = Double()
                     
-                    //ラベルがchapter1のように少し長いため、その分graphの長さを短く設定4/6 -> 4/7
-                    let graphMaxWidth = 4*graphCells[i].frame.width/7
                     
-                    let superViewWidth = graphCells[i].frame.width
-                    let superViewHeight = graphCells[i].frame.height
-                    
-                    print(graphCells[i].frame.width,graphCells[i].frame.height)
-                    
-                    //TODO: newChapterNumberがレベルカテゴリごとに必要
-                    if i < (newChapterNumbers[j]) / 5 {
-                        ratio = 1
-                    }else if i == (newChapterNumbers[j]) / 5{
-                        ratio = Double((newChapterNumbers[j]) % 5) / 5
-                    }else{
-                        ratio = 0
-                    }
-                    
-                    labels.append(UILabel(frame: CGRect(x:0,y:0, width: superViewWidth/4, height: superViewHeight/2)))
-                    
-                    coloredGraphs.append(ColoredDrawer(frame: CGRect(x: superViewWidth/4, y: 0.1*superViewHeight/5, width: CGFloat(ratio) * graphMaxWidth, height: superViewHeight/2)))
-                    
-                    labels2.append(UILabel(frame: CGRect(x:superViewWidth/4 + CGFloat(ratio) * graphMaxWidth + CGFloat(1.0 - ratio) * graphMaxWidth,y:0, width: superViewWidth/6, height: superViewHeight/2)))
-                    
-                    nonColoredGraphs.append(NonColoredDrawer(frame: CGRect(x: superViewWidth/4 + CGFloat(ratio) * graphMaxWidth, y: 0.1*superViewHeight/5,width: CGFloat(1.0 - ratio) * graphMaxWidth, height: superViewHeight/2)))
-                    
-                    labels[countOfCell].text = chapterNames[j][i]
-                    labels2[countOfCell].text = String(Int(ratio*100)) + "%"
-                    
-                    labels[countOfCell].center.y = superViewHeight/2
-                    labels2[countOfCell].center.y = superViewHeight/2
-                    coloredGraphs[countOfCell].center.y = superViewHeight/2
-                    nonColoredGraphs[countOfCell].center.y = superViewHeight/2
-                    print("center:\(graphCells[countOfCell].center.y)")
-                    
-                    graphCells[countOfCell].backgroundColor = UIColor.orange
-                    
-                    graphCells[countOfCell].contentView.addSubview(labels[countOfCell])
-                    graphCells[countOfCell].contentView.addSubview(coloredGraphs[countOfCell])
-                    graphCells[countOfCell].contentView.addSubview(labels2[countOfCell])
-                    graphCells[countOfCell].contentView.addSubview(nonColoredGraphs[countOfCell])
+                   
                     
                     countOfCell = countOfCell + 1
                 }

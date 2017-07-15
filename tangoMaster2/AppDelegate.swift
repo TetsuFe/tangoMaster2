@@ -23,6 +23,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var modeTag:Int = 0
     var canCardSwipe:Bool = true
     var isProblemCleared:Bool = false
+    var notificationSceneTag: Int = -1
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     
