@@ -20,7 +20,7 @@
 		19C23A091E1E8077008B0D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A071E1E8077008B0D9F /* Main.storyboard */; };
 		19C23A0B1E1E8077008B0D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A0A1E1E8077008B0D9F /* Assets.xcassets */; };
 		19C23A0E1E1E8077008B0D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */; };
-		19C23A581E1E82AB008B0D9F /* AutoFadeTangp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */; };
+		19C23A581E1E82AB008B0D9F /* AutoFadeTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1B1E1E82AB008B0D9F /* AutoFadeTango.swift */; };
 		19C23A591E1E82AB008B0D9F /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */; };
 		19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */; };
 		19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */; };
@@ -60,7 +60,7 @@
 		19C23A0D1E1E8077008B0D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19C23A0F1E1E8077008B0D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19C23A151E1E82AA008B0D9F /* tangoMaster2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tangoMaster2-Bridging-Header.h"; sourceTree = "<group>"; };
-		19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoFadeTangp.swift; sourceTree = "<group>"; };
+		19C23A1B1E1E82AB008B0D9F /* AutoFadeTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoFadeTango.swift; sourceTree = "<group>"; };
 		19C23A1C1E1E82AB008B0D9F /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
 		19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		19C23A1F1E1E82AB008B0D9F /* CardTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTango.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 				19C23A071E1E8077008B0D9F /* Main.storyboard */,
 				19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */,
 				199FD87E1E63B074008381D7 /* HelpSelectCell.swift */,
-				19C23A1B1E1E82AB008B0D9F /* AutoFadeTangp.swift */,
+				19C23A1B1E1E82AB008B0D9F /* AutoFadeTango.swift */,
 				19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */,
 				19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */,
 				1924974A1E1E83AB00E032B9 /* Jpn.swift */,
@@ -258,7 +258,7 @@
 				19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */,
 				19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */,
 				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,
-				19C23A581E1E82AB008B0D9F /* AutoFadeTangp.swift in Sources */,
+				19C23A581E1E82AB008B0D9F /* AutoFadeTango.swift in Sources */,
 				19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */,
 				199FD87F1E63B074008381D7 /* HelpSelectCell.swift in Sources */,
 				19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */,
