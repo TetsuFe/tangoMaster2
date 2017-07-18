@@ -144,14 +144,15 @@ class LocalNotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerVi
         if indexPath.row == 0{
             
         }else if indexPath.row == 1{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "nigateListForNotification") as! NigateListForNotificationVC
             
         }else if indexPath.row == 2{
             
         }else if indexPath.row == 3{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
             //self.present(secondViewController, animated: true, completion: nil)
-            self.navigationController?.pushViewController(secondViewController, animated: true)
         }
+        self.navigationController?.pushViewController(secondViewController, animated: true)
         //選択時の色の変更をすぐ消す
         //tableView.deselectRow(at: indexPath, animated: true)
     }

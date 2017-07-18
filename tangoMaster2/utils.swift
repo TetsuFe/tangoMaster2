@@ -311,6 +311,7 @@ func deleteFile(fileName:String){
     // Do any additional setup after loading the view.
     
     let filepath1 = "\(path)/\(fileName+".txt")"
+    print("delete\(filepath1)")
     
     do{
         try FileManager.default.removeItem(atPath: filepath1)
@@ -764,3 +765,36 @@ extension FileHandle{
         return nil
     }
 }
+
+func writeFile(fileName:String, text:String){
+    //"/Documentを調べたい場合 "/folder_name" -> ""
+    //"/Document/imagesの場合 "/folder_name" -> "/images"
+    let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+    
+    // -- start check directory --
+    let fileManager = FileManager.default
+    var isDir : ObjCBool = false
+    
+    fileManager.fileExists(atPath: path, isDirectory: &isDir)
+    
+    if !isDir.boolValue{
+        try! fileManager.createDirectory(atPath: path ,withIntermediateDirectories: false, attributes: nil)
+    }
+    
+    // 保存するもの
+    let fileObject:String = text
+    let filepath1 = "\(path)/\(fileName)"
+    print("write\(filepath1)")
+    
+    //初回はnilが入るこれを使って初回のみファイルを作成するようにする
+    //書き込み用で開くforWritingAtPath
+    let filew: FileHandle? = FileHandle(forWritingAtPath: filepath1)
+    
+    // 保存処理 初回のみfilew == nilなので、初回のみ新規につくられる
+    if(filew == nil){
+        try! fileObject.write(toFile: "\(path)/\(fileName)", atomically: true, encoding: String.Encoding.utf8)
+    }else{
+        fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+    }
+}
+

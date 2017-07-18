@@ -1532,7 +1532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFF-rg-fvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3650" y="-116"/>
+            <point key="canvasLocation" x="-4455" y="377"/>
         </scene>
         <!--Custom Notification ListVC-->
         <scene sceneID="0Ih-Nv-PFN">
@@ -1550,7 +1550,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yR7-D7-wVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3699" y="664"/>
+            <point key="canvasLocation" x="-4455" y="862"/>
+        </scene>
+        <!--Nigate List For NotificationVC-->
+        <scene sceneID="7z4-HZ-A6B">
+            <objects>
+                <viewController storyboardIdentifier="nigateListForNotification" id="Oqc-ij-8Yu" customClass="NigateListForNotificationVC" customModule="tangoMaster2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KhP-J2-sHO"/>
+                        <viewControllerLayoutGuide type="bottom" id="tKE-iq-uN3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S9j-In-CBK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AlK-0S-eYd">
+                                <rect key="frame" x="0.0" y="201" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chapterListForNotificationCell" id="gFA-4r-B19" customClass="ChapterListForNotificationCell" customModule="tangoMaster2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFA-4r-B19" id="9hC-tg-Dn0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gR-IW-6u0">
+                                                    <rect key="frame" x="43" y="11" width="59" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="苦手単語数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L13-Ng-2h7">
+                                                    <rect key="frame" x="117" y="11" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-Tg-qWM">
+                                                    <rect key="frame" x="258" y="3" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="bell"/>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="gFA-4r-B19" eventType="touchUpInside" id="A2p-PC-CPM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chapterOrSectionLabel" destination="8gR-IW-6u0" id="6WR-y2-ikd"/>
+                                            <outlet property="checkButton" destination="Lpw-Tg-qWM" id="5ae-iL-jsh"/>
+                                            <outlet property="nigateNumberLabel" destination="L13-Ng-2h7" id="VBo-d0-I4O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-Rs-xaY">
+                                <rect key="frame" x="16" y="30" width="61" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6zI-Rs-xaY" secondAttribute="height" multiplier="31:10" id="s74-IB-Qv3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIU-l3-Znf">
+                                <rect key="frame" x="258" y="163" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="全選択">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.057378669200000003" green="0.11228272440000001" blue="0.29693571889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6zI-Rs-xaY" firstAttribute="width" secondItem="6zI-Rs-xaY" secondAttribute="height" multiplier="31:10" id="gVi-wZ-5QV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nigateNotificationCategorySelectTable" destination="AlK-0S-eYd" id="uvq-9O-Rsw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWd-ox-dPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3110.625" y="-375"/>
         </scene>
         <!--Problem Result ProgressVC-->
         <scene sceneID="JwN-Jb-pPq">
@@ -2004,6 +2091,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" width="32" height="32"/>
         <image name="search" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
         <image name="un_nigate" width="50" height="50"/>
