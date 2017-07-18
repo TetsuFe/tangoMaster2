@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1P4-nb-bvt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1P4-nb-bvt">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1785,23 +1785,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-jL-MB7">
-                                <rect key="frame" x="28" y="519" width="69" height="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-jL-MB7">
+                                <rect key="frame" x="28" y="519" width="69" height="32"/>
                                 <color key="backgroundColor" red="0.97421470210000005" green="0.20930731520000001" blue="0.25449627860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6iM-jL-MB7" secondAttribute="height" multiplier="67:28" constant="13.964285714285715" id="s2G-fW-BNN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="やめる">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUG-A4-fqS">
-                                <rect key="frame" x="28" y="467" width="109" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUG-A4-fqS">
+                                <rect key="frame" x="28" y="467" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.1176496335" green="0.74813006150000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KUG-A4-fqS" secondAttribute="height" multiplier="19:7" constant="24.857142857142847" id="RQh-OA-mbK"/>
-                                </constraints>
                                 <state key="normal" title="一つ前に戻る">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1817,14 +1811,15 @@
                             <constraint firstItem="1fA-Fx-CyQ" firstAttribute="leading" secondItem="Spa-yc-h5B" secondAttribute="leading" id="AiB-ih-2qK"/>
                             <constraint firstItem="pRW-bb-yb2" firstAttribute="leading" secondItem="Spa-yc-h5B" secondAttribute="leadingMargin" constant="76" id="D4C-MA-f7T"/>
                             <constraint firstItem="XaU-Vc-H4L" firstAttribute="leading" secondItem="Spa-yc-h5B" secondAttribute="leadingMargin" constant="49" id="H02-FU-qzU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6iM-jL-MB7" secondAttribute="trailing" constant="207" id="HPJ-MD-zW8"/>
                             <constraint firstItem="16J-DK-tzT" firstAttribute="leading" secondItem="Spa-yc-h5B" secondAttribute="leadingMargin" constant="49" id="O3U-Kg-OrP"/>
                             <constraint firstItem="pRW-bb-yb2" firstAttribute="centerX" secondItem="Spa-yc-h5B" secondAttribute="centerX" id="Q2X-dY-Uyv"/>
                             <constraint firstItem="KUG-A4-fqS" firstAttribute="top" secondItem="a1V-sc-tgA" secondAttribute="bottom" constant="35" id="QVu-aR-czC"/>
                             <constraint firstItem="XaU-Vc-H4L" firstAttribute="centerX" secondItem="Spa-yc-h5B" secondAttribute="centerX" id="Qh8-sZ-pY0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KUG-A4-fqS" secondAttribute="trailing" constant="167" id="WJh-Ld-rcH"/>
                             <constraint firstItem="4sT-IH-o3d" firstAttribute="centerX" secondItem="Spa-yc-h5B" secondAttribute="centerX" id="WhA-P2-dqD"/>
                             <constraint firstItem="16J-DK-tzT" firstAttribute="centerX" secondItem="Spa-yc-h5B" secondAttribute="centerX" id="Xpa-L6-0cE"/>
                             <constraint firstItem="6iM-jL-MB7" firstAttribute="leading" secondItem="KUG-A4-fqS" secondAttribute="leading" id="aW2-Oz-mf7"/>
-                            <constraint firstItem="6iM-jL-MB7" firstAttribute="top" secondItem="KUG-A4-fqS" secondAttribute="bottom" constant="21" id="i9j-13-Zmt"/>
                             <constraint firstItem="a1V-sc-tgA" firstAttribute="top" secondItem="16J-DK-tzT" secondAttribute="bottom" constant="30" id="isa-Mc-dwY"/>
                             <constraint firstItem="a1V-sc-tgA" firstAttribute="centerX" secondItem="Spa-yc-h5B" secondAttribute="centerX" id="j65-8g-Nfs"/>
                             <constraint firstItem="KUG-A4-fqS" firstAttribute="leading" secondItem="Spa-yc-h5B" secondAttribute="leadingMargin" constant="12" id="kDg-Bb-fBe"/>
@@ -1832,6 +1827,7 @@
                             <constraint firstAttribute="trailing" secondItem="1fA-Fx-CyQ" secondAttribute="trailing" id="kl1-gV-xLF"/>
                             <constraint firstItem="4sT-IH-o3d" firstAttribute="top" secondItem="1fA-Fx-CyQ" secondAttribute="bottom" constant="24" id="mYS-rX-pkp"/>
                             <constraint firstItem="16J-DK-tzT" firstAttribute="top" secondItem="XRv-jH-dvw" secondAttribute="bottom" constant="30" id="nSx-0M-Zuf"/>
+                            <constraint firstItem="6iM-jL-MB7" firstAttribute="top" secondItem="KUG-A4-fqS" secondAttribute="bottom" constant="22" id="onk-2A-93i"/>
                             <constraint firstItem="XaU-Vc-H4L" firstAttribute="top" secondItem="pRW-bb-yb2" secondAttribute="bottom" constant="38" id="sce-1A-0YB"/>
                             <constraint firstItem="1fA-Fx-CyQ" firstAttribute="centerX" secondItem="Spa-yc-h5B" secondAttribute="centerX" id="vqF-BA-FjI"/>
                             <constraint firstItem="a1V-sc-tgA" firstAttribute="leading" secondItem="Spa-yc-h5B" secondAttribute="leadingMargin" constant="49" id="wPv-t5-bhH"/>
