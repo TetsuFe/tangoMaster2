@@ -25,7 +25,7 @@ class ProblemVC: UIViewController {
     @IBOutlet weak var answerButton4: UIButton!
     
     @IBOutlet weak var backProblemButton: UIButton!
-    @IBOutlet weak var backPageButton: UIButton!
+    //@IBOutlet weak var backPageButton: UIButton!
     
     
        
@@ -143,11 +143,11 @@ class ProblemVC: UIViewController {
         answerButton4.addTarget(self, action: #selector(pushAnswer4), for: .touchUpInside)
         
         backProblemButton.layer.borderWidth = 0
-        backPageButton.layer.borderWidth = 0
+        //backPageButton.layer.borderWidth = 0
         backProblemButton.layer.cornerRadius = 10
-        backPageButton.layer.cornerRadius = 10
+        //backPageButton.layer.cornerRadius = 10
         backProblemButton.addTarget(self, action: #selector(goPrevProblem), for: .touchUpInside)
-        backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
+        //backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
         
         
         //出題する分のファイルを読み込む（答えの分）
