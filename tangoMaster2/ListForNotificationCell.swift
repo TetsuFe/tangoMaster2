@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-class ChapterListForNotificationCell:UITableViewCell{
+class ListForNotificationCell:UITableViewCell{
     //ヘッダが必要（一括チェック欄）
     //chapter名
     //苦手の数
@@ -22,21 +22,24 @@ class ChapterListForNotificationCell:UITableViewCell{
     @IBOutlet weak var checkButton: UIButton!
     var notificationFlag:String = "0"
     var nigateNumber = String()
-    var chapterOrSetsuName = Int()
+    var chapterOrSetsuNumber = Int()
+    var sectionType = String()
     
-    func setCell(chapterOrSetsuName:Int, notificationFlag:String, nigateNumber:String) {
+    func setCell(chapterOrSetsuNumber:Int, notificationFlag:String, nigateNumber:String, sectionType: String) {
         print("setCell")
-
+        print("chapterOrSetsuNumber : \(chapterOrSetsuNumber)")
+        
         self.notificationFlag = notificationFlag
-        self.chapterOrSetsuName = chapterOrSetsuName
+        self.chapterOrSetsuNumber = chapterOrSetsuNumber
         self.nigateNumber = nigateNumber
+        self.sectionType = sectionType
 
         if(self.notificationFlag == "0"){
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
         }else{
             checkButton.setImage(UIImage(named:"bell_colored")!, for: UIControlState())
         }
-        self.chapterOrSetsuName = chapterOrSetsuName
+        self.chapterOrSetsuNumber = chapterOrSetsuNumber
     }
     
     @IBAction func buttonTapped(_ sender: AnyObject) {
@@ -60,7 +63,7 @@ class ChapterListForNotificationCell:UITableViewCell{
             //ON +"1"+
             if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
                 if let nigateNotificationCheckMask:String = f.readLine() {
-                    print("読み込んだマスクパターンです")
+                    print("書き込み前のマスクパターンです")
                     f.closeFile()
                     print(nigateNotificationCheckMask)
                     deleteFile(fileName:preserveFileName)
@@ -71,20 +74,37 @@ class ChapterListForNotificationCell:UITableViewCell{
                     var newMask = ""
                     var index = 0
                     for c in nigateNotificationCheckMask.characters{
-                        if index == preCount+appDelegate.chapterNumber*5+chapterOrSetsuName{
-                            newMask += self.notificationFlag
+                        if sectionType == "chapter"{
+                            let chapterNumber = self.chapterOrSetsuNumber
+                            if index >= preCount+chapterNumber*5 && index < preCount+chapterNumber*5+5{
+                                newMask += self.notificationFlag
+                            }else{
+                                newMask += String(c)
+                            }
                         }else{
-                            newMask += String(c)
+                            let setsuNumber = self.chapterOrSetsuNumber
+                            if index == preCount+appDelegate.chapterNumber*5+setsuNumber{
+                                newMask += self.notificationFlag
+                            }else{
+                                newMask += String(c)
+                            }
                         }
                         index += 1
                     }
                     writeFile(fileName: preserveFileName+".txt", text: newMask)
+                    if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
+                        if let nigateNotificationCheckMaskAfter:String =  f.readLine() {
+                            f.closeFile()
+                            print("書き込み後のマスクパターンです")
+                            print(nigateNotificationCheckMaskAfter)
+                        }
+                    }
                 }
             }else{
                 print("filehandle失敗")
                 writeFile(fileName:preserveFileName+".txt",text:"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
             }
-            setCell(chapterOrSetsuName:self.chapterOrSetsuName, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber)
+            setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber,sectionType: self.sectionType)
         }
         else{
             self.notificationFlag = "0"
@@ -94,7 +114,7 @@ class ChapterListForNotificationCell:UITableViewCell{
 
                 if let nigateNotificationCheckMask:String =  f.readLine() {
                     f.closeFile()
-                    print("読み込んだマスクパターンです")
+                    print("書き込み前のマスクパターンです")
                     print(nigateNotificationCheckMask)
                     deleteFile(fileName:preserveFileName)
                     var preCount = 0
@@ -104,21 +124,38 @@ class ChapterListForNotificationCell:UITableViewCell{
                     var newMask = ""
                     var index = 0
                     for c in nigateNotificationCheckMask.characters{
-                        if index == preCount+appDelegate.chapterNumber*5+chapterOrSetsuName{
-                            newMask += self.notificationFlag
+                        if sectionType == "chapter"{
+                            let chapterNumber = self.chapterOrSetsuNumber
+                            if index >= preCount+chapterNumber*5 && index < preCount+chapterNumber*5+5{
+                                newMask += self.notificationFlag
+                            }else{
+                                newMask += String(c)
+                            }
                         }else{
-                            newMask += String(c)
+                            let setsuNumber = self.chapterOrSetsuNumber
+                            if index == preCount+appDelegate.chapterNumber*5+setsuNumber{
+                                newMask += self.notificationFlag
+                            }else{
+                                newMask += String(c)
+                            }
                         }
                         index += 1
                     }
 
                     writeFile(fileName: preserveFileName+".txt", text: newMask)
+                    if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
+                        if let nigateNotificationCheckMaskAfter:String =  f.readLine() {
+                            f.closeFile()
+                            print("書き込み後のマスクパターンです")
+                            print(nigateNotificationCheckMaskAfter)
+                        }
+                    }
                 }
             }else{
                 print("filehandle失敗")
                 writeFile(fileName:preserveFileName+".txt",text:"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
             }
-            setCell(chapterOrSetsuName:self.chapterOrSetsuName, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber)
+            setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber,sectionType: self.sectionType)
         }
     }
 }

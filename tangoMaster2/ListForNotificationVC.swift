@@ -65,26 +65,27 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
             print("tableViewin write zero mask")
             writeFile(fileName:"nigateNotificationCheckMask.txt",text:zeroMask)
         }
-        let cell: ChapterListForNotificationCell = nigateNotificationCategorySelectTable.dequeueReusableCell(withIdentifier: "chapterListForNotificationCell") as! ChapterListForNotificationCell
+        let cell: ListForNotificationCell = nigateNotificationCategorySelectTable.dequeueReusableCell(withIdentifier: "listForNotificationCell") as! ListForNotificationCell
         var preCount = 0
 
         for i in 0..<appDelegate.problemCategory{
             preCount += fileNames[i].count
         }
-        var notificationFlag = "1"
+        var notificationFlag = "0"
         if is_category_top{
             var maskCharCount = 0
             for c in mask.characters{
                 if maskCharCount >= preCount+indexPath.row*5 && maskCharCount < preCount+indexPath.row*5 + 5{
-                    if String(c) == "0"{
-                        notificationFlag = "0"
+                    if String(c) == "1"{
+                        notificationFlag = "1"
                     }
                 }
                 maskCharCount += 1
             }
-            cell.setCell(chapterOrSetsuName:indexPath.row,notificationFlag:notificationFlag, nigateNumber:"1")
+            cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:notificationFlag, nigateNumber:"1",sectionType:"chapter")
             return cell
         }else{
+            var notificationFlag = "1"
             var maskCharCount = 0
             for c in mask.characters{
                 if maskCharCount == preCount+appDelegate.chapterNumber*5+indexPath.row{
@@ -94,7 +95,7 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
                 }
                 maskCharCount += 1
             }
-            cell.setCell(chapterOrSetsuName:indexPath.row,notificationFlag:notificationFlag, nigateNumber:"1")
+            cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:notificationFlag, nigateNumber:"1",sectionType:"setsu")
             return cell
         }
     }

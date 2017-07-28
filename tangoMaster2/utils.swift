@@ -151,23 +151,17 @@ func getTangoJpnEng(_ list:Array<Array<JpnEngImgTango>>)->Array<String>{
 }
 
 
-func fileWrite(filew:FileHandle?,filepath:String,fileObject:String){
-    var filew2 = filew
-    if(filew2 == nil){
-        filew2 = FileHandle(forWritingAtPath: filepath)
-    }
+func fileWrite(filew:FileHandle,filepath:String,fileObject:String){
     //offset = ファイル内のポインタの位置を示す
-    if filew2 == nil {
-        print("File open failed")
-    } else {
-        //print("Offset = \(filew2?.offsetInFile)")
-        let data = (fileObject as NSString).data(using: String.Encoding.utf8.rawValue)
-        filew2?.seekToEndOfFile()
-        filew2?.write(data!)
-        //print("Offset = \(filew2?.offsetInFile)")
-        filew2?.closeFile()
-    }
-    
+
+    //print("Offset = \(filew2?.offsetInFile)")
+    let data = (fileObject as NSString).data(using: String.Encoding.utf8.rawValue)
+    filew.seekToEndOfFile()
+    filew.write(data!)
+    //print("Offset = \(filew2?.offsetInFile)")
+    //filew2?.closeFile()
+
+
 }
 
 func isInFile(cWord:String,str:String)->Bool{
@@ -415,7 +409,7 @@ func fileSet(fileName:String,eng:String,jpn:String,imgPath:String,engPhrase:Stri
         let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
         // if judgeMatch(cWord: list[gtangoRow][gtangoColumn].eng, str:out){
         if !isInFile(cWord: eng, str:out){
-            fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+            fileWrite(filew: filew!, filepath:filepath1,fileObject:fileObject)
         }
         filer?.closeFile()
     }
@@ -442,13 +436,14 @@ func setFileOfProblemVolume(fileName:String,problemVolume:Int){
     
     //初回はnilが入るこれを使って初回のみファイルを作成するようにする
     //書き込み用で開くforWritingAtPath
-    let filew: FileHandle? = FileHandle(forWritingAtPath: filepath1)
+    
     
     // 保存処理 初回のみfilew == nilなので、初回のみ新規につくられる
-    if(filew == nil){
-        try! fileObject.write(toFile: "\(path)/\(fileName+".txt")", atomically: true, encoding: String.Encoding.utf8)
-    }else{
+    if let filew = FileHandle(forWritingAtPath: filepath1){
         fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+        filew.closeFile()
+    }else{
+        try! fileObject.write(toFile: "\(path)/\(fileName+".txt")", atomically: true, encoding: String.Encoding.utf8)
     }
     
     let filer = FileHandle(forReadingAtPath: filepath1)
@@ -625,7 +620,7 @@ func writeSevenFile(fileName:String,eng: String, jpn: String, engPhrase: String,
         let databuffer = filer?.readData(ofLength: Int(endOffset))
         let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
         if !isInFile(cWord: eng, str:out){
-            fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+            fileWrite(filew: filew!, filepath:filepath1,fileObject:fileObject)
         }
         filer?.closeFile()
     }
@@ -687,7 +682,7 @@ func writeSixFile(fileName:String,eng: String, jpn: String, engPhrase: String, j
         //ファイルの中にすでにその単語があるかどうか確認して重複しないようにする
         let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
         if !isInFile(cWord: eng, str:out){
-            fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+            fileWrite(filew: filew!, filepath:filepath1,fileObject:fileObject)
         }
         filer?.closeFile()
     }
@@ -738,7 +733,7 @@ extension FileHandle{
         var buffer = Data(capacity: 256)
         print("offset \(self.offsetInFile)")
         //let tempData = self.readData(ofLength: seekStep)
-        print("offset \(self.offsetInFile)")
+        //print("offset \(self.offsetInFile)")
         var atEof = false
         while !atEof {
             let tmpData = self.readData(ofLength: seekStep)
@@ -788,13 +783,14 @@ func writeFile(fileName:String, text:String){
     
     //初回はnilが入るこれを使って初回のみファイルを作成するようにする
     //書き込み用で開くforWritingAtPath
-    let filew: FileHandle? = FileHandle(forWritingAtPath: filepath1)
+    
     
     // 保存処理 初回のみfilew == nilなので、初回のみ新規につくられる
-    if(filew == nil){
-        try! fileObject.write(toFile: "\(path)/\(fileName)", atomically: true, encoding: String.Encoding.utf8)
-    }else{
+    if let filew = FileHandle(forWritingAtPath: filepath1){
         fileWrite(filew: filew, filepath:filepath1,fileObject:fileObject)
+        filew.closeFile()
+    }else{
+        try! fileObject.write(toFile: "\(path)/\(fileName)", atomically: true, encoding: String.Encoding.utf8)
     }
 }
 
