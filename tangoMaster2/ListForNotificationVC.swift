@@ -15,11 +15,81 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
     }
     
     @IBOutlet weak var nigateNotificationCategorySelectTable: UITableView!
+    
+    func selectAll(){
+        deleteFile(fileName:"nigateNotificationCheckMask")
+        writeFile(fileName:"nigateNotificationCheckMask.txt",text:oneMask)
+        nigateNotificationCategorySelectTable.reloadData()
+        selectAllButton.setTitle("クリア", for: UIControlState.normal)
+    }
+    
+    func deselectAll(){
+        deleteFile(fileName:"nigateNotificationCheckMask")
+        writeFile(fileName:"nigateNotificationCheckMask.txt",text:zeroMask)
+        nigateNotificationCategorySelectTable.reloadData()
+        selectAllButton.setTitle("全選択", for: UIControlState.normal)
+    }
+    
+    func selectOrDeselectAll(){
+        if selectAllButton.title! == "全選択"{
+            writeCurrectMask()
+            selectAll()
+        }else{
+            writeCurrectMask()
+            deselectAll()
+        }
+    }
+    
+    @IBOutlet weak var selectAllButton: UIButton!
 
+    func rollbackCheck(prevMaskFileName:String){
+        var prevMask = String()
+        deleteFile(fileName: "nigateNotificationCheckMask")
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+        print("prev: \(path+"/"+prevMaskFileName)")
+        if let f = FileHandle(forReadingAtPath: path+"/"+prevMaskFileName){
+            
+            if let mask = f.readLine(){
+                prevMask = mask
+            }else{
+                prevMask = zeroMask
+            }
+            print("ロールバックした後のマスクパターンは\(prevMask)")
+            writeFile(fileName: maskFileName,text: prevMask)
+        }
+    }
+    
+    @IBAction func rollbackCheckButton(_ sender: Any) {
+        
+        rollbackCheck(prevMaskFileName: prevMaskFileName)
+        nigateNotificationCategorySelectTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nigateNotificationCategorySelectTable.delegate = self
         nigateNotificationCategorySelectTable.dataSource = self
+        selectAllButton.addTarget(self, action: #selector(selectOrDeselectAll), for: .touchUpInside)
+        writeCurrectMask()
+    }
+    
+    let prevMaskFileName = "prevNigateNotificationCheckMask.txt"
+    
+    let maskFileName = "nigateNotificationCheckMask.txt"
+    
+    func writeCurrectMask(){
+        deleteFile(fileName:"prevNigateNotificationCheckMask")
+        var currectMask = String()
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+        if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName){
+
+            if let mask = f.readLine(){
+                currectMask = mask
+            }else{
+                currectMask = zeroMask
+            }
+            writeFile(fileName: prevMaskFileName,text: currectMask)
+        }
     }
     
     var is_category_top:Bool = true
@@ -45,14 +115,15 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
         }
     }
     
-   let zeroMask = "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    let zeroMask = "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    
+    let oneMask = "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
     
     func tableView(_ tableView : UITableView,cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         //ファイルからmaskを取り出す処理
-        let preserveFileName = "nigateNotificationCheckMask.txt"
         let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
         var mask = String()
-        if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName){
+        if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName){
             if let nigateNotificationCheckMask:String = f.readLine() {
                 mask = nigateNotificationCheckMask
                 print("読み込んだマスクパターンです")

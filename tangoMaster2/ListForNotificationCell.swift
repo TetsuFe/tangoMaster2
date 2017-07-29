@@ -42,9 +42,15 @@ class ListForNotificationCell:UITableViewCell{
         self.chapterOrSetsuNumber = chapterOrSetsuNumber
     }
     
+    let maskFileName = "nigateNotificationCheckMask"
+    let prevMaskFileName = "prevNigateNotificationCheckMask"
+
+    let zeroMask = "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    
     @IBAction func buttonTapped(_ sender: AnyObject) {
+        writeCurrectMask()
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let preserveFileName = "nigateNotificationCheckMask"
+        
         let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
         //苦手のmask文字列を得る
         
@@ -61,12 +67,12 @@ class ListForNotificationCell:UITableViewCell{
             self.notificationFlag = "1"
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
             //ON +"1"+
-            if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
+            if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName+".txt"){
                 if let nigateNotificationCheckMask:String = f.readLine() {
                     print("書き込み前のマスクパターンです")
                     f.closeFile()
                     print(nigateNotificationCheckMask)
-                    deleteFile(fileName:preserveFileName)
+                    deleteFile(fileName:maskFileName)
                     var preCount = 0
                     for i in 0..<appDelegate.problemCategory{
                         preCount += fileNames[i].count
@@ -91,8 +97,8 @@ class ListForNotificationCell:UITableViewCell{
                         }
                         index += 1
                     }
-                    writeFile(fileName: preserveFileName+".txt", text: newMask)
-                    if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
+                    writeFile(fileName: maskFileName+".txt", text: newMask)
+                    if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName+".txt"){
                         if let nigateNotificationCheckMaskAfter:String =  f.readLine() {
                             f.closeFile()
                             print("書き込み後のマスクパターンです")
@@ -102,7 +108,7 @@ class ListForNotificationCell:UITableViewCell{
                 }
             }else{
                 print("filehandle失敗")
-                writeFile(fileName:preserveFileName+".txt",text:"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+                writeFile(fileName:maskFileName+".txt",text:zeroMask)
             }
             setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber,sectionType: self.sectionType)
         }
@@ -110,13 +116,13 @@ class ListForNotificationCell:UITableViewCell{
             self.notificationFlag = "0"
             checkButton.setImage(UIImage(named:"bell_colored")!, for: UIControlState())
             //OFF +"0"+
-            if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
+            if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName+".txt"){
 
                 if let nigateNotificationCheckMask:String =  f.readLine() {
                     f.closeFile()
                     print("書き込み前のマスクパターンです")
                     print(nigateNotificationCheckMask)
-                    deleteFile(fileName:preserveFileName)
+                    deleteFile(fileName:maskFileName)
                     var preCount = 0
                     for i in 0..<appDelegate.problemCategory{
                         preCount += fileNames[i].count
@@ -142,8 +148,8 @@ class ListForNotificationCell:UITableViewCell{
                         index += 1
                     }
 
-                    writeFile(fileName: preserveFileName+".txt", text: newMask)
-                    if let f = FileHandle(forReadingAtPath: path+"/"+preserveFileName+".txt"){
+                    writeFile(fileName: maskFileName+".txt", text: newMask)
+                    if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName+".txt"){
                         if let nigateNotificationCheckMaskAfter:String =  f.readLine() {
                             f.closeFile()
                             print("書き込み後のマスクパターンです")
@@ -153,10 +159,26 @@ class ListForNotificationCell:UITableViewCell{
                 }
             }else{
                 print("filehandle失敗")
-                writeFile(fileName:preserveFileName+".txt",text:"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+                writeFile(fileName:maskFileName+".txt",text:zeroMask)
             }
             setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber,sectionType: self.sectionType)
         }
+    }
+    
+    func writeCurrectMask(){
+        var currectMask = String()
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+        if let f = FileHandle(forReadingAtPath: path+"/"+maskFileName+".txt"){
+            
+            if let mask = f.readLine(){
+                currectMask = mask
+            }else{
+                currectMask = zeroMask
+            }
+            deleteFile(fileName:prevMaskFileName)
+            writeFile(fileName: prevMaskFileName+".txt",text: currectMask)
+        }
+        print("書き込んだ現在のマスクパターンは\(currectMask)")
     }
 }
 

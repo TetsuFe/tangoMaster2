@@ -1625,6 +1625,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylT-vi-u6y">
+                                <rect key="frame" x="115" y="163" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="直前に戻す">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollbackCheckButton:" destination="Oqc-ij-8Yu" eventType="touchUpInside" id="Jwj-x9-Ybs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.057378669200000003" green="0.11228272440000001" blue="0.29693571889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1633,6 +1643,7 @@
                     </view>
                     <connections>
                         <outlet property="nigateNotificationCategorySelectTable" destination="AlK-0S-eYd" id="uvq-9O-Rsw"/>
+                        <outlet property="selectAllButton" destination="EIU-l3-Znf" id="1fE-tL-nBL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWd-ox-dPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
