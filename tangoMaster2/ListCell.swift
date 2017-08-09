@@ -59,7 +59,7 @@ class ListCell:UITableViewCell{
             self.nigateFlag = "0"
             checkButton.setImage(UIImage(named:"nigate")!, for: UIControlState())
             //OFF
-            let nigateArray = getfile(fileName:preserveFileName)
+            let nigateArray = getTangoArrayFromFile(fileName:preserveFileName)
             var list = Array<NewImageReibun>()
             for r in 0..<nigateArray.count/6{
                 list.append(NewImageReibun(eng: nigateArray[6*r],jpn:nigateArray[6*r+1],engReibun:nigateArray[6*r+2],jpnReibun:nigateArray[6*r+3],nigateFlag: nigateArray[6*r+4],partOfSpeech: nigateArray[6*r+5]))

@@ -42,7 +42,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
             cellsArray.append([])
             //先ずは苦手リストが作成されているか確認する
             
-            tango = getfile(fileName:nigateFileNames[appDelegate.problemCategory][i])
+            tango = getTangoArrayFromFile(fileName:nigateFileNames[appDelegate.problemCategory][i])
             if tango.count != 0{
                 for r in 0..<tango.count/6{
                     listForTable.append(NewImageReibun(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5]))

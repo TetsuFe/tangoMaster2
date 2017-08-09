@@ -38,13 +38,13 @@ class AutoFadeVC: UIViewController {
         var list = Array<Array<NewImageReibun>>(repeating: [],count: 26)
         if appDelegate.modeTag == 0{
             fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
+            tango = readFilegetTangoArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             
             print("tokui")
         }else if appDelegate.modeTag == 1{
             appDelegate.setsuNumber = 0
             fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            tango = getfile(fileName:fileName)
+            tango = getTangoArrayFromFile(fileName:fileName)
             print("nigate")
         } //苦手chpaterの全範囲のProblem
         else if appDelegate.modeTag == 2{
@@ -55,7 +55,7 @@ class AutoFadeVC: UIViewController {
                         nigateExistingFileNames.append(nigateFileNames[appDelegate.problemCategory
                             ][chapter*5+setsu])
                         /*
-                        let tempTango = getfile(fileName:fileName)
+                        let tempTango = getTangoArrayFromFile(fileName:fileName)
                         for j in tempTango{
                             print(j)
                         }
@@ -70,7 +70,7 @@ class AutoFadeVC: UIViewController {
             }
  */
             fileName = nigateExistingFileNames[0]
-            tango = getfile(fileName: fileName)
+            tango = getTangoArrayFromFile(fileName: fileName)
         }else{
             
         }
@@ -366,7 +366,7 @@ class AutoFadeVC: UIViewController {
         
         if appDelegate.modeTag == 0{
             fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
+            tango = readFilegetTangoArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             for r in 0..<tango.count/6{
                 let hash = getHashNum(tango[6*r])
                 list[hash] = addListNIR(list: list,eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5])
@@ -375,7 +375,7 @@ class AutoFadeVC: UIViewController {
         }else if appDelegate.modeTag == 1{
             
             fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            tango = getfile(fileName:fileName)
+            tango = getTangoArrayFromFile(fileName:fileName)
             for r in 0..<tango.count/6{
                 //苦手だけを代入
                 if(tango[6*r+4] == "1"){
@@ -388,7 +388,7 @@ class AutoFadeVC: UIViewController {
         }else {
             
             fileName = nigateExistingFileNames[nigate2FileIndex]
-            tango = getfile(fileName:fileName)
+            tango = getTangoArrayFromFile(fileName:fileName)
             for r in 0..<tango.count/6{
                 //苦手だけを代入
                 if(tango[6*r+4] == "1"){

@@ -45,7 +45,7 @@ class CardVC: UIViewController {
             cardDatas = getAllTangos(fileName:fileName)
         }else if appDelegate.modeTag == 1{
             fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            let tangos = getfile(fileName: fileName)
+            let tangos = getTangoArrayFromFile(fileName: fileName)
             for r in 0..<tangos.count/6{
                 cardDatas.append(NewImageReibun(eng: tangos[6*r],jpn:tangos[6*r+1],engReibun:tangos[6*r+2],jpnReibun:tangos[6*r+3],nigateFlag:tangos[6*r+4],partOfSpeech:tangos[6*r+5]))
             }
@@ -56,7 +56,7 @@ class CardVC: UIViewController {
                 for chapter in 0..<chapterNames[appDelegate.problemCategory].count{
                     let fileName = nigateFileNames[appDelegate.problemCategory
                         ][chapter*5+setsu]
-                    let tempTango = getfile(fileName:fileName)
+                    let tempTango = getTangoArrayFromFile(fileName:fileName)
                     for j in tempTango{
                         print(j)
                     }
@@ -77,7 +77,7 @@ class CardVC: UIViewController {
 
         //テスト中なので、とりあえず、ファイルの全てを取れるようにしておく。基本、苦手もファイル名が変わるだけで形式は同じ
         //苦手配列の英語と同じ英語に苦手ラベルづけ
-        let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
+        let nigateArray:Array<String> = getTangoArrayFromFile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
         for r in 0..<nigateArray.count/6{
             if nigateArray[6*r+4] == "1"{
                 for i in 0..<cardDatas.count{
@@ -284,7 +284,7 @@ class CardVC: UIViewController {
                 nigateButtons[count].setImage(UIImage(named:"un_nigate.png"), for: .normal)
                 cardDatas[count].nigateFlag = "0"
                 
-                let nigateArray = getfile(fileName:preserveFileName)
+                let nigateArray = getTangoArrayFromFile(fileName:preserveFileName)
                 var list = Array<NewImageReibun>()
                 for r in 0..<nigateArray.count/6{
                     list.append(NewImageReibun(eng: nigateArray[6*r],jpn:nigateArray[6*r+1],engReibun:nigateArray[6*r+2],jpnReibun:nigateArray[6*r+3],nigateFlag: nigateArray[6*r+4],partOfSpeech: nigateArray[6*r+5]))
@@ -313,7 +313,7 @@ class CardVC: UIViewController {
                 print("nigate cancel")
                 nigateButtons[count].setImage(UIImage(named:"un_nigate.png"), for: .normal)
                 sevenDatas[count].nigateFlag = "0"
-                let nigateArray = getfile(fileName:preserveFileName)
+                let nigateArray = getTangoArrayFromFile(fileName:preserveFileName)
                 var list = Array<NewImageReibun>()
                 for r in 0..<nigateArray.count/6{
                     list.append(NewImageReibun(eng: nigateArray[6*r],jpn:nigateArray[6*r+1],engReibun:nigateArray[6*r+2],jpnReibun:nigateArray[6*r+3],nigateFlag: nigateArray[6*r+4],partOfSpeech: nigateArray[6*r+5]))
@@ -421,7 +421,7 @@ class CardVC: UIViewController {
                 cardDatas = getAllTangos(fileName:fileName)
             }else if appDelegate.modeTag == 1{
                 fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-                let tangos = getfile(fileName: fileName)
+                let tangos = getTangoArrayFromFile(fileName: fileName)
                 cardDatas = Array<NewImageReibun>()
                 for r in 0..<tangos.count/6{
                     cardDatas.append(NewImageReibun(eng: tangos[6*r],jpn:tangos[6*r+1],engReibun:tangos[6*r+2],jpnReibun:tangos[6*r+3],nigateFlag:tangos[6*r+4],partOfSpeech:tangos[6*r+5]))
@@ -432,7 +432,7 @@ class CardVC: UIViewController {
                 for i in 0..<2{
                     let fileName = nigateFileNames[appDelegate.problemCategory
                         ][i]
-                    let tempTango = getfile(fileName:fileName)
+                    let tempTango = getTangoArrayFromFile(fileName:fileName)
                     for j in tempTango{
                         print(j)
                     }
@@ -456,7 +456,7 @@ class CardVC: UIViewController {
             }
             
             //苦手配列の英語と同じ英語に苦手ラベルづけ
-            let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
+            let nigateArray:Array<String> = getTangoArrayFromFile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
             for r in 0..<nigateArray.count/6{
                 if nigateArray[6*r+4] == "1"{
                     for i in 0..<cardDatas.count{
@@ -805,7 +805,7 @@ class CardVC: UIViewController {
     //苦手ファイルをゲット
     func getNigateTangos(fileName:String)->Array<NewImageReibun>{
         //ファイルをゲット、区切られたArray<String>を得る
-        let nigateArray = getfile(fileName: fileName)
+        let nigateArray = getTangoArrayFromFile(fileName: fileName)
         //var nigateFlagArray = Array<Int>(repeating:0,count:nigateArray.count/8)
         var nigateTangos = Array<NewImageReibun>()
         //区切られたArray<String>の一部の情報を得る
@@ -818,7 +818,7 @@ class CardVC: UIViewController {
     
     func getAllTangos(fileName:String)->Array<NewImageReibun>{
         //ファイルをゲット、区切られたArray<String>を得る
-        let fileWholeTangos = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
+        let fileWholeTangos = readFilegetTangoArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
         var cardDatas = Array<NewImageReibun>()
         //区切られたArray<String>の一部の情報を得る
         for r in 0..<fileWholeTangos.count/6{

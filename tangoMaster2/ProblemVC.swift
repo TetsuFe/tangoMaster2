@@ -39,7 +39,7 @@ class ProblemVC: UIViewController {
     
 
 /*
-    func getFileNameOfParts(parts:String)->String{
+    func getTangoArrayFromFileNameOfParts(parts:String)->String{
         let fileName = parts
         /*
         var fileName = String()
@@ -85,10 +85,10 @@ class ProblemVC: UIViewController {
     }
    /*
     func writePartsFileFromDataFile(parts:String,fileName:String){
-        var readArray = readFileGetWordArray(fileName,extent:"txt",inDirectory: "tango/seedtango")
+        var readArray = readFilegetTangoArray(fileName,extent:"txt",inDirectory: "tango/seedtango")
         for r in 0..<readArray.count/6{
             if readArray[6*r+5] == parts {
-                writeSixFile(fileName:getFileNameOfParts(chap:0, parts:parts),eng:readArray[6*r],jpn:readArray[6*r+1],engPhrase:readArray[6*r+2],jpnPhrase:readArray[6*r+3],nigateFlag:readArray[6*r+4],partOfSpeech:readArray[6*r+5])
+                writeSixFile(fileName:getTangoArrayFromFileNameOfParts(chap:0, parts:parts),eng:readArray[6*r],jpn:readArray[6*r+1],engPhrase:readArray[6*r+2],jpnPhrase:readArray[6*r+3],nigateFlag:readArray[6*r+4],partOfSpeech:readArray[6*r+5])
             }
         }
     }
@@ -105,7 +105,7 @@ class ProblemVC: UIViewController {
         let iterParts = ["n","a","av","p","v","c","aux"]
         for i in 0..<iterParts.count{
             writePartsFileFromDataFile(parts:iterParts[i],dummyTextArray:dummyText)
-            let array = getfile(fileName:getFileNameOfParts(chap:0,parts:iterParts[i]))
+            let array = getTangoArrayFromFile(fileName:getTangoArrayFromFileNameOfParts(chap:0,parts:iterParts[i]))
             //print(array.count)
             for r in 0..<array.count/6{
                 //dummyArrayのrowごとに各partsが入っている。取り出すために、partsToIndexがある
@@ -116,7 +116,7 @@ class ProblemVC: UIViewController {
         let partsOfSpeechCodes:Array<String> = ["n","a","av","v","o"]//各品詞を集めたファイル
         var array = Array<Array<String>>(repeating:[],count:5)
         for i in 0..<partsOfSpeechCodes.count{
-            array[i] = readFileGetWordArray(partsOfSpeechCodes[i], extent: "txt", inDirectory:"tango/dummy")
+            array[i] = readFilegetTangoArray(partsOfSpeechCodes[i], extent: "txt", inDirectory:"tango/dummy")
             for r in 0..<array[i].count/6{
                 //dummyArrayのrowごとに各partsが入っている。取り出すために、partsToIndexがある
                 dummyArray[i].append(Jpn(jpn: array[i][6*r+1]))
@@ -155,7 +155,7 @@ class ProblemVC: UIViewController {
         var tango = Array<String>()
         if appDelegate.modeTag == 0{
             fileName = fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            tango = readFileGetWordArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
+            tango = readFilegetTangoArray(fileName, extent: "txt",inDirectory: "tango/seedtango")
             for r in 0..<tango.count/6{
                 sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber*5+appDelegate.setsuNumber)))
             }
@@ -163,7 +163,7 @@ class ProblemVC: UIViewController {
         //単一の苦手節に対してのProblem
         }else if appDelegate.modeTag == 1{
             fileName = nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber]
-            tango = getfile(fileName:fileName)
+            tango = getTangoArrayFromFile(fileName:fileName)
             for r in 0..<tango.count/6{
                 sevenList.append(SixWithChapter(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5],chapterNumber: String(appDelegate.chapterNumber*5+appDelegate.setsuNumber)))
             }
@@ -177,7 +177,7 @@ class ProblemVC: UIViewController {
                 for chapter in 0..<chapterNames[appDelegate.problemCategory].count{
                     fileName = nigateFileNames[appDelegate.problemCategory
                         ][chapter*5+setsu]
-                    let tempTango = getfile(fileName:fileName)
+                    let tempTango = getTangoArrayFromFile(fileName:fileName)
                     for j in tempTango{
                         print(j)
                     }

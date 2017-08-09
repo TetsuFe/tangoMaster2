@@ -39,9 +39,9 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         resultTableView.delegate = self
         resultTableView.dataSource = self
         
-        let wrongArray = getfile(fileName:incorrectFileNames[appDelegate.problemCategory
+        let wrongArray = getTangoArrayFromFile(fileName:incorrectFileNames[appDelegate.problemCategory
             ][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
-        let correctArray = getfile(fileName: "correct")
+        let correctArray = getTangoArrayFromFile(fileName: "correct")
         
         print(wrongArray.count/6)
         print(correctArray.count/6)
@@ -56,7 +56,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         //苦手ラベルをつけるために苦手を参照
-        let nigateArray:Array<String> = getfile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
+        let nigateArray:Array<String> = getTangoArrayFromFile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
         
         //苦手配列の英語と同じ英語に苦手ラベルづけcorrect
         for r in 0..<nigateArray.count/6{
@@ -239,7 +239,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         print("writeNewChapter")
         deleteFile(fileName:fileName)
         var chapterNumber = 0
-        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/text"
+        let path = defaultTextFileDirectoryPath
         
         // -- start check directory --
         let fileManager = FileManager.default
