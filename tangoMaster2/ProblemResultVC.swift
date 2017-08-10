@@ -39,7 +39,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         resultTableView.delegate = self
         resultTableView.dataSource = self
         
-        let wrongArray = getTangoArrayFromFile(fileName:incorrectFileNames[appDelegate.problemCategory
+        let wrongArray = getTangoArrayFromFile(fileName:WRONG_FILE_NAMES[appDelegate.problemCategory
             ][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
         let correctArray = getTangoArrayFromFile(fileName: "correct")
         
@@ -56,7 +56,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         //苦手ラベルをつけるために苦手を参照
-        let nigateArray:Array<String> = getTangoArrayFromFile(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
+        let nigateArray:Array<String> = getTangoArrayFromFile(fileName: NIGATE_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber])
         
         //苦手配列の英語と同じ英語に苦手ラベルづけcorrect
         for r in 0..<nigateArray.count/6{
@@ -137,30 +137,30 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //ボタンをタップした時に実行するメソッドを指定
         goNextProblem.addTarget(self, action: #selector
             (goNext), for: .touchUpInside)
-        if(appDelegate.chapterNumber*5+appDelegate.setsuNumber >= fileNames[appDelegate.problemCategory].count-1){
+        if(appDelegate.chapterNumber*5+appDelegate.setsuNumber >= NORMAL_FILE_NAMES[appDelegate.problemCategory].count-1){
             print(appDelegate.chapterNumber*5+appDelegate.setsuNumber)
-            print(fileNames[appDelegate.problemCategory].count-1)
+            print(NORMAL_FILE_NAMES[appDelegate.problemCategory].count-1)
             goNextProblem.layer.backgroundColor = UIColor.gray.cgColor
             goNextProblem.isEnabled = false
         }
         
-        let newChapterNumber = getNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], chapterVolume: fileNames[appDelegate.problemCategory].count)
+        let newChapterNumber = getNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], chapterVolume: NORMAL_FILE_NAMES[appDelegate.problemCategory].count)
         
         if(newChapterNumber > appDelegate.chapterNumber*5+appDelegate.setsuNumber){
             //次のchapterを調べるので、次があることを確認する
             if(appDelegate.modeTag == 1){
-                if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < nigateFileNames[appDelegate.problemCategory].count-1){
-                    if getNigateTangoVolume(fileName: nigateFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber+1]) == 0{
+                if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < NIGATE_FILE_NAMES[appDelegate.problemCategory].count-1){
+                    if getNigateTangoVolume(fileName: NIGATE_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber+1]) == 0{
                         goNextProblem.layer.backgroundColor = UIColor.gray.cgColor
                         goNextProblem.isEnabled = false
                     }
                 }
             }
             
-            //これおかしい。if文でnigateFileNamesつかっているのに後でincorrectFileNames使ってる。
+            //これおかしい。if文でNIGATE_FILE_NAMESつかっているのに後でWRONG_FILE_NAMES使ってる。
             if(appDelegate.modeTag == 2){
-                if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < nigateFileNames[appDelegate.problemCategory].count-1){
-                    if getWrongTangoVolume(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber+1]) == 0{
+                if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < NIGATE_FILE_NAMES[appDelegate.problemCategory].count-1){
+                    if getWrongTangoVolume(fileName:WRONG_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber+1]) == 0{
                         goNextProblem.layer.backgroundColor = UIColor.gray.cgColor
                         goNextProblem.isEnabled = false
                     }
@@ -194,19 +194,19 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             comment[1] = ""
             resultImage.image = UIImage(named: "90ten.jpg")
             appDelegate.isProblemCleared = true
-            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
+            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: NIGATE_FILE_NAMES[appDelegate.problemCategory].count)
         }else if(100*incorrectCount/problemVolume <= 10 && 100*incorrectCount/problemVolume > 0){
             comment[0] = "Excellent"
             comment[1] = ""
             resultImage.image = UIImage(named: "80ten.jpg")
             appDelegate.isProblemCleared = true
-            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
+            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: NIGATE_FILE_NAMES[appDelegate.problemCategory].count)
         }else if(100*incorrectCount/problemVolume <= 20 && 100*incorrectCount/problemVolume > 10 ){
             comment[0] = "Good"
             comment[1] = ""
             resultImage.image = UIImage(named: "70ten.jpg")
             appDelegate.isProblemCleared = true
-            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
+            //writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: NIGATE_FILE_NAMES[appDelegate.problemCategory].count)
         }else if(100*incorrectCount/problemVolume <= 30  && 100*incorrectCount/problemVolume > 20){
             comment[0] = "Not Bad"
             comment[1] = ""
@@ -226,11 +226,11 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         if(appDelegate.modeTag == 0){
             print("appDelegate.chapterNumber*5+appDelegate.setsuNumber: \(appDelegate.chapterNumber*5+appDelegate.setsuNumber)")
             if(100*incorrectCount/problemVolume == 0){
-                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
+                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: NIGATE_FILE_NAMES[appDelegate.problemCategory].count)
             }else if(100*incorrectCount/problemVolume <= 10 && 100*incorrectCount/problemVolume > 0){
-                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
+                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: NIGATE_FILE_NAMES[appDelegate.problemCategory].count)
             }else if(100*incorrectCount/problemVolume <= 20 && 100*incorrectCount/problemVolume > 10 ){
-                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: nigateFileNames[appDelegate.problemCategory].count)
+                writeNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], clearedChapterNumber: appDelegate.chapterNumber*5+appDelegate.setsuNumber, chapterVolume: NIGATE_FILE_NAMES[appDelegate.problemCategory].count)
             }
         }
     }
@@ -356,7 +356,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func goNext(){
-        if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < fileNames[appDelegate.problemCategory].count-1 ){
+        if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < NORMAL_FILE_NAMES[appDelegate.problemCategory].count-1 ){
             if appDelegate.setsuNumber == 4{
                 appDelegate.chapterNumber += 1
                 appDelegate.setsuNumber = 0
