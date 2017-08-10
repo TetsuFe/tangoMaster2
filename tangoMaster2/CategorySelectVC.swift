@@ -410,27 +410,27 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func categoryChange(_ category:Int){
-        if category != appDelegate.problemCategory{
-            begButton.backgroundColor = UIColor.gray
-            midButton.backgroundColor = UIColor.gray
-            highButton.backgroundColor = UIColor.gray
-            toeicButton.backgroundColor = UIColor.gray
-            if category == 0{
-                begButton.backgroundColor = UIColor.blue
-            }else if category == 1{
-                midButton.backgroundColor = UIColor.blue
-            }else if category == 2{
-                highButton.backgroundColor = UIColor.blue
-            }else if category == 3{
-                toeicButton.backgroundColor = UIColor.blue
-            }
-            appDelegate.problemCategory = category
-            is_category_top = true
-            
-            //categoryChanged = true
-        
-            categorySelectTable.reloadData()
+        //if category != appDelegate.problemCategory{
+        begButton.backgroundColor = UIColor.gray
+        midButton.backgroundColor = UIColor.gray
+        highButton.backgroundColor = UIColor.gray
+        toeicButton.backgroundColor = UIColor.gray
+        if category == 0{
+            begButton.backgroundColor = UIColor.blue
+        }else if category == 1{
+            midButton.backgroundColor = UIColor.blue
+        }else if category == 2{
+            highButton.backgroundColor = UIColor.blue
+        }else if category == 3{
+            toeicButton.backgroundColor = UIColor.blue
         }
+        appDelegate.problemCategory = category
+        is_category_top = true
+        
+        //categoryChanged = true
+    
+        categorySelectTable.reloadData()
+        //}
     }
     
     func toBeg(){
