@@ -36,13 +36,13 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
         //ループで使う、chapterの番号を示す
         var cIndex = 0
         //ループでカテゴリ全部の苦手単語を取得させる？
-        for i in 0..<nigateFileNames[appDelegate.problemCategory].count{
+        for i in 0..<NIGATE_FILE_NAMES[appDelegate.problemCategory].count{
             var tango = Array<String>()
             var listForTable : Array<NewImageReibun> = []
             cellsArray.append([])
             //先ずは苦手リストが作成されているか確認する
             
-            tango = getfile(fileName:nigateFileNames[appDelegate.problemCategory][i])
+            tango = getTangoArrayFromFile(fileName:NIGATE_FILE_NAMES[appDelegate.problemCategory][i])
             if tango.count != 0{
                 for r in 0..<tango.count/6{
                     listForTable.append(NewImageReibun(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5]))
@@ -54,7 +54,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
                     cellsArray[cIndex][r].setCell(listForTable[r],chapterSetsuNumber:String(i))
                 }
                 cIndex += 1
-                self.nigateSectionList.append(nigateFileNames[appDelegate.problemCategory][i])
+                self.nigateSectionList.append(NIGATE_FILE_NAMES[appDelegate.problemCategory][i])
             }
         }
         imageTableView.dataSource = self
@@ -85,7 +85,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
      セクションの数を返す.
      */
     func numberOfSections(in tableView: UITableView) -> Int {
-        //return nigateFileNames[appDelegate.problemCategory].count
+        //return NIGATE_FILE_NAMES[appDelegate.problemCategory].count
         return nigateSectionList.count
     }
     
@@ -95,7 +95,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //先頭の一文字n(苦手nigate)を消して表示
         let s = nigateSectionList[section]
-        //let s = nigateFileNames[appDelegate.problemCategory][section]
+        //let s = NIGATE_FILE_NAMES[appDelegate.problemCategory][section]
         return s.substring(from: s.index(after: s.startIndex))
     }
     
