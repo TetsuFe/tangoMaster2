@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1P4-nb-bvt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1P4-nb-bvt">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1441,11 +1441,8 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-44-PP7">
-                                <rect key="frame" x="0.0" y="286" width="320" height="282"/>
+                                <rect key="frame" x="0.0" y="282.5" width="320" height="285.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dWA-44-PP7" secondAttribute="height" multiplier="160:141" id="GXN-pH-7zj"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationHomeSelectCell" id="eg4-5b-I3c" customClass="NotificationHomeSelectCell" customModule="tangoMaster2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -1498,7 +1495,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知間隔" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x14-k6-eZN">
-                                <rect key="frame" x="16" y="99" width="90" height="24"/>
+                                <rect key="frame" x="16" y="99" width="77" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x14-k6-eZN" secondAttribute="height" multiplier="15:4" id="wXI-Ev-aex"/>
                                 </constraints>
@@ -1507,7 +1504,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="覚える単語" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-3S-JAt">
-                                <rect key="frame" x="16" y="243" width="96" height="21"/>
+                                <rect key="frame" x="16" y="239.5" width="96" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="euZ-3S-JAt" secondAttribute="height" multiplier="32:7" id="r2v-up-atq"/>
                                 </constraints>
@@ -1516,7 +1513,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ii-Wi-Lwt">
-                                <rect key="frame" x="0.0" y="127.5" width="320" height="89"/>
+                                <rect key="frame" x="0.0" y="124" width="320" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7Ii-Wi-Lwt" secondAttribute="height" multiplier="320:89" id="M4U-KF-6dg"/>
                                 </constraints>
