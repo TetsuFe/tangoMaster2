@@ -1,5 +1,5 @@
 //
-//  ListForNotificationVC.swift
+//  NigateListForNotificationVC.swift
 //  tangoMaster2
 //
 //  Created by Satoshi Yoshio on 2017/07/15.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDataSource{
-    
+class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDataSource{
+
     //status bar's color is while
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     @IBAction func backButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBOutlet weak var notificationCategorySelectTable: UITableView!
+    @IBOutlet weak var nigateNotificationCategorySelectTable: UITableView!
     
     @IBOutlet weak var begButton: UIButton!
     @IBOutlet weak var midButton: UIButton!
@@ -32,21 +32,22 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
     @IBAction func rollbackCheckButton(_ sender: Any) {
         
         rollbackCheck(prevMaskFileName: prevMaskFileName)
-        notificationCategorySelectTable.reloadData()
+        nigateNotificationCategorySelectTable.reloadData()
     }
     
+    var nigateTangoVolumes2D = Array<Array<Int>>()
+
     @IBOutlet weak var graphView: UIView!
     var graphs = Array<TangoProgressGraph>()
     var graphTitle = UILabel()
     let levelLabelNames = ["初級","中級","上級","合計"]
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
-        notificationCategorySelectTable.delegate = self
-        notificationCategorySelectTable.dataSource = self
+        nigateNotificationCategorySelectTable.delegate = self
+        nigateNotificationCategorySelectTable.dataSource = self
         selectAllButton.addTarget(self, action: #selector(selectAllAndSaveCurrent), for: .touchUpInside)
         deselectAllButton.addTarget(self, action: #selector(deselectAllAndSaveCurrent), for: .touchUpInside)
         writeCurrectMask()
@@ -60,8 +61,11 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
         highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
         toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
+        
+        nigateTangoVolumes2D = getNigateVolumeArray()
     }
     
+
     override func viewDidAppear(_ animated : Bool){
         super.viewDidAppear(true)
         loadTangoProgressGraph()
@@ -136,7 +140,7 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
     var begin = CGFloat()
     var end   = CGFloat()
     let step: CGFloat = 1.0
-
+    
     var originProgressBarFrame = CGRect()
     
     //後で削除するために、ここで参照を保持
@@ -190,27 +194,34 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         graphView.backgroundColor = UIColor.orange
         let graphMaxWidth = 4*graphView.frame.width/6
         
-        var willNotifyTangoVolumes = getWillNotifyChapterVolume(maskFileName:NOTIFICATION_MASK_FILE_NAME)
+        var willNotifyNigateTangoVolumes = getWillNotifyNigateTangoVolume(maskFileName:NIGATE_NOTIFICATION_MASK_FILE_NAME,nigateTangoVolumes1D:transArrayDimension2to1(array2D:nigateTangoVolumes2D))
         
         var ratios = Array<Double>()
         
         //+1しているのは、合計の分
         for i in 0..<sectionList.count+1{
             if(i < 3){
-                ratios.append(Double(willNotifyTangoVolumes[i]) / Double(fileVolumes[i]))
-                print("Double(willNotifyTangoVolumes[\(i)]: \(Double(willNotifyTangoVolumes[i]) )")
-                print("Double(fileVolumes[\(i)]): \(Double(fileVolumes[i]))")
-                print("ratios[\(i)]: \(ratios[i])")
+                let nigateTangoVolume = Double(nigateTangoVolumes2D[i].reduce(0, {$0+$1}))
+                if nigateTangoVolume != 0{
+                    ratios.append(Double(willNotifyNigateTangoVolumes[i]) / nigateTangoVolume)
+                }else{
+                    ratios.append(0.0)
+                }
                 //3番目は3種類の合計
             }else{
-                ratios.append(Double(willNotifyTangoVolumes.reduce(0, {$0 + $1})) / Double(fileVolumes.reduce(0, {$0 + $1})))
+                let nigateTangoVolume = Double(transArrayDimension2to1(array2D: nigateTangoVolumes2D).reduce(0, {$0+$1}))
+                if nigateTangoVolume != 0{
+                    ratios.append(Double(willNotifyNigateTangoVolumes.reduce(0, {$0 + $1})) / nigateTangoVolume)
+                }else{
+                    ratios.append(0.0)
+                }
             }
             print(ratios[i])
         }
         
         //タイトルの追加
         graphTitle = UILabel(frame: CGRect(x:0,y:0, width: graphView.frame.width, height: graphView.frame.height/6))
-        graphTitle.text = "覚えられる単語の網羅率"
+        graphTitle.text = "苦手な単語の網羅率"
         graphView.addSubview(graphTitle)
         
         //グラフの追加
@@ -230,7 +241,7 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         let graph = TangoProgressGraph(superViewWidth: superViewWidth, superViewHeight: superViewHeight, graphMaxWidth: graphMaxWidth, labelName: labelName, ratio: ratio,number:number)
         return graph
     }
-
+    
     
     func toBeg(){
         categoryChange(0)
@@ -261,14 +272,14 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
             toeicButton.backgroundColor = UIColor.blue
         }
         is_category_top = true
-        notificationCategorySelectTable.reloadData()
+        nigateNotificationCategorySelectTable.reloadData()
     }
-
     
     func selectAll(){
-        let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:NOTIFICATION_MASK_FILE_NAME, extent:"txt")
+        let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME, extent:"txt")
         let currentMask = f!.readLine()!
         var selectedMask = String()
+        
         if is_category_top{
             if appDelegate.problemCategory == 0{
                 selectedMask = selectMask(mask:currentMask, range:0..<45)
@@ -290,14 +301,17 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
                 
             }
         }
-        deleteFile(fileName:NOTIFICATION_MASK_FILE_NAME)
-        writeFile(fileName:NOTIFICATION_MASK_FILE_NAME+".txt",text:selectedMask)
-        notificationCategorySelectTable.reloadData()
+
+        selectedMask = deselectNigateVolume0(for: selectedMask, nigateTangoVolumes1D: transArrayDimension2to1(array2D: nigateTangoVolumes2D))
+        deleteFile(fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME)
+        writeFile(fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt",text:selectedMask)
+        
+        nigateNotificationCategorySelectTable.reloadData()
         drawGraphWirhAnimation()
     }
     
     func deselectAll(){
-        let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:NOTIFICATION_MASK_FILE_NAME, extent:"txt")
+        let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME, extent:"txt")
         let currentMask = f!.readLine()!
         var deselectedMask = String()
         if is_category_top{
@@ -321,9 +335,9 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
                 
             }
         }
-        deleteFile(fileName:NOTIFICATION_MASK_FILE_NAME)
-        writeFile(fileName:NOTIFICATION_MASK_FILE_NAME+".txt",text:deselectedMask)
-        notificationCategorySelectTable.reloadData()
+        deleteFile(fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME)
+        writeFile(fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt",text:deselectedMask)
+        nigateNotificationCategorySelectTable.reloadData()
         drawGraphWirhAnimation()
     }
     
@@ -337,11 +351,13 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         deselectAll()
     }
     
+
     func rollbackCheck(prevMaskFileName:String){
         var prevMask = String()
+        
         let path = defaultTextFileDirectoryPath
-        print("prev: \(path+"/"+prevMaskFileName+".txt")")
-        if let f = FileHandle(forReadingAtPath: path+"/"+prevMaskFileName+".txt"){
+        print("prev: \(path+"/"+nigatePrevMaskFileName+".txt")")
+        if let f = FileHandle(forReadingAtPath: path+"/"+nigatePrevMaskFileName+".txt"){
             
             if let mask = f.readLine(){
                 prevMask = mask
@@ -349,22 +365,21 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
                 prevMask = zeroMask
             }
             print("ロールバックした後のマスクパターンは\(prevMask)")
-            deleteFile(fileName: NOTIFICATION_MASK_FILE_NAME)
-            writeFile(fileName: NOTIFICATION_MASK_FILE_NAME+".txt",text: prevMask)
+            deleteFile(fileName: NIGATE_NOTIFICATION_MASK_FILE_NAME)
+            writeFile(fileName: NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt",text: prevMask)
             drawGraphWirhAnimation()
         }
     }
     
-    
-    
-    //let prevMaskFileName = "prevNotificationCheckMask"
+    //let prevMaskFileName = "prevNigateNotificationCheckMask"
+    //let maskFileName = NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt"
     
     func writeCurrectMask(){
-        deleteFile(fileName:prevMaskFileName)
+        deleteFile(fileName:nigatePrevMaskFileName)
         var currectMask = String()
         let path = defaultTextFileDirectoryPath
-        if let f = FileHandle(forReadingAtPath: path+"/"+NOTIFICATION_MASK_FILE_NAME+".txt"){
-            
+        if let f = FileHandle(forReadingAtPath: path+"/"+NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt"){
+
             if let mask = f.readLine(){
                 currectMask = mask
             }else{
@@ -373,11 +388,18 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
             writeFile(fileName: prevMaskFileName+".txt",text: currectMask)
             print("書き込んだ現在のマスクパターンは\(currectMask)")
         }
-        
     }
     
+    func getChapterSum(categoryTangoVolumeArray: Array<Int>, chapterNumber: Int)->Int{
+        var chapterTangoVolume = 0
+        for i in 0..<5{
+            chapterTangoVolume += categoryTangoVolumeArray[chapterNumber+i]
+        }
+        return chapterTangoVolume
+    }
     
     var is_category_top:Bool = true
+
     
     //tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
@@ -398,32 +420,33 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         }
     }
     
-    
+   
     func tableView(_ tableView : UITableView,cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         //ファイルからmaskを取り出す処理
         let path = defaultTextFileDirectoryPath
         var mask = String()
-        if let f = FileHandle(forReadingAtPath: path+"/"+NOTIFICATION_MASK_FILE_NAME+".txt"){
-            if let notificationCheckMask:String = f.readLine() {
-                mask = notificationCheckMask
+        if let f = FileHandle(forReadingAtPath: path+"/"+NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt"){
+            if let nigateNotificationCheckMask:String = f.readLine() {
+                mask = nigateNotificationCheckMask
                 print("読み込んだマスクパターンです")
-                print(notificationCheckMask)
+                print(nigateNotificationCheckMask)
                 
             }else{
                 mask = zeroMask
             }
         }else{
             print("tableViewin write zero mask")
-            writeFile(fileName:NOTIFICATION_MASK_FILE_NAME+".txt",text:zeroMask)
+            writeFile(fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt",text:zeroMask)
         }
-        let cell: ListForNotificationCell = notificationCategorySelectTable.dequeueReusableCell(withIdentifier: "listForNotificationCell") as! ListForNotificationCell
+        let cell: NigateListForNotificationCell = nigateNotificationCategorySelectTable.dequeueReusableCell(withIdentifier: "nigateListForNotificationCell") as! NigateListForNotificationCell
         var preCount = 0
-        
+
         for i in 0..<appDelegate.problemCategory{
             preCount += NORMAL_FILE_NAMES[i].count
         }
         var notificationFlag = "0"
         if is_category_top{
+            
             var maskCharCount = 0
             for c in mask.characters{
                 if maskCharCount >= preCount+indexPath.row*5 && maskCharCount < preCount+indexPath.row*5 + 5{
@@ -433,10 +456,17 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
                 }
                 maskCharCount += 1
             }
-            print("indexPath.row: \(indexPath.row)")
-            cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:notificationFlag, sectionType:"chapter", maskFileName: NOTIFICATION_MASK_FILE_NAME, parentVC: self)
+            
+            if getChapterSum(categoryTangoVolumeArray: nigateTangoVolumes2D[appDelegate.problemCategory], chapterNumber: indexPath.row) == 0{
+                cell.backgroundColor = UIColor.darkGray
+                cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:"0", nigateNumber:getChapterSum(categoryTangoVolumeArray: nigateTangoVolumes2D[appDelegate.problemCategory], chapterNumber: indexPath.row),sectionType:"chapter", maskFileName: NIGATE_NOTIFICATION_MASK_FILE_NAME, isEnabled: false, parentVC: self)
+            }else{
+                cell.backgroundColor = UIColor.white
+                cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:notificationFlag, nigateNumber:getChapterSum(categoryTangoVolumeArray: nigateTangoVolumes2D[appDelegate.problemCategory], chapterNumber: indexPath.row),sectionType:"chapter", maskFileName: NIGATE_NOTIFICATION_MASK_FILE_NAME, isEnabled: true, parentVC: self)
+            }
             return cell
         }else{
+            
             var notificationFlag = "1"
             var maskCharCount = 0
             for c in mask.characters{
@@ -447,7 +477,14 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
                 }
                 maskCharCount += 1
             }
-            cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:notificationFlag,sectionType:"setsu", maskFileName: NOTIFICATION_MASK_FILE_NAME, parentVC: self)
+ 
+            if nigateTangoVolumes2D[appDelegate.problemCategory][appDelegate.chapterNumber*5+indexPath.row] == 0{
+                cell.backgroundColor = UIColor.darkGray
+                cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:"0", nigateNumber:nigateTangoVolumes2D[appDelegate.problemCategory][appDelegate.chapterNumber*5+indexPath.row],sectionType:"setsu", maskFileName: NIGATE_NOTIFICATION_MASK_FILE_NAME,isEnabled: false, parentVC: self)
+            }else{
+                cell.backgroundColor = UIColor.white
+                cell.setCell(chapterOrSetsuNumber:indexPath.row,notificationFlag:notificationFlag, nigateNumber:nigateTangoVolumes2D[appDelegate.problemCategory][appDelegate.chapterNumber*5+indexPath.row],sectionType:"setsu", maskFileName: NIGATE_NOTIFICATION_MASK_FILE_NAME, isEnabled: true, parentVC: self)
+            }
             return cell
         }
     }
@@ -467,22 +504,24 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         }
     }
     
-    //Cellが選択された際に呼び出される.
+    /*
+     Cellが選択された際に呼び出される.
+     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if is_category_top{
             appDelegate.chapterNumber = indexPath.row
             is_category_top = false
-            notificationCategorySelectTable.reloadData()
+            nigateNotificationCategorySelectTable.reloadData()
         }else{
             appDelegate.setsuNumber = indexPath.row
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 }
-

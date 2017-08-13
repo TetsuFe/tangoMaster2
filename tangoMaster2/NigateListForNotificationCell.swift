@@ -1,5 +1,5 @@
 //
-//  ListForNotificationCell.swift
+//  NigateListForNotificationCell.swift
 //  tangoMaster2
 //
 //  Created by Satoshi Yoshio on 2017/07/15.
@@ -10,29 +10,35 @@
 import Foundation
 import UIKit
 
-class ListForNotificationCell:UITableViewCell{
+class NigateListForNotificationCell:UITableViewCell{
 
     @IBOutlet weak var chapterOrSectionLabel: UILabel!
-   
+    @IBOutlet weak var nigateNumberLabel: UILabel!
+    
     @IBOutlet weak var checkButton: UIButton!
     
     var notificationFlag:String = "0"
+    var nigateNumber = Int()
     var chapterOrSetsuNumber = Int()
     var sectionType = String()
     var maskFileName = String()
-    private var parentVC:ListForNotificationVC!
-
+    private var isEnabled:Bool!
+    private var parentVC:NigateListForNotificationVC!
     
-    func setCell(chapterOrSetsuNumber:Int, notificationFlag:String, sectionType: String, maskFileName:String,parentVC:ListForNotificationVC) {
+    func setCell(chapterOrSetsuNumber:Int, notificationFlag:String, nigateNumber:Int, sectionType: String, maskFileName:String,isEnabled:Bool,parentVC:NigateListForNotificationVC) {
         print("setCell")
         print("chapterOrSetsuNumber : \(chapterOrSetsuNumber)")
         
         self.notificationFlag = notificationFlag
         self.chapterOrSetsuNumber = chapterOrSetsuNumber
+        self.nigateNumber = nigateNumber
         self.sectionType = sectionType
         self.maskFileName = maskFileName
+        self.isEnabled = isEnabled
         self.parentVC = parentVC
-
+        
+        nigateNumberLabel.text = "苦手単語数：\(self.nigateNumber)"
+        
         if(self.notificationFlag == "0"){
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
         }else{
@@ -45,10 +51,12 @@ class ListForNotificationCell:UITableViewCell{
         }else{
             chapterOrSectionLabel.text = NORMAL_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+chapterOrSetsuNumber]
         }
-
-        checkButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        if self.isEnabled{
+            checkButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        }
     }
-
+    
+    
     func buttonTapped(_ sender: AnyObject) {
         writeCurrectMask()
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -66,17 +74,17 @@ class ListForNotificationCell:UITableViewCell{
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
             //ON +"1"+
             if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-                if let notificationCheckMask:String = f.readLine() {
+                if let nigateNotificationCheckMask:String = f.readLine() {
                     print("書き込み前のマスクパターンです")
                     f.closeFile()
-                    print(notificationCheckMask)
+                    print(nigateNotificationCheckMask)
                     var preCount = 0
                     for i in 0..<appDelegate.problemCategory{
                         preCount += NORMAL_FILE_NAMES[i].count
                     }
                     var newMask = ""
                     var index = 0
-                    for c in notificationCheckMask.characters{
+                    for c in nigateNotificationCheckMask.characters{
                         if sectionType == "chapter"{
                             let chapterNumber = self.chapterOrSetsuNumber
                             if index >= preCount+chapterNumber*5 && index < preCount+chapterNumber*5+5{
@@ -97,10 +105,10 @@ class ListForNotificationCell:UITableViewCell{
                     deleteFile(fileName:self.maskFileName)
                     writeFile(fileName: self.maskFileName+".txt", text: newMask)
                     if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-                        if let notificationCheckMaskAfter:String =  f.readLine() {
+                        if let nigateNotificationCheckMaskAfter:String =  f.readLine() {
                             f.closeFile()
                             print("書き込み後のマスクパターンです")
-                            print(notificationCheckMaskAfter)
+                            print(nigateNotificationCheckMaskAfter)
                         }
                     }
                 }
@@ -108,14 +116,14 @@ class ListForNotificationCell:UITableViewCell{
                 print("filehandle失敗")
                 writeFile(fileName:self.maskFileName+".txt",text:zeroMask)
             }
-            setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag ,sectionType: self.sectionType, maskFileName: self.maskFileName,parentVC: self.parentVC)
+            setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber,sectionType: self.sectionType, maskFileName: self.maskFileName, isEnabled: self.isEnabled,parentVC: self.parentVC)
         }
         else{
             self.notificationFlag = "0"
             checkButton.setImage(UIImage(named:"bell_colored")!, for: UIControlState())
             //OFF +"0"+
             if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-
+                
                 if let nigateNotificationCheckMask:String =  f.readLine() {
                     f.closeFile()
                     print("書き込み前のマスクパターンです")
@@ -158,7 +166,7 @@ class ListForNotificationCell:UITableViewCell{
                 print("filehandle失敗")
                 writeFile(fileName:self.maskFileName+".txt",text:zeroMask)
             }
-            setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag,sectionType: self.sectionType, maskFileName: self.maskFileName,parentVC: self.parentVC)
+            setCell(chapterOrSetsuNumber:self.chapterOrSetsuNumber, notificationFlag:self.notificationFlag, nigateNumber:self.nigateNumber,sectionType: self.sectionType, maskFileName: self.maskFileName,isEnabled:self.isEnabled,parentVC: self.parentVC)
         }
         self.parentVC.drawGraphWirhAnimation()
     }
@@ -173,12 +181,10 @@ class ListForNotificationCell:UITableViewCell{
             }else{
                 currectMask = zeroMask
             }
-            deleteFile(fileName:prevMaskFileName)
-            writeFile(fileName: prevMaskFileName+".txt",text: currectMask)
+            deleteFile(fileName:nigatePrevMaskFileName)
+            writeFile(fileName: nigatePrevMaskFileName+".txt",text: currectMask)
+            print("書き込んだ現在のマスクパターンは\(currectMask)")
         }
-        print("書き込んだ現在のマスクパターンは\(currectMask)")
     }
-    
-    
 }
 

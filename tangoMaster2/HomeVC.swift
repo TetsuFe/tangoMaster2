@@ -29,7 +29,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
     @IBOutlet weak var homeTableView: UITableView!
     
     //tableView
-    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語通知設定"]
+    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語タイマー"]
     let imageNames = ["normallist.png","test.png","card.png","nigatelist.png,","bell.png"]
     
     override func viewDidLoad() {
@@ -119,7 +119,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
         var secondViewController = UIViewController()
         if indexPath.row == 4{
             //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
-            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "localNotificationHome") as! LocalNotificationHomeVC
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "notificationHome") as! NotificationHomeVC
             self.navigationController?.pushViewController(secondViewController, animated: true)
         }else{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
