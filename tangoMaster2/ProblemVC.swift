@@ -489,9 +489,9 @@ class ProblemVC: UIViewController {
         print("setResultwrong:\(wrongArray.count)")
         for k in 0..<wrongArray.count{
             if(wrongArray[k] == 1){
-                //writeSixFile(fileName:incorrectFileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!)
-                writeSevenFile(fileName:incorrectFileNames[appDelegate.problemCategory
-                ][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!,chapterNumber:sevenList[correctArray[k]].chapterNumber!)
+                //writeSixFile(fileName:WRONG_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
+                writeSevenFile(fileName:WRONG_FILE_NAMES[appDelegate.problemCategory
+                ][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!,chapterNumber:sevenList[k].chapterNumber!)
                 print("wrongファイルセット完了？")
             }else{
                 //writeSixFile(fileName:"correct",eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!)
