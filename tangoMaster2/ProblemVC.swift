@@ -502,6 +502,10 @@ class ProblemVC: UIViewController {
     
     
     func backPage(){
+        showBackAlertView()
+    }
+    
+    func showBackAlertView(){
         // ① UIAlertControllerクラスのインスタンスを生成
         let alert: UIAlertController = UIAlertController(title: "確認", message: "範囲選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
         
