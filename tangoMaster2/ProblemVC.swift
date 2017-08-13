@@ -25,7 +25,7 @@ class ProblemVC: UIViewController {
     @IBOutlet weak var answerButton4: UIButton!
     
     @IBOutlet weak var backProblemButton: UIButton!
-    @IBOutlet weak var backPageButton: UIButton!
+    //@IBOutlet weak var backPageButton: UIButton!
     
     
        
@@ -143,11 +143,11 @@ class ProblemVC: UIViewController {
         answerButton4.addTarget(self, action: #selector(pushAnswer4), for: .touchUpInside)
         
         backProblemButton.layer.borderWidth = 0
-        backPageButton.layer.borderWidth = 0
+        //backPageButton.layer.borderWidth = 0
         backProblemButton.layer.cornerRadius = 10
-        backPageButton.layer.cornerRadius = 10
+        //backPageButton.layer.cornerRadius = 10
         backProblemButton.addTarget(self, action: #selector(goPrevProblem), for: .touchUpInside)
-        backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
+        //backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
         
         
         //出題する分のファイルを読み込む（答えの分）
@@ -258,7 +258,7 @@ class ProblemVC: UIViewController {
         //解決法：表示にlistを使わず、問題配列を使う。そうすれば、間違いない
         
         for i in 0..<listEleCount{
-            let rand = Int(arc4random()) % listEleCount
+            let rand = Int(arc4random_uniform(UInt32(UInt(listEleCount))))
             let tempOrder = orderArray[i]
             orderArray[i] = orderArray[rand]
             orderArray[rand] = tempOrder
@@ -279,7 +279,7 @@ class ProblemVC: UIViewController {
         var nextProblem:Array<Int> = originProblem4(correct: correctArray[k],M:correctArray.count)
         correctArray[k] = nextProblem[0]
         for i in 0..<10{
-            let rand = Int(arc4random()) % 4
+            let rand = Int(arc4random_uniform(4))
             let tempOrder = nextProblem[i%4]
             nextProblem[i%4] = nextProblem[rand]
             nextProblem[rand] = tempOrder
@@ -332,7 +332,7 @@ class ProblemVC: UIViewController {
         )->Array<Int>{
         var probOrderArray = currentProbArray
         for i in 0..<20{
-            let rand = Int(arc4random()) % 4
+            let rand = Int(arc4random_uniform(4))
             let tempOrder = probOrderArray[i%4]
             probOrderArray[i%4] = probOrderArray[rand]
             probOrderArray[rand] = tempOrder
