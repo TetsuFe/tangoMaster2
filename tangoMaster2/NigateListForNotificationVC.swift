@@ -393,7 +393,8 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
     func getChapterSum(categoryTangoVolumeArray: Array<Int>, chapterNumber: Int)->Int{
         var chapterTangoVolume = 0
         for i in 0..<5{
-            chapterTangoVolume += categoryTangoVolumeArray[chapterNumber+i]
+            chapterTangoVolume += categoryTangoVolumeArray[chapterNumber*5+i]
+            //print("array[\(chapterNumber+i)] = ^\(categoryTangoVolumeArray[chapterNumber+i])")
         }
         return chapterTangoVolume
     }
