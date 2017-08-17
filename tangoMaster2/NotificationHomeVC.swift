@@ -51,9 +51,9 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
     
     @IBOutlet weak var notificationHomeTable: UITableView!
     
-    //let notificationLabelNames = ["自由に選ぶ","苦手","自分で登録"]
-    let notificationLabelNames = ["自由に選ぶ","苦手"]
-    let imageNames = ["normallist.png","nigatelist.png"]
+    let notificationLabelNames = ["自由に選ぶ","苦手","オリジナル単語登録"]
+    //let notificationLabelNames = ["自由に選ぶ","苦手"]
+    let imageNames = ["normallist.png","nigatelist.png", "manual.png"]
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -137,7 +137,7 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
          nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nigateListForNotification") as! NigateListForNotificationVC
          
          }else if indexPath.row == 2{
-         
+             nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "originalListForNotification") as! OriginalListForNotificationVC
          }else if indexPath.row == 3{
          //nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
          //self.present(nextViewController, animated: true, completion: nil)

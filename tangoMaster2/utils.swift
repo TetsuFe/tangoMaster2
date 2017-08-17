@@ -272,6 +272,7 @@ func getTangoArrayFromFile(fileName:String)->Array<String>{
     //let fileObject:String = eng+"@"+jpn+"\n"
     
     let filepath1 = "\(path)/\(fileName+".txt")"
+    print("filepath1: \(filepath1)")
     
     //初回はnilが入るこれを使って初回のみファイルを作成するようにする
     //書き込み用で開くforWritingAtPath
@@ -371,7 +372,30 @@ func deleteWordFromNigateArraySeven(eng:String,list:Array<SixWithChapter>)->Arra
     return deletedArray
 }
 
+func deleteWordFromOriginalArray(eng:String,list:Array<OriginalNotificationTango>)->Array<OriginalNotificationTango>{
+    var deletedArray = list
+    for i in 0..<deletedArray.count{
+        if deletedArray[i].eng == eng{
+            deletedArray.remove(at: i)
+            break
+        }
+    }
+    return deletedArray
+}
 
+func deleteOriginalFileName(fileName:String,from listFileStatuses:Array<OriginalTangoFileStatus>)->Array<OriginalTangoFileStatus>{
+    var deletedArray = listFileStatuses
+    for i in 0..<deletedArray.count{
+        if deletedArray[i].fileName == fileName{
+            deletedArray.remove(at: i)
+            break
+        }
+    }
+    return deletedArray
+}
+
+
+/*
 func fileSet(fileName:String,eng:String,jpn:String,imgPath:String,engPhrase:String,jpnPhrase:String,nigateFlag:String,partsOfSpeech:String,soundPath:String){
     //get current word list
     
@@ -435,6 +459,7 @@ func fileSet(fileName:String,eng:String,jpn:String,imgPath:String,engPhrase:Stri
         filer?.closeFile()
     }
 }
+ */
 
 func setFileOfProblemVolume(fileName:String,problemVolume:Int){
     //"/Documentを調べたい場合 "/folder_name" -> ""
@@ -627,6 +652,7 @@ func getNewChapter(fileName:String,chapterVolume:Int)->Int{
     print("new chapter number is \(chapterNumber)")
     return chapterNumber
 }
+
 
 func writeSevenFile(fileName:String,eng: String, jpn: String, engPhrase: String, jpnPhrase: String,nigateFlag:String,partOfSpeech:String,chapterNumber:String){
     let path = defaultTextFileDirectoryPath
@@ -824,7 +850,7 @@ func writeFile(fileName:String, text:String){
     // 保存するもの
     let fileObject:String = text
     let filepath1 = "\(path)/\(fileName)"
-    print("write\(filepath1)")
+    print("writeFile \(filepath1)")
     
     //初回はnilが入るこれを使って初回のみファイルを作成するようにする
     //書き込み用で開くforWritingAtPath
@@ -1000,4 +1026,72 @@ func deselectMask(at:Int, oldMask:String)->String{
         }
     }
     return newMask
+}
+
+
+func readFile(fileName:String, extent:String)->String?{
+    
+    let path = defaultTextFileDirectoryPath
+    
+    let fileManager = FileManager.default
+    var isDir : ObjCBool = false
+    
+    fileManager.fileExists(atPath: path, isDirectory: &isDir)
+    
+    if !isDir.boolValue{
+        try! fileManager.createDirectory(atPath: path ,withIntermediateDirectories: true, attributes: nil)
+    }
+    
+    let filepath1 = "\(path)/\(fileName)"+".\(extent)"
+    
+    //読み込み用で開くforReadingAtPath
+    let filer: FileHandle? = FileHandle(forReadingAtPath: filepath1)
+    if filer == nil {
+        print("File open failed")
+        return nil
+    } else {
+        filer?.seekToEndOfFile()
+        let endOffset = (filer?.offsetInFile)!
+        filer?.seek(toFileOffset: 0)
+        let databuffer = filer?.readData(ofLength: Int(endOffset))
+        // NSData to String
+        let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
+        filer?.closeFile()
+        return out
+    }
+}
+
+
+func copyFile(from copiedFileName:String, to targetFileName:String, extent:String){
+    if let copiedText = readFile(fileName: copiedFileName, extent: extent){
+        deleteFile(fileName:targetFileName)
+        writeFileWithExtent(fileName:targetFileName, text:copiedText, extent:extent)
+    }
+}
+
+
+
+func updateOriginalFileListFile(originaltangoFileStatus:OriginalTangoFileStatus,extent:String){
+    let originalListFileElements = getTangoArrayFromFile(fileName:ORIGINAL_LIST_FILE_NAME)
+    var originalListFileList = Array<OriginalTangoFileStatus>()
+    for r in 0..<originalListFileElements.count/3{
+        originalListFileList.append(OriginalTangoFileStatus(fileName: originalListFileElements[3*r],prevFileName:originalListFileElements[3*r+1],notificationFlag: originalListFileElements[3*r+2]))
+    }
+    originalListFileList = deleteOriginalFileName(fileName:originaltangoFileStatus.fileName,from :originalListFileList)
+    deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
+    for originalTango in originalListFileList{
+        originalTango.writeFileAdditioanally(fileName: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+    }
+}
+
+
+//let ORIGINAL_NOTIFICATION_FILE_NAME = "origialNotificationTangos"
+//let PREV_ORIGINAL_NOTIFICATION_FILE_NAME = "prevOriginalNotificationTangos"
+
+let ORIGINAL_LIST_FILE_NAME = "listNameList"
+let PREV_ORIGINAL_LIST_FILE_NAME = "prevListNameList"
+
+
+func writeFileWithExtent(fileName:String, text:String, extent:String){
+    writeFile(fileName:fileName+"."+extent, text: text)
 }

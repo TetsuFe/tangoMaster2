@@ -25,6 +25,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var canCardSwipe:Bool = true
     var isProblemCleared:Bool = false
     var notificationSceneTag: Int = -1
+    var originalFileName = String()
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     
