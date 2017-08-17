@@ -331,12 +331,12 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         }else{
             
             if appDelegate.sceneTag == 1{
-                if indexPath.row < newChapterNumbers[appDelegate.problemCategory]{
+                if indexPath.row+5*appDelegate.chapterNumber < newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.green
-                }else if indexPath.row == newChapterNumbers[appDelegate.problemCategory]{
+                }else if indexPath.row+5*appDelegate.chapterNumber == newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.orange
                 }
-                else if indexPath.row > newChapterNumbers[appDelegate.problemCategory]{
+                else if indexPath.row+5*appDelegate.chapterNumber > newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.darkGray
                 }
             }else{
