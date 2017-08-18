@@ -50,6 +50,7 @@ class OriginalListForNotificationVC: UIViewController, UITableViewDelegate,UITab
     
     @IBAction func rollbackCheckButton(_ sender: Any) {
         rollbackCheck(prevMaskFileName: PREV_ORIGINAL_LIST_FILE_NAME)
+        cells = readOriginalTangoFile()
         originalNotificationSelectTable.reloadData()
     }
 

@@ -32,7 +32,7 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var deselectAllButton: UIButton!
     
     @IBAction func rollbackCheckButton(_ sender: Any) {
-        rollbackCheck(prevMaskFileName: appDelegate.originalFileName)
+        rollbackCheck(prevMaskFileName: "prev"+appDelegate.originalFileName)
         originalListTable.reloadData()
     }
     
@@ -78,6 +78,7 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
             cells[i].originalNotificationTango.notificationFlag = "1"
             cells[i].originalNotificationTango.writeFileAdditioanally(fileName: appDelegate.originalFileName, extent: "txt")
         }
+        cells = readOriginalTangoFile()
         originalListTable.reloadData()
     }
     
@@ -87,6 +88,7 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
             cells[i].originalNotificationTango.notificationFlag = "0"
             cells[i].originalNotificationTango.writeFileAdditioanally(fileName: appDelegate.originalFileName, extent: "txt")
         }
+        cells = readOriginalTangoFile()
         originalListTable.reloadData()
     }
     
