@@ -10,6 +10,14 @@ import UIKit
 import AVFoundation
 import UserNotifications
 
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // アプリ起動中でもアラート&音で通知
+        completionHandler([.alert])
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder,UIApplicationDelegate {
     
@@ -70,6 +78,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
                 
                 if granted {
                     debugPrint("通知許可")
+                    UNUserNotificationCenter.current().delegate = self
                 } else {
                     debugPrint("通知拒否")
                 }
