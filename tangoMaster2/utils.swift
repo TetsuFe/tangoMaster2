@@ -91,10 +91,11 @@ let NOTIFICATION_TYPE_KEY = "notificationType"
 let NOTIFICATION_MINUTES_INDEX_KEY = "notificationMinutesIndex"
 let NOTIFICATION_HOURS_INDEX_KEY = "notificationHoursIndex"
 let NOTIFICATION_ISENABLED_KEY = "notificationIsEnabled"
+
 func getNewChapterArray()->Array<Int>{
     var newChapterNumbers = Array<Int>()
-    for category in 0..<chapterNames.count{
-        newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: chapterNames[category].count))
+    for category in 0..<categoryNames.count{
+        newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: fileVolumes[category]))
     }
     return newChapterNumbers
 }
@@ -617,7 +618,7 @@ func getNewChapter(fileName:String,chapterVolume:Int)->Int{
         for s in out.characters{
             if(s == "0"){//未クリアの
                 break
-            }else if s == "1" && chapterNumber == chapterVolume-1{
+            }else if s == "1" && chapterNumber == chapterVolume{
                 break //全てクリア済みの時は、存在しない次のchapternumberまでいかないように、ここで食い止める。
             }
             chapterNumber += 1//0章がクリアされた時、1になる。つまり、newchapternumberと基本は一致する。
