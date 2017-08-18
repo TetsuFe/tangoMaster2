@@ -10,6 +10,14 @@ import UIKit
 import AVFoundation
 import UserNotifications
 
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // アプリ起動中でもアラート&音で通知
+        completionHandler([.alert])
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder,UIApplicationDelegate {
     
@@ -25,6 +33,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var canCardSwipe:Bool = true
     var isProblemCleared:Bool = false
     var notificationSceneTag: Int = -1
+    var originalFileName = String()
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     
@@ -69,6 +78,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
                 
                 if granted {
                     debugPrint("通知許可")
+                    UNUserNotificationCenter.current().delegate = self
                 } else {
                     debugPrint("通知拒否")
                 }
@@ -93,37 +103,64 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         //有効なのか、無効なのかを取得
-        let notificationType = UserDefaults.standard.integer(forKey: NOTIFICATION_TYPE_KEY)
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().getPendingNotificationRequests { (requests: [UNNotificationRequest]) in
                 if requests.count > 0{
                     return
+                }else{
+                    self.validateNotification()
                 }
             }
         } else {
             if let scheduledNotifications = UIApplication.shared.scheduledLocalNotifications{
                 if scheduledNotifications.count > 0{
                     return
+                }else{
+                    validateNotification()
                 }
             }
         }
+        //単語ファイルー＞単語
+        //単語ー＞[英語・日本語]
+        //[英語・日本語]ー＞通知の設定
+        //tangoNotificationSetter.setNotification(engWord:String,jpnWord:String,index:Int)
+    }
+    
+    func validateNotification(){
+        let notificationType = UserDefaults.standard.integer(forKey: NOTIFICATION_TYPE_KEY)
         if notificationType != -1{
             //普通リスト・苦手リスト・カスタムのどれかを判別
-            //UserDefaultでもともと保存しておいたものを使用
-            let maskFileName = NOTIFICATION_MASK_FILE_NAMES[notificationType]
-            //maskから単語ファイル集に変換　：　どのクラスだっけか
-            let tangoNotificationMaskLoader = TangoNotificationMaskLoader(maskFileName: maskFileName)
-            let notificationMask = tangoNotificationMaskLoader.readNotificationFileMask()
-            print("mask: \(notificationMask)")
-            let notificationFileNames = tangoNotificationMaskLoader.convertMaskToNotificationFileName(notificationType: notificationType, maskString: notificationMask)
+            var notificationFileNames = Array<String>()
+            if notificationType < 2{
+                //UserDefaultでもともと保存しておいたものを使用
+                let maskFileName = NOTIFICATION_MASK_FILE_NAMES[notificationType]
+                //maskから単語ファイル集に変換　：　どのクラスだっけか
+                let tangoNotificationMaskLoader = TangoNotificationMaskLoader(maskFileName: maskFileName)
+                let notificationMask = tangoNotificationMaskLoader.readNotificationFileMask()
+                print("mask: \(notificationMask)")
+                notificationFileNames = tangoNotificationMaskLoader.convertMaskToNotificationFileName(notificationType: notificationType, maskString: notificationMask)
+            }else{
+                let fileStatuses = getTangoArrayFromFile(fileName: ORIGINAL_LIST_FILE_NAME)
+                for r in 0..<fileStatuses.count/3{
+                    if fileStatuses[3*r+2] == "1"{
+                        notificationFileNames.append(fileStatuses[3*r])
+                    }
+                }
+            }
             let tangoNotificationSetter = NormalTangoNotificationSetter(notificationFileNames: notificationFileNames, notificationType: notificationType)
             for fileName in notificationFileNames{
                 print("f: \(fileName)")
             }
             let tangoArray = tangoNotificationSetter.convertFileIntoTangoArray(notificationFileNames: notificationFileNames)
             print("tangoArray.count: \(tangoArray.count)")
-            let engJpnArray = tangoNotificationSetter.abstractEngJpnWord(sixTangoArray: tangoArray)
-           
+            var engJpnArray = Array<EngJpn>()
+            if notificationType < 2{
+                engJpnArray = tangoNotificationSetter.abstractEngJpnWord(sixTangoArray: tangoArray)
+            }else{
+                engJpnArray = tangoNotificationSetter.abstractEngJpnWord(originalThreeTangoArray: tangoArray)
+            }
+            //シャッフル？
+            engJpnArray = NotificationOrderSuffuler(engJpnArray:engJpnArray).suffule()
             let durationHoursIndex = UserDefaults.standard.integer(forKey: NOTIFICATION_HOURS_INDEX_KEY)
             let durationMinutesIndex = UserDefaults.standard.integer(forKey: NOTIFICATION_MINUTES_INDEX_KEY)
             let durationHours = hoursList[durationHoursIndex]
@@ -131,18 +168,10 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
             if #available(iOS 10.0, *){
                 tangoNotificationSetter.setAllNotificationAfterios10(durationHours: durationHours,durationMinutes: durationMinutes, engJpnArray:engJpnArray)
             }else{
-                tangoNotificationSetter.setAllNotificationBeforeios10(application:application, durationHours: durationHours,durationMinutes: durationMinutes, engJpnArray:engJpnArray)
+                tangoNotificationSetter.setAllNotificationBeforeios10(application:UIApplication.shared, durationHours: durationHours,durationMinutes: durationMinutes, engJpnArray:engJpnArray)
             }
             UserDefaults.standard.set(true,forKey: NOTIFICATION_ISENABLED_KEY)
         }
-        
-        
-        
-       
-        //単語ファイルー＞単語
-        //単語ー＞[英語・日本語]
-        //[英語・日本語]ー＞通知の設定
-        //tangoNotificationSetter.setNotification(engWord:String,jpnWord:String,index:Int)
     }
     
     

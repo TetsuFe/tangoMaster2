@@ -23,12 +23,13 @@ class NormalTangoNotificationSetter{
         self.notificationType = notificationType
     }
     
+    //結局transArrayDimension2to1()を使うのなら、わざわざ2Dにする必要ないのでは？
     func convertFileIntoTangoArray2D(notificationFileNames:Array<String>)->Array<Array<String>>{
         var wordArray2D = Array<Array<String>>()
         for notificationFileName in notificationFileNames{
             if self.notificationType == 0{
                 wordArray2D.append(readFilegetTangoArray(notificationFileName, extent: "txt",inDirectory: "tango/seedtango"))
-            }else if self.notificationType == 1{
+            }else if self.notificationType <= 2{
                 wordArray2D.append(getTangoArrayFromFile(fileName: notificationFileName))
             }else{
                 
@@ -63,6 +64,15 @@ class NormalTangoNotificationSetter{
         }
         return engJpnArray
     }
+    
+    func abstractEngJpnWord(originalThreeTangoArray:Array<String>)->Array<EngJpn>{
+        var engJpnArray = Array<EngJpn>()
+        for r in 0..<originalThreeTangoArray.count/3{
+            engJpnArray.append(EngJpn(eng:originalThreeTangoArray[3*r], jpn: originalThreeTangoArray[3*r+1]))
+        }
+        return engJpnArray
+    }
+
     
     /*
     //AppDelegateで使う どう使う？　とりあえず関数としては使わない？

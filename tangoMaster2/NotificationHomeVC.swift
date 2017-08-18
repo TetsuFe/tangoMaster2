@@ -8,6 +8,8 @@
 
 import UIKit
 
+let SHUFFLE_ENABLED_KEY = "shuffle_enabled_key"
+
 class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource, UITableViewDelegate,UITableViewDataSource{
 
     //status bar's color is while
@@ -25,7 +27,6 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
         return true
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         notificationDurationPicker.delegate = self
@@ -35,11 +36,45 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
         //保存した値を読み込み、pickerに反映
         readStoredDurationAndSetPicker()
         
+        if UserDefaults.standard.object(forKey: SHUFFLE_ENABLED_KEY) == nil{
+            UserDefaults.standard.set(false, forKey: SHUFFLE_ENABLED_KEY)
+            onShuffleButton.backgroundColor = UIColor.gray
+            offShuffleButton.backgroundColor = UIColor.blue
+        }else{
+            if UserDefaults.standard.bool(forKey: SHUFFLE_ENABLED_KEY){
+                onShuffleButton.backgroundColor = UIColor.blue
+                offShuffleButton.backgroundColor = UIColor.gray
+            }else{
+                onShuffleButton.backgroundColor = UIColor.gray
+                offShuffleButton.backgroundColor = UIColor.blue
+            }
+        }
+        onShuffleButton.addTarget(self, action: #selector(onShuffle), for: .touchUpInside)
+        offShuffleButton.addTarget(self, action: #selector(offShuffle), for: .touchUpInside)
         //cancelButton.addTarget(self,action: #selector(cancelChangeDuration),for: .touchUpInside)
         
         // Do any additional setup after loading the view.
     }
     
+    func onShuffle(){
+        if !UserDefaults.standard.bool(forKey: SHUFFLE_ENABLED_KEY){
+            onShuffleButton.backgroundColor = UIColor.blue
+            offShuffleButton.backgroundColor = UIColor.gray
+            UserDefaults.standard.set(true, forKey: SHUFFLE_ENABLED_KEY)
+        }
+    }
+    
+    func offShuffle(){
+        if UserDefaults.standard.bool(forKey: SHUFFLE_ENABLED_KEY){
+            onShuffleButton.backgroundColor = UIColor.gray
+            offShuffleButton.backgroundColor = UIColor.blue
+            UserDefaults.standard.set(false, forKey: SHUFFLE_ENABLED_KEY)
+        }
+    }
+    
+    @IBOutlet weak var onShuffleButton: UIButton!
+    
+    @IBOutlet weak var offShuffleButton: UIButton!
     
     @IBAction func backButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
@@ -51,9 +86,9 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
     
     @IBOutlet weak var notificationHomeTable: UITableView!
     
-    //let notificationLabelNames = ["自由に選ぶ","苦手","自分で登録"]
-    let notificationLabelNames = ["自由に選ぶ","苦手"]
-    let imageNames = ["normallist.png","nigatelist.png"]
+    let notificationLabelNames = ["自由に選ぶ","苦手","オリジナル単語登録"]
+    //let notificationLabelNames = ["自由に選ぶ","苦手"]
+    let imageNames = ["normallist.png","nigatelist.png", "manual.png"]
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -137,7 +172,7 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
          nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nigateListForNotification") as! NigateListForNotificationVC
          
          }else if indexPath.row == 2{
-         
+             nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "originalListForNotification") as! OriginalListForNotificationVC
          }else if indexPath.row == 3{
          //nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
          //self.present(nextViewController, animated: true, completion: nil)
