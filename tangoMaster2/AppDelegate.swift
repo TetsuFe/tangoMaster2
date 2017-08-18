@@ -94,20 +94,31 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         //有効なのか、無効なのかを取得
-        let notificationType = UserDefaults.standard.integer(forKey: NOTIFICATION_TYPE_KEY)
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().getPendingNotificationRequests { (requests: [UNNotificationRequest]) in
                 if requests.count > 0{
                     return
+                }else{
+                    self.validateNotification()
                 }
             }
         } else {
             if let scheduledNotifications = UIApplication.shared.scheduledLocalNotifications{
                 if scheduledNotifications.count > 0{
                     return
+                }else{
+                    validateNotification()
                 }
             }
         }
+        //単語ファイルー＞単語
+        //単語ー＞[英語・日本語]
+        //[英語・日本語]ー＞通知の設定
+        //tangoNotificationSetter.setNotification(engWord:String,jpnWord:String,index:Int)
+    }
+    
+    func validateNotification(){
+        let notificationType = UserDefaults.standard.integer(forKey: NOTIFICATION_TYPE_KEY)
         if notificationType != -1{
             //普通リスト・苦手リスト・カスタムのどれかを判別
             var notificationFileNames = Array<String>()
@@ -139,6 +150,8 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
             }else{
                 engJpnArray = tangoNotificationSetter.abstractEngJpnWord(originalThreeTangoArray: tangoArray)
             }
+            //シャッフル？
+            engJpnArray = NotificationOrderSuffuler(engJpnArray:engJpnArray).suffule()
             let durationHoursIndex = UserDefaults.standard.integer(forKey: NOTIFICATION_HOURS_INDEX_KEY)
             let durationMinutesIndex = UserDefaults.standard.integer(forKey: NOTIFICATION_MINUTES_INDEX_KEY)
             let durationHours = hoursList[durationHoursIndex]
@@ -146,18 +159,10 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
             if #available(iOS 10.0, *){
                 tangoNotificationSetter.setAllNotificationAfterios10(durationHours: durationHours,durationMinutes: durationMinutes, engJpnArray:engJpnArray)
             }else{
-                tangoNotificationSetter.setAllNotificationBeforeios10(application:application, durationHours: durationHours,durationMinutes: durationMinutes, engJpnArray:engJpnArray)
+                tangoNotificationSetter.setAllNotificationBeforeios10(application:UIApplication.shared, durationHours: durationHours,durationMinutes: durationMinutes, engJpnArray:engJpnArray)
             }
             UserDefaults.standard.set(true,forKey: NOTIFICATION_ISENABLED_KEY)
         }
-        
-        
-        
-       
-        //単語ファイルー＞単語
-        //単語ー＞[英語・日本語]
-        //[英語・日本語]ー＞通知の設定
-        //tangoNotificationSetter.setNotification(engWord:String,jpnWord:String,index:Int)
     }
     
     

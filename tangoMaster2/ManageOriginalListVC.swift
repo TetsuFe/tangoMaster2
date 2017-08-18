@@ -32,12 +32,11 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var deselectAllButton: UIButton!
     
     @IBAction func rollbackCheckButton(_ sender: Any) {
-        rollbackCheck(prevMaskFileName: PREV_ORIGINAL_LIST_FILE_NAME)
+        rollbackCheck(prevMaskFileName: appDelegate.originalFileName)
         originalListTable.reloadData()
     }
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,21 +45,27 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
         originalListTable.dataSource = self
         selectAllButton.addTarget(self, action: #selector(selectAllAndSaveCurrent), for: .touchUpInside)
         deselectAllButton.addTarget(self, action: #selector(deselectAllAndSaveCurrent), for: .touchUpInside)
-        preserveCurrentOriginalNotificaion(currentFileName:ORIGINAL_LIST_FILE_NAME, preservingFileNames: PREV_ORIGINAL_LIST_FILE_NAME, extent:"txt")
+        preserveCurrentOriginalNotificaion(currentFileName:appDelegate.originalFileName, preservingFileNames: "prev"+appDelegate.originalFileName, extent:"txt")
+    }
+    
+    override func viewWillAppear(_ animated : Bool){
+        super.viewWillAppear(true)
         cells = readOriginalTangoFile()
+        originalListTable.reloadData()
     }
     
     var cells = Array<OriginalListCell>()
     
     func readOriginalTangoFile()->Array<OriginalListCell>{
         let tango = getTangoArrayFromFile(fileName:appDelegate.originalFileName)
+        var mewCells = Array<OriginalListCell>()
         if tango.count != 0{
             for r in 0..<tango.count/3{
-                cells.append(originalListTable.dequeueReusableCell(withIdentifier: "originalListCell") as! OriginalListCell)
-                cells[r].setCell(originalNotificationTango: OriginalNotificationTango(eng: tango[3*r],jpn:tango[3*r+1],notificationFlag: tango[3*r+2]))
+                mewCells.append(originalListTable.dequeueReusableCell(withIdentifier: "originalListCell") as! OriginalListCell)
+                mewCells[r].setCell(originalNotificationTango: OriginalNotificationTango(eng: tango[3*r],jpn:tango[3*r+1],notificationFlag: tango[3*r+2]))
             }
         }
-        return cells
+        return mewCells
     }
     
     func preserveCurrentOriginalNotificaion(currentFileName:String, preservingFileNames:String, extent:String){
@@ -68,38 +73,36 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func selectAll(){
-        deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        deleteFile(fileName:appDelegate.originalFileName)
         for i in 0..<cells.count{
             cells[i].originalNotificationTango.notificationFlag = "1"
-            cells[i].originalNotificationTango.writeFileAdditioanally(fileName: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+            cells[i].originalNotificationTango.writeFileAdditioanally(fileName: appDelegate.originalFileName, extent: "txt")
         }
         originalListTable.reloadData()
     }
     
     func deselectAll(){
-        deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        deleteFile(fileName:appDelegate.originalFileName)
         for i in 0..<cells.count{
             cells[i].originalNotificationTango.notificationFlag = "0"
-            cells[i].originalNotificationTango.writeFileAdditioanally(fileName: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+            cells[i].originalNotificationTango.writeFileAdditioanally(fileName: appDelegate.originalFileName, extent: "txt")
         }
         originalListTable.reloadData()
     }
     
-    
-    
     func selectAllAndSaveCurrent(){
-        preserveCurrentOriginalNotificaion(currentFileName:ORIGINAL_LIST_FILE_NAME, preservingFileNames: PREV_ORIGINAL_LIST_FILE_NAME, extent:"txt")
+        preserveCurrentOriginalNotificaion(currentFileName:appDelegate.originalFileName, preservingFileNames: "prev"+appDelegate.originalFileName, extent:"txt")
         selectAll()
     }
     
     func deselectAllAndSaveCurrent(){
-        preserveCurrentOriginalNotificaion(currentFileName:ORIGINAL_LIST_FILE_NAME, preservingFileNames: PREV_ORIGINAL_LIST_FILE_NAME, extent:"txt")
+        preserveCurrentOriginalNotificaion(currentFileName:appDelegate.originalFileName, preservingFileNames: "prev"+appDelegate.originalFileName, extent:"txt")
         deselectAll()
     }
     
     func rollbackCheck(prevMaskFileName:String){
-        deleteFile(fileName: ORIGINAL_LIST_FILE_NAME)
-        copyFile(from: prevMaskFileName, to: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+        deleteFile(fileName: appDelegate.originalFileName)
+        copyFile(from: prevMaskFileName, to: appDelegate.originalFileName, extent: "txt")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
@@ -114,6 +117,17 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView : UITableView, cellForRowAt indexPath : IndexPath) -> UITableViewCell {
         return cells[indexPath.row]
     }
+    
+    //セクションの数を返す.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //セクションのタイトルを返す.
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return appDelegate.originalFileName
+    }
+
     
     //Cellが選択された際に呼び出される.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

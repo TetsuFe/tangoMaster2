@@ -21,6 +21,8 @@ class OriginalListCell:UITableViewCell{
     
     var originalNotificationTango:OriginalNotificationTango!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     func setCell(originalNotificationTango:OriginalNotificationTango) {
         print("setCell")
         
@@ -36,7 +38,7 @@ class OriginalListCell:UITableViewCell{
     }
     
     func buttonTapped() {
-        copyFile(from: ORIGINAL_LIST_FILE_NAME, to: PREV_ORIGINAL_LIST_FILE_NAME, extent: "txt")
+        copyFile(from: appDelegate.originalFileName, to: "prev"+appDelegate.originalFileName, extent: "txt")
         checkButton.isEnabled = false
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
@@ -47,28 +49,31 @@ class OriginalListCell:UITableViewCell{
             // OFF -> ON
             self.originalNotificationTango.notificationFlag = "1"
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
-            updateOriginalFile()
+            updateOriginalTangoList()
             setCell(originalNotificationTango:self.originalNotificationTango)
         }else{
             // ON -> OFF
             self.originalNotificationTango.notificationFlag = "0"
             checkButton.setImage(UIImage(named:"bell_colored")!, for: UIControlState())
-            updateOriginalFile()
+            updateOriginalTangoList()
             setCell(originalNotificationTango:self.originalNotificationTango)
         }
     }
     
-    func updateOriginalFile(){
-        let originalTangos = getTangoArrayFromFile(fileName:ORIGINAL_LIST_FILE_NAME)
+    
+    func updateOriginalTangoList(){
+        let originalTangos = getTangoArrayFromFile(fileName:appDelegate.originalFileName)
         var originalTangoList = Array<OriginalNotificationTango>()
         for r in 0..<originalTangos.count/3{
-            originalTangoList.append(OriginalNotificationTango(eng: originalTangos[3*r],jpn:originalTangos[3*r+1],notificationFlag: originalTangos[3*r+2]))
+            if originalTangos[3*r] == self.originalNotificationTango.eng{
+                originalTangoList.append(OriginalNotificationTango(eng: self.originalNotificationTango.eng,jpn:self.originalNotificationTango.jpn, notificationFlag: self.originalNotificationTango.notificationFlag))
+            }else{
+                originalTangoList.append(OriginalNotificationTango(eng: originalTangos[3*r],jpn:originalTangos[3*r+1],notificationFlag: originalTangos[3*r+2]))
+            }
         }
-        originalTangoList = deleteWordFromOriginalArray(eng:engLabel.text!,
-                                                        list: originalTangoList)
-        deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        deleteFile(fileName:appDelegate.originalFileName)
         for originalTango in originalTangoList{
-            originalTango.writeFileAdditioanally(fileName: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+            originalTango.writeFileAdditioanally(fileName: appDelegate.originalFileName, extent: "txt")
         }
     }
 }

@@ -44,28 +44,39 @@ class OriginalNotificationListCell:UITableViewCell{
             // OFF -> ON
             self.originaltangoFileStatus.notificationFlag = "1"
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
-            updateOriginalFile()
+            updateOriginalFileStatus()
             setCell(originaltangoFileStatus:self.originaltangoFileStatus)
         }else{
             // ON -> OFF
             self.originaltangoFileStatus.notificationFlag = "0"
             checkButton.setImage(UIImage(named:"bell_colored")!, for: UIControlState())
-            updateOriginalFile()
+            updateOriginalFileStatus()
             setCell(originaltangoFileStatus:self.originaltangoFileStatus)
         }
     }
     
-    func updateOriginalFile(){
-        let originalTangos = getTangoArrayFromFile(fileName:ORIGINAL_LIST_FILE_NAME)
-        var originalTangoList = Array<OriginalNotificationTango>()
-        for r in 0..<originalTangos.count/3{
-            originalTangoList.append(OriginalNotificationTango(eng: originalTangos[3*r],jpn:originalTangos[3*r+1],notificationFlag: originalTangos[3*r+2]))
+    func updateOriginalFileStatus(){
+        let originalListsFIleElements = getTangoArrayFromFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        var originalListFileStatuses = Array<OriginalTangoFileStatus>()
+        for t in originalListsFIleElements{
+            print("tangoElemet: \(t)")
         }
-        originalTangoList = deleteWordFromOriginalArray(eng:listNameLabel.text!,
-                                                        list: originalTangoList)
+        for r in 0..<originalListsFIleElements.count/3{
+            if originalListsFIleElements[3*r] == self.originaltangoFileStatus.fileName{
+                originalListFileStatuses.append(OriginalTangoFileStatus(fileName: self.originaltangoFileStatus.fileName, prevFileName: self.originaltangoFileStatus.prevFileName, notificationFlag: self.originaltangoFileStatus.notificationFlag))
+            }else{
+                originalListFileStatuses.append(OriginalTangoFileStatus(fileName: originalListsFIleElements[3*r], prevFileName: originalListsFIleElements[3*r+1], notificationFlag: originalListsFIleElements[3*r+2]))
+            }
+        }
         deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
-        for originalTango in originalTangoList{
-            originalTango.writeFileAdditioanally(fileName: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+        for originalListFileStatus in originalListFileStatuses{
+            print("in")
+            originalListFileStatus.writeFileAdditioanally(fileName: ORIGINAL_LIST_FILE_NAME, extent: "txt")
+        }
+        let originalListsFIleElements2 = getTangoArrayFromFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        for t in originalListsFIleElements2{
+            print("tangoElemet: \(t)")
         }
     }
+ 
 }

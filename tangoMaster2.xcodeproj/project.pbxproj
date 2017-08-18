@@ -52,6 +52,7 @@
 		9703D1D21F443131005818AF /* OriginalTangoFileStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */; };
 		973B5B8C1F19DA580082A169 /* NigateListForNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */; };
 		973B5B8E1F19DA860082A169 /* ListForNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */; };
+		97C2AD4C1F47474000CB001F /* NotificationOrderSuffuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */; };
 		97CE91BC1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */; };
 		97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */; };
 		97CE91C81F3909B600F2FC91 /* ListForNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */; };
@@ -114,6 +115,7 @@
 		9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTangoFileStatus.swift; sourceTree = "<group>"; };
 		973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListForNotificationVC.swift; sourceTree = "<group>"; };
 		973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListForNotificationCell.swift; sourceTree = "<group>"; };
+		97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationOrderSuffuler.swift; sourceTree = "<group>"; };
 		97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangoNotificationMaskLoader.swift; sourceTree = "<group>"; };
 		97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHomeSelectCell.swift; sourceTree = "<group>"; };
 		97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListForNotificationVC.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */,
 				97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */,
 				97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */,
+				97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */,
 				973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */,
 				97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */,
 				97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */,
@@ -320,6 +323,7 @@
 				19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */,
 				19C23A6F1E1E82AB008B0D9F /* AutoFadeVC.swift in Sources */,
 				97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */,
+				97C2AD4C1F47474000CB001F /* NotificationOrderSuffuler.swift in Sources */,
 				973B5B8E1F19DA860082A169 /* ListForNotificationCell.swift in Sources */,
 				97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */,
 				19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */,

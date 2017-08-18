@@ -84,6 +84,7 @@ class CreateOriginalListPopUpVC: UIViewController {
             if (finished)
             {
                 let parentVC = self.parent as! OriginalListForNotificationVC
+                    parentVC.cells = parentVC.readOriginalTangoFile()
                 parentVC.originalNotificationSelectTable.reloadData()
                 self.view.removeFromSuperview()
             }

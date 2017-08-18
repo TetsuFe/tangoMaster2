@@ -39,24 +39,24 @@ class OriginalNotificationTango{
         
         // 保存処理 初回のみfilew == nilなので、初回のみ新規につくられる
         if(filew == nil){
-            try! fileObject.write(toFile: "\(path)/\(fileName+".txt")", atomically: true, encoding: String.Encoding.utf8)
-        }
-        
-        //読み込み用で開くforReadingAtPath
-        let filer: FileHandle? = FileHandle(forReadingAtPath: filepath1)
-        if filer == nil {
-            print("File open failed")
-        } else {
-            filer?.seekToEndOfFile()
-            let endOffset = (filer?.offsetInFile)!
-            filer?.seek(toFileOffset: 0)
-            let databuffer = filer?.readData(ofLength: Int(endOffset))
-            // NSData to String
-            let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
-            if !isInFile(cWord: eng, str:out){
-                fileWrite(filew: filew!, filepath:filepath1,fileObject:fileObject)
+            try! fileObject.write(toFile: filepath1 , atomically: true, encoding: String.Encoding.utf8)
+        }else{
+            //読み込み用で開くforReadingAtPath
+            let filer: FileHandle? = FileHandle(forReadingAtPath: filepath1)
+            if filer == nil {
+                print("File open failed")
+            } else {
+                filer?.seekToEndOfFile()
+                let endOffset = (filer?.offsetInFile)!
+                filer?.seek(toFileOffset: 0)
+                let databuffer = filer?.readData(ofLength: Int(endOffset))
+                // NSData to String
+                let out: String = String(data:databuffer!, encoding:String.Encoding.utf8)!
+                if !isInFile(cWord: eng, str:out){
+                    fileWrite(filew: filew!, filepath:filepath1,fileObject:fileObject)
+                }
+                filer?.closeFile()
             }
-            filer?.closeFile()
         }
     }
 }

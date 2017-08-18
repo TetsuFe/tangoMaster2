@@ -71,14 +71,17 @@ class OriginalListForNotificationVC: UIViewController, UITableViewDelegate,UITab
     
     func readOriginalTangoFile()->Array<OriginalNotificationListCell>{
         let tango = getTangoArrayFromFile(fileName:ORIGINAL_LIST_FILE_NAME)
-        var cells = Array<OriginalNotificationListCell>()
+        for t in tango{
+            print("element: \(t)")
+        }
+        var newCells = Array<OriginalNotificationListCell>()
         if tango.count != 0{
             for r in 0..<tango.count/3{
-                cells.append(originalNotificationSelectTable.dequeueReusableCell(withIdentifier: "originalNotificationListCell") as! OriginalNotificationListCell)
-                cells[r].setCell(originaltangoFileStatus:OriginalTangoFileStatus(fileName: tango[3*r], prevFileName: tango[3*r+1], notificationFlag: tango[3*r+2]))
+                newCells.append(originalNotificationSelectTable.dequeueReusableCell(withIdentifier: "originalNotificationListCell") as! OriginalNotificationListCell)
+                newCells[r].setCell(originaltangoFileStatus:OriginalTangoFileStatus(fileName: tango[3*r], prevFileName: tango[3*r+1], notificationFlag: tango[3*r+2]))
             }
         }
-        return cells
+        return newCells
     }
 
     func preserveCurrentOriginalNotificaion(currentFileName:String, preservingFileNames:String, extent:String){
@@ -86,24 +89,29 @@ class OriginalListForNotificationVC: UIViewController, UITableViewDelegate,UITab
     }
 
     func selectAll(){
+        deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        var preservedText = String()
         for i in 0..<cells.count{
             cells[i].originaltangoFileStatus.notificationFlag = "1"
-            updateOriginalFileListFile(originaltangoFileStatus:cells[i].originaltangoFileStatus,extent:"txt")
-
+            preservedText += cells[i].originaltangoFileStatus.fileName+"@"+cells[i].originaltangoFileStatus.prevFileName+"@"+cells[i].originaltangoFileStatus.notificationFlag+"\n"
         }
+        writeFileWithExtent(fileName: ORIGINAL_LIST_FILE_NAME, text: preservedText, extent: "txt")
+
+        cells = readOriginalTangoFile()
         originalNotificationSelectTable.reloadData()
     }
     
     func deselectAll(){
+        deleteFile(fileName:ORIGINAL_LIST_FILE_NAME)
+        var preservedText = String()
         for i in 0..<cells.count{
             cells[i].originaltangoFileStatus.notificationFlag = "0"
-            updateOriginalFileListFile(originaltangoFileStatus:cells[i].originaltangoFileStatus,extent:"txt")
-            
+            preservedText += cells[i].originaltangoFileStatus.fileName+"@"+cells[i].originaltangoFileStatus.prevFileName+"@"+cells[i].originaltangoFileStatus.notificationFlag+"\n"
         }
+        writeFileWithExtent(fileName: ORIGINAL_LIST_FILE_NAME, text: preservedText, extent: "txt")
+        cells = readOriginalTangoFile()
         originalNotificationSelectTable.reloadData()
     }
-
-
     
     func selectAllAndSaveCurrent(){
         preserveCurrentOriginalNotificaion(currentFileName:ORIGINAL_LIST_FILE_NAME, preservingFileNames: PREV_ORIGINAL_LIST_FILE_NAME, extent:"txt")
