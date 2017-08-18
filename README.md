@@ -1,6 +1,27 @@
 # 本アプリの説明
 本アプリはiOS向け英単語学習用アプリです。  
 対象：センター試験向けの基礎英単語を勉強したい人  
+価格：無料
+
+## Screenshots
+
+### 単語タイマー
+<img src="screenshots/notification_53inch.png" width=320 height=480/>
+
+### 単語リスト
+<img src="screenshots/list_53inch.png" width=320 height=480/>
+
+### 苦手な単語リスト
+<img src="screenshots/nigatelist_53inch.png" width=320 height=480/>
+
+### 自動で覚える
+<img src="screenshots/auto_53inch.png" width=320 height=480/>
+
+### 単語テスト
+<img src="screenshots/problem53inch.png" width=320 height=480/>
+
+### 単語カード
+<img src="screenshots/card_53inch.png" width=320 height=480/>
 
 ## 機能
 - 英単語リスト表示
