@@ -110,21 +110,35 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
         }
         if notificationType != -1{
             //普通リスト・苦手リスト・カスタムのどれかを判別
-            //UserDefaultでもともと保存しておいたものを使用
-            let maskFileName = NOTIFICATION_MASK_FILE_NAMES[notificationType]
-            //maskから単語ファイル集に変換　：　どのクラスだっけか
-            let tangoNotificationMaskLoader = TangoNotificationMaskLoader(maskFileName: maskFileName)
-            let notificationMask = tangoNotificationMaskLoader.readNotificationFileMask()
-            print("mask: \(notificationMask)")
-            let notificationFileNames = tangoNotificationMaskLoader.convertMaskToNotificationFileName(notificationType: notificationType, maskString: notificationMask)
+            var notificationFileNames = Array<String>()
+            if notificationType < 2{
+                //UserDefaultでもともと保存しておいたものを使用
+                let maskFileName = NOTIFICATION_MASK_FILE_NAMES[notificationType]
+                //maskから単語ファイル集に変換　：　どのクラスだっけか
+                let tangoNotificationMaskLoader = TangoNotificationMaskLoader(maskFileName: maskFileName)
+                let notificationMask = tangoNotificationMaskLoader.readNotificationFileMask()
+                print("mask: \(notificationMask)")
+                notificationFileNames = tangoNotificationMaskLoader.convertMaskToNotificationFileName(notificationType: notificationType, maskString: notificationMask)
+            }else{
+                let fileStatuses = getTangoArrayFromFile(fileName: ORIGINAL_LIST_FILE_NAME)
+                for r in 0..<fileStatuses.count/3{
+                    if fileStatuses[3*r+2] == "1"{
+                        notificationFileNames.append(fileStatuses[3*r])
+                    }
+                }
+            }
             let tangoNotificationSetter = NormalTangoNotificationSetter(notificationFileNames: notificationFileNames, notificationType: notificationType)
             for fileName in notificationFileNames{
                 print("f: \(fileName)")
             }
             let tangoArray = tangoNotificationSetter.convertFileIntoTangoArray(notificationFileNames: notificationFileNames)
             print("tangoArray.count: \(tangoArray.count)")
-            let engJpnArray = tangoNotificationSetter.abstractEngJpnWord(sixTangoArray: tangoArray)
-           
+            var engJpnArray = Array<EngJpn>()
+            if notificationType < 2{
+                engJpnArray = tangoNotificationSetter.abstractEngJpnWord(sixTangoArray: tangoArray)
+            }else{
+                engJpnArray = tangoNotificationSetter.abstractEngJpnWord(originalThreeTangoArray: tangoArray)
+            }
             let durationHoursIndex = UserDefaults.standard.integer(forKey: NOTIFICATION_HOURS_INDEX_KEY)
             let durationMinutesIndex = UserDefaults.standard.integer(forKey: NOTIFICATION_MINUTES_INDEX_KEY)
             let durationHours = hoursList[durationHoursIndex]
