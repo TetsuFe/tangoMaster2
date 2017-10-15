@@ -37,7 +37,7 @@ class OriginalListCell:UITableViewCell{
         checkButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
-    func buttonTapped() {
+    @objc func buttonTapped() {
         copyFile(from: appDelegate.originalFileName, to: "prev"+appDelegate.originalFileName, extent: "txt")
         checkButton.isEnabled = false
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)

@@ -84,7 +84,7 @@ class CardSettingPopUpVC: UIViewController {
     }
 
     
-    func pushedButtonButton(){
+    @objc func pushedButtonButton(){
         print("push button button")
 
         appDelegate.canCardSwipe = false
@@ -94,7 +94,7 @@ class CardSettingPopUpVC: UIViewController {
         
     }
     
-    func pushedSwipeButton(){
+    @objc func pushedSwipeButton(){
         print("push swipe button")
         appDelegate.canCardSwipe = true
         

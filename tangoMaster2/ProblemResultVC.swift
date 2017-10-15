@@ -113,7 +113,9 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //各種ラベル・ボタンの設定
         
         //scoreLabel.text = "正解率 : "+String(wrongArray.count/6+correctArray.count/6 - wrongCount)+" / "+String(wrongArray.count/6+correctArray.count/6)
-        scoreLabel.text = "正解率 : "+String(wrongArray.count/7+correctArray.count/7 - wrongCount)+" / "+String(wrongArray.count/7+correctArray.count/7)
+        let correctCount = wrongArray.count/7+correctArray.count/7 - wrongCount
+        let problemCount = wrongArray.count/7+correctArray.count/7
+        scoreLabel.text = "正解率 : "+String(correctCount)+" / "+String(problemCount)
         
         makeFinishLabel(incorrectCount : wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
         judgeAndWriteNewChapter(incorrectCount :wrongCount,problemVolume:wrongArray.count/6+correctArray.count/6)
@@ -355,7 +357,7 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
            self.present(secondViewController, animated: true, completion: nil)
     }
     
-    func goNext(){
+    @objc func goNext(){
         if(appDelegate.chapterNumber*5+appDelegate.setsuNumber < NORMAL_FILE_NAMES[appDelegate.problemCategory].count-1 ){
             if appDelegate.setsuNumber == 4{
                 appDelegate.chapterNumber += 1
@@ -367,13 +369,13 @@ class ProblemResultVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    func retryProblem(){
+    @objc func retryProblem(){
         goProblem()
     }
     
     //goStoryはstoryboard上で実装
     
-    func backToSelect(){
+    @objc func backToSelect(){
         
         // ① UIAlertControllerクラスのインスタンスを生成
         // タイトル, メッセージ, Alertのスタイルを指定する

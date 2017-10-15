@@ -56,7 +56,7 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
         // Do any additional setup after loading the view.
     }
     
-    func onShuffle(){
+    @objc func onShuffle(){
         if !UserDefaults.standard.bool(forKey: SHUFFLE_ENABLED_KEY){
             onShuffleButton.backgroundColor = UIColor.blue
             offShuffleButton.backgroundColor = UIColor.gray
@@ -64,7 +64,7 @@ class NotificationHomeVC: UIViewController, UIPickerViewDelegate,UIPickerViewDat
         }
     }
     
-    func offShuffle(){
+    @objc func offShuffle(){
         if UserDefaults.standard.bool(forKey: SHUFFLE_ENABLED_KEY){
             onShuffleButton.backgroundColor = UIColor.gray
             offShuffleButton.backgroundColor = UIColor.blue

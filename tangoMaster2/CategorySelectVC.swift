@@ -433,16 +433,16 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         //}
     }
     
-    func toBeg(){
+    @objc func toBeg(){
         categoryChange(0)
     }
-    func toMid(){
+    @objc func toMid(){
         categoryChange(1)
     }
-    func toHigh(){
+    @objc func toHigh(){
         categoryChange(2)
     }
-    func toToeic(){
+    @objc func toToeic(){
         categoryChange(3)
     }
     

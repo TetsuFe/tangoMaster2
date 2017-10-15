@@ -57,7 +57,7 @@ class NigateListForNotificationCell:UITableViewCell{
     }
     
     
-    func buttonTapped(_ sender: AnyObject) {
+    @objc func buttonTapped(_ sender: AnyObject) {
         writeCurrectMask()
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         

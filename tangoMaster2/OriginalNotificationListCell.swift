@@ -32,7 +32,7 @@ class OriginalNotificationListCell:UITableViewCell{
         checkButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
-    func buttonTapped() {
+    @objc func buttonTapped() {
         copyFile(from: ORIGINAL_LIST_FILE_NAME, to: PREV_ORIGINAL_LIST_FILE_NAME, extent: "txt")
         checkButton.isEnabled = false
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)

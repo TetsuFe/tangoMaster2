@@ -399,7 +399,7 @@ class ProblemVC: UIViewController {
     }
     
     
-    func goPrevProblem() {
+    @objc func goPrevProblem() {
         if(k>0){
             k -= 1
             setLabel()
@@ -421,19 +421,19 @@ class ProblemVC: UIViewController {
     }
 
 
-    func pushAnswer1(){
+    @objc func pushAnswer1(){
         judgeAnswer(0)
         answerButton()
     }
-    func pushAnswer2(){
+    @objc func pushAnswer2(){
         judgeAnswer(1)
         answerButton()
     }
-    func pushAnswer3(){
+    @objc func pushAnswer3(){
         judgeAnswer(2)
         answerButton()
     }
-    func pushAnswer4(){
+    @objc func pushAnswer4(){
         judgeAnswer(3)
         answerButton()
     }

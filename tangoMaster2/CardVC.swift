@@ -32,9 +32,21 @@ class CardVC: UIViewController {
     var sevenDatas = Array<SixWithChapter>()
     var cardWorkFlag:Bool = true
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        /*
+        var backgroundImageManager = BackgroundImageManager(image: UIImage(named:"50ten")!)
+        //以下は必ずUIViewController.viewの子要素である必要がある
+        let headerBottomY = headerView.frame.origin.y + headerView.frame.origin.y
+        let backgroundImageView = backgroundImageManager.generateBackgroundImageView(image: backgroundImageManager.image, headerBottomY: headerBottomY)
+        self.view.addSubview(backgroundImageView)
+        self.view.sendSubview(toBack:backgroundImageView)
+ */
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
         
         newChapterNumber = getNewChapter(fileName: checkNewChapterFileNames[appDelegate.problemCategory], chapterVolume: NORMAL_FILE_NAMES[appDelegate.problemCategory].count)
 
@@ -238,7 +250,7 @@ class CardVC: UIViewController {
     }
 
     
-    func goNextCard(){
+    @objc func goNextCard(){
         UIView.animate(withDuration: 0.7,delay: 0,
                        // アニメーション中の処理.
             animations: { () -> Void in
@@ -251,7 +263,7 @@ class CardVC: UIViewController {
         }
     }
     
-    func goNextAndAddBehind(){
+    @objc func goNextAndAddBehind(){
         UIView.animate(withDuration: 0.7,delay: 0,
                        // アニメーション中の処理.
             animations: { () -> Void in
@@ -267,7 +279,7 @@ class CardVC: UIViewController {
         
     }
     
-    func nigateAdd(){
+    @objc func nigateAdd(){
         var preserveFileName = String()
         print("count : " + String(count))
         if(appDelegate.modeTag != 2){
@@ -327,7 +339,7 @@ class CardVC: UIViewController {
         }
     }
 
-    func goProblem2(){
+    @objc func goProblem2(){
         //苦手モードに変更
         appDelegate.modeTag = 1
         goProblem()
@@ -410,7 +422,7 @@ class CardVC: UIViewController {
     }
 
     
-    func retry(){
+    @objc func retry(){
         //if(appDelegate.chapterNumber-1 < newChapterNumber){
         if(appDelegate.chapterNumber*5+appDelegate.setsuNumber-1 < NORMAL_FILE_NAMES[appDelegate.problemCategory].count-1){
             retryCount = 0
@@ -586,7 +598,7 @@ class CardVC: UIViewController {
     
     var newChapterNumber = Int()
 
-    func goProblem(){
+    @objc func goProblem(){
         
         //if(cardMode == 0){
             //goProblem
@@ -599,7 +611,7 @@ class CardVC: UIViewController {
         //}
     }
     
-    func goNextChapter(){
+    @objc func goNextChapter(){
         if appDelegate.setsuNumber == 4{
             appDelegate.chapterNumber += 1
             appDelegate.setsuNumber = 0
@@ -684,7 +696,7 @@ class CardVC: UIViewController {
     var listcount = 0
     var jpnVisible : CGFloat = CGFloat(0)
     
-    func backToSelect() {
+    @objc func backToSelect() {
         // ① UIAlertControllerクラスのインスタンスを生成
         let alert: UIAlertController = UIAlertController(title: "確認", message: "範囲選択画面に戻りますか？", preferredStyle:  UIAlertControllerStyle.alert)
         

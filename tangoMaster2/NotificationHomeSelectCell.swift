@@ -45,7 +45,7 @@ class NotificationHomeSelectCell:UITableViewCell{
         }
     }
     
-    func switchActivateOrDeactivate(){
+    @objc func switchActivateOrDeactivate(){
         //valueChangedで発火するので、switchの値は変化した後を考えればよい
         if UserDefaults.standard.object(forKey: NOTIFICATION_ISENABLED_KEY) == nil{
             UserDefaults.standard.set(false,forKey: NOTIFICATION_ISENABLED_KEY)

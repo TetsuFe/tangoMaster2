@@ -114,12 +114,12 @@ class OriginalListForNotificationVC: UIViewController, UITableViewDelegate,UITab
         originalNotificationSelectTable.reloadData()
     }
     
-    func selectAllAndSaveCurrent(){
+    @objc func selectAllAndSaveCurrent(){
         preserveCurrentOriginalNotificaion(currentFileName:ORIGINAL_LIST_FILE_NAME, preservingFileNames: PREV_ORIGINAL_LIST_FILE_NAME, extent:"txt")
         selectAll()
     }
     
-    func deselectAllAndSaveCurrent(){
+    @objc func deselectAllAndSaveCurrent(){
         preserveCurrentOriginalNotificaion(currentFileName:ORIGINAL_LIST_FILE_NAME, preservingFileNames: PREV_ORIGINAL_LIST_FILE_NAME, extent:"txt")
         deselectAll()
     }

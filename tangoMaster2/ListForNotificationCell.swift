@@ -49,7 +49,7 @@ class ListForNotificationCell:UITableViewCell{
         checkButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
 
-    func buttonTapped(_ sender: AnyObject) {
+    @objc func buttonTapped(_ sender: AnyObject) {
         writeCurrectMask()
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         

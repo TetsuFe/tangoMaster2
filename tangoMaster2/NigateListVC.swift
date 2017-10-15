@@ -103,19 +103,19 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
         return cellsArray[indexPath.section][indexPath.row]
     }
     
-    func goCard() {
+    @objc func goCard() {
         changeModeToNigateFull()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCard") as!  CardVC
          self.present(secondViewController, animated: true, completion: nil)
     }
     
-    func goAutoFade() {
+    @objc func goAutoFade() {
         changeModeToNigateFull()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newAutoFade") as!  AutoFadeVC
         self.present(secondViewController, animated: true, completion: nil)
     }
     
-    func goTest(){
+    @objc func goTest(){
         changeModeToNigateFull()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
         self.present(secondViewController, animated: true, completion: nil)

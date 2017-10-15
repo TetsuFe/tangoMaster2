@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NewImageReibun : AnyObject{
+class NewImageReibun{
     var eng:String?
     var jpn:String?
     var engReibun:String?

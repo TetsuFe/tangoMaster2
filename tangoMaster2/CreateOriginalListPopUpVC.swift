@@ -61,7 +61,7 @@ class CreateOriginalListPopUpVC: UIViewController {
     }
     
     //textViewのキーボードの閉じるボタンが押されたとき、キーボードを閉じる
-    func commitButtonTapped (){
+    @objc func commitButtonTapped (){
         self.view.endEditing(true)
     }
     

@@ -143,7 +143,7 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
     var percentLabel = UILabel()
     var drawer = ColoredDrawer()
     
-    func progressDraw(){
+    @objc func progressDraw(){
         if(begin <= end){
             self.begin += step
             drawer.removeFromSuperview()
@@ -159,7 +159,7 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         }
     }
     
-    func minusDraw(){
+    @objc func minusDraw(){
         if(begin >= end){
             self.begin -= step
             drawer.removeFromSuperview()
@@ -232,16 +232,16 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
     }
 
     
-    func toBeg(){
+    @objc func toBeg(){
         categoryChange(0)
     }
-    func toMid(){
+    @objc func toMid(){
         categoryChange(1)
     }
-    func toHigh(){
+    @objc func toHigh(){
         categoryChange(2)
     }
-    func toToeic(){
+    @objc func toToeic(){
         categoryChange(3)
     }
     
@@ -327,12 +327,12 @@ class ListForNotificationVC: UIViewController, UITableViewDelegate,UITableViewDa
         drawGraphWirhAnimation()
     }
     
-    func selectAllAndSaveCurrent(){
+    @objc func selectAllAndSaveCurrent(){
         writeCurrectMask()
         selectAll()
     }
     
-    func deselectAllAndSaveCurrent(){
+    @objc func deselectAllAndSaveCurrent(){
         writeCurrectMask()
         deselectAll()
     }

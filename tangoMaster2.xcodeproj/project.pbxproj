@@ -115,6 +115,17 @@
 		9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTangoFileStatus.swift; sourceTree = "<group>"; };
 		973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListForNotificationVC.swift; sourceTree = "<group>"; };
 		973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListForNotificationCell.swift; sourceTree = "<group>"; };
+		97ADD99C1F92FA91007C79D9 /* TextFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileManager.swift; sourceTree = "<group>"; };
+		97ADD99D1F92FA91007C79D9 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
+		97ADD99E1F92FA91007C79D9 /* SimpleFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFileManager.swift; sourceTree = "<group>"; };
+		97ADD99F1F92FA91007C79D9 /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		97ADD9A01F92FA91007C79D9 /* ImageListFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListFileManager.swift; sourceTree = "<group>"; };
+		97ADD9A11F92FA91007C79D9 /* ImageViewCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCreator.swift; sourceTree = "<group>"; };
+		97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandle+Readline.swift"; sourceTree = "<group>"; };
+		97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Trimming.swift"; sourceTree = "<group>"; };
+		97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimImageVC.swift; sourceTree = "<group>"; };
+		97ADD9A71F92FA91007C79D9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredImageListVC.swift; sourceTree = "<group>"; };
 		97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationOrderSuffuler.swift; sourceTree = "<group>"; };
 		97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangoNotificationMaskLoader.swift; sourceTree = "<group>"; };
 		97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHomeSelectCell.swift; sourceTree = "<group>"; };
@@ -157,6 +168,7 @@
 		19C23A021E1E8077008B0D9F /* tangoMaster2 */ = {
 			isa = PBXGroup;
 			children = (
+				97ADD9AD1F92FB6E007C79D9 /* BackGroundImageManager */,
 				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
 				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
 				199FD87C1E63ADDA008381D7 /* HelpVC.swift */,
@@ -218,6 +230,72 @@
 				19C23A0A1E1E8077008B0D9F /* Assets.xcassets */,
 			);
 			path = tangoMaster2;
+			sourceTree = "<group>";
+		};
+		97ADD9991F92FA91007C79D9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD99A1F92FA91007C79D9 /* Classes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		97ADD99A1F92FA91007C79D9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD99B1F92FA91007C79D9 /* Models */,
+				97ADD9A21F92FA91007C79D9 /* Extensions */,
+				97ADD9A51F92FA91007C79D9 /* Controllers */,
+				97ADD9A91F92FA91007C79D9 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		97ADD99B1F92FA91007C79D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD99C1F92FA91007C79D9 /* TextFileManager.swift */,
+				97ADD99D1F92FA91007C79D9 /* ImageFileManager.swift */,
+				97ADD99E1F92FA91007C79D9 /* SimpleFileManager.swift */,
+				97ADD99F1F92FA91007C79D9 /* PhotoLibraryManager.swift */,
+				97ADD9A01F92FA91007C79D9 /* ImageListFileManager.swift */,
+				97ADD9A11F92FA91007C79D9 /* ImageViewCreator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97ADD9A21F92FA91007C79D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */,
+				97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		97ADD9A51F92FA91007C79D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */,
+				97ADD9A71F92FA91007C79D9 /* HomeVC.swift */,
+				97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		97ADD9A91F92FA91007C79D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97ADD9AD1F92FB6E007C79D9 /* BackGroundImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD9991F92FA91007C79D9 /* Sources */,
+			);
+			path = BackGroundImageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,14 +548,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7VDG358L4M;
 				INFOPLIST_FILE = tangoMaster2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testu2723mental.tangoMaster2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -490,13 +568,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7VDG358L4M;
 				INFOPLIST_FILE = tangoMaster2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testu2723mental.tangoMaster2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

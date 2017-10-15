@@ -92,11 +92,11 @@ class ManageOriginalListVC: UIViewController, UITableViewDelegate, UITableViewDa
         originalListTable.reloadData()
     }
     
-    func selectAllAndSaveCurrent(){
+    @objc func selectAllAndSaveCurrent(){
         preserveCurrentOriginalNotificaion(currentFileName:appDelegate.originalFileName, preservingFileNames: "prev"+appDelegate.originalFileName, extent:"txt")
         selectAll()
     }
-    
+    @objc  
     func deselectAllAndSaveCurrent(){
         preserveCurrentOriginalNotificaion(currentFileName:appDelegate.originalFileName, preservingFileNames: "prev"+appDelegate.originalFileName, extent:"txt")
         deselectAll()

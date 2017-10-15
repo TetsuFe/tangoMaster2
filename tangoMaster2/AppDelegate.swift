@@ -34,6 +34,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     var isProblemCleared:Bool = false
     var notificationSceneTag: Int = -1
     var originalFileName = String()
+    var photoLibraryImage : UIImage!
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     

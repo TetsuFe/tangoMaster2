@@ -147,7 +147,7 @@ class AutoFadeVC: UIViewController {
      */
     var direction:Int = 1
     
-    func update() {
+    @objc func update() {
         if self.direction == 1{
             //順再生のとき
             if(self.count < sortedImageReibunArray.count-1){
@@ -207,7 +207,7 @@ class AutoFadeVC: UIViewController {
         
     }
     
-    func reverse(){
+    @objc func reverse(){
         self.direction *= -1
         if self.direction == -1{
             reverseButton.title = "順再生に"
@@ -415,7 +415,7 @@ class AutoFadeVC: UIViewController {
         timer.fire()
     }
     
-    func changeSpeed(){
+    @objc func changeSpeed(){
         if timerInterval > 1.0{
             timerInterval -= 0.5
             self.fudeDuration -= 0.1
@@ -436,7 +436,7 @@ class AutoFadeVC: UIViewController {
     
     var sortedImageReibunArray : Array<NewImageReibun> = []
     
-    func stopOrPlay(){
+    @objc func stopOrPlay(){
         if(timer.isValid){
             flag = false
             stopOrPlayButton.title = "再生"
