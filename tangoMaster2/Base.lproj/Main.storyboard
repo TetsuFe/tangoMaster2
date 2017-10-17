@@ -26,42 +26,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EKe-bt-ItG">
-                                <rect key="frame" x="40" y="99" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKe-bt-ItG">
+                                <rect key="frame" x="16" y="99" width="288" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJb-l1-OU7">
-                                        <rect key="frame" x="99" y="8" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJb-l1-OU7">
+                                        <rect key="frame" x="126" y="8" width="36" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="背景を見やすくする" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMn-6h-Use">
-                                        <rect key="frame" x="0.0" y="54" width="156" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-WG-VZN">
-                                        <rect key="frame" x="186" y="49" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-WG-VZN">
+                                        <rect key="frame" x="216" y="49" width="25" height="25"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJh-nB-Zs5">
-                                        <rect key="frame" x="97" y="90" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJh-nB-Zs5">
+                                        <rect key="frame" x="126" y="93" width="36" height="30"/>
+                                        <state key="normal" title="完了"/>
                                         <connections>
                                             <action selector="doneButton:" destination="uTW-Ef-S9s" eventType="touchUpInside" id="sy2-st-zOB"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="背景を見やすくする" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMn-6h-Use">
+                                        <rect key="frame" x="12" y="49" width="187" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AMn-6h-Use" secondAttribute="height" multiplier="156:25" constant="31" id="TnM-3q-PSq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gtL-WG-VZN" firstAttribute="top" secondItem="EKe-bt-ItG" secondAttribute="top" constant="49" id="8va-B9-Ogl"/>
+                                    <constraint firstAttribute="bottom" secondItem="lJh-nB-Zs5" secondAttribute="bottom" constant="5" id="BnH-UV-Xjj"/>
+                                    <constraint firstItem="lJh-nB-Zs5" firstAttribute="leading" secondItem="EKe-bt-ItG" secondAttribute="leading" constant="126" id="C1t-jw-iPZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="lJh-nB-Zs5" secondAttribute="bottom" constant="5" id="C28-Qr-uLE"/>
+                                    <constraint firstItem="BJb-l1-OU7" firstAttribute="leading" secondItem="EKe-bt-ItG" secondAttribute="leading" constant="126" id="E0s-Is-kor"/>
+                                    <constraint firstItem="gtL-WG-VZN" firstAttribute="top" secondItem="AMn-6h-Use" secondAttribute="top" id="LI5-V4-tvn"/>
+                                    <constraint firstItem="gtL-WG-VZN" firstAttribute="bottom" secondItem="AMn-6h-Use" secondAttribute="bottom" id="N0G-gP-ubD"/>
+                                    <constraint firstAttribute="bottom" secondItem="gtL-WG-VZN" secondAttribute="bottom" constant="54" id="Osh-N4-24m"/>
+                                    <constraint firstItem="lJh-nB-Zs5" firstAttribute="centerX" secondItem="EKe-bt-ItG" secondAttribute="centerX" id="XCK-QE-RAl"/>
+                                    <constraint firstAttribute="trailing" secondItem="gtL-WG-VZN" secondAttribute="trailing" constant="47" id="XRB-4o-JvX"/>
+                                    <constraint firstItem="BJb-l1-OU7" firstAttribute="centerX" secondItem="EKe-bt-ItG" secondAttribute="centerX" id="XwM-dU-uhc"/>
+                                    <constraint firstItem="BJb-l1-OU7" firstAttribute="top" secondItem="EKe-bt-ItG" secondAttribute="top" constant="8" id="ayD-r6-l82"/>
+                                    <constraint firstItem="AMn-6h-Use" firstAttribute="leading" secondItem="EKe-bt-ItG" secondAttribute="leading" constant="12" id="d1Q-66-aqe"/>
+                                    <constraint firstItem="gtL-WG-VZN" firstAttribute="leading" secondItem="AMn-6h-Use" secondAttribute="trailing" constant="17" id="gxZ-by-rJA"/>
+                                    <constraint firstItem="AMn-6h-Use" firstAttribute="top" secondItem="BJb-l1-OU7" secondAttribute="bottom" constant="20" id="zX0-JT-620"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EKe-bt-ItG" firstAttribute="top" secondItem="03M-QT-OwS" secondAttribute="bottom" constant="79" id="3tb-Wt-27X"/>
+                            <constraint firstItem="EKe-bt-ItG" firstAttribute="leading" secondItem="QAS-49-584" secondAttribute="leadingMargin" id="AsW-DK-i7q"/>
+                            <constraint firstItem="EKe-bt-ItG" firstAttribute="trailing" secondItem="QAS-49-584" secondAttribute="trailingMargin" id="Gd7-mT-ue4"/>
+                            <constraint firstItem="UXl-Ns-tCe" firstAttribute="top" secondItem="EKe-bt-ItG" secondAttribute="bottom" constant="341" id="TyQ-sn-CYn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="alphaSettingsButton" destination="gtL-WG-VZN" id="gmN-nb-q2n"/>
@@ -69,7 +89,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1328" y="-1041"/>
+            <point key="canvasLocation" x="-1329.375" y="-1041.5492957746478"/>
         </scene>
         <!--Problem ResultVC-->
         <scene sceneID="5vV-7G-9Dr">
