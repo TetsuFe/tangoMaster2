@@ -15,11 +15,9 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         return .lightContent
     }
     
-    
     @IBAction func backButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
-    
    
     @IBAction func alphaSettingsButton(_ sender: Any) {
         showPopUpProgressView()
@@ -41,11 +39,8 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     let viewAlphaManager = ViewAlphaManager()
     
     func updateTransparency(){
-        if viewAlphaManager.getTransparentSetting(){
-           imageTableView.alpha = 0.7
-        }else{
-            imageTableView.alpha = 1.0
-        }
+        updateCell()
+        imageTableView.reloadData()
     }
     
     override func viewDidLayoutSubviews(){
@@ -76,9 +71,6 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         print(self.view.bounds.size)
         imageTableView.rowHeight = self.view.bounds.size.height/9
         updateCell()
-        //以下２行は壁紙用の設定
-        //imageTableView.backgroundView = backgroundParentView
-        updateTransparency()
     }
     
     func updateCell(){
@@ -105,6 +97,14 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         for r in 0..<tango.count/6{
             cell.append(imageTableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
             )
+            //壁紙用の設定
+            if viewAlphaManager.getTransparentSetting(){
+                cell[r].backgroundColor = UIColor.white.withAlphaComponent(0.85)
+                imageTableView.backgroundColor = UIColor.clear
+            }else{
+                cell[r].backgroundColor = UIColor.white
+                imageTableView.backgroundColor = UIColor.white
+            }
             cell[r].setCell(listForTable[r],chapterSetsuNumber: String(appDelegate.chapterNumber*5+appDelegate.setsuNumber))
         }
     }
@@ -184,7 +184,6 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var imageTableView: UITableView!
     
     var listForTable = Array<NewImageReibun>()
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
         return listForTable.count

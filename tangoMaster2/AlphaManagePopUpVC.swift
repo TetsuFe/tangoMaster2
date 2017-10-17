@@ -68,7 +68,7 @@ class AlphaManagePopUpVC: UIViewController {
                     case .nigateListVC:
                         //親ビューに設定変更を適用
                         let parentViewController = self.parent as! NigateListVC
-                            //parentViewController.updateTransparency()
+                            parentViewController.updateTransparency()
                 }
                 
                 self.view.removeFromSuperview()

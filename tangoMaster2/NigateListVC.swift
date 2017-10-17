@@ -24,6 +24,62 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var goTestButton: UIButton!
     @IBOutlet weak var imageTableView: UITableView!
     
+    @IBAction func alphaSettingsButton(_ sender: Any) {
+        showPopUpProgressView()
+    }
+    
+    func showPopUpProgressView(){
+        AlphaManagePopUpVC.parentVCType = .nigateListVC
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "alphaManageSettingPopUpVC") as! AlphaManagePopUpVC
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
+    @IBOutlet weak var backgroundParentView: UIView!
+    
+    var backgroundImageView : UIImageView?
+    
+    let viewAlphaManager = ViewAlphaManager()
+    
+    func updateTransparency(){
+        updateCellAlpha()
+        imageTableView.reloadData()
+    }
+    
+    func updateCellAlpha(){
+        for i in 0..<cellsArray.count{
+            for j in 0..<cellsArray[i].count{
+                //壁紙用の設定
+                if viewAlphaManager.getTransparentSetting(){
+                    cellsArray[i][j].backgroundColor = UIColor.white.withAlphaComponent(0.85)
+                    imageTableView.backgroundColor = UIColor.clear
+                }else{
+                    cellsArray[i][j].backgroundColor = UIColor.white
+                    imageTableView.backgroundColor = UIColor.white
+                }
+            }
+        }
+    }
+    
+    override func viewDidLayoutSubviews(){
+        if backgroundImageView == nil{
+            showBackgroundImage()
+        }
+    }
+    
+    func showBackgroundImage(){
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+            let imageFileManager = ImageFileManager()
+            backgroundImageView = UIImageView(image: imageFileManager.readImageFile(fileName: currentBackgroundImageFileName))
+            fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
+            backgroundParentView.addSubview(backgroundImageView!)
+        }else{
+            //backgroundParentView.removeFromSuperview()
+        }
+    }
+    
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var nigateSectionList = Array<String>()

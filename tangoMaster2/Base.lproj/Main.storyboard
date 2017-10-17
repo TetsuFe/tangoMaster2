@@ -16,7 +16,6 @@
         <!--Alpha Manage Pop UpVC-->
         <scene sceneID="rnO-ZC-2ss">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rvx-mm-umT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="alphaManageSettingPopUpVC" id="uTW-Ef-S9s" customClass="AlphaManagePopUpVC" customModule="tangoMaster2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="03M-QT-OwS"/>
@@ -91,6 +90,7 @@
                         <outlet property="popUpView" destination="EKe-bt-ItG" id="ILY-AM-3gb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvx-mm-umT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1329.375" y="-1041.5492957746478"/>
         </scene>
@@ -752,7 +752,14 @@
                                 <state key="normal" title="設定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="alphaSettingsButton:" destination="b0d-cQ-iGI" eventType="touchUpInside" id="pZP-n4-l6E"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4M-gD-05G">
+                                <rect key="frame" x="0.0" y="107" width="320" height="460.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Px-9Q-bnk">
                                 <rect key="frame" x="0.0" y="107.5" width="320" height="460.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -848,21 +855,26 @@
                             <constraint firstItem="0K0-Gu-h57" firstAttribute="centerY" secondItem="U1U-Ev-6Cv" secondAttribute="centerY" id="NAJ-I4-aDa"/>
                             <constraint firstItem="QfU-sh-Afs" firstAttribute="leading" secondItem="rYA-0t-YZ7" secondAttribute="trailing" constant="30" id="Q9G-qo-baG"/>
                             <constraint firstItem="QfU-sh-Afs" firstAttribute="centerY" secondItem="rYA-0t-YZ7" secondAttribute="centerY" id="SBj-9b-Yif"/>
+                            <constraint firstItem="U4M-gD-05G" firstAttribute="leading" secondItem="eSV-Xv-wVs" secondAttribute="leading" id="US4-mq-4Lc"/>
+                            <constraint firstItem="OCo-W8-jEY" firstAttribute="top" secondItem="U4M-gD-05G" secondAttribute="bottom" id="XBL-uc-4DK"/>
                             <constraint firstItem="rYA-0t-YZ7" firstAttribute="leading" secondItem="PYz-SB-LqE" secondAttribute="trailing" constant="30" id="afv-oS-4kl"/>
                             <constraint firstItem="K3b-MM-gRI" firstAttribute="top" secondItem="QfU-sh-Afs" secondAttribute="bottom" constant="11" id="crx-0r-r4l"/>
                             <constraint firstItem="PYz-SB-LqE" firstAttribute="leading" secondItem="eSV-Xv-wVs" secondAttribute="leadingMargin" constant="8" id="dgo-Ye-gAP"/>
                             <constraint firstItem="0K0-Gu-h57" firstAttribute="top" secondItem="PYz-SB-LqE" secondAttribute="bottom" constant="11" id="eLr-9V-kSg"/>
+                            <constraint firstItem="U4M-gD-05G" firstAttribute="top" secondItem="K3b-MM-gRI" secondAttribute="bottom" id="fFe-BR-0Zx"/>
                             <constraint firstItem="OCo-W8-jEY" firstAttribute="top" secondItem="3Px-9Q-bnk" secondAttribute="bottom" id="mVl-WJ-nZy"/>
                             <constraint firstItem="K3b-MM-gRI" firstAttribute="leading" secondItem="U1U-Ev-6Cv" secondAttribute="trailing" constant="64" id="tcE-zb-I3e"/>
                             <constraint firstItem="rYA-0t-YZ7" firstAttribute="top" secondItem="WTT-iI-FB4" secondAttribute="bottom" constant="14" id="vOj-wH-udm"/>
                             <constraint firstItem="3Px-9Q-bnk" firstAttribute="leading" secondItem="eSV-Xv-wVs" secondAttribute="leading" id="vpM-Ss-ceM"/>
                             <constraint firstItem="PYz-SB-LqE" firstAttribute="centerY" secondItem="rYA-0t-YZ7" secondAttribute="centerY" id="wUf-9I-rFi"/>
+                            <constraint firstAttribute="trailing" secondItem="U4M-gD-05G" secondAttribute="trailing" id="yGz-Cr-mW1"/>
                             <constraint firstAttribute="trailing" secondItem="K3b-MM-gRI" secondAttribute="trailing" id="yb3-gR-8yH"/>
                             <constraint firstItem="U1U-Ev-6Cv" firstAttribute="top" secondItem="rYA-0t-YZ7" secondAttribute="bottom" constant="10" id="z3Q-Cs-ogS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QfU-sh-Afs" secondAttribute="trailing" constant="8" id="zkT-ua-t6O"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundParentView" destination="U4M-gD-05G" id="KjT-qU-dru"/>
                         <outlet property="goAutoFadeButton" destination="U1U-Ev-6Cv" id="IfR-iu-aEo"/>
                         <outlet property="goCardButton" destination="0K0-Gu-h57" id="SM8-Vm-P47"/>
                         <outlet property="goTestButton" destination="K3b-MM-gRI" id="xWo-fL-9lG"/>
