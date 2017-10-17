@@ -34,7 +34,6 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var begButton: UIButton!
     @IBOutlet weak var midButton: UIButton!
     @IBOutlet weak var highButton: UIButton!
-    @IBOutlet weak var toeicButton: UIButton!
     @IBOutlet weak var categorySelectTable: UITableView!
     
     @IBOutlet weak var modeLabel: UILabel!
@@ -159,12 +158,10 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         begButton.backgroundColor = UIColor.blue
         midButton.backgroundColor = UIColor.gray
         highButton.backgroundColor = UIColor.gray
-        toeicButton.backgroundColor = UIColor.gray
         
         begButton.addTarget(self, action: #selector(toBeg), for: .touchUpInside)
         midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
         highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
-        toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
         
     }
     
@@ -414,15 +411,12 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         begButton.backgroundColor = UIColor.gray
         midButton.backgroundColor = UIColor.gray
         highButton.backgroundColor = UIColor.gray
-        toeicButton.backgroundColor = UIColor.gray
         if category == 0{
             begButton.backgroundColor = UIColor.blue
         }else if category == 1{
             midButton.backgroundColor = UIColor.blue
         }else if category == 2{
             highButton.backgroundColor = UIColor.blue
-        }else if category == 3{
-            toeicButton.backgroundColor = UIColor.blue
         }
         appDelegate.problemCategory = category
         is_category_top = true
