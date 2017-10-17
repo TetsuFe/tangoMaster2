@@ -31,6 +31,36 @@ class ProblemVC: UIViewController {
     }
     
     @IBOutlet weak var backgroundParentView: UIView!
+    
+    @IBAction func settingButton(_ sender: Any) {
+        showPopUpProgressView()
+    }
+    
+    func showPopUpProgressView(){
+        AlphaManagePopUpVC.parentVCType = .problemVC
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "alphaManageSettingPopUpVC") as! AlphaManagePopUpVC
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
+    func updateTransparency(){
+        if superViewAlphaManager.getTransparentSetting(){
+            answerButton1.alpha = 0.7
+            answerButton2.alpha = 0.7
+            answerButton3.alpha = 0.7
+            answerButton4.alpha = 0.7
+            labelProblem.alpha = 0.7
+        }else{
+            answerButton1.alpha = 1.0
+            answerButton2.alpha = 1.0
+            answerButton3.alpha = 1.0
+            answerButton4.alpha = 1.0
+            labelProblem.alpha = 1.0
+        }
+    }
+    
     var backgroundImageView : UIImageView?
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -59,6 +89,13 @@ class ProblemVC: UIViewController {
     }
 
     var dummyArray = Array<Array<Jpn>>(repeating:[],count:5)
+    
+    let superViewAlphaManager = ViewAlphaManager()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateTransparency()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         //ダミー配列の生成（２次元） 非常にややこしい構成である
@@ -110,11 +147,7 @@ class ProblemVC: UIViewController {
         backProblemButton.addTarget(self, action: #selector(goPrevProblem), for: .touchUpInside)
         //backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
         
-        answerButton1.alpha = 0.7
-        answerButton2.alpha = 0.7
-        answerButton3.alpha = 0.7
-        answerButton4.alpha = 0.7
-        labelProblem.alpha = 0.7
+       
         
         //出題する分のファイルを読み込む（答えの分）
         var fileName = String()
@@ -191,7 +224,7 @@ class ProblemVC: UIViewController {
             fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
             backgroundParentView.addSubview(backgroundImageView!)
         }else{
-            backgroundParentView.removeFromSuperview()
+            //backgroundParentView.removeFromSuperview()
         }
     }
 

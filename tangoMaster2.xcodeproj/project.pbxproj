@@ -69,6 +69,8 @@
 		97CE91CA1F39198500F2FC91 /* NormalTangoNotificationSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */; };
 		97CE91CC1F3AE28B00F2FC91 /* EngJpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */; };
 		97CE91CE1F3CC58900F2FC91 /* NigateListForNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */; };
+		97D5312C1F95C130003BFFCA /* ViewAlphaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */; };
+		97D5312E1F95C493003BFFCA /* AlphaManagePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */; };
 		97E56B2E1F94B99200048F66 /* BackgroundImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */; };
 		97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */; };
 		97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */; };
@@ -143,6 +145,8 @@
 		97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalTangoNotificationSetter.swift; sourceTree = "<group>"; };
 		97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngJpn.swift; sourceTree = "<group>"; };
 		97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListForNotificationCell.swift; sourceTree = "<group>"; };
+		97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAlphaManager.swift; sourceTree = "<group>"; };
+		97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaManagePopUpVC.swift; sourceTree = "<group>"; };
 		97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageViewManager.swift; sourceTree = "<group>"; };
 		97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNotificationListVC.swift; sourceTree = "<group>"; };
 		97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCategorySelectVC.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				97ADD9AD1F92FB6E007C79D9 /* BackGroundImageManager */,
 				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
 				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
+				97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */,
+				97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */,
 				199FD87C1E63ADDA008381D7 /* HelpVC.swift */,
 				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
 				97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */,
@@ -404,6 +410,7 @@
 				97CE91CE1F3CC58900F2FC91 /* NigateListForNotificationCell.swift in Sources */,
 				19C23A701E1E82AB008B0D9F /* CardVC.swift in Sources */,
 				199FD87D1E63ADDA008381D7 /* HelpVC.swift in Sources */,
+				97D5312C1F95C130003BFFCA /* ViewAlphaManager.swift in Sources */,
 				9703D1C81F438D90005818AF /* CreateOriginalListPopUpVC.swift in Sources */,
 				199FD87B1E6255E5008381D7 /* ProblemResultProgressVC.swift in Sources */,
 				199FD8811E66CA9A008381D7 /* CardSettingPopUpVC.swift in Sources */,
@@ -420,6 +427,7 @@
 				19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */,
 				19C23A6F1E1E82AB008B0D9F /* AutoFadeVC.swift in Sources */,
 				97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */,
+				97D5312E1F95C493003BFFCA /* AlphaManagePopUpVC.swift in Sources */,
 				97C2AD4C1F47474000CB001F /* NotificationOrderSuffuler.swift in Sources */,
 				973B5B8E1F19DA860082A169 /* ListForNotificationCell.swift in Sources */,
 				97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */,
