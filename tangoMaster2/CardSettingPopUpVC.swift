@@ -79,7 +79,7 @@ class CardSettingPopUpVC: UIViewController {
                    if let parentViewController:CardVC = self.parent as! CardVC?{
                         parentViewController.leftSwipeButton.isEnabled = true
                         parentViewController.rightSwipeButton.isEnabled = true
-                        parentViewController.leftSwipeButton.backgroundColor = UIColor.orange
+                        parentViewController.leftSwipeButton.backgroundColor = UIColor(red: 0.11765, green: 0.74813, blue: 1, alpha:1)
                         parentViewController.rightSwipeButton.backgroundColor = UIColor(red:  0.225346 ,green: 0.870325, blue: 0.104825, alpha: 1)
                     }
                 }

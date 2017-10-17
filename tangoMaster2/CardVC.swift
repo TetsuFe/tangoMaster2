@@ -42,8 +42,10 @@ class CardVC: UIViewController {
     func updateTransparency(){
         if superViewAlphaManager.getTransparentSetting(){
             superCardView.alpha = 0.7
+            progress.alpha = 0.7
         }else{
             superCardView.alpha = 1.0
+            progress.alpha = 1.0
         }
     }
     
@@ -387,8 +389,8 @@ class CardVC: UIViewController {
         
         goProblemButton.removeTarget(self, action: #selector(nigateAdd), for: .touchUpInside)
         goProblemButton.addTarget(self, action: #selector(goProblem), for: .touchUpInside)
-        goNigateProblemButton.isEnabled = true
-        goNigateProblemButton.title = "問題（苦手）"
+
+        
         
         goProblemButton.title = "問題（全て）"
         
@@ -435,13 +437,15 @@ class CardVC: UIViewController {
                 goNigateProblemButton.backgroundColor = UIColor.clear
             }else{
                 goNigateProblemButton.isEnabled = true
+                goNigateProblemButton.title = "問題（苦手）"
+                goNigateProblemButton.backgroundColor = UIColor.purple
             }
         }
+        goProblemButton.backgroundColor = UIColor.orange
         goProblemButton.isEnabled = true
         goProblemButton.layer.borderWidth = 1.0
     }
 
-    
     @objc func retry(){
         //if(appDelegate.chapterNumber-1 < newChapterNumber){
         if(appDelegate.chapterNumber*5+appDelegate.setsuNumber-1 < NORMAL_FILE_NAMES[appDelegate.problemCategory].count-1){
@@ -576,7 +580,7 @@ class CardVC: UIViewController {
             leftSwipeButton.backgroundColor = UIColor.clear
             rightSwipeButton.backgroundColor = UIColor.clear
         }else{
-            leftSwipeButton.backgroundColor = UIColor.orange
+            leftSwipeButton.backgroundColor = UIColor(red: 0.11765, green: 0.74813, blue: 1, alpha:1)
             rightSwipeButton.backgroundColor = UIColor(red:  0.225346 ,green: 0.870325, blue: 0.104825, alpha: 1)
         }
     }

@@ -47,12 +47,14 @@ class ProblemVC: UIViewController {
     
     func updateTransparency(){
         if superViewAlphaManager.getTransparentSetting(){
+            progress.alpha = 0.7
             answerButton1.alpha = 0.7
             answerButton2.alpha = 0.7
             answerButton3.alpha = 0.7
             answerButton4.alpha = 0.7
             labelProblem.alpha = 0.7
         }else{
+            progress.alpha = 1.0
             answerButton1.alpha = 1.0
             answerButton2.alpha = 1.0
             answerButton3.alpha = 1.0
