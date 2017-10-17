@@ -2199,16 +2199,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlM-Ey-M8l">
-                                                    <rect key="frame" x="270" y="8" width="32" height="32"/>
+                                                    <rect key="frame" x="270" y="8" width="26" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="WlM-Ey-M8l" secondAttribute="height" multiplier="1:1" id="hBI-cN-KuE"/>
+                                                        <constraint firstAttribute="width" secondItem="WlM-Ey-M8l" secondAttribute="height" multiplier="1:1" constant="-2" id="hBI-cN-KuE"/>
                                                     </constraints>
                                                     <state key="normal" image="bell"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chapter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-lQ-c0Y">
-                                                    <rect key="frame" x="37" y="12" width="85" height="20"/>
+                                                    <rect key="frame" x="36" y="8" width="85" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="0HU-lQ-c0Y" secondAttribute="height" multiplier="53:10" constant="-21" id="p0I-aq-jBR"/>
+                                                        <constraint firstAttribute="width" secondItem="0HU-lQ-c0Y" secondAttribute="height" multiplier="53:10" constant="-63.400000000000006" id="p0I-aq-jBR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -2216,11 +2216,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="0HU-lQ-c0Y" firstAttribute="height" secondItem="WlM-Ey-M8l" secondAttribute="height" id="4Ja-Nr-8Qb"/>
                                                 <constraint firstItem="WlM-Ey-M8l" firstAttribute="top" secondItem="dxw-YO-cnw" secondAttribute="top" constant="8" id="BaW-4V-45i"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="0HU-lQ-c0Y" secondAttribute="bottom" constant="3.5" id="CCi-Je-0hQ"/>
-                                                <constraint firstItem="0HU-lQ-c0Y" firstAttribute="top" secondItem="dxw-YO-cnw" secondAttribute="topMargin" constant="4" id="G4l-29-KXQ"/>
-                                                <constraint firstItem="0HU-lQ-c0Y" firstAttribute="leading" secondItem="dxw-YO-cnw" secondAttribute="leadingMargin" constant="29" id="VF9-sP-vzG"/>
-                                                <constraint firstItem="WlM-Ey-M8l" firstAttribute="leading" secondItem="0HU-lQ-c0Y" secondAttribute="trailing" constant="148" id="kh7-Mo-lXl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0HU-lQ-c0Y" secondAttribute="bottom" constant="-0.5" id="CCi-Je-0hQ"/>
+                                                <constraint firstItem="0HU-lQ-c0Y" firstAttribute="top" secondItem="dxw-YO-cnw" secondAttribute="topMargin" id="G4l-29-KXQ"/>
+                                                <constraint firstItem="0HU-lQ-c0Y" firstAttribute="leading" secondItem="dxw-YO-cnw" secondAttribute="leadingMargin" constant="28" id="VF9-sP-vzG"/>
+                                                <constraint firstItem="WlM-Ey-M8l" firstAttribute="leading" secondItem="0HU-lQ-c0Y" secondAttribute="trailing" constant="149" id="kh7-Mo-lXl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -2372,7 +2373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWx-Bs-g6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5651" y="436"/>
+            <point key="canvasLocation" x="-5651.25" y="435.21126760563379"/>
         </scene>
         <!--Nigate List For NotificationVC-->
         <scene sceneID="0MR-e9-Dqq">
@@ -2611,9 +2612,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-NQ-eIr">
-                                                    <rect key="frame" x="270" y="8" width="32" height="32"/>
+                                                    <rect key="frame" x="270" y="8" width="28" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="hP8-NQ-eIr" secondAttribute="height" multiplier="1:1" id="aFL-Kl-Rtf"/>
+                                                        <constraint firstAttribute="width" constant="28" id="2F4-Iv-g4i"/>
                                                     </constraints>
                                                     <state key="normal" image="bell"/>
                                                 </button>
@@ -2628,11 +2629,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hP8-NQ-eIr" secondAttribute="trailing" constant="14" id="1mQ-xP-vz4"/>
                                                 <constraint firstItem="9XC-xf-Fz0" firstAttribute="leading" secondItem="1yG-cc-gWd" secondAttribute="leadingMargin" constant="29" id="ArT-tN-UN1"/>
-                                                <constraint firstItem="hP8-NQ-eIr" firstAttribute="top" secondItem="1yG-cc-gWd" secondAttribute="top" constant="8" id="Xhy-T4-bmc"/>
+                                                <constraint firstItem="hP8-NQ-eIr" firstAttribute="top" secondItem="1yG-cc-gWd" secondAttribute="topMargin" id="FYb-9s-X4i"/>
+                                                <constraint firstItem="hP8-NQ-eIr" firstAttribute="leading" secondItem="9XC-xf-Fz0" secondAttribute="trailing" constant="39" id="MXd-bY-HPO"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9XC-xf-Fz0" secondAttribute="bottom" constant="3.5" id="bZz-EF-6jy"/>
                                                 <constraint firstItem="9XC-xf-Fz0" firstAttribute="top" secondItem="1yG-cc-gWd" secondAttribute="topMargin" constant="4" id="dSY-Zn-rFp"/>
-                                                <constraint firstItem="hP8-NQ-eIr" firstAttribute="leading" secondItem="9XC-xf-Fz0" secondAttribute="trailing" constant="39" id="g3W-08-gb2"/>
+                                                <constraint firstItem="hP8-NQ-eIr" firstAttribute="centerY" secondItem="9XC-xf-Fz0" secondAttribute="centerY" id="gdO-yJ-Fh3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -2734,7 +2737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cqa-kS-vEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5651" y="1469"/>
+            <point key="canvasLocation" x="-5651.25" y="1468.3098591549297"/>
         </scene>
         <!--Create Original List Pop UpVC-->
         <scene sceneID="j0T-ob-u2L">
@@ -3008,9 +3011,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-3n-ZS7">
-                                                    <rect key="frame" x="270" y="8" width="32" height="32"/>
+                                                    <rect key="frame" x="270" y="8" width="28" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="iW5-3n-ZS7" secondAttribute="height" multiplier="1:1" id="cgv-qp-DgU"/>
+                                                        <constraint firstAttribute="width" secondItem="iW5-3n-ZS7" secondAttribute="height" multiplier="1:1" id="Ud2-yL-SPn"/>
                                                     </constraints>
                                                     <state key="normal" image="bell"/>
                                                 </button>
@@ -3035,11 +3038,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FeB-4t-5su" firstAttribute="top" secondItem="wDg-Mj-e1l" secondAttribute="topMargin" constant="4" id="1ic-Pg-IvD"/>
+                                                <constraint firstItem="iW5-3n-ZS7" firstAttribute="top" secondItem="wDg-Mj-e1l" secondAttribute="topMargin" id="2Sj-rM-sIf"/>
+                                                <constraint firstItem="iW5-3n-ZS7" firstAttribute="centerY" secondItem="8y4-4d-ydc" secondAttribute="centerY" id="3yi-Ik-a4f"/>
+                                                <constraint firstItem="iW5-3n-ZS7" firstAttribute="leading" secondItem="8y4-4d-ydc" secondAttribute="trailing" constant="13" id="AkV-Ir-Qyj"/>
                                                 <constraint firstItem="8y4-4d-ydc" firstAttribute="top" secondItem="FeB-4t-5su" secondAttribute="top" id="Fmx-DG-Tks"/>
                                                 <constraint firstItem="FeB-4t-5su" firstAttribute="leading" secondItem="wDg-Mj-e1l" secondAttribute="leadingMargin" id="KwE-YF-ixE"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="FeB-4t-5su" secondAttribute="bottom" constant="3.5" id="Lfn-LE-u2m"/>
-                                                <constraint firstItem="iW5-3n-ZS7" firstAttribute="leading" secondItem="8y4-4d-ydc" secondAttribute="trailing" constant="13" id="N8g-mz-aSr"/>
-                                                <constraint firstItem="iW5-3n-ZS7" firstAttribute="top" secondItem="wDg-Mj-e1l" secondAttribute="top" constant="8" id="Oyf-y9-u2C"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iW5-3n-ZS7" secondAttribute="trailing" constant="14" id="Q3k-C7-TbV"/>
                                                 <constraint firstItem="8y4-4d-ydc" firstAttribute="leading" secondItem="FeB-4t-5su" secondAttribute="trailing" constant="14" id="fpv-jP-u4U"/>
                                                 <constraint firstItem="8y4-4d-ydc" firstAttribute="bottom" secondItem="FeB-4t-5su" secondAttribute="bottom" id="uw0-2Q-BeF"/>
                                             </constraints>
@@ -3113,7 +3118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIq-hb-jtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7646" y="1203"/>
+            <point key="canvasLocation" x="-7646.25" y="1202.1126760563379"/>
         </scene>
         <!--Manage Original ListVC-->
         <scene sceneID="VCo-hV-ew6">
@@ -3139,9 +3144,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBJ-WZ-uox">
-                                                    <rect key="frame" x="270" y="8" width="32" height="32"/>
+                                                    <rect key="frame" x="270" y="8" width="28" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="tBJ-WZ-uox" secondAttribute="height" multiplier="1:1" id="65e-Rx-8Tf"/>
+                                                        <constraint firstAttribute="width" secondItem="tBJ-WZ-uox" secondAttribute="height" multiplier="1:1" id="1cy-kT-ebC"/>
                                                     </constraints>
                                                     <state key="normal" image="bell"/>
                                                 </button>
@@ -3165,14 +3170,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tBJ-WZ-uox" firstAttribute="top" secondItem="hcl-Lg-F8V" secondAttribute="top" constant="8" id="9a3-XR-ZBH"/>
                                                 <constraint firstItem="rk4-Mv-Hvb" firstAttribute="bottom" secondItem="tT0-xc-Rb2" secondAttribute="bottom" id="Aqm-Tz-jEw"/>
                                                 <constraint firstItem="tT0-xc-Rb2" firstAttribute="top" secondItem="hcl-Lg-F8V" secondAttribute="topMargin" constant="4" id="Q9G-X7-hDA"/>
-                                                <constraint firstItem="tBJ-WZ-uox" firstAttribute="leading" secondItem="rk4-Mv-Hvb" secondAttribute="trailing" constant="13" id="fCX-hu-QFZ"/>
+                                                <constraint firstItem="tBJ-WZ-uox" firstAttribute="leading" secondItem="rk4-Mv-Hvb" secondAttribute="trailing" constant="13" id="TAu-yK-GZ1"/>
+                                                <constraint firstItem="tBJ-WZ-uox" firstAttribute="top" secondItem="hcl-Lg-F8V" secondAttribute="topMargin" id="VpP-sd-Ytf"/>
                                                 <constraint firstItem="tT0-xc-Rb2" firstAttribute="leading" secondItem="hcl-Lg-F8V" secondAttribute="leadingMargin" id="hh1-Pk-bUY"/>
                                                 <constraint firstItem="rk4-Mv-Hvb" firstAttribute="top" secondItem="tT0-xc-Rb2" secondAttribute="top" id="kZl-Yv-g24"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="tT0-xc-Rb2" secondAttribute="bottom" constant="3.5" id="nqN-hh-MWQ"/>
+                                                <constraint firstItem="tBJ-WZ-uox" firstAttribute="centerY" secondItem="rk4-Mv-Hvb" secondAttribute="centerY" id="pKf-U3-OMJ"/>
                                                 <constraint firstItem="rk4-Mv-Hvb" firstAttribute="leading" secondItem="tT0-xc-Rb2" secondAttribute="trailing" constant="14" id="syF-vx-JYw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tBJ-WZ-uox" secondAttribute="trailing" constant="14" id="u3Y-e7-bLR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -3387,7 +3394,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bell" width="32" height="32"/>
+        <image name="bell" width="64" height="64"/>
         <image name="search" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
         <image name="un_nigate" width="50" height="50"/>
