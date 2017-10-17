@@ -17,15 +17,16 @@ class CardSettingPopUpVC: UIViewController {
         removeAnimate()
     }
     
+    @IBOutlet weak var alphaSettingsButton: UIButton!
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let viewAlphaManager = ViewAlphaManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //ポップアップ処理のセット二行。ポップアップ以外部分を暗い透明にし、ポップアップ
 
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        self.showAnimate()
         print("appdelegate.cardSetting: \(appDelegate.canCardSwipe)")
         swipeSettingButton.addTarget(self, action: #selector(pushedSwipeButton), for: .touchUpInside)
         
@@ -41,6 +42,9 @@ class CardSettingPopUpVC: UIViewController {
             buttonSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
 
         }
+        updateButtonImage()
+        alphaSettingsButton.addTarget(self, action: #selector(pushedAlphaSettingsButton), for: .touchUpInside)
+        self.showAnimate()
     }
     
     func showAnimate()
@@ -68,6 +72,7 @@ class CardSettingPopUpVC: UIViewController {
                         parentViewController.rightSwipeButton.isEnabled = false
                         parentViewController.leftSwipeButton.backgroundColor = UIColor.clear
                         parentViewController.rightSwipeButton.backgroundColor = UIColor.clear
+                        parentViewController.updateTransparency()
                         
                     }
                 }else{
@@ -101,6 +106,20 @@ class CardSettingPopUpVC: UIViewController {
         buttonSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
         swipeSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
         
+    }
+    
+    @objc func pushedAlphaSettingsButton(){
+        print("push button")
+        viewAlphaManager.switchTransparentSetting()
+        updateButtonImage()
+    }
+    
+    func updateButtonImage(){
+        if(viewAlphaManager.getTransparentSetting()){
+            alphaSettingsButton.setImage(UIImage(named:"card_setting_pushed.png"), for: .normal)
+        }else{
+            alphaSettingsButton.setImage(UIImage(named:"card_setting_not_pushed.png"), for: .normal)
+        }
     }
 
     override func didReceiveMemoryWarning() {

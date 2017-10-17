@@ -32,18 +32,19 @@ class CardVC: UIViewController {
     
     var sevenDatas = Array<SixWithChapter>()
     var cardWorkFlag:Bool = true
+    let superViewAlphaManager = ViewAlphaManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        superCardView.alpha = 0.7
-        /*
-        var backgroundImageManager = BackgroundImageManager(image: UIImage(named:"50ten")!)
-        //以下は必ずUIViewController.viewの子要素である必要がある
-        let headerBottomY = headerView.frame.origin.y + headerView.frame.origin.y
-        let backgroundImageView = backgroundImageManager.generateBackgroundImageView(image: backgroundImageManager.image, headerBottomY: headerBottomY)
-        self.view.addSubview(backgroundImageView)
-        self.view.sendSubview(toBack:backgroundImageView)
- */
+        updateTransparency()
+    }
+    
+    func updateTransparency(){
+        if superViewAlphaManager.getTransparentSetting(){
+            superCardView.alpha = 0.7
+        }else{
+            superCardView.alpha = 1.0
+        }
     }
     
     override func viewDidLayoutSubviews(){
@@ -59,7 +60,7 @@ class CardVC: UIViewController {
             fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
             backgroundParentView.addSubview(backgroundImageView!)
         }else{
-            backgroundParentView.removeFromSuperview()
+            //backgroundParentView.removeFromSuperview()
         }
     }
     
