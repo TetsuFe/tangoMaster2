@@ -45,7 +45,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     
     func updateTransparency(){
         updateCellAlpha()
-        imageTableView.reloadData()
+        //imageTableView.reloadData()
     }
     
     func updateCellAlpha(){
@@ -124,6 +124,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
             goAutoFadeButton.isEnabled = false
             goTestButton.isEnabled = false
         }
+        updateCellAlpha()
     }
     
     var cellsArray = Array<Array<ListCell>>()

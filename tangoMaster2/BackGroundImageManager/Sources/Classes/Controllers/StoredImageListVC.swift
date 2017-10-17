@@ -68,7 +68,10 @@ class StoredImageListVC: UIViewController, UINavigationControllerDelegate, UIIma
     
     @IBOutlet weak var deleteImageButton: UIButton!
     
-    @IBAction func selectImageButton(_ sender: Any) {
+    
+    @IBOutlet weak var selectImageButton: UIButton!
+    
+    @objc func selectImage(){
         UserDefaults.standard.set(imageFileNameList[pointerIndex], forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY)
         let alert = UIAlertController(title: "設定完了",
                                       message: "現在の壁紙に設定されました。",
@@ -101,6 +104,36 @@ class StoredImageListVC: UIViewController, UINavigationControllerDelegate, UIIma
         print("pointerIndex: \(pointerIndex)")
         senderView.layer.borderWidth = 5
         senderView.layer.borderColor = UIColor.blue.cgColor
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+             if currentBackgroundImageFileName == imageFileNameList[pointerIndex] {
+                if selectImageButton.title != "壁紙設定を解除"{
+                    selectImageButton.removeTarget(self, action: #selector(selectImage), for: .touchUpInside)
+                    selectImageButton.addTarget(self, action: #selector(unselectImage), for: .touchUpInside)
+                    selectImageButton.setTitle("壁紙設定を解除", for: .normal)
+                }
+             }else{
+                if selectImageButton.title != "壁紙に設定"{
+                    selectImageButton.removeTarget(self, action: #selector(unselectImage), for: .touchUpInside)
+                    selectImageButton.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
+                    selectImageButton.setTitle("壁紙に設定", for: .normal)
+                }
+            }
+        }
+    }
+    
+    @objc func unselectImage(){
+        UserDefaults.standard.set(nil, forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY)
+        let alert = UIAlertController(title: "設定完了",
+                                      message: "現在の壁紙から解除されました。",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "確認", style: .cancel) { _ in
+            self.refreshImageView()
+        })
+        self.present(alert, animated: true)
+        selectImageButton.removeTarget(self, action: #selector(unselectImage), for: .touchUpInside)
+        selectImageButton.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
+        selectImageButton.setTitle("壁紙に設定", for: .normal)
+        
     }
     
     override func viewDidLoad() {
@@ -112,6 +145,7 @@ class StoredImageListVC: UIViewController, UINavigationControllerDelegate, UIIma
             deleteImageButton.isEnabled = true
             deleteImageButton.addTarget(self, action: #selector(tapDeleteButton), for:.touchUpInside)
         }
+        selectImageButton.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews(){
@@ -207,11 +241,12 @@ class StoredImageListVC: UIViewController, UINavigationControllerDelegate, UIIma
     }
     
     @objc func tapDeleteButton(){
-        let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY)!
-        if currentBackgroundImageFileName == imageFileNameList[pointerIndex] {
-            createAlertViewForForbiddenToDeleteImage()
-        }else{
-            createAlertViewForDeleteImage()
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+            if currentBackgroundImageFileName == imageFileNameList[pointerIndex] {
+                createAlertViewForForbiddenToDeleteImage()
+            }else{
+                createAlertViewForDeleteImage()
+            }
         }
     }
     
@@ -259,9 +294,13 @@ class StoredImageListVC: UIViewController, UINavigationControllerDelegate, UIIma
         if imageList.count > 0{
             if pointerIndex != imageList.count{
                 clearAllBackgroundImageView()
-                let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY)!
-                let imageFileNameList = imageListFileManager.readImageListFileToArray()
-                makeBackgroundImageListView(currentBackgroundImageFileName: currentBackgroundImageFileName, imageFIleNameList: imageFileNameList)
+                if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+                    let imageFileNameList = imageListFileManager.readImageListFileToArray()
+                    makeBackgroundImageListView(currentBackgroundImageFileName: currentBackgroundImageFileName, imageFIleNameList: imageFileNameList)
+                }else{
+                    let imageFileNameList = imageListFileManager.readImageListFileToArray()
+                    makeBackgroundImageListView(currentBackgroundImageFileName: "none", imageFIleNameList: imageFileNameList)
+                }
             }else{
                 backgroundImageViewList[pointerIndex].removeFromSuperview()
             }

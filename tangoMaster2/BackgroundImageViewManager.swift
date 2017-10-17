@@ -19,7 +19,10 @@ func fitWidthOfImageView(changingImageView: UIImageView, parentView:UIView){
     let rect:CGRect = CGRect(x:0, y:0, width:tempScale*imageViewWidth, height:tempScale*imageViewHeight)
     // ImageView frame をCGRectで作った矩形に合わせる
     changingImageView.frame = rect
-    
-    // 画像の中心をスクリーンの中心位置に設定
-    changingImageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
+    if imageViewHeight > screenHeight{
+        changingImageView.frame.origin = CGPoint(x:0,y:0)
+    }else{
+        // 画像の中心をスクリーンの中心位置に設定
+        changingImageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
+    }
 }

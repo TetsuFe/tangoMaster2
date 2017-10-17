@@ -443,6 +443,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNY-zI-vrp">
+                                <rect key="frame" x="0.0" y="109" width="320" height="459"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="単語リスト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gA-Ty-Db1">
                                 <rect key="frame" x="116.5" y="34" width="87" height="29.5"/>
                                 <constraints>
@@ -543,10 +547,6 @@
                                     <action selector="backButton:" destination="jK6-bO-wxM" eventType="touchUpInside" id="B0T-L6-NM7"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNY-zI-vrp">
-                                <rect key="frame" x="0.0" y="109" width="320" height="459"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T9g-sq-aXA">
                                 <rect key="frame" x="0.0" y="108.5" width="320" height="459.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -691,6 +691,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4M-gD-05G">
+                                <rect key="frame" x="0.0" y="107" width="320" height="460.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1U-Ev-6Cv">
                                 <rect key="frame" x="128" y="72.5" width="64" height="36.5"/>
                                 <constraints>
@@ -756,10 +760,6 @@
                                     <action selector="alphaSettingsButton:" destination="b0d-cQ-iGI" eventType="touchUpInside" id="pZP-n4-l6E"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4M-gD-05G">
-                                <rect key="frame" x="0.0" y="107" width="320" height="460.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Px-9Q-bnk">
                                 <rect key="frame" x="0.0" y="107.5" width="320" height="460.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2903,9 +2903,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoT-W1-UNa">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
                                         <state key="normal" title="壁紙に設定"/>
-                                        <connections>
-                                            <action selector="selectImageButton:" destination="NUk-an-jq4" eventType="touchUpInside" id="n0k-JF-ibU"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03i-e0-8G1">
                                         <rect key="frame" x="160" y="0.0" width="160" height="30"/>
@@ -2944,6 +2941,7 @@
                         <outlet property="deleteImageButton" destination="03i-e0-8G1" id="SVB-um-iUG"/>
                         <outlet property="headerView" destination="HKh-V9-Fvm" id="pxs-Ah-Hnm"/>
                         <outlet property="imageListView" destination="7wI-hZ-7eb" id="zhQ-MH-79M"/>
+                        <outlet property="selectImageButton" destination="QoT-W1-UNa" id="S9h-SE-vMn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbH-XO-56d" userLabel="First Responder" sceneMemberID="firstResponder"/>
