@@ -20,6 +20,51 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         _ = navigationController?.popViewController(animated: true)
     }
     
+   
+    @IBAction func alphaSettingsButton(_ sender: Any) {
+        showPopUpProgressView()
+    }
+    
+    func showPopUpProgressView(){
+        AlphaManagePopUpVC.parentVCType = .listVC
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "alphaManageSettingPopUpVC") as! AlphaManagePopUpVC
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
+    @IBOutlet weak var backgroundParentView: UIView!
+    
+    var backgroundImageView : UIImageView?
+    
+    let viewAlphaManager = ViewAlphaManager()
+    
+    func updateTransparency(){
+        if viewAlphaManager.getTransparentSetting(){
+           imageTableView.alpha = 0.7
+        }else{
+            imageTableView.alpha = 1.0
+        }
+    }
+    
+    override func viewDidLayoutSubviews(){
+        if backgroundImageView == nil{
+            showBackgroundImage()
+        }
+    }
+    
+    func showBackgroundImage(){
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+            let imageFileManager = ImageFileManager()
+            backgroundImageView = UIImageView(image: imageFileManager.readImageFile(fileName: currentBackgroundImageFileName))
+            fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
+            backgroundParentView.addSubview(backgroundImageView!)
+        }else{
+            //backgroundParentView.removeFromSuperview()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,8 +75,10 @@ class ListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         imageTableView.delegate = self
         print(self.view.bounds.size)
         imageTableView.rowHeight = self.view.bounds.size.height/9
-        
         updateCell()
+        //以下２行は壁紙用の設定
+        //imageTableView.backgroundView = backgroundParentView
+        updateTransparency()
     }
     
     func updateCell(){
