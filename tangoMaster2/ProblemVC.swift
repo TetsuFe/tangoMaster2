@@ -25,42 +25,16 @@ class ProblemVC: UIViewController {
     @IBOutlet weak var answerButton4: UIButton!
     
     @IBOutlet weak var backProblemButton: UIButton!
-    //@IBOutlet weak var backPageButton: UIButton!
-    
-    
        
     @IBAction func backButton2(_ sender: Any) {
         backPage()
     }
     
+    @IBOutlet weak var backgroundParentView: UIView!
+    var backgroundImageView : UIImageView?
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
-    
-
-/*
-    func getTangoArrayFromFileNameOfParts(parts:String)->String{
-        let fileName = parts
-        /*
-        var fileName = String()
-        switch parts{
-        case "n":
-            fileName = "dummy_noun"
-        case "a":
-            fileName = "dummy_adj"
-        case "av":
-            fileName =  "dummy_adve"
-        case "v":
-            fileName = "dummy_verb"
-        case "o":
-            fileName = "dummy_other"
-        default:
-            break
-        }
- */
-        return fileName
-    }
-  */
     //本当はchapに応じた範囲でランダム決定したいので、chap引数も追加したい。
     func partsToIndex(parts:String)->Int{
         var jpnArrayIdentifier = -1
@@ -83,20 +57,10 @@ class ProblemVC: UIViewController {
         }
         return jpnArrayIdentifier
     }
-   /*
-    func writePartsFileFromDataFile(parts:String,fileName:String){
-        var readArray = readFilegetTangoArray(fileName,extent:"txt",inDirectory: "tango/seedtango")
-        for r in 0..<readArray.count/6{
-            if readArray[6*r+5] == parts {
-                writeSixFile(fileName:getTangoArrayFromFileNameOfParts(chap:0, parts:parts),eng:readArray[6*r],jpn:readArray[6*r+1],engPhrase:readArray[6*r+2],jpnPhrase:readArray[6*r+3],nigateFlag:readArray[6*r+4],partOfSpeech:readArray[6*r+5])
-            }
-        }
-    }
-*/
+
     var dummyArray = Array<Array<Jpn>>(repeating:[],count:5)
     
     override func viewWillAppear(_ animated: Bool) {
-        
         //ダミー配列の生成（２次元） 非常にややこしい構成である
         //まず最初にwrong_test_for_0.txtから各partsに応じたファイルに対してpartsの情報を書き込む。
         //このpartsofspeechファイル群は、のちにdummyArrayに使用される。今回はデモなのでいちいち作成しているが、
@@ -122,10 +86,7 @@ class ProblemVC: UIViewController {
                 dummyArray[i].append(Jpn(jpn: array[i][6*r+1]))
             }
         }
-        
 
-      
-        
         labelProblem.layer.borderWidth = 1
         
         answerButton1.layer.borderWidth = 0
@@ -149,6 +110,11 @@ class ProblemVC: UIViewController {
         backProblemButton.addTarget(self, action: #selector(goPrevProblem), for: .touchUpInside)
         //backPageButton.addTarget(self, action: #selector(backPage), for: .touchUpInside)
         
+        answerButton1.alpha = 0.7
+        answerButton2.alpha = 0.7
+        answerButton3.alpha = 0.7
+        answerButton4.alpha = 0.7
+        labelProblem.alpha = 0.7
         
         //出題する分のファイルを読み込む（答えの分）
         var fileName = String()
@@ -210,6 +176,23 @@ class ProblemVC: UIViewController {
         //ラベルを表示する
         setLabel()
         print("succeed!")
+    }
+    
+    override func viewDidLayoutSubviews(){
+        if backgroundImageView == nil{
+            showBackgroundImage()
+        }
+    }
+    
+    func showBackgroundImage(){
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+            let imageFileManager = ImageFileManager()
+            backgroundImageView = UIImageView(image: imageFileManager.readImageFile(fileName: currentBackgroundImageFileName))
+            fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
+            backgroundParentView.addSubview(backgroundImageView!)
+        }else{
+            backgroundParentView.removeFromSuperview()
+        }
     }
 
 
@@ -406,7 +389,6 @@ class ProblemVC: UIViewController {
         }
     }
     
-    
     func answerButton(){
         if(k < correctArray.count){
             if k > existProblemIndex{
@@ -419,7 +401,6 @@ class ProblemVC: UIViewController {
             submit()
         }
     }
-
 
     @objc func pushAnswer1(){
         judgeAnswer(0)
@@ -489,13 +470,11 @@ class ProblemVC: UIViewController {
         print("setResultwrong:\(wrongArray.count)")
         for k in 0..<wrongArray.count{
             if(wrongArray[k] == 1){
-                //writeSixFile(fileName:WRONG_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[k].eng!,jpn:sevenList[k].jpn!,engPhrase:sevenList[k].engReibun!,jpnPhrase:sevenList[k].jpnReibun!,nigateFlag:sevenList[k].nigateFlag!,partOfSpeech:sevenList[k].partOfSpeech!)
                 writeSevenFile(fileName:WRONG_FILE_NAMES[appDelegate.problemCategory
                     ][appDelegate.chapterNumber*5+appDelegate.setsuNumber],eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!,chapterNumber:sevenList[correctArray[k]].chapterNumber!)
                 print("wrongファイルセット完了？")
             }else{
-                //writeSixFile(fileName:"correct",eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!)
-                writeSevenFile(fileName:"correct",eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!,chapterNumber:sevenList[correctArray[k]].chapterNumber!)
+             writeSevenFile(fileName:"correct",eng:sevenList[correctArray[k]].eng!,jpn:sevenList[correctArray[k]].jpn!,engPhrase:sevenList[correctArray[k]].engReibun!,jpnPhrase:sevenList[correctArray[k]].jpnReibun!,nigateFlag:sevenList[correctArray[k]].nigateFlag!,partOfSpeech:sevenList[correctArray[k]].partOfSpeech!,chapterNumber:sevenList[correctArray[k]].chapterNumber!)
                 print("correctファイルセット完了？")
             }
         }
@@ -516,11 +495,6 @@ class ProblemVC: UIViewController {
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
-            //let secondViewController: CategorySelectVC = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
-            
-            // Viewの移動する.
-            //self.present(secondViewController, animated: true, completion: nil)
-            //self.dismiss(animated: true, completion: nil)
             backNearestNaviVC(currentVC:self)
         })
         // キャンセルボタン

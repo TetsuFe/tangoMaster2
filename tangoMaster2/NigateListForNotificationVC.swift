@@ -277,7 +277,7 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
     
     func selectAll(){
         let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME, extent:"txt")
-        let currentMask = f!.readLine()!
+        let currentMask = f!.readline()!
         var selectedMask = String()
         
         if is_category_top{
@@ -312,7 +312,7 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
     
     func deselectAll(){
         let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:NIGATE_NOTIFICATION_MASK_FILE_NAME, extent:"txt")
-        let currentMask = f!.readLine()!
+        let currentMask = f!.readline()!
         var deselectedMask = String()
         if is_category_top{
             if appDelegate.problemCategory == 0{
@@ -359,7 +359,7 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
         print("prev: \(path+"/"+nigatePrevMaskFileName+".txt")")
         if let f = FileHandle(forReadingAtPath: path+"/"+nigatePrevMaskFileName+".txt"){
             
-            if let mask = f.readLine(){
+            if let mask = f.readline(){
                 prevMask = mask
             }else{
                 prevMask = zeroMask
@@ -380,7 +380,7 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
         let path = defaultTextFileDirectoryPath
         if let f = FileHandle(forReadingAtPath: path+"/"+NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt"){
 
-            if let mask = f.readLine(){
+            if let mask = f.readline(){
                 currectMask = mask
             }else{
                 currectMask = zeroMask
@@ -427,7 +427,7 @@ class NigateListForNotificationVC: UIViewController, UITableViewDelegate,UITable
         let path = defaultTextFileDirectoryPath
         var mask = String()
         if let f = FileHandle(forReadingAtPath: path+"/"+NIGATE_NOTIFICATION_MASK_FILE_NAME+".txt"){
-            if let nigateNotificationCheckMask:String = f.readLine() {
+            if let nigateNotificationCheckMask:String = f.readline() {
                 mask = nigateNotificationCheckMask
                 print("読み込んだマスクパターンです")
                 print(nigateNotificationCheckMask)

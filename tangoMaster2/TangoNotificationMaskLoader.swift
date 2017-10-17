@@ -20,7 +20,7 @@ class TangoNotificationMaskLoader{
         let path = defaultTextFileDirectoryPath
         var mask = String()
         if let maskFileObject = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-            if let nigateNotificationCheckMask:String = maskFileObject.readLine() {
+            if let nigateNotificationCheckMask:String = maskFileObject.readline() {
                 mask = nigateNotificationCheckMask
                 print("読み込んだマスクパターンです")
                 print(nigateNotificationCheckMask)

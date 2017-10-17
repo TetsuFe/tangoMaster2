@@ -29,15 +29,20 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
     @IBOutlet weak var homeTableView: UITableView!
     
     //tableView
-    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語タイマー"]
-    let imageNames = ["normallist.png","test.png","card.png","nigatelist.png,","bell.png"]
+    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語タイマー","壁紙設定"]
+    let imageNames = ["normallist.png","test.png","card.png","nigatelist.png,","bell.png","bell.png"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.setNavigationBarHidden(true, animated:false)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         homeTableView.dataSource = self
         homeTableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+       
     }
     
     var graphs = Array<TangoProgressGraph>()
@@ -46,6 +51,11 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
 
     override func viewDidAppear(_ animated : Bool){
         super.viewDidAppear(true)
+        if appDelegate.flag{
+            self.navigationController?.setNavigationBarHidden(true, animated:false)
+            self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        }
+        
         if graphs.count != 0{
             for i in 0..<levelLabelNames.count{
                 graphs[i].label1.removeFromSuperview()
@@ -120,12 +130,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
         if indexPath.row == 4{
             //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "notificationHome") as! NotificationHomeVC
-            self.navigationController?.pushViewController(secondViewController, animated: true)
+            //self.present(secondViewController, animated: true, completion: nil)
+        }else if indexPath.row == 5{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storedImageListVC") as! StoredImageListVC
         }else{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
-            //self.present(secondViewController, animated: true, completion: nil)
-            self.navigationController?.pushViewController(secondViewController, animated: true)
         }
+        self.navigationController?.pushViewController(secondViewController, animated: true)
         //選択時の色の変更をすぐ消す
         tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -24,7 +24,7 @@ class AddOriginalTangoVC: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var originalListTable: UITableView!
 
     //textViewのキーボードの閉じるボタンが押されたとき、キーボードを閉じる
-    func endEdit(){
+    @objc func endEdit(){
         self.view.endEditing(true)
     }
     

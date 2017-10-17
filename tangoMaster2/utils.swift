@@ -92,6 +92,8 @@ let NOTIFICATION_MINUTES_INDEX_KEY = "notificationMinutesIndex"
 let NOTIFICATION_HOURS_INDEX_KEY = "notificationHoursIndex"
 let NOTIFICATION_ISENABLED_KEY = "notificationIsEnabled"
 
+let CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY = "background_image_file_name"
+
 func getNewChapterArray()->Array<Int>{
     var newChapterNumbers = Array<Int>()
     for category in 0..<categoryNames.count{
@@ -794,9 +796,9 @@ func easyFileHandle(directoryPath:String, fileName:String, extent:String)->FileH
         return nil
     }
 }
-
+/*
 extension FileHandle{
-    func readLine() -> String?{
+    func readline() -> String?{
         print("readline")
         //読み込み用で開くforReadingAtPath
         let seekStep = 256
@@ -832,7 +834,7 @@ extension FileHandle{
         return nil
     }
 }
-
+*/
 func writeFile(fileName:String, text:String){
     //"/Documentを調べたい場合 "/folder_name" -> ""
     //"/Document/imagesの場合 "/folder_name" -> "/images"
@@ -920,7 +922,7 @@ func getWillNotifyChapterVolume(maskFileName:String)->Array<Int>{
     var category = 0
     var computedChapterVolume = 0
     let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:maskFileName, extent:"txt")
-    let currentMask = f!.readLine()!
+    let currentMask = f!.readline()!
     print("maskcount:\(currentMask.characters.count)")
     for (cIndex,c) in currentMask.characters.enumerated(){
         if category == 0{
@@ -961,7 +963,7 @@ func getWillNotifyNigateTangoVolume(maskFileName:String, nigateTangoVolumes1D:Ar
     var category = 0
     var computedChapterVolume = 0
     let f = easyFileHandle(directoryPath:defaultTextFileDirectoryPath, fileName:maskFileName, extent:"txt")
-    let currentMask = f!.readLine()!
+    let currentMask = f!.readline()!
     for (cIndex,c) in currentMask.characters.enumerated(){
         if category == 0{
             if cIndex < fileVolumes[category]{

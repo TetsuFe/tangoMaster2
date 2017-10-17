@@ -66,7 +66,7 @@ class ListForNotificationCell:UITableViewCell{
             checkButton.setImage(UIImage(named:"bell")!, for: UIControlState())
             //ON +"1"+
             if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-                if let notificationCheckMask:String = f.readLine() {
+                if let notificationCheckMask:String = f.readline() {
                     print("書き込み前のマスクパターンです")
                     f.closeFile()
                     print(notificationCheckMask)
@@ -97,7 +97,7 @@ class ListForNotificationCell:UITableViewCell{
                     deleteFile(fileName:self.maskFileName)
                     writeFile(fileName: self.maskFileName+".txt", text: newMask)
                     if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-                        if let notificationCheckMaskAfter:String =  f.readLine() {
+                        if let notificationCheckMaskAfter:String =  f.readline() {
                             f.closeFile()
                             print("書き込み後のマスクパターンです")
                             print(notificationCheckMaskAfter)
@@ -116,7 +116,7 @@ class ListForNotificationCell:UITableViewCell{
             //OFF +"0"+
             if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
 
-                if let nigateNotificationCheckMask:String =  f.readLine() {
+                if let nigateNotificationCheckMask:String =  f.readline() {
                     f.closeFile()
                     print("書き込み前のマスクパターンです")
                     print(nigateNotificationCheckMask)
@@ -147,7 +147,7 @@ class ListForNotificationCell:UITableViewCell{
                     deleteFile(fileName:self.maskFileName)
                     writeFile(fileName: self.maskFileName+".txt", text: newMask)
                     if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
-                        if let nigateNotificationCheckMaskAfter:String =  f.readLine() {
+                        if let nigateNotificationCheckMaskAfter:String =  f.readline() {
                             f.closeFile()
                             print("書き込み後のマスクパターンです")
                             print(nigateNotificationCheckMaskAfter)
@@ -168,7 +168,7 @@ class ListForNotificationCell:UITableViewCell{
         let path = defaultTextFileDirectoryPath
         if let f = FileHandle(forReadingAtPath: path+"/"+self.maskFileName+".txt"){
             
-            if let mask = f.readLine(){
+            if let mask = f.readline(){
                 currectMask = mask
             }else{
                 currectMask = zeroMask

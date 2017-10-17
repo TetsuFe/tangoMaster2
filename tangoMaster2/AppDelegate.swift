@@ -38,6 +38,8 @@ class AppDelegate: UIResponder,UIApplicationDelegate {
     //imagelist:0 mylist: 1
     // var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     
+    var flag = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         

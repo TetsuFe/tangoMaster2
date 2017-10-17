@@ -52,6 +52,16 @@
 		9703D1D21F443131005818AF /* OriginalTangoFileStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */; };
 		973B5B8C1F19DA580082A169 /* NigateListForNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */; };
 		973B5B8E1F19DA860082A169 /* ListForNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */; };
+		97ADD9AF1F931E9E007C79D9 /* FileHandle+Readline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */; };
+		97ADD9B01F931EB3007C79D9 /* UIImage+Trimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */; };
+		97ADD9B11F931EB7007C79D9 /* TrimImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */; };
+		97ADD9B31F931EBB007C79D9 /* StoredImageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */; };
+		97ADD9B41F931EC0007C79D9 /* TextFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99C1F92FA91007C79D9 /* TextFileManager.swift */; };
+		97ADD9B51F931EC3007C79D9 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99D1F92FA91007C79D9 /* ImageFileManager.swift */; };
+		97ADD9B61F931EC5007C79D9 /* SimpleFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99E1F92FA91007C79D9 /* SimpleFileManager.swift */; };
+		97ADD9B71F931EC7007C79D9 /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99F1F92FA91007C79D9 /* PhotoLibraryManager.swift */; };
+		97ADD9B81F931ECA007C79D9 /* ImageListFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A01F92FA91007C79D9 /* ImageListFileManager.swift */; };
+		97ADD9B91F931ECB007C79D9 /* ImageViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A11F92FA91007C79D9 /* ImageViewCreator.swift */; };
 		97C2AD4C1F47474000CB001F /* NotificationOrderSuffuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */; };
 		97CE91BC1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */; };
 		97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */; };
@@ -59,6 +69,7 @@
 		97CE91CA1F39198500F2FC91 /* NormalTangoNotificationSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */; };
 		97CE91CC1F3AE28B00F2FC91 /* EngJpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */; };
 		97CE91CE1F3CC58900F2FC91 /* NigateListForNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */; };
+		97E56B2E1F94B99200048F66 /* BackgroundImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */; };
 		97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */; };
 		97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */; };
 		97F1FF381EE2C72200EC81B2 /* NotificationHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */; };
@@ -124,7 +135,6 @@
 		97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandle+Readline.swift"; sourceTree = "<group>"; };
 		97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Trimming.swift"; sourceTree = "<group>"; };
 		97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimImageVC.swift; sourceTree = "<group>"; };
-		97ADD9A71F92FA91007C79D9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredImageListVC.swift; sourceTree = "<group>"; };
 		97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationOrderSuffuler.swift; sourceTree = "<group>"; };
 		97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangoNotificationMaskLoader.swift; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 		97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalTangoNotificationSetter.swift; sourceTree = "<group>"; };
 		97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngJpn.swift; sourceTree = "<group>"; };
 		97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListForNotificationCell.swift; sourceTree = "<group>"; };
+		97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageViewManager.swift; sourceTree = "<group>"; };
 		97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNotificationListVC.swift; sourceTree = "<group>"; };
 		97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCategorySelectVC.swift; sourceTree = "<group>"; };
 		97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHomeVC.swift; sourceTree = "<group>"; };
@@ -202,6 +213,7 @@
 				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
 				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
 				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
+				97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */,
 				97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */,
 				199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */,
 				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
@@ -277,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */,
-				97ADD9A71F92FA91007C79D9 /* HomeVC.swift */,
 				97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */,
 			);
 			path = Controllers;
@@ -325,7 +336,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Tetsu;
 				TargetAttributes = {
 					19C239FF1E1E8077008B0D9F = {
@@ -381,10 +392,13 @@
 				199F80A41E3C8AB800913F0F /* CategorySelectWithGraphCell.swift in Sources */,
 				191DBC941E6F05A4002978C3 /* SixwithChapter.swift in Sources */,
 				19C23A761E1E82AB008B0D9F /* ProblemResultVC.swift in Sources */,
+				97ADD9B71F931EC7007C79D9 /* PhotoLibraryManager.swift in Sources */,
 				19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */,
 				9703D1C41F431D63005818AF /* AddOriginalTangoVC.swift in Sources */,
 				973B5B8C1F19DA580082A169 /* NigateListForNotificationVC.swift in Sources */,
+				97ADD9B01F931EB3007C79D9 /* UIImage+Trimming.swift in Sources */,
 				9703D1C01F43182D005818AF /* OriginalListCell.swift in Sources */,
+				97ADD9B51F931EC3007C79D9 /* ImageFileManager.swift in Sources */,
 				97F1FF381EE2C72200EC81B2 /* NotificationHomeVC.swift in Sources */,
 				19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */,
 				97CE91CE1F3CC58900F2FC91 /* NigateListForNotificationCell.swift in Sources */,
@@ -393,9 +407,14 @@
 				9703D1C81F438D90005818AF /* CreateOriginalListPopUpVC.swift in Sources */,
 				199FD87B1E6255E5008381D7 /* ProblemResultProgressVC.swift in Sources */,
 				199FD8811E66CA9A008381D7 /* CardSettingPopUpVC.swift in Sources */,
+				97ADD9B11F931EB7007C79D9 /* TrimImageVC.swift in Sources */,
 				19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */,
 				19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */,
+				97ADD9B91F931ECB007C79D9 /* ImageViewCreator.swift in Sources */,
+				97ADD9B61F931EC5007C79D9 /* SimpleFileManager.swift in Sources */,
 				19C23A591E1E82AB008B0D9F /* CALayer+XibConfiguration.m in Sources */,
+				97E56B2E1F94B99200048F66 /* BackgroundImageViewManager.swift in Sources */,
+				97ADD9AF1F931E9E007C79D9 /* FileHandle+Readline.swift in Sources */,
 				19C23A6B1E1E82AB008B0D9F /* JpnEngImgTango.swift in Sources */,
 				19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */,
 				19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */,
@@ -406,12 +425,15 @@
 				97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */,
 				19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */,
 				97CE91C81F3909B600F2FC91 /* ListForNotificationVC.swift in Sources */,
+				97ADD9B81F931ECA007C79D9 /* ImageListFileManager.swift in Sources */,
 				9703D1CE1F439577005818AF /* OriginalNotificationListCell.swift in Sources */,
 				19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */,
 				97CE91CA1F39198500F2FC91 /* NormalTangoNotificationSetter.swift in Sources */,
 				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,
+				97ADD9B41F931EC0007C79D9 /* TextFileManager.swift in Sources */,
 				19C23A581E1E82AB008B0D9F /* AutoFadeTango.swift in Sources */,
 				19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */,
+				97ADD9B31F931EBB007C79D9 /* StoredImageListVC.swift in Sources */,
 				199FD87F1E63B074008381D7 /* HelpSelectCell.swift in Sources */,
 				9703D1D21F443131005818AF /* OriginalTangoFileStatus.swift in Sources */,
 				97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */,
@@ -458,7 +480,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -466,7 +490,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -507,7 +535,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -515,7 +545,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

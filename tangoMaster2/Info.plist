@@ -36,5 +36,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>use the photo library photo as a background image in this app</string>
 </dict>
 </plist>

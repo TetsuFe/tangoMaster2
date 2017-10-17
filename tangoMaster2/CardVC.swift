@@ -23,17 +23,19 @@ class CardVC: UIViewController {
     @IBOutlet weak var superCardView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
-    
     @IBAction func backButton2(_ sender: Any) {
-        //self.dismiss(animated: true, completion: nil)
         backToSelect()
     }
+    @IBOutlet weak var backgroundParentView: UIView!
+    
+    var backgroundImageView : UIImageView?
     
     var sevenDatas = Array<SixWithChapter>()
     var cardWorkFlag:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        superCardView.alpha = 0.7
         /*
         var backgroundImageManager = BackgroundImageManager(image: UIImage(named:"50ten")!)
         //以下は必ずUIViewController.viewの子要素である必要がある
@@ -44,6 +46,22 @@ class CardVC: UIViewController {
  */
     }
     
+    override func viewDidLayoutSubviews(){
+        if backgroundImageView == nil{
+            showBackgroundImage()
+        }
+    }
+    
+    func showBackgroundImage(){
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+            let imageFileManager = ImageFileManager()
+            backgroundImageView = UIImageView(image: imageFileManager.readImageFile(fileName: currentBackgroundImageFileName))
+            fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
+            backgroundParentView.addSubview(backgroundImageView!)
+        }else{
+            backgroundParentView.removeFromSuperview()
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -151,6 +169,7 @@ class CardVC: UIViewController {
             leftSwipeButton.isEnabled = false
             rightSwipeButton.isEnabled = false
             goNigateProblemButton.isEnabled = false
+            goProblemButton.isEnabled = false
         }
         goNigateProblemButton.addTarget(self, action: #selector(goProblem2), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backToSelect), for: .touchUpInside)
@@ -669,6 +688,7 @@ class CardVC: UIViewController {
             myLabel[i].layer.masksToBounds = true
             myLabel[i].layer.cornerRadius = 0.0
         }
+        //cardView.alpha = 0.2
         superCardView.addSubview(cardView)
         cardView.addSubview(myLabel[1])
         cardView.addSubview(myLabel[0])
