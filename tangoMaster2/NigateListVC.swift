@@ -24,6 +24,62 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var goTestButton: UIButton!
     @IBOutlet weak var imageTableView: UITableView!
     
+    @IBAction func alphaSettingsButton(_ sender: Any) {
+        showPopUpProgressView()
+    }
+    
+    func showPopUpProgressView(){
+        AlphaManagePopUpVC.parentVCType = .nigateListVC
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "alphaManageSettingPopUpVC") as! AlphaManagePopUpVC
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
+    @IBOutlet weak var backgroundParentView: UIView!
+    
+    var backgroundImageView : UIImageView?
+    
+    let viewAlphaManager = ViewAlphaManager()
+    
+    func updateTransparency(){
+        updateCellAlpha()
+        //imageTableView.reloadData()
+    }
+    
+    func updateCellAlpha(){
+        for i in 0..<cellsArray.count{
+            for j in 0..<cellsArray[i].count{
+                //壁紙用の設定
+                if viewAlphaManager.getTransparentSetting(){
+                    cellsArray[i][j].backgroundColor = UIColor.white.withAlphaComponent(0.85)
+                    imageTableView.backgroundColor = UIColor.clear
+                }else{
+                    cellsArray[i][j].backgroundColor = UIColor.white
+                    imageTableView.backgroundColor = UIColor.white
+                }
+            }
+        }
+    }
+    
+    override func viewDidLayoutSubviews(){
+        if backgroundImageView == nil{
+            showBackgroundImage()
+        }
+    }
+    
+    func showBackgroundImage(){
+        if let currentBackgroundImageFileName = UserDefaults.standard.string(forKey: CURRENT_BACKGROUND_IMAGE_FILE_NAME_KEY){
+            let imageFileManager = ImageFileManager()
+            backgroundImageView = UIImageView(image: imageFileManager.readImageFile(fileName: currentBackgroundImageFileName))
+            fitWidthOfImageView(changingImageView: backgroundImageView!, parentView: backgroundParentView)
+            backgroundParentView.addSubview(backgroundImageView!)
+        }else{
+            //backgroundParentView.removeFromSuperview()
+        }
+    }
+    
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var nigateSectionList = Array<String>()
@@ -36,13 +92,13 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
         //ループで使う、chapterの番号を示す
         var cIndex = 0
         //ループでカテゴリ全部の苦手単語を取得させる？
-        for i in 0..<nigateFileNames[appDelegate.problemCategory].count{
+        for i in 0..<NIGATE_FILE_NAMES[appDelegate.problemCategory].count{
             var tango = Array<String>()
             var listForTable : Array<NewImageReibun> = []
             cellsArray.append([])
             //先ずは苦手リストが作成されているか確認する
             
-            tango = getfile(fileName:nigateFileNames[appDelegate.problemCategory][i])
+            tango = getTangoArrayFromFile(fileName:NIGATE_FILE_NAMES[appDelegate.problemCategory][i])
             if tango.count != 0{
                 for r in 0..<tango.count/6{
                     listForTable.append(NewImageReibun(eng: tango[6*r],jpn:tango[6*r+1],engReibun:tango[6*r+2],jpnReibun:tango[6*r+3],nigateFlag: tango[6*r+4],partOfSpeech:tango[6*r+5]))
@@ -54,7 +110,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
                     cellsArray[cIndex][r].setCell(listForTable[r],chapterSetsuNumber:String(i))
                 }
                 cIndex += 1
-                self.nigateSectionList.append(nigateFileNames[appDelegate.problemCategory][i])
+                self.nigateSectionList.append(NIGATE_FILE_NAMES[appDelegate.problemCategory][i])
             }
         }
         imageTableView.dataSource = self
@@ -68,6 +124,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
             goAutoFadeButton.isEnabled = false
             goTestButton.isEnabled = false
         }
+        updateCellAlpha()
     }
     
     var cellsArray = Array<Array<ListCell>>()
@@ -85,7 +142,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
      セクションの数を返す.
      */
     func numberOfSections(in tableView: UITableView) -> Int {
-        //return nigateFileNames[appDelegate.problemCategory].count
+        //return NIGATE_FILE_NAMES[appDelegate.problemCategory].count
         return nigateSectionList.count
     }
     
@@ -95,7 +152,7 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //先頭の一文字n(苦手nigate)を消して表示
         let s = nigateSectionList[section]
-        //let s = nigateFileNames[appDelegate.problemCategory][section]
+        //let s = NIGATE_FILE_NAMES[appDelegate.problemCategory][section]
         return s.substring(from: s.index(after: s.startIndex))
     }
     
@@ -103,19 +160,19 @@ class NigateListVC: UIViewController  ,UITableViewDelegate,UITableViewDataSource
         return cellsArray[indexPath.section][indexPath.row]
     }
     
-    func goCard() {
+    @objc func goCard() {
         changeModeToNigateFull()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCard") as!  CardVC
          self.present(secondViewController, animated: true, completion: nil)
     }
     
-    func goAutoFade() {
+    @objc func goAutoFade() {
         changeModeToNigateFull()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newAutoFade") as!  AutoFadeVC
         self.present(secondViewController, animated: true, completion: nil)
     }
     
-    func goTest(){
+    @objc func goTest(){
         changeModeToNigateFull()
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newProblem") as!  ProblemVC
         self.present(secondViewController, animated: true, completion: nil)

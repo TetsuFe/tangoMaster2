@@ -119,7 +119,7 @@ class ProblemResultProgressVC: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(progressDraw), userInfo: nil, repeats: true)
     }
     
-    func progressDraw(){
+    @objc func progressDraw(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if(appDelegate.isProblemCleared){
             if(begin <= end){
@@ -176,7 +176,7 @@ class ProblemResultProgressVC: UIViewController {
         });
     }
     
-    func removeAnimate()
+    @objc func removeAnimate()
     {
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)

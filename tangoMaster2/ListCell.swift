@@ -41,7 +41,7 @@ class ListCell:UITableViewCell{
     @IBAction func buttonTapped(_ sender: AnyObject) {
         
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let preserveFileName = nigateFileNames[appDelegate.problemCategory][Int(self.chapterSetsuNumber)!]
+        let preserveFileName = NIGATE_FILE_NAMES[appDelegate.problemCategory][Int(self.chapterSetsuNumber)!]
         checkButton.isEnabled = false //login_btnはUIButtonです
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
@@ -59,7 +59,7 @@ class ListCell:UITableViewCell{
             self.nigateFlag = "0"
             checkButton.setImage(UIImage(named:"nigate")!, for: UIControlState())
             //OFF
-            let nigateArray = getfile(fileName:preserveFileName)
+            let nigateArray = getTangoArrayFromFile(fileName:preserveFileName)
             var list = Array<NewImageReibun>()
             for r in 0..<nigateArray.count/6{
                 list.append(NewImageReibun(eng: nigateArray[6*r],jpn:nigateArray[6*r+1],engReibun:nigateArray[6*r+2],jpnReibun:nigateArray[6*r+3],nigateFlag: nigateArray[6*r+4],partOfSpeech: nigateArray[6*r+5]))

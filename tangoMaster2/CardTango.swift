@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CardTango:AnyObject{
+class CardTango{
     var eng:String?
     var jpn:String?
     var soundPath:String?

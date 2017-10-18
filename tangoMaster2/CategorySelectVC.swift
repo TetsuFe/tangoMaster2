@@ -34,7 +34,6 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var begButton: UIButton!
     @IBOutlet weak var midButton: UIButton!
     @IBOutlet weak var highButton: UIButton!
-    @IBOutlet weak var toeicButton: UIButton!
     @IBOutlet weak var categorySelectTable: UITableView!
     
     @IBOutlet weak var modeLabel: UILabel!
@@ -84,7 +83,7 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         //for category in 0..<chapterNames.count{
         for category in 0..<categoryNames.count{
-            newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: fileNames[category].count))
+            newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: NORMAL_FILE_NAMES[category].count))
         }
         
         print(appDelegate.chapterNumber)
@@ -159,12 +158,10 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         begButton.backgroundColor = UIColor.blue
         midButton.backgroundColor = UIColor.gray
         highButton.backgroundColor = UIColor.gray
-        toeicButton.backgroundColor = UIColor.gray
         
         begButton.addTarget(self, action: #selector(toBeg), for: .touchUpInside)
         midButton.addTarget(self, action: #selector(toMid), for: .touchUpInside)
         highButton.addTarget(self, action: #selector(toHigh), for: .touchUpInside)
-        toeicButton.addTarget(self, action: #selector(toToeic), for: .touchUpInside)
         
     }
     
@@ -190,11 +187,11 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             
             //for category in 0..<chapterNames.count{
             for category in 0..<categoryNames.count{
-                newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: fileNames[category].count))
+                newChapterNumbers.append(getNewChapter(fileName: checkNewChapterFileNames[category], chapterVolume: NORMAL_FILE_NAMES[category].count))
             }
             
             //各chapterの苦手単語数を取得
-            for fileName in nigateFileNames[appDelegate.problemCategory]{
+            for fileName in NIGATE_FILE_NAMES[appDelegate.problemCategory]{
                 nigateTangoVolumeArray.append(getNigateTangoVolume(fileName: fileName))
             }
  
@@ -331,18 +328,18 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         }else{
             
             if appDelegate.sceneTag == 1{
-                if indexPath.row < newChapterNumbers[appDelegate.problemCategory]{
+                if indexPath.row+5*appDelegate.chapterNumber < newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.green
-                }else if indexPath.row == newChapterNumbers[appDelegate.problemCategory]{
+                }else if indexPath.row+5*appDelegate.chapterNumber == newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.orange
                 }
-                else if indexPath.row > newChapterNumbers[appDelegate.problemCategory]{
+                else if indexPath.row+5*appDelegate.chapterNumber > newChapterNumbers[appDelegate.problemCategory]{
                     cell.backgroundColor = UIColor.darkGray
                 }
             }else{
                 cell.backgroundColor = UIColor.orange
             }
-            cell.setCell(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+indexPath.row])
+            cell.setCell(NORMAL_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+indexPath.row])
             return cell
         }
     }
@@ -376,7 +373,7 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
                     /*
                     for i in 0..<5{
                         normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
-                        normalCells[i].setCell(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+i])
+                        normalCells[i].setCell(NORMAL_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+i])
                     }
  */
                     is_category_top = false
@@ -387,7 +384,7 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
                 /*
                 for i in 0..<5{
                     normalCells.append(categorySelectTable.dequeueReusableCell(withIdentifier: "CategorySelectCell") as! CategorySelectCell)
-                    normalCells[i].setCell(fileNames[appDelegate.problemCategory][appDelegate.chapterNumber*5+i])
+                    normalCells[i].setCell(NORMAL_FILE_NAMES[appDelegate.problemCategory][appDelegate.chapterNumber*5+i])
                 }
  */
                 is_category_top = false
@@ -410,39 +407,36 @@ class CategorySelectVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func categoryChange(_ category:Int){
-        if category != appDelegate.problemCategory{
-            begButton.backgroundColor = UIColor.gray
-            midButton.backgroundColor = UIColor.gray
-            highButton.backgroundColor = UIColor.gray
-            toeicButton.backgroundColor = UIColor.gray
-            if category == 0{
-                begButton.backgroundColor = UIColor.blue
-            }else if category == 1{
-                midButton.backgroundColor = UIColor.blue
-            }else if category == 2{
-                highButton.backgroundColor = UIColor.blue
-            }else if category == 3{
-                toeicButton.backgroundColor = UIColor.blue
-            }
-            appDelegate.problemCategory = category
-            is_category_top = true
-            
-            //categoryChanged = true
-        
-            categorySelectTable.reloadData()
+        //if category != appDelegate.problemCategory{
+        begButton.backgroundColor = UIColor.gray
+        midButton.backgroundColor = UIColor.gray
+        highButton.backgroundColor = UIColor.gray
+        if category == 0{
+            begButton.backgroundColor = UIColor.blue
+        }else if category == 1{
+            midButton.backgroundColor = UIColor.blue
+        }else if category == 2{
+            highButton.backgroundColor = UIColor.blue
         }
+        appDelegate.problemCategory = category
+        is_category_top = true
+        
+        //categoryChanged = true
+    
+        categorySelectTable.reloadData()
+        //}
     }
     
-    func toBeg(){
+    @objc func toBeg(){
         categoryChange(0)
     }
-    func toMid(){
+    @objc func toMid(){
         categoryChange(1)
     }
-    func toHigh(){
+    @objc func toHigh(){
         categoryChange(2)
     }
-    func toToeic(){
+    @objc func toToeic(){
         categoryChange(3)
     }
     

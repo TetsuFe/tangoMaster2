@@ -17,15 +17,16 @@ class CardSettingPopUpVC: UIViewController {
         removeAnimate()
     }
     
+    @IBOutlet weak var alphaSettingsButton: UIButton!
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let viewAlphaManager = ViewAlphaManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //ポップアップ処理のセット二行。ポップアップ以外部分を暗い透明にし、ポップアップ
 
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        self.showAnimate()
         print("appdelegate.cardSetting: \(appDelegate.canCardSwipe)")
         swipeSettingButton.addTarget(self, action: #selector(pushedSwipeButton), for: .touchUpInside)
         
@@ -41,6 +42,9 @@ class CardSettingPopUpVC: UIViewController {
             buttonSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
 
         }
+        updateButtonImage()
+        alphaSettingsButton.addTarget(self, action: #selector(pushedAlphaSettingsButton), for: .touchUpInside)
+        self.showAnimate()
     }
     
     func showAnimate()
@@ -68,13 +72,14 @@ class CardSettingPopUpVC: UIViewController {
                         parentViewController.rightSwipeButton.isEnabled = false
                         parentViewController.leftSwipeButton.backgroundColor = UIColor.clear
                         parentViewController.rightSwipeButton.backgroundColor = UIColor.clear
+                        parentViewController.updateTransparency()
                         
                     }
                 }else{
                    if let parentViewController:CardVC = self.parent as! CardVC?{
                         parentViewController.leftSwipeButton.isEnabled = true
                         parentViewController.rightSwipeButton.isEnabled = true
-                        parentViewController.leftSwipeButton.backgroundColor = UIColor.orange
+                        parentViewController.leftSwipeButton.backgroundColor = UIColor(red: 0.11765, green: 0.74813, blue: 1, alpha:1)
                         parentViewController.rightSwipeButton.backgroundColor = UIColor(red:  0.225346 ,green: 0.870325, blue: 0.104825, alpha: 1)
                     }
                 }
@@ -84,7 +89,7 @@ class CardSettingPopUpVC: UIViewController {
     }
 
     
-    func pushedButtonButton(){
+    @objc func pushedButtonButton(){
         print("push button button")
 
         appDelegate.canCardSwipe = false
@@ -94,13 +99,27 @@ class CardSettingPopUpVC: UIViewController {
         
     }
     
-    func pushedSwipeButton(){
+    @objc func pushedSwipeButton(){
         print("push swipe button")
         appDelegate.canCardSwipe = true
         
         buttonSettingButton.setImage(UIImage(named: "card_setting_not_pushed.png"), for: .normal)
         swipeSettingButton.setImage(UIImage(named: "card_setting_pushed.png"), for: .normal)
         
+    }
+    
+    @objc func pushedAlphaSettingsButton(){
+        print("push button")
+        viewAlphaManager.switchTransparentSetting()
+        updateButtonImage()
+    }
+    
+    func updateButtonImage(){
+        if(viewAlphaManager.getTransparentSetting()){
+            alphaSettingsButton.setImage(UIImage(named:"card_setting_pushed.png"), for: .normal)
+        }else{
+            alphaSettingsButton.setImage(UIImage(named:"card_setting_not_pushed.png"), for: .normal)
+        }
     }
 
     override func didReceiveMemoryWarning() {

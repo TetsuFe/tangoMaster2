@@ -186,7 +186,7 @@ class NovelScene: SKScene {
     
     var jpnEngShowFlag:UInt8 = 1
     
-    func switchJpnEng(){
+    @objc func switchJpnEng(){
         sendTextEng.remove()
         sendTextJpn.remove()
         jpnEngShowFlag += 1
@@ -281,7 +281,7 @@ class NovelVC: UIViewController {
     
     var scene:NovelScene?
     
-    func backHome(){
+    @objc func backHome(){
         self.dismiss(animated:true)
     }
     

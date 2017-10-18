@@ -17,4 +17,4 @@ constitute@占める@constitute 20% of GDP@GDPの20%を占める@0@v
 appoint@任命する@appointed a director@重役を任命する@0@v
 lean@もたれる@lean against ~@〜にもたれる@0@v
 undertake@引き受ける@undertake a task@仕事を引き受ける@0@v
-split@分かれる@the party split@政党が分裂する@0@
+split@分かれる@the party split@政党が分裂する@0@v

@@ -26,7 +26,7 @@
 		19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */; };
 		19C23A601E1E82AB008B0D9F /* dangoEngStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */; };
 		19C23A611E1E82AB008B0D9F /* dangoStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A251E1E82AB008B0D9F /* dangoStory.txt */; };
-		19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A281E1E82AB008B0D9F /* GlobalList.swift */; };
+		19C23A641E1E82AB008B0D9F /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A281E1E82AB008B0D9F /* utils.swift */; };
 		19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */; };
 		19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */; };
 		19C23A6B1E1E82AB008B0D9F /* JpnEngImgTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */; };
@@ -42,6 +42,39 @@
 		19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */; };
 		19C23A831E1E82AB008B0D9F /* tangoData2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19C23A481E1E82AB008B0D9F /* tangoData2.txt */; };
 		19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A4F1E1E82AB008B0D9F /* ListCell.swift */; };
+		9703D1BE1F431554005818AF /* OriginalListForNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1BD1F431554005818AF /* OriginalListForNotificationVC.swift */; };
+		9703D1C01F43182D005818AF /* OriginalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1BF1F43182D005818AF /* OriginalListCell.swift */; };
+		9703D1C41F431D63005818AF /* AddOriginalTangoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1C31F431D63005818AF /* AddOriginalTangoVC.swift */; };
+		9703D1C61F43428D005818AF /* OriginalNotificationTango.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1C51F43428D005818AF /* OriginalNotificationTango.swift */; };
+		9703D1C81F438D90005818AF /* CreateOriginalListPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1C71F438D90005818AF /* CreateOriginalListPopUpVC.swift */; };
+		9703D1CE1F439577005818AF /* OriginalNotificationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1CD1F439577005818AF /* OriginalNotificationListCell.swift */; };
+		9703D1D01F440D4A005818AF /* ManageOriginalListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1CF1F440D4A005818AF /* ManageOriginalListVC.swift */; };
+		9703D1D21F443131005818AF /* OriginalTangoFileStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */; };
+		973B5B8C1F19DA580082A169 /* NigateListForNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */; };
+		973B5B8E1F19DA860082A169 /* ListForNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */; };
+		97ADD9AF1F931E9E007C79D9 /* FileHandle+Readline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */; };
+		97ADD9B01F931EB3007C79D9 /* UIImage+Trimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */; };
+		97ADD9B11F931EB7007C79D9 /* TrimImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */; };
+		97ADD9B31F931EBB007C79D9 /* StoredImageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */; };
+		97ADD9B41F931EC0007C79D9 /* TextFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99C1F92FA91007C79D9 /* TextFileManager.swift */; };
+		97ADD9B51F931EC3007C79D9 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99D1F92FA91007C79D9 /* ImageFileManager.swift */; };
+		97ADD9B61F931EC5007C79D9 /* SimpleFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99E1F92FA91007C79D9 /* SimpleFileManager.swift */; };
+		97ADD9B71F931EC7007C79D9 /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD99F1F92FA91007C79D9 /* PhotoLibraryManager.swift */; };
+		97ADD9B81F931ECA007C79D9 /* ImageListFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A01F92FA91007C79D9 /* ImageListFileManager.swift */; };
+		97ADD9B91F931ECB007C79D9 /* ImageViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADD9A11F92FA91007C79D9 /* ImageViewCreator.swift */; };
+		97C2AD4C1F47474000CB001F /* NotificationOrderSuffuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */; };
+		97CE91BC1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */; };
+		97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */; };
+		97CE91C81F3909B600F2FC91 /* ListForNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */; };
+		97CE91CA1F39198500F2FC91 /* NormalTangoNotificationSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */; };
+		97CE91CC1F3AE28B00F2FC91 /* EngJpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */; };
+		97CE91CE1F3CC58900F2FC91 /* NigateListForNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */; };
+		97D5312C1F95C130003BFFCA /* ViewAlphaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */; };
+		97D5312E1F95C493003BFFCA /* AlphaManagePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */; };
+		97E56B2E1F94B99200048F66 /* BackgroundImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */; };
+		97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */; };
+		97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */; };
+		97F1FF381EE2C72200EC81B2 /* NotificationHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +101,7 @@
 		19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectVC.swift; sourceTree = "<group>"; };
 		19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dangoEngStory.txt; sourceTree = "<group>"; };
 		19C23A251E1E82AB008B0D9F /* dangoStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dangoStory.txt; sourceTree = "<group>"; };
-		19C23A281E1E82AB008B0D9F /* GlobalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalList.swift; sourceTree = "<group>"; };
+		19C23A281E1E82AB008B0D9F /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSelectCell.swift; sourceTree = "<group>"; };
 		19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReibunTango.swift; sourceTree = "<group>"; };
 		19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnEngImgTango.swift; sourceTree = "<group>"; };
@@ -85,6 +118,39 @@
 		19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySelectVC.swift; sourceTree = "<group>"; };
 		19C23A481E1E82AB008B0D9F /* tangoData2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangoData2.txt; sourceTree = "<group>"; };
 		19C23A4F1E1E82AB008B0D9F /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		9703D1BD1F431554005818AF /* OriginalListForNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalListForNotificationVC.swift; sourceTree = "<group>"; };
+		9703D1BF1F43182D005818AF /* OriginalListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalListCell.swift; sourceTree = "<group>"; };
+		9703D1C31F431D63005818AF /* AddOriginalTangoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOriginalTangoVC.swift; sourceTree = "<group>"; };
+		9703D1C51F43428D005818AF /* OriginalNotificationTango.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalNotificationTango.swift; sourceTree = "<group>"; };
+		9703D1C71F438D90005818AF /* CreateOriginalListPopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOriginalListPopUpVC.swift; sourceTree = "<group>"; };
+		9703D1CD1F439577005818AF /* OriginalNotificationListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalNotificationListCell.swift; sourceTree = "<group>"; };
+		9703D1CF1F440D4A005818AF /* ManageOriginalListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageOriginalListVC.swift; sourceTree = "<group>"; };
+		9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTangoFileStatus.swift; sourceTree = "<group>"; };
+		973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListForNotificationVC.swift; sourceTree = "<group>"; };
+		973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListForNotificationCell.swift; sourceTree = "<group>"; };
+		97ADD99C1F92FA91007C79D9 /* TextFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileManager.swift; sourceTree = "<group>"; };
+		97ADD99D1F92FA91007C79D9 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
+		97ADD99E1F92FA91007C79D9 /* SimpleFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFileManager.swift; sourceTree = "<group>"; };
+		97ADD99F1F92FA91007C79D9 /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		97ADD9A01F92FA91007C79D9 /* ImageListFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListFileManager.swift; sourceTree = "<group>"; };
+		97ADD9A11F92FA91007C79D9 /* ImageViewCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCreator.swift; sourceTree = "<group>"; };
+		97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandle+Readline.swift"; sourceTree = "<group>"; };
+		97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Trimming.swift"; sourceTree = "<group>"; };
+		97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimImageVC.swift; sourceTree = "<group>"; };
+		97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredImageListVC.swift; sourceTree = "<group>"; };
+		97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationOrderSuffuler.swift; sourceTree = "<group>"; };
+		97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TangoNotificationMaskLoader.swift; sourceTree = "<group>"; };
+		97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHomeSelectCell.swift; sourceTree = "<group>"; };
+		97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListForNotificationVC.swift; sourceTree = "<group>"; };
+		97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalTangoNotificationSetter.swift; sourceTree = "<group>"; };
+		97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngJpn.swift; sourceTree = "<group>"; };
+		97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListForNotificationCell.swift; sourceTree = "<group>"; };
+		97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAlphaManager.swift; sourceTree = "<group>"; };
+		97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaManagePopUpVC.swift; sourceTree = "<group>"; };
+		97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageViewManager.swift; sourceTree = "<group>"; };
+		97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNotificationListVC.swift; sourceTree = "<group>"; };
+		97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCategorySelectVC.swift; sourceTree = "<group>"; };
+		97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,24 +183,49 @@
 		19C23A021E1E8077008B0D9F /* tangoMaster2 */ = {
 			isa = PBXGroup;
 			children = (
+				97ADD9AD1F92FB6E007C79D9 /* BackGroundImageManager */,
 				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
 				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
+				97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */,
+				97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */,
 				199FD87C1E63ADDA008381D7 /* HelpVC.swift */,
 				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
+				97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */,
+				97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */,
+				97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */,
+				97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */,
+				97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */,
+				973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */,
+				97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */,
+				97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */,
+				973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */,
+				9703D1BD1F431554005818AF /* OriginalListForNotificationVC.swift */,
+				9703D1CD1F439577005818AF /* OriginalNotificationListCell.swift */,
+				9703D1C71F438D90005818AF /* CreateOriginalListPopUpVC.swift */,
+				9703D1CF1F440D4A005818AF /* ManageOriginalListVC.swift */,
+				9703D1BF1F43182D005818AF /* OriginalListCell.swift */,
+				9703D1C31F431D63005818AF /* AddOriginalTangoVC.swift */,
+				9703D1C51F43428D005818AF /* OriginalNotificationTango.swift */,
+				9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */,
 				19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */,
 				199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */,
+				97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */,
 				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
 				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
 				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
+				97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */,
 				191DBC931E6F05A4002978C3 /* SixwithChapter.swift */,
 				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
 				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
 				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
 				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
 				199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */,
+				97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */,
+				97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */,
 				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
 				19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */,
 				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
+				19C23A281E1E82AB008B0D9F /* utils.swift */,
 				19C23A071E1E8077008B0D9F /* Main.storyboard */,
 				19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */,
 				199FD87E1E63B074008381D7 /* HelpSelectCell.swift */,
@@ -144,7 +235,6 @@
 				1924974A1E1E83AB00E032B9 /* Jpn.swift */,
 				19C23A1F1E1E82AB008B0D9F /* CardTango.swift */,
 				19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */,
-				19C23A281E1E82AB008B0D9F /* GlobalList.swift */,
 				19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */,
 				19C23A1C1E1E82AB008B0D9F /* CALayer+XibConfiguration.h */,
 				19C23A3E1E1E82AB008B0D9F /* NSCharacterSet_empyt.h */,
@@ -158,6 +248,71 @@
 				19C23A0A1E1E8077008B0D9F /* Assets.xcassets */,
 			);
 			path = tangoMaster2;
+			sourceTree = "<group>";
+		};
+		97ADD9991F92FA91007C79D9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD99A1F92FA91007C79D9 /* Classes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		97ADD99A1F92FA91007C79D9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD99B1F92FA91007C79D9 /* Models */,
+				97ADD9A21F92FA91007C79D9 /* Extensions */,
+				97ADD9A51F92FA91007C79D9 /* Controllers */,
+				97ADD9A91F92FA91007C79D9 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		97ADD99B1F92FA91007C79D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD99C1F92FA91007C79D9 /* TextFileManager.swift */,
+				97ADD99D1F92FA91007C79D9 /* ImageFileManager.swift */,
+				97ADD99E1F92FA91007C79D9 /* SimpleFileManager.swift */,
+				97ADD99F1F92FA91007C79D9 /* PhotoLibraryManager.swift */,
+				97ADD9A01F92FA91007C79D9 /* ImageListFileManager.swift */,
+				97ADD9A11F92FA91007C79D9 /* ImageViewCreator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97ADD9A21F92FA91007C79D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD9A31F92FA91007C79D9 /* FileHandle+Readline.swift */,
+				97ADD9A41F92FA91007C79D9 /* UIImage+Trimming.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		97ADD9A51F92FA91007C79D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD9A61F92FA91007C79D9 /* TrimImageVC.swift */,
+				97ADD9A81F92FA91007C79D9 /* StoredImageListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		97ADD9A91F92FA91007C79D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97ADD9AD1F92FB6E007C79D9 /* BackGroundImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				97ADD9991F92FA91007C79D9 /* Sources */,
+			);
+			path = BackGroundImageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +342,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Tetsu;
 				TargetAttributes = {
 					19C239FF1E1E8077008B0D9F = {
@@ -238,34 +393,67 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9703D1D01F440D4A005818AF /* ManageOriginalListVC.swift in Sources */,
 				1924974E1E1E994D00E032B9 /* CardTango.swift in Sources */,
 				199F80A41E3C8AB800913F0F /* CategorySelectWithGraphCell.swift in Sources */,
 				191DBC941E6F05A4002978C3 /* SixwithChapter.swift in Sources */,
 				19C23A761E1E82AB008B0D9F /* ProblemResultVC.swift in Sources */,
+				97ADD9B71F931EC7007C79D9 /* PhotoLibraryManager.swift in Sources */,
 				19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */,
+				9703D1C41F431D63005818AF /* AddOriginalTangoVC.swift in Sources */,
+				973B5B8C1F19DA580082A169 /* NigateListForNotificationVC.swift in Sources */,
+				97ADD9B01F931EB3007C79D9 /* UIImage+Trimming.swift in Sources */,
+				9703D1C01F43182D005818AF /* OriginalListCell.swift in Sources */,
+				97ADD9B51F931EC3007C79D9 /* ImageFileManager.swift in Sources */,
+				97F1FF381EE2C72200EC81B2 /* NotificationHomeVC.swift in Sources */,
 				19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */,
+				97CE91CE1F3CC58900F2FC91 /* NigateListForNotificationCell.swift in Sources */,
 				19C23A701E1E82AB008B0D9F /* CardVC.swift in Sources */,
 				199FD87D1E63ADDA008381D7 /* HelpVC.swift in Sources */,
+				97D5312C1F95C130003BFFCA /* ViewAlphaManager.swift in Sources */,
+				9703D1C81F438D90005818AF /* CreateOriginalListPopUpVC.swift in Sources */,
 				199FD87B1E6255E5008381D7 /* ProblemResultProgressVC.swift in Sources */,
 				199FD8811E66CA9A008381D7 /* CardSettingPopUpVC.swift in Sources */,
+				97ADD9B11F931EB7007C79D9 /* TrimImageVC.swift in Sources */,
 				19C23A5D1E1E82AB008B0D9F /* CategorySelectVC.swift in Sources */,
 				19C23A691E1E82AB008B0D9F /* ImageReibunTango.swift in Sources */,
+				97ADD9B91F931ECB007C79D9 /* ImageViewCreator.swift in Sources */,
+				97ADD9B61F931EC5007C79D9 /* SimpleFileManager.swift in Sources */,
 				19C23A591E1E82AB008B0D9F /* CALayer+XibConfiguration.m in Sources */,
+				97E56B2E1F94B99200048F66 /* BackgroundImageViewManager.swift in Sources */,
+				97ADD9AF1F931E9E007C79D9 /* FileHandle+Readline.swift in Sources */,
 				19C23A6B1E1E82AB008B0D9F /* JpnEngImgTango.swift in Sources */,
 				19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */,
 				19C23A651E1E82AB008B0D9F /* HomeSelectCell.swift in Sources */,
 				19C23A6F1E1E82AB008B0D9F /* AutoFadeVC.swift in Sources */,
+				97E786C31EEAA6810065478A /* NotificationCategorySelectVC.swift in Sources */,
+				97D5312E1F95C493003BFFCA /* AlphaManagePopUpVC.swift in Sources */,
+				97C2AD4C1F47474000CB001F /* NotificationOrderSuffuler.swift in Sources */,
+				973B5B8E1F19DA860082A169 /* ListForNotificationCell.swift in Sources */,
+				97CE91C21F38EC7900F2FC91 /* NotificationHomeSelectCell.swift in Sources */,
 				19C23A8A1E1E82AB008B0D9F /* ListCell.swift in Sources */,
+				97CE91C81F3909B600F2FC91 /* ListForNotificationVC.swift in Sources */,
+				97ADD9B81F931ECA007C79D9 /* ImageListFileManager.swift in Sources */,
+				9703D1CE1F439577005818AF /* OriginalNotificationListCell.swift in Sources */,
 				19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */,
+				97CE91CA1F39198500F2FC91 /* NormalTangoNotificationSetter.swift in Sources */,
 				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,
+				97ADD9B41F931EC0007C79D9 /* TextFileManager.swift in Sources */,
 				19C23A581E1E82AB008B0D9F /* AutoFadeTango.swift in Sources */,
 				19C23A5C1E1E82AB008B0D9F /* CategorySelectCell.swift in Sources */,
+				97ADD9B31F931EBB007C79D9 /* StoredImageListVC.swift in Sources */,
 				199FD87F1E63B074008381D7 /* HelpSelectCell.swift in Sources */,
-				19C23A641E1E82AB008B0D9F /* GlobalList.swift in Sources */,
+				9703D1D21F443131005818AF /* OriginalTangoFileStatus.swift in Sources */,
+				97E786C11EEA8B8B0065478A /* CustomNotificationListVC.swift in Sources */,
+				19C23A641E1E82AB008B0D9F /* utils.swift in Sources */,
+				97CE91BC1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift in Sources */,
 				1924974B1E1E83AB00E032B9 /* Jpn.swift in Sources */,
 				19C23A721E1E82AB008B0D9F /* NewImageReibun.swift in Sources */,
 				19C23A711E1E82AB008B0D9F /* HomeVC.swift in Sources */,
 				1924974D1E1E98F600E032B9 /* AppDelegate.swift in Sources */,
+				9703D1BE1F431554005818AF /* OriginalListForNotificationVC.swift in Sources */,
+				9703D1C61F43428D005818AF /* OriginalNotificationTango.swift in Sources */,
+				97CE91CC1F3AE28B00F2FC91 /* EngJpn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +488,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -308,7 +498,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -331,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -349,7 +543,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -357,7 +553,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -374,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -390,14 +590,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7VDG358L4M;
 				INFOPLIST_FILE = tangoMaster2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testu2723mental.tangoMaster2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -409,13 +610,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7VDG358L4M;
 				INFOPLIST_FILE = tangoMaster2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testu2723mental.tangoMaster2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tangoMaster2/tangoMaster2-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
