@@ -31,7 +31,7 @@ class OriginalNotificationTango{
             try! fileManager.createDirectory(atPath: path ,withIntermediateDirectories: false, attributes: nil)
         }
         
-        let fileObject:String = eng+"@"+jpn+"@"+notificationFlag+"\n"
+        let fileObject:String = "\(eng!)@\(jpn!)@\(notificationFlag!)\n"
         
         let filepath1 = "\(path)/\(fileName)"+"."+extent
         

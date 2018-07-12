@@ -185,56 +185,10 @@
 			children = (
 				97ADD9AD1F92FB6E007C79D9 /* BackGroundImageManager */,
 				1924974C1E1E98F600E032B9 /* AppDelegate.swift */,
-				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
-				97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */,
-				97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */,
-				199FD87C1E63ADDA008381D7 /* HelpVC.swift */,
-				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
-				97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */,
-				97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */,
-				97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */,
-				97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */,
-				97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */,
-				973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */,
-				97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */,
-				97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */,
-				973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */,
-				9703D1BD1F431554005818AF /* OriginalListForNotificationVC.swift */,
-				9703D1CD1F439577005818AF /* OriginalNotificationListCell.swift */,
-				9703D1C71F438D90005818AF /* CreateOriginalListPopUpVC.swift */,
-				9703D1CF1F440D4A005818AF /* ManageOriginalListVC.swift */,
-				9703D1BF1F43182D005818AF /* OriginalListCell.swift */,
-				9703D1C31F431D63005818AF /* AddOriginalTangoVC.swift */,
-				9703D1C51F43428D005818AF /* OriginalNotificationTango.swift */,
-				9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */,
-				19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */,
-				199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */,
-				97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */,
-				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
-				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
-				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
-				97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */,
-				191DBC931E6F05A4002978C3 /* SixwithChapter.swift */,
-				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
-				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
-				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
-				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
-				199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */,
-				97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */,
-				97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */,
-				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
-				19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */,
-				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
+				97D37FEF20F7349E003965CA /* Models */,
+				97D37FF020F734B9003965CA /* Views */,
+				97D37FF120F734C0003965CA /* Controllers */,
 				19C23A281E1E82AB008B0D9F /* utils.swift */,
-				19C23A071E1E8077008B0D9F /* Main.storyboard */,
-				19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */,
-				199FD87E1E63B074008381D7 /* HelpSelectCell.swift */,
-				19C23A1B1E1E82AB008B0D9F /* AutoFadeTango.swift */,
-				19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */,
-				19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */,
-				1924974A1E1E83AB00E032B9 /* Jpn.swift */,
-				19C23A1F1E1E82AB008B0D9F /* CardTango.swift */,
-				19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */,
 				19C23A1D1E1E82AB008B0D9F /* CALayer+XibConfiguration.m */,
 				19C23A1C1E1E82AB008B0D9F /* CALayer+XibConfiguration.h */,
 				19C23A3E1E1E82AB008B0D9F /* NSCharacterSet_empyt.h */,
@@ -244,7 +198,6 @@
 				19C23A241E1E82AB008B0D9F /* dangoEngStory.txt */,
 				19C23A251E1E82AB008B0D9F /* dangoStory.txt */,
 				19C23A0F1E1E8077008B0D9F /* Info.plist */,
-				19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */,
 				19C23A0A1E1E8077008B0D9F /* Assets.xcassets */,
 			);
 			path = tangoMaster2;
@@ -313,6 +266,77 @@
 				97ADD9991F92FA91007C79D9 /* Sources */,
 			);
 			path = BackGroundImageManager;
+			sourceTree = "<group>";
+		};
+		97D37FEF20F7349E003965CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97CE91BB1F373F7100F2FC91 /* TangoNotificationMaskLoader.swift */,
+				97C2AD4B1F47474000CB001F /* NotificationOrderSuffuler.swift */,
+				97D5312B1F95C130003BFFCA /* ViewAlphaManager.swift */,
+				97CE91C91F39198500F2FC91 /* NormalTangoNotificationSetter.swift */,
+				9703D1C51F43428D005818AF /* OriginalNotificationTango.swift */,
+				9703D1D11F443131005818AF /* OriginalTangoFileStatus.swift */,
+				191DBC931E6F05A4002978C3 /* SixwithChapter.swift */,
+				97CE91CB1F3AE28B00F2FC91 /* EngJpn.swift */,
+				97E56B2D1F94B99200048F66 /* BackgroundImageViewManager.swift */,
+				19C23A1B1E1E82AB008B0D9F /* AutoFadeTango.swift */,
+				19C23A2D1E1E82AB008B0D9F /* ImageReibunTango.swift */,
+				19C23A2F1E1E82AB008B0D9F /* JpnEngImgTango.swift */,
+				1924974A1E1E83AB00E032B9 /* Jpn.swift */,
+				19C23A1F1E1E82AB008B0D9F /* CardTango.swift */,
+				19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97D37FF020F734B9003965CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97CE91CD1F3CC58900F2FC91 /* NigateListForNotificationCell.swift */,
+				973B5B8D1F19DA860082A169 /* ListForNotificationCell.swift */,
+				97CE91C11F38EC7900F2FC91 /* NotificationHomeSelectCell.swift */,
+				9703D1CD1F439577005818AF /* OriginalNotificationListCell.swift */,
+				9703D1BF1F43182D005818AF /* OriginalListCell.swift */,
+				19C23A201E1E82AB008B0D9F /* CategorySelectCell.swift */,
+				199F80A31E3C8AB800913F0F /* CategorySelectWithGraphCell.swift */,
+				19C23A4F1E1E82AB008B0D9F /* ListCell.swift */,
+				19C23A291E1E82AB008B0D9F /* HomeSelectCell.swift */,
+				199FD87E1E63B074008381D7 /* HelpSelectCell.swift */,
+				19C23A071E1E8077008B0D9F /* Main.storyboard */,
+				19C23A0C1E1E8077008B0D9F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97D37FF120F734C0003965CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */,
+				19C23A381E1E82AB008B0D9F /* NigateListVC.swift */,
+				97D5312D1F95C493003BFFCA /* AlphaManagePopUpVC.swift */,
+				199FD87C1E63ADDA008381D7 /* HelpVC.swift */,
+				19C23A211E1E82AB008B0D9F /* CategorySelectVC.swift */,
+				973B5B8B1F19DA580082A169 /* NigateListForNotificationVC.swift */,
+				97F1FF371EE2C72200EC81B2 /* NotificationHomeVC.swift */,
+				97CE91C71F3909B600F2FC91 /* ListForNotificationVC.swift */,
+				9703D1BD1F431554005818AF /* OriginalListForNotificationVC.swift */,
+				19C23A351E1E82AB008B0D9F /* HomeVC.swift */,
+				9703D1CF1F440D4A005818AF /* ManageOriginalListVC.swift */,
+				9703D1C31F431D63005818AF /* AddOriginalTangoVC.swift */,
+				9703D1C71F438D90005818AF /* CreateOriginalListPopUpVC.swift */,
+				97E786C21EEAA6810065478A /* NotificationCategorySelectVC.swift */,
+				19C23A331E1E82AB008B0D9F /* AutoFadeVC.swift */,
+				19C23A371E1E82AB008B0D9F /* ListVC.swift */,
+				97E786C01EEA8B8B0065478A /* CustomNotificationListVC.swift */,
+				19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */,
+				19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */,
+				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
+				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
+				199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */,
+				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

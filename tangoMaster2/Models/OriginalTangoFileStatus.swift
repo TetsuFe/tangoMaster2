@@ -32,7 +32,7 @@ class OriginalTangoFileStatus{
             try! fileManager.createDirectory(atPath: path ,withIntermediateDirectories: false, attributes: nil)
         }
         
-        let fileObject:String = self.fileName+"@"+self.prevFileName+"@"+self.notificationFlag+"\n"
+        let fileObject:String = "\(self.fileName!)@\(self.prevFileName!)@\(self.notificationFlag!)\n"
         
         let filepath1 = "\(path)/\(fileName)"+"."+extent
         
