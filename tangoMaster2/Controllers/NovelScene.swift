@@ -105,7 +105,7 @@ class NovelScene: SKScene {
         self.view!.addSubview(self.jpnEngButton)
         
         let storyNameEng = "dangoEngStory"
-        let storyNameJpn = "dangoStory"
+        let storyNameJpn = "dangoJpnStory"
         
         self.arrayEng = self.readFileGetSentences(storyNameEng,extent:"txt")
         self.arrayJpn = self.readFileGetSentences(storyNameJpn,extent:"txt")
