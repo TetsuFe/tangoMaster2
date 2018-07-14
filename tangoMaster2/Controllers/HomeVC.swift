@@ -29,8 +29,8 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
     @IBOutlet weak var homeTableView: UITableView!
     
     //tableView
-    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語タイマー","壁紙設定"]
-    let imageNames = ["normallist.png","test.png","card.png","nigatelist.png,","bell.png","wallpaper.png"]
+    let sceneLabelNames = ["単語一覧","単語テスト","単語カード","苦手リスト","単語タイマー","壁紙設定","ストーリーモード"]
+    let imageNames = ["normallist.png","test.png","card.png","nigatelist.png,","bell.png","wallpaper.png", "story.png"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,11 +128,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestu
         appDelegate.sceneTag = indexPath.row
         var secondViewController = UIViewController()
         if indexPath.row == 4{
-            //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "notificationHome") as! NotificationHomeVC
             //self.present(secondViewController, animated: true, completion: nil)
         }else if indexPath.row == 5{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storedImageListVC") as! StoredImageListVC
+        }else if indexPath.row == 6{
+            secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "storySelect") as! StorySelectVC
+            //secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "novel") as! NovelVC
         }else{
             secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "categorySelect") as! CategorySelectVC
         }
