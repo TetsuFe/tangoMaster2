@@ -36,7 +36,7 @@
 		19C23A721E1E82AB008B0D9F /* NewImageReibun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */; };
 		19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A371E1E82AB008B0D9F /* ListVC.swift */; };
 		19C23A741E1E82AB008B0D9F /* NigateListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A381E1E82AB008B0D9F /* NigateListVC.swift */; };
-		19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A391E1E82AB008B0D9F /* NovelVC.swift */; };
+		19C23A751E1E82AB008B0D9F /* NovelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A391E1E82AB008B0D9F /* NovelScene.swift */; };
 		19C23A761E1E82AB008B0D9F /* ProblemResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */; };
 		19C23A771E1E82AB008B0D9F /* ProblemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */; };
 		19C23A821E1E82AB008B0D9F /* StorySelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23A471E1E82AB008B0D9F /* StorySelectVC.swift */; };
@@ -111,7 +111,7 @@
 		19C23A361E1E82AB008B0D9F /* NewImageReibun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImageReibun.swift; sourceTree = "<group>"; };
 		19C23A371E1E82AB008B0D9F /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		19C23A381E1E82AB008B0D9F /* NigateListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NigateListVC.swift; sourceTree = "<group>"; };
-		19C23A391E1E82AB008B0D9F /* NovelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelVC.swift; sourceTree = "<group>"; };
+		19C23A391E1E82AB008B0D9F /* NovelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelScene.swift; sourceTree = "<group>"; };
 		19C23A3A1E1E82AB008B0D9F /* ProblemResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemResultVC.swift; sourceTree = "<group>"; };
 		19C23A3B1E1E82AB008B0D9F /* ProblemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemVC.swift; sourceTree = "<group>"; };
 		19C23A3E1E1E82AB008B0D9F /* NSCharacterSet_empyt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_empyt.h; sourceTree = "<group>"; };
@@ -334,7 +334,7 @@
 				199FD87A1E6255E5008381D7 /* ProblemResultProgressVC.swift */,
 				19C23A341E1E82AB008B0D9F /* CardVC.swift */,
 				199FD8801E66CA9A008381D7 /* CardSettingPopUpVC.swift */,
-				19C23A391E1E82AB008B0D9F /* NovelVC.swift */,
+				19C23A391E1E82AB008B0D9F /* NovelScene.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				97CE91C81F3909B600F2FC91 /* ListForNotificationVC.swift in Sources */,
 				97ADD9B81F931ECA007C79D9 /* ImageListFileManager.swift in Sources */,
 				9703D1CE1F439577005818AF /* OriginalNotificationListCell.swift in Sources */,
-				19C23A751E1E82AB008B0D9F /* NovelVC.swift in Sources */,
+				19C23A751E1E82AB008B0D9F /* NovelScene.swift in Sources */,
 				97CE91CA1F39198500F2FC91 /* NormalTangoNotificationSetter.swift in Sources */,
 				19C23A731E1E82AB008B0D9F /* ListVC.swift in Sources */,
 				97ADD9B41F931EC0007C79D9 /* TextFileManager.swift in Sources */,
